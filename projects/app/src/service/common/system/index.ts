@@ -113,7 +113,7 @@ const defaultFeConfigs: LibChatFeConfigsType = {
     'https://fael3z0zfze.feishu.cn/wiki/CX9wwMGyEi5TL6koiLYcg7U0nWb?fromScene=spaceOverview',
   systemTitle: 'LibChat',
   concatMd:
-    '项目开源地址: [LibChat GitHub](https://github.com/labring/LibChat)\n交流群: ![](https://oss.laf.run/otnvvf-imgs/libchat-feishu1.png)',
+    '项目开源地址: [LibChat GitHub](https://github.com/zetxtech/libchat)\n交流群: ![](https://oss.laf.run/otnvvf-imgs/libchat-feishu1.png)',
   limit: {
     exportDatasetLimitMinutes: 0,
     websiteSyncLimitMinuted: 0

@@ -110,14 +110,12 @@ services:
   sandbox:
     container_name: sandbox
     image: ghcr.io/labring/libchat-sandbox:v4.9.13 # git
-    # image: registry.cn-hangzhou.aliyuncs.com/libchat/libchat-sandbox:v4.9.13 # 阿里云
     networks:
       - libchat
     restart: always
   libchat-mcp-server:
     container_name: libchat-mcp-server
     image: ghcr.io/labring/libchat-mcp_server:v4.9.13 # git
-    # image: registry.cn-hangzhou.aliyuncs.com/libchat/libchat-mcp_server:v4.9.13 # 阿里云
     ports:
       - 3005:3000
     networks:
@@ -128,7 +126,6 @@ services:
   libchat:
     container_name: libchat
     image: ghcr.io/labring/libchat:v4.9.13 # git
-    # image: registry.cn-hangzhou.aliyuncs.com/libchat/libchat:v4.9.13 # 阿里云
     ports:
       - 3000:3000
     networks:
@@ -185,7 +182,6 @@ services:
   # AI Proxy
   aiproxy:
     image: ghcr.io/labring/aiproxy:v0.1.7
-    # image: registry.cn-hangzhou.aliyuncs.com/labring/aiproxy:v0.1.7 # 阿里云
     container_name: aiproxy
     restart: unless-stopped
     depends_on:
@@ -213,7 +209,6 @@ services:
       retries: 10
   aiproxy_pg:
     image: pgvector/pgvector:0.8.0-pg15 # docker hub
-    # image: registry.cn-hangzhou.aliyuncs.com/libchat/pgvector:v0.8.0-pg15 # 阿里云
     restart: unless-stopped
     container_name: aiproxy_pg
     volumes:

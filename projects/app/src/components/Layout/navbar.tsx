@@ -216,7 +216,7 @@ const Navbar = ({ unread }: { unread: number }) => {
         <MyTooltip label={`Git Star: ${gitStar}`} placement={'right-end'}>
           <Link
             as={NextLink}
-            href="https://github.com/labring/LibChat"
+            href="https://github.com/zetxtech/libchat"
             target={'_blank'}
             {...itemStyles}
             {...hoverStyle}

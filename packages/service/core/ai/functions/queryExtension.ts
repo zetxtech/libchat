@@ -57,10 +57,10 @@ assistant: The number of days of maternity leave depends on the city in which th
 历史记录: 
 """
 user: 作者是谁？
-assistant: ${title} 的作者是 labring。
+assistant: ${title} 的作者是 zetxtech。
 """
 原问题: Tell me about him
-检索词: ["Introduce labring, the author of ${title}." ," Background information on author labring." "," Why does labring do ${title}?"]
+检索词: ["Introduce zetxtech, the author of ${title}." ," Background information on author zetxtech." "," Why does zetxtech do ${title}?"]
 ----------------
 历史记录:
 """

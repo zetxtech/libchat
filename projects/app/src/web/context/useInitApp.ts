@@ -81,7 +81,7 @@ export const useInitApp = () => {
       console.log(
         '%cWelcome to LibChat',
         'font-family:Arial; color:#3370ff ; font-size:18px; font-weight:bold;',
-        `GitHub：https://github.com/labring/LibChat`
+        `GitHub：https://github.com/zetxtech/libchat`
       );
     }
 

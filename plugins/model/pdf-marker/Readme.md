@@ -45,7 +45,7 @@ export PROCESSES_PER_GPU="1"
 1. 克隆一个LibChat的项目文件
 
    ```
-   git clone https://github.com/labring/LibChat.git
+   git clone https://github.com/zetxtech/libchat.git
    ```
 
 2. 将主目录设置为 python下的pdf-marker文件

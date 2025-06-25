@@ -59,7 +59,7 @@ pip install paddlepaddle-gpu==2.6.1
 5、克隆一个LibChat的项目文件
 
 ```
-git clone https://github.com/labring/LibChat.git
+git clone https://github.com/zetxtech/libchat.git
 ```
 
 6、将主目录设置为 plugins/model 下的pdf-mineru文件夹

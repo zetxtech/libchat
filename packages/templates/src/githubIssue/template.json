@@ -374,7 +374,7 @@
             "description": "common:core.module.input.description.Http Request Url",
             "placeholder": "https://api.ai.com/getInventory",
             "required": false,
-            "value": "https://api.github.com/repos/labring/LibChat/issues",
+            "value": "https://api.github.com/repos/zetxtech/libchat/issues",
             "valueDesc": "",
             "debugLabel": "",
             "toolDescription": ""
