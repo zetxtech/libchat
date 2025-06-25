@@ -1,10 +1,10 @@
 import { Box, Flex, type TextareaProps } from '@chakra-ui/react';
 import React from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import ChatFunctionTip from './Tip';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
 import { useTranslation } from 'next-i18next';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 const WelcomeTextConfig = (props: TextareaProps) => {
   const { t } = useTranslation();

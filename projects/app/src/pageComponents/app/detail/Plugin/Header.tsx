@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext, type WorkflowSnapshotsType } from '../WorkflowComponents/context';
 import { AppContext, TabEnum } from '../context';
@@ -19,11 +19,11 @@ import RouteTab from '../RouteTab';
 import { useRouter } from 'next/router';
 
 import AppCard from '../WorkflowComponents/AppCard';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { formatTime2YMDHMS } from '@fastgpt/global/common/string/time';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { formatTime2YMDHMS } from '@libchat/global/common/string/time';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import PublishHistories from '../PublishHistoriesSlider';
 import { WorkflowEventContext } from '../WorkflowComponents/context/workflowEventContext';

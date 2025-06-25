@@ -1,6 +1,6 @@
 ## Premise
 
-Since FastGPT is managed in the same way as monorepo, it is recommended to install ‘make’ first during development.
+Since LibChat is managed in the same way as monorepo, it is recommended to install ‘make’ first during development.
 
 monorepo Project Name:
 
@@ -83,7 +83,7 @@ export default YourComponent;
 
 ```typescript
 // utils/i18n.ts
-import { i18nT } from '@fastgpt/web/i18n/utils';
+import { i18nT } from '@libchat/web/i18n/utils';
 
 const staticContent = {
   id: 'simpleChat',
@@ -107,12 +107,12 @@ Please fill the AuditEventEnum and audit function is added to the ts, and on the
 
 ```sh
 # Docker cmd: Build image, not proxy
-docker build -f ./projects/app/Dockerfile -t registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.1 . --build-arg name=app
+docker build -f ./projects/app/Dockerfile -t registry.cn-hangzhou.aliyuncs.com/libchat/libchat:v4.8.1 . --build-arg name=app
 # Make cmd: Build image, not proxy
-make build name=app image=registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.1
+make build name=app image=registry.cn-hangzhou.aliyuncs.com/libchat/libchat:v4.8.1
 
 # Docker cmd: Build image with proxy
-docker build -f ./projects/app/Dockerfile -t registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.1 . --build-arg name=app --build-arg proxy=taobao
+docker build -f ./projects/app/Dockerfile -t registry.cn-hangzhou.aliyuncs.com/libchat/libchat:v4.8.1 . --build-arg name=app --build-arg proxy=taobao
 # Make cmd: Build image with proxy
-make build name=app image=registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.8.1 proxy=taobao
+make build name=app image=registry.cn-hangzhou.aliyuncs.com/libchat/libchat:v4.8.1 proxy=taobao
 ```

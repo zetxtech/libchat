@@ -1,5 +1,5 @@
 import { POST } from '@/web/common/api/request';
-import { TrackEnum } from '@fastgpt/global/common/middle/tracks/constants';
+import { TrackEnum } from '@libchat/global/common/middle/tracks/constants';
 import { useSystemStore } from '../../system/useSystemStore';
 
 const createTrack = ({ event, data }: { event: TrackEnum; data: any }) => {

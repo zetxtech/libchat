@@ -1,9 +1,9 @@
-import { batchRun, delay } from '@fastgpt/global/common/system/utils';
+import { batchRun, delay } from '@libchat/global/common/system/utils';
 import { addLog } from '../../common/system/log';
-import { htmlTable2Md } from '@fastgpt/global/common/string/markdown';
+import { htmlTable2Md } from '@libchat/global/common/string/markdown';
 import axios, { type Method } from 'axios';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { type ImageType } from '../../worker/readFile/type';
 import { getImageBase64 } from '../../common/file/image/utils';
 

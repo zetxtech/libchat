@@ -16,18 +16,18 @@ import {
   Thead,
   Tr
 } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { AppListContext } from './context';
 import { useContextSelector } from 'use-context-selector';
-import { type McpToolConfigType } from '@fastgpt/global/core/app/type';
+import { type McpToolConfigType } from '@libchat/global/core/app/type';
 import type { getMCPToolsBody } from '@/pages/api/support/mcp/client/getTools';
 import HeaderAuthConfig from '@/components/common/secret/HeaderAuthConfig';
-import { type StoreSecretValueType } from '@fastgpt/global/common/secret/type';
+import { type StoreSecretValueType } from '@libchat/global/common/secret/type';
 
 export type MCPToolSetData = {
   url: string;

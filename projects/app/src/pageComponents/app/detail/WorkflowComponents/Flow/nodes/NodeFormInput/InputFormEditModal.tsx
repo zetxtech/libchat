@@ -1,13 +1,13 @@
 import { Box, Flex, FormLabel, Stack } from '@chakra-ui/react';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import MyModal from '@libchat/web/components/common/MyModal';
 import React, { useCallback } from 'react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { type UserInputFormItemType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { type UserInputFormItemType } from '@libchat/global/core/workflow/template/system/interactive/type';
 import { useForm } from 'react-hook-form';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import InputTypeConfig from '../NodePluginIO/InputTypeConfig';
 
 export const defaultFormInput: UserInputFormItemType = {

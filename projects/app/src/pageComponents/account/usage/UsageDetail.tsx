@@ -11,13 +11,13 @@ import {
   Td,
   TableContainer
 } from '@chakra-ui/react';
-import { type UsageItemType } from '@fastgpt/global/support/wallet/usage/type.d';
+import { type UsageItemType } from '@libchat/global/support/wallet/usage/type.d';
 import dayjs from 'dayjs';
-import { UsageSourceMap } from '@fastgpt/global/support/wallet/usage/constants';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import { UsageSourceMap } from '@libchat/global/support/wallet/usage/constants';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import { formatNumber } from '@fastgpt/global/common/math/tools';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import { formatNumber } from '@libchat/global/common/math/tools';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 const UsageDetail = ({ usage, onClose }: { usage: UsageItemType; onClose: () => void }) => {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import Avatar from '@libchat/web/components/common/Avatar';
 import {
   Box,
   Button,
@@ -22,35 +22,35 @@ import {
   putUpdateMemberNameByManager,
   postRestoreMember
 } from '@/web/support/user/team/api';
-import Tag from '@fastgpt/web/components/common/Tag';
-import Icon from '@fastgpt/web/components/common/Icon';
+import Tag from '@libchat/web/components/common/Tag';
+import Icon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
 import { TeamContext } from './context';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import dynamic from 'next/dynamic';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { delLeaveTeam } from '@/web/support/user/team/api';
 import { GetSearchUserGroupOrg, postSyncMembers } from '@/web/support/user/api';
 import {
   TeamMemberRoleEnum,
   TeamMemberStatusEnum
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 import format from 'date-fns/format';
 import OrgTags from '@/components/support/user/team/OrgTags';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
 import { useCallback, useEffect, useState } from 'react';
 import { downloadFetch } from '@/web/common/system/utils';
-import { type TeamMemberItemType } from '@fastgpt/global/support/user/team/type';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
-import { type PaginationResponse } from '@fastgpt/web/common/fetch/type';
+import { type TeamMemberItemType } from '@libchat/global/support/user/team/type';
+import { useToast } from '@libchat/web/hooks/useToast';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
+import { type PaginationResponse } from '@libchat/web/common/fetch/type';
 import _ from 'lodash';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { useEditTitle } from '@/web/common/hooks/useEditTitle';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 const InviteModal = dynamic(() => import('./Invite/InviteModal'));
 const TeamTagModal = dynamic(() => import('@/components/support/user/team/TeamTagModal'));

@@ -1,8 +1,8 @@
 import type { ListParams } from '@/pages/api/core/app/template/list';
 import { GET } from '@/web/common/api/request';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import type { AppTemplateSchemaType, TemplateTypeSchemaType } from '@fastgpt/global/core/app/type';
-import { defaultTemplateTypes } from '@fastgpt/web/core/workflow/constants';
+import type { AppTemplateSchemaType, TemplateTypeSchemaType } from '@libchat/global/core/app/type';
+import { defaultTemplateTypes } from '@libchat/web/core/workflow/constants';
 
 export const getTemplateMarketItemList = (data: ListParams) =>
   GET<AppTemplateSchemaType[]>(`/core/app/template/list`, data);

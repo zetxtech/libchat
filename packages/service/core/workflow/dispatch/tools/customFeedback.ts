@@ -1,12 +1,12 @@
 import {
   DispatchNodeResponseKeyEnum,
   SseResponseEventEnum
-} from '@fastgpt/global/core/workflow/runtime/constants';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/constants';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
 import { addCustomFeedbacks } from '../../../chat/controller';
-import { textAdaptGptResponse } from '@fastgpt/global/core/workflow/runtime/utils';
+import { textAdaptGptResponse } from '@libchat/global/core/workflow/runtime/utils';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.textareaInput]: string;

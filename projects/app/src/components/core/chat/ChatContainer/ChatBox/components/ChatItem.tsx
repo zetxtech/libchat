@@ -10,23 +10,23 @@ import {
   ChatItemValueTypeEnum,
   ChatRoleEnum,
   ChatStatusEnum
-} from '@fastgpt/global/core/chat/constants';
+} from '@libchat/global/core/chat/constants';
 import FilesBlock from './FilesBox';
 import { ChatBoxContext } from '../Provider';
 import { useContextSelector } from 'use-context-selector';
 import AIResponseBox from '../../../components/AIResponseBox';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
 import {
   type AIChatItemValueItemType,
   type ChatItemValueItemType
-} from '@fastgpt/global/core/chat/type';
+} from '@libchat/global/core/chat/type';
 import { CodeClassNameEnum } from '@/components/Markdown/utils';
 import { isEqual } from 'lodash';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import { formatTimeToChatItemTime } from '@fastgpt/global/common/string/time';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import { formatTimeToChatItemTime } from '@libchat/global/common/string/time';
 import dayjs from 'dayjs';
 import {
   ChatItemContext,

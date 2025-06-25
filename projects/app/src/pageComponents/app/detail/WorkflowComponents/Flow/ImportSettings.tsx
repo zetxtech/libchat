@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, ModalBody, ModalFooter } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../context';
 import { useTranslation } from 'next-i18next';

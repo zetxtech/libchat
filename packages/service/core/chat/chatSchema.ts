@@ -1,11 +1,11 @@
 import { connectionMongo, getMongoModel } from '../../common/mongo';
 const { Schema } = connectionMongo;
-import { type ChatSchema as ChatType } from '@fastgpt/global/core/chat/type.d';
-import { ChatSourceEnum, ChatSourceMap } from '@fastgpt/global/core/chat/constants';
+import { type ChatSchema as ChatType } from '@libchat/global/core/chat/type.d';
+import { ChatSourceEnum, ChatSourceMap } from '@libchat/global/core/chat/constants';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 import { AppCollectionName } from '../app/schema';
 
 export const chatCollectionName = 'chat';

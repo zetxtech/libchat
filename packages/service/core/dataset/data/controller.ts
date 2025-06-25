@@ -1,6 +1,6 @@
 import { addEndpointToImageUrl } from '../../../common/file/image/utils';
 import { getDatasetImagePreviewUrl } from '../image/utils';
-import type { DatasetCiteItemType, DatasetDataSchemaType } from '@fastgpt/global/core/dataset/type';
+import type { DatasetCiteItemType, DatasetDataSchemaType } from '@libchat/global/core/dataset/type';
 
 export const formatDatasetDataValue = ({
   teamId,

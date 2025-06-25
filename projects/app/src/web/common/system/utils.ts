@@ -1,9 +1,9 @@
 import {
   type EmbeddingModelItemType,
   type LLMModelItemType
-} from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/global/core/ai/model.d';
 import { useSystemStore } from './useSystemStore';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 
 export const downloadFetch = async ({
   url,

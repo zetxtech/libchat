@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from './render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import Container from '../components/Container';
 import RenderOutput from './render/RenderOutput';
 import IOTitle from '../components/IOTitle';
@@ -9,17 +9,17 @@ import { useTranslation } from 'next-i18next';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
 import { useCreation } from 'ahooks';
-import { type FlowNodeOutputItemType } from '@fastgpt/global/core/workflow/type/io';
-import { FlowNodeOutputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { type FlowNodeOutputItemType } from '@libchat/global/core/workflow/type/io';
+import { FlowNodeOutputTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import { AppContext } from '@/pageComponents/app/detail/context';
 import { workflowSystemVariables } from '@/web/core/app/utils';
 import {
   formatEditorVariablePickerIcon,
   getAppChatConfig,
   getGuideModule
-} from '@fastgpt/global/core/workflow/utils';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+} from '@libchat/global/core/workflow/utils';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 
 const NodeStart = ({ data, selected }: NodeProps<FlowNodeItemType>) => {
   const { t } = useTranslation();

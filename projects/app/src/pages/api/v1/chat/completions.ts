@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { sseErrRes, jsonRes } from '@fastgpt/service/common/response';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { ChatRoleEnum, ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { dispatchWorkFlow } from '@fastgpt/service/core/workflow/dispatch';
-import type { ChatCompletionCreateParams } from '@fastgpt/global/core/ai/type.d';
-import type { ChatCompletionMessageParam } from '@fastgpt/global/core/ai/type.d';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { sseErrRes, jsonRes } from '@libchat/service/common/response';
+import { addLog } from '@libchat/service/common/system/log';
+import { ChatRoleEnum, ChatSourceEnum } from '@libchat/global/core/chat/constants';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { dispatchWorkFlow } from '@libchat/service/core/workflow/dispatch';
+import type { ChatCompletionCreateParams } from '@libchat/global/core/ai/type.d';
+import type { ChatCompletionMessageParam } from '@libchat/global/core/ai/type.d';
 import {
   getWorkflowEntryNodeIds,
   getMaxHistoryLimitFromNodes,
@@ -15,16 +15,16 @@ import {
   storeNodes2RuntimeNodes,
   textAdaptGptResponse,
   getLastInteractiveValue
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import { GPTMessages2Chats, chatValue2RuntimePrompt } from '@fastgpt/global/core/chat/adapt';
-import { getChatItems } from '@fastgpt/service/core/chat/controller';
-import { saveChat, updateInteractiveChat } from '@fastgpt/service/core/chat/saveChat';
-import { responseWrite } from '@fastgpt/service/common/response';
-import { createChatUsage } from '@fastgpt/service/support/wallet/usage/controller';
+} from '@libchat/global/core/workflow/runtime/utils';
+import { GPTMessages2Chats, chatValue2RuntimePrompt } from '@libchat/global/core/chat/adapt';
+import { getChatItems } from '@libchat/service/core/chat/controller';
+import { saveChat, updateInteractiveChat } from '@libchat/service/core/chat/saveChat';
+import { responseWrite } from '@libchat/service/common/response';
+import { createChatUsage } from '@libchat/service/support/wallet/usage/controller';
 import { authOutLinkChatStart } from '@/service/support/permission/auth/outLink';
-import { pushResult2Remote, addOutLinkUsage } from '@fastgpt/service/support/outLink/tools';
+import { pushResult2Remote, addOutLinkUsage } from '@libchat/service/support/outLink/tools';
 import requestIp from 'request-ip';
-import { getUsageSourceByAuthType } from '@fastgpt/global/support/wallet/usage/tools';
+import { getUsageSourceByAuthType } from '@libchat/global/support/wallet/usage/tools';
 import { authTeamSpaceToken } from '@/service/support/permission/auth/team';
 import {
   concatHistories,
@@ -32,36 +32,36 @@ import {
   getChatTitleFromChatMessage,
   removeAIResponseCite,
   removeEmptyUserInput
-} from '@fastgpt/global/core/chat/utils';
-import { updateApiKeyUsage } from '@fastgpt/service/support/openapi/tools';
-import { getUserChatInfoAndAuthTeamPoints } from '@fastgpt/service/support/permission/auth/team';
-import { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
-import { type AuthOutLinkChatProps } from '@fastgpt/global/support/outLink/api';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { type AIChatItemType, type UserChatItemType } from '@fastgpt/global/core/chat/type';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+} from '@libchat/global/core/chat/utils';
+import { updateApiKeyUsage } from '@libchat/service/support/openapi/tools';
+import { getUserChatInfoAndAuthTeamPoints } from '@libchat/service/support/permission/auth/team';
+import { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { type AppSchema } from '@libchat/global/core/app/type';
+import { type AuthOutLinkChatProps } from '@libchat/global/support/outLink/api';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { type AIChatItemType, type UserChatItemType } from '@libchat/global/core/chat/type';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 
 import { NextAPI } from '@/service/middleware/entry';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import {
   getPluginRunUserQuery,
   updatePluginInputByVariables
-} from '@fastgpt/global/core/workflow/utils';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { getSystemTime } from '@fastgpt/global/common/time/timezone';
-import { rewriteNodeOutputByHistories } from '@fastgpt/global/core/workflow/runtime/utils';
-import { getWorkflowResponseWrite } from '@fastgpt/service/core/workflow/dispatch/utils';
-import { WORKFLOW_MAX_RUN_TIMES } from '@fastgpt/service/core/workflow/constants';
-import { getPluginInputsFromStoreNodes } from '@fastgpt/global/core/app/plugin/utils';
-import { type ExternalProviderType } from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/utils';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { getSystemTime } from '@libchat/global/common/time/timezone';
+import { rewriteNodeOutputByHistories } from '@libchat/global/core/workflow/runtime/utils';
+import { getWorkflowResponseWrite } from '@libchat/service/core/workflow/dispatch/utils';
+import { WORKFLOW_MAX_RUN_TIMES } from '@libchat/service/core/workflow/constants';
+import { getPluginInputsFromStoreNodes } from '@libchat/global/core/app/plugin/utils';
+import { type ExternalProviderType } from '@libchat/global/core/workflow/runtime/type';
 
-type FastGptWebChatProps = {
+type LibChatWebChatProps = {
   chatId?: string; // undefined: get histories from messages, '': new chat, 'xxxxx': get histories from db
   appId?: string;
   customUid?: string; // non-undefined: will be the priority provider for the logger.
@@ -69,7 +69,7 @@ type FastGptWebChatProps = {
 };
 
 export type Props = ChatCompletionCreateParams &
-  FastGptWebChatProps &
+  LibChatWebChatProps &
   OutLinkChatAuthProps & {
     messages: ChatCompletionMessageParam[];
     responseChatItemId?: string;

@@ -7,12 +7,12 @@ import {
   DatasetTypeEnum,
   DatasetTypeMap,
   ParagraphChunkAIModeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
-import type { DatasetSchemaType } from '@fastgpt/global/core/dataset/type.d';
+} from '@libchat/global/support/user/team/constant';
+import type { DatasetSchemaType } from '@libchat/global/core/dataset/type.d';
 
 export const DatasetCollectionName = 'datasets';
 

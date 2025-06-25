@@ -1,20 +1,20 @@
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import { XYPosition } from 'reactflow';
 import { AppModuleItemTypeEnum, ModulesInputItemTypeEnum } from '../constants/app';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import type { FlowNodeOutputTargetItemType } from '@fastgpt/global/core/workflow/node/type.d';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import type { FlowNodeOutputTargetItemType } from '@libchat/global/core/workflow/node/type.d';
 import {
   FlowNodeInputItemType,
   FlowNodeOutputItemType
-} from '@fastgpt/global/core/workflow/type/io.d';
-import type { StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
-import type { FlowNodeTemplateType } from '@fastgpt/global/core/workflow/type/node';
-import type { ChatSchema } from '@fastgpt/global/core/chat/type';
-import type { AppSchema } from '@fastgpt/global/core/app/type';
+} from '@libchat/global/core/workflow/type/io.d';
+import type { StoreNodeItemType } from '@libchat/global/core/workflow/type/node.d';
+import type { FlowNodeTemplateType } from '@libchat/global/core/workflow/type/node';
+import type { ChatSchema } from '@libchat/global/core/chat/type';
+import type { AppSchema } from '@libchat/global/core/app/type';
 import { ChatModelType } from '@/constants/model';
-import { TeamMemberStatusEnum } from '@fastgpt/global/support/user/team/constant';
-import type { SourceMember } from '@fastgpt/global/support/user/type';
+import { TeamMemberStatusEnum } from '@libchat/global/support/user/team/constant';
+import type { SourceMember } from '@libchat/global/support/user/type';
 
 export interface ShareAppItem {
   _id: string;

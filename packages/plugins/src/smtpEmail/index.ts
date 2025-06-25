@@ -1,4 +1,4 @@
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import nodemailer from 'nodemailer';
 
 interface Props {
@@ -89,7 +89,7 @@ const main = async ({
 
     // 发送邮件
     const info = await transporter.sendMail({
-      from: `"${fromName || 'FastGPT'}" <${smtpUser}>`,
+      from: `"${fromName || 'LibChat'}" <${smtpUser}>`,
       to: to
         .split(',')
         .map((email) => email.trim())

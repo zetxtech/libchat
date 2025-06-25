@@ -1,4 +1,4 @@
-import { urlsFetch } from '@fastgpt/service/common/string/cheerio';
+import { urlsFetch } from '@libchat/service/common/string/cheerio';
 
 type Props = {
   url: string;

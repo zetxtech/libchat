@@ -1,28 +1,28 @@
 import React, { useCallback, useState } from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from '../render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import { Box, Button, Flex } from '@chakra-ui/react';
 import { SmallAddIcon } from '@chakra-ui/icons';
 import Container from '../../components/Container';
 import {
   type FlowNodeInputItemType,
   type ReferenceValueType
-} from '@fastgpt/global/core/workflow/type/io';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/type/io';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import { useTranslation } from 'next-i18next';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
 import IOTitle from '../../components/IOTitle';
 import { ReferSelector, useReference } from '../render/RenderInput/templates/Reference';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import ValueTypeLabel from '../render/ValueTypeLabel';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import PluginOutputEditModal, { defaultOutput } from './PluginOutputEditModal';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 const customOutputConfig = {
   selectValueTypeList: Object.values(WorkflowIOValueTypeEnum),

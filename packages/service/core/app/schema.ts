@@ -1,10 +1,10 @@
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import { Schema, getMongoModel } from '../../common/mongo';
-import type { AppSchema as AppType } from '@fastgpt/global/core/app/type.d';
+import type { AppSchema as AppType } from '@libchat/global/core/app/type.d';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 
 export const AppCollectionName = 'apps';
 

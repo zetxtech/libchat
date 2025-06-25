@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import type { RenderInputProps } from '../type';
 import { useTranslation } from 'next-i18next';
-import PromptEditor from '@fastgpt/web/components/common/Textarea/PromptEditor';
+import PromptEditor from '@libchat/web/components/common/Textarea/PromptEditor';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
 import { useCreation } from 'ahooks';

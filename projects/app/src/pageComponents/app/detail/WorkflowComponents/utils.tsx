@@ -1,12 +1,12 @@
 import { computedNodeInputReference } from '@/web/core/workflow/utils';
-import { type AppDetailType } from '@fastgpt/global/core/app/type';
-import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import type { StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
+import { type AppDetailType } from '@libchat/global/core/app/type';
+import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import type { StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
 import {
   type FlowNodeItemType,
   type StoreNodeItemType
-} from '@fastgpt/global/core/workflow/type/node.d';
+} from '@libchat/global/core/workflow/type/node.d';
 import { type TFunction } from 'i18next';
 import { type Node, type Edge } from 'reactflow';
 

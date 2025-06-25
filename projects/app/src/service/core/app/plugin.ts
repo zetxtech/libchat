@@ -1,11 +1,11 @@
-import { FastGPTProUrl } from '@fastgpt/service/common/system/constants';
-import { isProduction } from '@fastgpt/global/common/system/constants';
+import { LibChatProUrl } from '@libchat/service/common/system/constants';
+import { isProduction } from '@libchat/global/common/system/constants';
 import { cloneDeep } from 'lodash';
-import { getCommunityCb, getCommunityPlugins } from '@fastgpt/plugins/register';
-import { GET, POST } from '@fastgpt/service/common/api/plusRequest';
-import { type SystemPluginTemplateItemType } from '@fastgpt/global/core/workflow/type';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { type SystemPluginResponseType } from '@fastgpt/plugins/type';
+import { getCommunityCb, getCommunityPlugins } from '@libchat/plugins/register';
+import { GET, POST } from '@libchat/service/common/api/plusRequest';
+import { type SystemPluginTemplateItemType } from '@libchat/global/core/workflow/type';
+import { addLog } from '@libchat/service/common/system/log';
+import { type SystemPluginResponseType } from '@libchat/plugins/type';
 
 /* Get plugins */
 const getCommercialPlugins = () => {
@@ -21,7 +21,7 @@ export const getSystemPlugins = async (refresh = false) => {
       global.systemPlugins = [];
     }
 
-    global.systemPlugins = FastGPTProUrl
+    global.systemPlugins = LibChatProUrl
       ? await getCommercialPlugins()
       : await getCommunityPlugins();
 
@@ -72,7 +72,7 @@ export const getSystemPluginCb = async (refresh = false) => {
   try {
     global.systemPluginCb = {};
     await getSystemPlugins(refresh);
-    global.systemPluginCb = FastGPTProUrl ? await getCommercialCb() : await getCommunityCb();
+    global.systemPluginCb = LibChatProUrl ? await getCommercialCb() : await getCommunityCb();
     return global.systemPluginCb;
   } catch (error) {
     return Promise.reject(error);

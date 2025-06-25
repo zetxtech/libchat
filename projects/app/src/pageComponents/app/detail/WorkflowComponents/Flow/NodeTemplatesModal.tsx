@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
-import type { FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import type { FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import { type Node } from 'reactflow';
 import { useContextSelector } from 'use-context-selector';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { WorkflowNodeEdgeContext } from '../context/workflowInitContext';
 import { useMemoizedFn } from 'ahooks';
 import NodeTemplateListHeader from './components/NodeTemplates/header';

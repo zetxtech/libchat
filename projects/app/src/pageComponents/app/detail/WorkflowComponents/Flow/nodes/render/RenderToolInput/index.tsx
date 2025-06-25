@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import type { FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io.d';
+import type { FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io.d';
 import {
   Box,
   Button,
@@ -14,14 +14,14 @@ import {
   HStack
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import dynamic from 'next/dynamic';
 import { defaultEditFormData } from './EditFieldModal';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
 import IOTitle from '../../../components/IOTitle';
 import { SmallAddIcon } from '@chakra-ui/icons';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 const EditFieldModal = dynamic(() => import('./EditFieldModal'));
 
 const RenderToolInput = ({

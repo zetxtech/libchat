@@ -1,24 +1,24 @@
 import { insertData2Dataset } from '@/service/core/dataset/data/controller';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
 import { pushGenerateVectorUsage } from '@/service/support/wallet/usage/push';
 import { checkTeamAiPointsAndLock } from './utils';
 import { addMinutes } from 'date-fns';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
+import { addLog } from '@libchat/service/common/system/log';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
 import {
   deleteDatasetDataVector,
   insertDatasetDataVector
-} from '@fastgpt/service/common/vectorDB/controller';
-import { getEmbeddingModel } from '@fastgpt/service/core/ai/model';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { getMaxIndexSize } from '@fastgpt/global/core/dataset/training/utils';
+} from '@libchat/service/common/vectorDB/controller';
+import { getEmbeddingModel } from '@libchat/service/core/ai/model';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { getMaxIndexSize } from '@libchat/global/core/dataset/training/utils';
 import type {
   DatasetDataSchemaType,
   DatasetTrainingSchemaType
-} from '@fastgpt/global/core/dataset/type';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+} from '@libchat/global/core/dataset/type';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 const reduceQueue = () => {
   global.vectorQueueLen = global.vectorQueueLen > 0 ? global.vectorQueueLen - 1 : 0;

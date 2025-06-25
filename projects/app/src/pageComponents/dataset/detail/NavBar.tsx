@@ -1,16 +1,16 @@
 import React, { useCallback, useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box, Flex, IconButton, useTheme, Progress } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useRouter } from 'next/router';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import MyPopover from '@libchat/web/components/common/MyPopover';
 import ParentPaths from '@/components/common/ParentPaths';
 import { getTrainingQueueLen } from '@/web/core/dataset/api';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 
 export enum TabEnum {
   dataCard = 'dataCard',

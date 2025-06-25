@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { Box, Button, HStack, ModalBody, ModalFooter, VStack, Flex, Link } from '@chakra-ui/react';
 import FileSelector, { type SelectFileItemType } from '../components/FileSelector';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 import { postTemplateDatasetCollection } from '@/web/core/dataset/api';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import { useContextSelector } from 'use-context-selector';
 import { getDocPath } from '@/web/common/system/doc';

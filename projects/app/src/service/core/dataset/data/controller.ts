@@ -1,24 +1,24 @@
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
 import {
   type CreateDatasetDataProps,
   type PatchIndexesProps,
   type UpdateDatasetDataProps
-} from '@fastgpt/global/core/dataset/controller';
-import { insertDatasetDataVector } from '@fastgpt/service/common/vectorDB/controller';
-import { jiebaSplit } from '@fastgpt/service/common/string/jieba/index';
-import { deleteDatasetDataVector } from '@fastgpt/service/common/vectorDB/controller';
+} from '@libchat/global/core/dataset/controller';
+import { insertDatasetDataVector } from '@libchat/service/common/vectorDB/controller';
+import { jiebaSplit } from '@libchat/service/common/string/jieba/index';
+import { deleteDatasetDataVector } from '@libchat/service/common/vectorDB/controller';
 import {
   type DatasetDataIndexItemType,
   type DatasetDataItemType
-} from '@fastgpt/global/core/dataset/type';
-import { getEmbeddingModel } from '@fastgpt/service/core/ai/model';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { type ClientSession } from '@fastgpt/service/common/mongo';
-import { MongoDatasetDataText } from '@fastgpt/service/core/dataset/data/dataTextSchema';
-import { DatasetDataIndexTypeEnum } from '@fastgpt/global/core/dataset/data/constants';
-import { countPromptTokens } from '@fastgpt/service/common/string/tiktoken';
-import { deleteDatasetImage } from '@fastgpt/service/core/dataset/image/controller';
-import { text2Chunks } from '@fastgpt/service/worker/function';
+} from '@libchat/global/core/dataset/type';
+import { getEmbeddingModel } from '@libchat/service/core/ai/model';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { type ClientSession } from '@libchat/service/common/mongo';
+import { MongoDatasetDataText } from '@libchat/service/core/dataset/data/dataTextSchema';
+import { DatasetDataIndexTypeEnum } from '@libchat/global/core/dataset/data/constants';
+import { countPromptTokens } from '@libchat/service/common/string/tiktoken';
+import { deleteDatasetImage } from '@libchat/service/core/dataset/image/controller';
+import { text2Chunks } from '@libchat/service/worker/function';
 
 const formatIndexes = async ({
   indexes = [],

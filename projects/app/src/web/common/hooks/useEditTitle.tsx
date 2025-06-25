@@ -1,10 +1,10 @@
 import React, { useCallback, useRef } from 'react';
 import { ModalFooter, ModalBody, Input, useDisclosure, Button, Box } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 export const useEditTitle = ({
   title,

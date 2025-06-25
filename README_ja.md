@@ -1,8 +1,8 @@
 <div align="center">
 
-<a href="https://tryfastgpt.ai/"><img src="/.github/imgs/logo.svg" width="120" height="120" alt="fastgpt logo"></a>
+<a href="https://trylibchat.ai/"><img src="/.github/imgs/logo.svg" width="120" height="120" alt="libchat logo"></a>
 
-# FastGPT
+# LibChat
 
 <p align="center">
   <a href="./README_en.md">English</a> |
@@ -10,33 +10,33 @@
   <a href="./README_ja.md">日语</a>
 </p>
 
-FastGPT は、LLM 上 に 構築 された 知識 ベースの Q&A システムで、すぐに 使 えるデータ 処理 とモデル 呼 び 出 し 機能 を 提供 し、Flow の 可視化 を 通 じてワークフローのオーケストレーションを 可能 にします！
+LibChat は、LLM 上 に 構築 された 知識 ベースの Q&A システムで、すぐに 使 えるデータ 処理 とモデル 呼 び 出 し 機能 を 提供 し、Flow の 可視化 を 通 じてワークフローのオーケストレーションを 可能 にします！
 
 </div>
 
 <p align="center">
-  <a href="https://tryfastgpt.ai/">
+  <a href="https://trylibchat.ai/">
     <img height="21" src="https://img.shields.io/badge/在线使用-d4eaf7?style=flat-square&logo=spoj&logoColor=7d09f1" alt="cloud">
   </a>
-  <a href="https://doc.tryfastgpt.ai/docs/intro">
+  <a href="https://doc.trylibchat.ai/docs/intro">
     <img height="21" src="https://img.shields.io/badge/相关文档-7d09f1?style=flat-square" alt="document">
   </a>
-  <a href="https://doc.tryfastgpt.ai/docs/development">
+  <a href="https://doc.trylibchat.ai/docs/development">
     <img height="21" src="https://img.shields.io/badge/本地开发-%23d4eaf7?style=flat-square&logo=xcode&logoColor=7d09f1" alt="development">
   </a>
   <a href="/#-%E7%9B%B8%E5%85%B3%E9%A1%B9%E7%9B%AE">
     <img height="21" src="https://img.shields.io/badge/相关项目-7d09f1?style=flat-square" alt="project">
   </a>
-  <a href="https://github.com/labring/FastGPT/blob/main/LICENSE">
+  <a href="https://github.com/labring/LibChat/blob/main/LICENSE">
     <img height="21" src="https://img.shields.io/badge/License-Apache--2.0-ffffff?style=flat-square&labelColor=d4eaf7&color=7d09f1" alt="license">
   </a>
 </p>
 
-https://github.com/labring/FastGPT/assets/15308462/7d3a38df-eb0e-4388-9250-2409bd33f6d4
+https://github.com/labring/LibChat/assets/15308462/7d3a38df-eb0e-4388-9250-2409bd33f6d4
 
 ## 🛸 クラウドサービスの 利用
 
-[tryfastgpt.ai](https://tryfastgpt.ai/)
+[trylibchat.ai](https://trylibchat.ai/)
 
 | | |
 | ---------------------------------- | ---------------------------------- |
@@ -94,18 +94,18 @@ https://github.com/labring/FastGPT/assets/15308462/7d3a38df-eb0e-4388-9250-2409b
 
 - **⚡ デプロイ**
 
-  [![](https://cdn.jsdelivr.net/gh/labring-actions/templates@main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-fastdeploy%3FtemplateName%3Dfastgpt&uid=fnWRt09fZP)
+  [![](https://cdn.jsdelivr.net/gh/labring-actions/templates@main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-fastdeploy%3FtemplateName%3Dlibchat&uid=fnWRt09fZP)
 
   デプロイ 後、データベースをセットアップするので、2～4分待 ってください。基本設定 を 使 っているので、最初 は 少 し 遅 いかもしれません。
 
-- [ローカル 開発入門](https://doc.tryfastgpt.ai/docs/development)
-- [FastGPT のデプロイ](https://doc.tryfastgpt.ai/docs/installation)
-- [システム 設定 ガイド](https://doc.tryfastgpt.ai/docs/installation/reference)
-- [複数 モデルの 設定](https://doc.tryfastgpt.ai/docs/installation/reference/models)
-- [バージョン 更新 とアップグレード](https://doc.tryfastgpt.ai/docs/installation/upgrading)
+- [ローカル 開発入門](https://doc.trylibchat.ai/docs/development)
+- [LibChat のデプロイ](https://doc.trylibchat.ai/docs/installation)
+- [システム 設定 ガイド](https://doc.trylibchat.ai/docs/installation/reference)
+- [複数 モデルの 設定](https://doc.trylibchat.ai/docs/installation/reference/models)
+- [バージョン 更新 とアップグレード](https://doc.trylibchat.ai/docs/installation/upgrading)
 
 <!-- ## :point_right: ロードマップ
-- [FastGPT ロードマップ](https://kjqvjse66l.feishu.cn/docx/RVUxdqE2WolDYyxEKATcM0XXnte) -->
+- [LibChat ロードマップ](https://kjqvjse66l.feishu.cn/docx/RVUxdqE2WolDYyxEKATcM0XXnte) -->
 
 <!-- ## 🏘️ コミュニティ
 
@@ -115,10 +115,10 @@ https://github.com/labring/FastGPT/assets/15308462/7d3a38df-eb0e-4388-9250-2409b
 
 ## 👀 その 他
 
-- [FastGPT FAQ](https://kjqvjse66l.feishu.cn/docx/HtrgdT0pkonP4kxGx8qcu6XDnGh)
+- [LibChat FAQ](https://kjqvjse66l.feishu.cn/docx/HtrgdT0pkonP4kxGx8qcu6XDnGh)
 - [Docker 導入 チュートリアル 動画](https://www.bilibili.com/video/BV1jo4y147fT/)
 - [公式 アカウント 統合 ビデオチュートリアル](https://www.bilibili.com/video/BV1xh4y1t7fy/)
-- [FastGPT ナレッジベースデモ](https://www.bilibili.com/video/BV1Wo4y1p7i1/)
+- [LibChat ナレッジベースデモ](https://www.bilibili.com/video/BV1Wo4y1p7i1/)
 
 ## 💪 関連 プロジェクト
 
@@ -129,8 +129,8 @@ https://github.com/labring/FastGPT/assets/15308462/7d3a38df-eb0e-4388-9250-2409b
 
 ## 🤝 サードパーティエコシステム
 
-- [luolinAI：すぐに 使 える 企業向 け WeChat ボット](https://github.com/luolin-ai/FastGPT-Enterprise-WeChatbot)
+- [luolinAI：すぐに 使 える 企業向 け WeChat ボット](https://github.com/luolin-ai/LibChat-Enterprise-WeChatbot)
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=labring/FastGPT&type=Date)](https://star-history.com/#labring/FastGPT&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=labring/LibChat&type=Date)](https://star-history.com/#labring/LibChat&Date)

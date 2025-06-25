@@ -1,4 +1,4 @@
-import { type LLMModelItemType } from '@fastgpt/global/core/ai/model.d';
+import { type LLMModelItemType } from '@libchat/global/core/ai/model.d';
 import type {
   ChatCompletionCreateParamsNonStreaming,
   ChatCompletionCreateParamsStreaming,
@@ -7,10 +7,10 @@ import type {
   UnStreamChatType,
   CompletionUsage,
   ChatCompletionMessageToolCall
-} from '@fastgpt/global/core/ai/type';
+} from '@libchat/global/core/ai/type';
 import { getLLMModel } from './model';
-import { getLLMDefaultUsage } from '@fastgpt/global/core/ai/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getLLMDefaultUsage } from '@libchat/global/core/ai/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import json5 from 'json5';
 
 /* 
@@ -31,7 +31,7 @@ export const computedMaxToken = ({
   return Math.max(maxToken, min || 0);
 };
 
-// FastGPT temperature range: [0,10], ai temperature:[0,2],{0,1]……
+// LibChat temperature range: [0,10], ai temperature:[0,2],{0,1]……
 export const computedTemperature = ({
   model,
   temperature

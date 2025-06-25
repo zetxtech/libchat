@@ -5,13 +5,13 @@
 */
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 const { Schema } = connectionMongo;
-import { TeamCollectionName } from '@fastgpt/global/support/user/team/constant';
+import { TeamCollectionName } from '@libchat/global/support/user/team/constant';
 import {
   StandardSubLevelEnum,
   SubModeEnum,
   SubTypeEnum
-} from '@fastgpt/global/support/wallet/sub/constants';
-import type { TeamSubSchema } from '@fastgpt/global/support/wallet/sub/type';
+} from '@libchat/global/support/wallet/sub/constants';
+import type { TeamSubSchema } from '@libchat/global/support/wallet/sub/type';
 
 export const subCollectionName = 'team_subscriptions';
 

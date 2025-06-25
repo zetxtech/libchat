@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 import type { ImageProps } from '@chakra-ui/react';
-import { LOGO_ICON } from '@fastgpt/global/common/system/constants';
+import { LOGO_ICON } from '@libchat/global/common/system/constants';
 import MyIcon from '../Icon';
 import { iconPaths } from '../Icon/constants';
 import MyImage from '../Image/MyImage';

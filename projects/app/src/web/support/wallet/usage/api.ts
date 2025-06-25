@@ -4,9 +4,9 @@ import type {
   GetUsageDashboardProps,
   GetUsageDashboardResponseItem,
   GetUsageProps
-} from '@fastgpt/global/support/wallet/usage/api.d';
-import type { UsageItemType } from '@fastgpt/global/support/wallet/usage/type';
-import type { PaginationProps, PaginationResponse } from '@fastgpt/web/common/fetch/type';
+} from '@libchat/global/support/wallet/usage/api.d';
+import type { UsageItemType } from '@libchat/global/support/wallet/usage/type';
+import type { PaginationProps, PaginationResponse } from '@libchat/web/common/fetch/type';
 
 export const getUserUsages = (data: PaginationProps<GetUsageProps>) =>
   POST<PaginationResponse<UsageItemType>>(`/proApi/support/wallet/usage/getUsage`, data);

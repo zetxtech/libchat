@@ -22,14 +22,14 @@ import {
   ModelProviderList,
   type ModelProviderIdType,
   getModelProvider
-} from '@fastgpt/global/core/ai/provider';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { modelTypeList, ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+} from '@libchat/global/core/ai/provider';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { modelTypeList, ModelTypeEnum } from '@libchat/global/core/ai/model';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import dynamic from 'next/dynamic';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import {
   deleteSystemModel,
   getModelConfigJson,
@@ -39,23 +39,23 @@ import {
   putSystemModel,
   putUpdateDefaultModels
 } from '@/web/core/ai/config';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { type SystemModelItemType } from '@fastgpt/service/core/ai/type';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
-import JsonEditor from '@fastgpt/web/components/common/Textarea/JsonEditor';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { type SystemModelItemType } from '@libchat/service/core/ai/type';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
+import JsonEditor from '@libchat/web/components/common/Textarea/JsonEditor';
 import { clientInitData } from '@/web/common/system/staticData';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { putUpdateWithJson } from '@/web/core/ai/config';
-import CopyBox from '@fastgpt/web/components/common/String/CopyBox';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import CopyBox from '@libchat/web/components/common/String/CopyBox';
+import MyIcon from '@libchat/web/components/common/Icon';
 import AIModelSelector from '@/components/Select/AIModelSelector';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 import { AddModelButton } from './AddModelBox';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
 
-const MyModal = dynamic(() => import('@fastgpt/web/components/common/MyModal'));
+const MyModal = dynamic(() => import('@libchat/web/components/common/MyModal'));
 const ModelEditModal = dynamic(() => import('./AddModelBox').then((mod) => mod.ModelEditModal));
 
 const ModelTable = ({ Tab }: { Tab: React.ReactNode }) => {

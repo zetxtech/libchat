@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoUser } from '@fastgpt/service/support/user/schema';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoUser } from '@libchat/service/support/user/schema';
 
-import { MongoTeamMember } from '@fastgpt/service/support/user/team/teamMemberSchema';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+import { MongoTeamMember } from '@libchat/service/support/user/team/teamMemberSchema';
+import { i18nT } from '@libchat/web/i18n/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
 async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { oldPsw, newPsw } = req.body as { oldPsw: string; newPsw: string };
 

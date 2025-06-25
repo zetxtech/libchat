@@ -2,7 +2,7 @@ import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
 import { useTranslation } from 'next-i18next';
 import { useCallback } from 'react';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 
 export const useWorkflowUtils = () => {
   const { t } = useTranslation();

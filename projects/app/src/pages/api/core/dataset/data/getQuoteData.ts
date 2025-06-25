@@ -1,15 +1,15 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { type DatasetCollectionSchemaType } from '@fastgpt/global/core/dataset/type';
+import { type DatasetCollectionSchemaType } from '@libchat/global/core/dataset/type';
 import { authChatCrud, authCollectionInChat } from '@/service/support/permission/auth/chat';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { authDatasetData } from '@fastgpt/service/support/permission/dataset/auth';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { i18nT } from '@fastgpt/web/i18n/utils';
-import { formatDatasetDataValue } from '@fastgpt/service/core/dataset/data/controller';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { authDatasetData } from '@libchat/service/support/permission/dataset/auth';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { i18nT } from '@libchat/web/i18n/utils';
+import { formatDatasetDataValue } from '@libchat/service/core/dataset/data/controller';
 
 export type GetQuoteDataResponse = {
   collection: DatasetCollectionSchemaType;

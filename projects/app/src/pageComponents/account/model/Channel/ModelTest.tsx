@@ -14,18 +14,18 @@ import {
   ModalBody,
   ModalFooter
 } from '@chakra-ui/react';
-import { getModelProvider } from '@fastgpt/global/core/ai/provider';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { getModelProvider } from '@libchat/global/core/ai/provider';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import React, { useRef, useState } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { batchRun } from '@fastgpt/global/common/system/utils';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyTag from '@libchat/web/components/common/Tag/index';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { batchRun } from '@libchat/global/common/system/utils';
+import { useToast } from '@libchat/web/hooks/useToast';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 type ModelTestItem = {
   label: React.ReactNode;

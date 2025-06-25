@@ -1,20 +1,20 @@
-import { toolValueTypeList } from '@fastgpt/global/core/workflow/constants';
+import { toolValueTypeList } from '@libchat/global/core/workflow/constants';
 import { Box, Button, Flex, Input, ModalBody, ModalFooter, Textarea } from '@chakra-ui/react';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MySelect from '@libchat/web/components/common/MySelect';
 import React, { useCallback, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
 import { defaultEditFormData } from '../render/RenderToolInput/EditFieldModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { FlowNodeOutputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { FlowNodeOutputTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 
 const ToolParamsEditModal = ({
   defaultValue = defaultEditFormData,

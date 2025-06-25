@@ -1,21 +1,21 @@
 import {
   type DispatchNodeResponseType,
   type DispatchNodeResultType
-} from '@fastgpt/global/core/workflow/runtime/type.d';
+} from '@libchat/global/core/workflow/runtime/type.d';
 import { formatModelChars2Points } from '../../../../support/wallet/usage/utils';
-import type { SelectedDatasetType } from '@fastgpt/global/core/workflow/api.d';
-import type { SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
+import type { SelectedDatasetType } from '@libchat/global/core/workflow/api.d';
+import type { SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
 import { getEmbeddingModel, getRerankModel } from '../../../ai/model';
 import { deepRagSearch, defaultSearchDatasetData } from '../../../dataset/search/controller';
-import type { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { DatasetSearchModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { type ChatNodeUsageType } from '@fastgpt/global/support/wallet/bill/type';
+import type { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { DatasetSearchModeEnum } from '@libchat/global/core/dataset/constants';
+import { type ChatNodeUsageType } from '@libchat/global/support/wallet/bill/type';
 import { MongoDataset } from '../../../dataset/schema';
 import { i18nT } from '../../../../../web/i18n/utils';
 import { filterDatasetsByTmbId } from '../../../dataset/utils';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
 import { getDatasetSearchToolResponsePrompt } from '../../../../../global/core/ai/prompt/dataset';
 
 type DatasetSearchProps = ModuleDispatchProps<{

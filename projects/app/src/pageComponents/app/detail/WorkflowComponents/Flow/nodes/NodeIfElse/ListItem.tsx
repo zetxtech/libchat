@@ -2,15 +2,15 @@ import { Box, Button, Flex, HStack } from '@chakra-ui/react';
 import {
   type DraggableProvided,
   type DraggableStateSnapshot
-} from '@fastgpt/web/components/common/DndDrag/index';
+} from '@libchat/web/components/common/DndDrag/index';
 import Container from '../../components/Container';
 import { MinusIcon } from '@chakra-ui/icons';
-import { type IfElseListItemType } from '@fastgpt/global/core/workflow/template/system/ifElse/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { type ReferenceItemValueType } from '@fastgpt/global/core/workflow/type/io';
+import { type IfElseListItemType } from '@libchat/global/core/workflow/template/system/ifElse/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { type ReferenceItemValueType } from '@libchat/global/core/workflow/type/io';
 import { useTranslation } from 'next-i18next';
 import { ReferSelector, useReference } from '../render/RenderInput/templates/Reference';
-import { VARIABLE_NODE_ID, WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { VARIABLE_NODE_ID, WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import {
   VariableConditionEnum,
   allConditionList,
@@ -20,21 +20,21 @@ import {
   objectConditionList,
   renderNumberConditionList,
   stringConditionList
-} from '@fastgpt/global/core/workflow/template/system/ifElse/constant';
+} from '@libchat/global/core/workflow/template/system/ifElse/constant';
 import { useContextSelector } from 'use-context-selector';
 import React, { useMemo } from 'react';
 import { WorkflowContext } from '../../../context';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import MyInput from '@/components/MyInput';
-import { getElseIFLabel, getHandleId } from '@fastgpt/global/core/workflow/utils';
+import { getElseIFLabel, getHandleId } from '@libchat/global/core/workflow/utils';
 import { MySourceHandle } from '../render/Handle';
 import { Position, useReactFlow } from 'reactflow';
 import { getRefData, getWorkflowGlobalVariables } from '@/web/core/workflow/utils';
-import DragIcon from '@fastgpt/web/components/common/DndDrag/DragIcon';
+import DragIcon from '@libchat/web/components/common/DndDrag/DragIcon';
 import { AppContext } from '@/pageComponents/app/detail/context';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 const ListItem = ({
   provided,

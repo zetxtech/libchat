@@ -1,18 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { responseWriteController } from '@fastgpt/service/common/response';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { findDatasetAndAllChildren } from '@fastgpt/service/core/dataset/controller';
+import { responseWriteController } from '@libchat/service/common/response';
+import { addLog } from '@libchat/service/common/system/log';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { findDatasetAndAllChildren } from '@libchat/service/core/dataset/controller';
 import {
   checkExportDatasetLimit,
   updateExportDatasetLimit
-} from '@fastgpt/service/support/user/utils';
+} from '@libchat/service/support/user/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
-import type { DatasetDataSchemaType } from '@fastgpt/global/core/dataset/type';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
+import type { DatasetDataSchemaType } from '@libchat/global/core/dataset/type';
 
 type DataItemType = {
   _id: string;

@@ -2,14 +2,14 @@ import { GET, POST, PUT, DELETE } from '@/web/common/api/request';
 import type {
   GetPathProps,
   ParentTreePathItemType
-} from '@fastgpt/global/common/parentFolder/type.d';
+} from '@libchat/global/common/parentFolder/type.d';
 import type {
   DatasetItemType,
   DatasetListItemType,
   DatasetSimpleItemType,
   DatasetTagType,
   TagUsageType
-} from '@fastgpt/global/core/dataset/type.d';
+} from '@libchat/global/core/dataset/type.d';
 import type { GetDatasetCollectionsProps } from '@/global/core/api/datasetReq.d';
 import type {
   AddTagsToCollectionsParams,
@@ -24,12 +24,12 @@ import type {
   PostWebsiteSyncParams,
   TextCreateDatasetCollectionParams,
   UpdateDatasetCollectionTagParams
-} from '@fastgpt/global/core/dataset/api.d';
+} from '@libchat/global/core/dataset/api.d';
 import type { SearchTestProps, SearchTestResponse } from '@/global/core/dataset/api.d';
 import type { CreateDatasetParams, InsertOneDatasetDataProps } from '@/global/core/dataset/api.d';
-import type { DatasetCollectionItemType } from '@fastgpt/global/core/dataset/type';
-import type { DatasetCollectionSyncResultEnum } from '@fastgpt/global/core/dataset/constants';
-import type { DatasetDataItemType } from '@fastgpt/global/core/dataset/type';
+import type { DatasetCollectionItemType } from '@libchat/global/core/dataset/type';
+import type { DatasetCollectionSyncResultEnum } from '@libchat/global/core/dataset/constants';
+import type { DatasetDataItemType } from '@libchat/global/core/dataset/type';
 import type { DatasetCollectionsListItemType } from '@/global/core/dataset/type.d';
 import type { getDatasetTrainingQueueResponse } from '@/pages/api/core/dataset/training/getDatasetTrainingQueue';
 import type { rebuildEmbeddingBody } from '@/pages/api/core/dataset/training/rebuildEmbedding';
@@ -47,9 +47,9 @@ import type {
   GetDatasetDataListProps,
   GetDatasetDataListRes
 } from '@/pages/api/core/dataset/data/v2/list';
-import type { UpdateDatasetDataProps } from '@fastgpt/global/core/dataset/controller';
+import type { UpdateDatasetDataProps } from '@libchat/global/core/dataset/controller';
 import type { DatasetFolderCreateBody } from '@/pages/api/core/dataset/folder/create';
-import type { PaginationProps, PaginationResponse } from '@fastgpt/web/common/fetch/type';
+import type { PaginationProps, PaginationResponse } from '@libchat/web/common/fetch/type';
 import type { GetApiDatasetFileListProps } from '@/pages/api/core/dataset/apiDataset/list';
 import type {
   listExistIdQuery,
@@ -69,7 +69,7 @@ import type {
   getTrainingErrorBody,
   getTrainingErrorResponse
 } from '@/pages/api/core/dataset/training/getTrainingError';
-import type { APIFileItem } from '@fastgpt/global/core/dataset/apiDataset/type';
+import type { APIFileItem } from '@libchat/global/core/dataset/apiDataset/type';
 import type { GetQuoteDataProps } from '@/pages/api/core/dataset/data/getQuoteData';
 import type {
   GetApiDatasetCataLogResponse,

@@ -1,9 +1,9 @@
 import { type ExportChatType } from '@/types/chat';
-import { type ChatItemType } from '@fastgpt/global/core/chat/type';
+import { type ChatItemType } from '@libchat/global/core/chat/type';
 import { useCallback } from 'react';
 import { htmlTemplate } from '@/web/core/chat/constants';
 import { fileDownload } from '@/web/common/file/utils';
-import { ChatItemValueTypeEnum } from '@fastgpt/global/core/chat/constants';
+import { ChatItemValueTypeEnum } from '@libchat/global/core/chat/constants';
 import { useTranslation } from 'next-i18next';
 export const useChatBox = () => {
   const { t } = useTranslation();

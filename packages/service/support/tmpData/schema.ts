@@ -1,5 +1,5 @@
 import { getMongoModel, Schema } from '../../common/mongo';
-import type { TmpDataSchema as SchemaType } from '@fastgpt/global/support/tmpData/type';
+import type { TmpDataSchema as SchemaType } from '@libchat/global/support/tmpData/type';
 
 const collectionName = 'tmp_datas';
 

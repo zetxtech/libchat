@@ -2,11 +2,11 @@ import {
   type AIChatItemValueItemType,
   type ChatItemValueItemType,
   type ChatSiteItemType
-} from '@fastgpt/global/core/chat/type';
+} from '@libchat/global/core/chat/type';
 import { type ChatBoxInputType, type UserInputFileItemType } from './type';
-import { getFileIcon } from '@fastgpt/global/common/file/icon';
-import { ChatItemValueTypeEnum, ChatStatusEnum } from '@fastgpt/global/core/chat/constants';
-import { extractDeepestInteractive } from '@fastgpt/global/core/workflow/runtime/utils';
+import { getFileIcon } from '@libchat/global/common/file/icon';
+import { ChatItemValueTypeEnum, ChatStatusEnum } from '@libchat/global/core/chat/constants';
+import { extractDeepestInteractive } from '@libchat/global/core/workflow/runtime/utils';
 
 export const formatChatValue2InputType = (value?: ChatItemValueItemType[]): ChatBoxInputType => {
   if (!value) {

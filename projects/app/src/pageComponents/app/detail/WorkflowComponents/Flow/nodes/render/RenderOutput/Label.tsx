@@ -1,15 +1,15 @@
-import { type FlowNodeOutputItemType } from '@fastgpt/global/core/workflow/type/io.d';
+import { type FlowNodeOutputItemType } from '@libchat/global/core/workflow/type/io.d';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box, Flex } from '@chakra-ui/react';
-import { FlowNodeOutputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeOutputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { MySourceHandle } from '../Handle';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
 import { Position } from 'reactflow';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import ValueTypeLabel from '../ValueTypeLabel';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../../context';
 

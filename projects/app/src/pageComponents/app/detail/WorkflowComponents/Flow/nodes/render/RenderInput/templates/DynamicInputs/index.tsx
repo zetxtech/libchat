@@ -4,20 +4,20 @@ import { Box, Button, Flex, HStack } from '@chakra-ui/react';
 import { SmallAddIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import {
   type FlowNodeInputItemType,
   type ReferenceValueType
-} from '@fastgpt/global/core/workflow/type/io';
+} from '@libchat/global/core/workflow/type/io';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
 import { defaultInput } from '../../FieldEditModal';
-import { getInputComponentProps } from '@fastgpt/global/core/workflow/node/io/utils';
+import { getInputComponentProps } from '@libchat/global/core/workflow/node/io/utils';
 import { ReferSelector, useReference } from '../Reference';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import ValueTypeLabel from '../../../ValueTypeLabel';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 const FieldEditModal = dynamic(() => import('../../FieldEditModal'));
 

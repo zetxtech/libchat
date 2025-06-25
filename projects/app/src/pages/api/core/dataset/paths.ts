@@ -1,11 +1,11 @@
 import type { NextApiRequest } from 'next';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
 import type {
   GetPathProps,
   ParentTreePathItemType
-} from '@fastgpt/global/common/parentFolder/type.d';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
+} from '@libchat/global/common/parentFolder/type.d';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
 import { NextAPI } from '@/service/middleware/entry';
 
 async function handler(req: NextApiRequest) {

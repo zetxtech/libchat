@@ -1,4 +1,4 @@
-import { create, devtools, persist, immer } from '@fastgpt/web/common/zustand';
+import { create, devtools, persist, immer } from '@libchat/web/common/zustand';
 
 type State = {
   localUId?: string;

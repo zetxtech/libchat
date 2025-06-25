@@ -19,20 +19,20 @@ import {
   Tr,
   useDisclosure
 } from '@chakra-ui/react';
-import { billTypeMap } from '@fastgpt/global/support/wallet/bill/constants';
-import { formatStorePrice2Read } from '@fastgpt/global/support/wallet/usage/tools';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { billTypeMap } from '@libchat/global/support/wallet/bill/constants';
+import { formatStorePrice2Read } from '@libchat/global/support/wallet/usage/tools';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import dayjs from 'dayjs';
 import { useTranslation } from 'next-i18next';
 import { useCallback, useState } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import Divider from '@/pageComponents/app/detail/WorkflowComponents/Flow/components/Divider';
-import { type TeamInvoiceHeaderType } from '@fastgpt/global/support/user/team/type';
+import { type TeamInvoiceHeaderType } from '@libchat/global/support/user/team/type';
 import { InvoiceHeaderSingleForm } from './InvoiceHeaderForm';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { getTeamInvoiceHeader } from '@/web/support/user/team/api';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 

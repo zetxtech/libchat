@@ -1,12 +1,12 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { authAppByTmbId } from '@fastgpt/service/support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { MongoMcpKey } from '@fastgpt/service/support/mcp/schema';
-import { type McpAppType } from '@fastgpt/global/support/mcp/type';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { authAppByTmbId } from '@libchat/service/support/permission/app/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { MongoMcpKey } from '@libchat/service/support/mcp/schema';
+import { type McpAppType } from '@libchat/global/support/mcp/type';
 
 export type createQuery = {};
 

@@ -47,7 +47,7 @@ python api_mp.py
 uvicorn api_mp:app --host 0.0.0.0 --port 7231
 ```
 
-然后配置到FastGPT配置文件即可
+然后配置到LibChat配置文件即可
 ```json
 {
   xxx

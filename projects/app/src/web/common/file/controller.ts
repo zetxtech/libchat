@@ -1,8 +1,8 @@
 import { postUploadImg, postUploadFiles } from '@/web/common/file/api';
-import type { UploadImgProps } from '@fastgpt/global/common/file/api';
-import type { BucketNameEnum } from '@fastgpt/global/common/file/constants';
-import type { preUploadImgProps } from '@fastgpt/global/common/file/api';
-import { compressBase64Img, type CompressImgProps } from '@fastgpt/web/common/file/img';
+import type { UploadImgProps } from '@libchat/global/common/file/api';
+import type { BucketNameEnum } from '@libchat/global/common/file/constants';
+import type { preUploadImgProps } from '@libchat/global/common/file/api';
+import { compressBase64Img, type CompressImgProps } from '@libchat/web/common/file/img';
 import type { UploadChatFileProps, UploadDatasetFileProps } from '@/pages/api/common/file/upload';
 
 /**

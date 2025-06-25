@@ -1,5 +1,5 @@
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import {
   Box,
   Button,
@@ -12,19 +12,19 @@ import {
 
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import type { AppQGConfigType } from '@fastgpt/global/core/app/type.d';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { defaultQGConfig } from '@fastgpt/global/core/app/constants';
+import type { AppQGConfigType } from '@libchat/global/core/app/type.d';
+import MyModal from '@libchat/web/components/common/MyModal';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { defaultQGConfig } from '@libchat/global/core/app/constants';
 import ChatFunctionTip from './Tip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import AIModelSelector from '@/components/Select/AIModelSelector';
-import CustomPromptEditor from '@fastgpt/web/components/common/Textarea/CustomPromptEditor';
+import CustomPromptEditor from '@libchat/web/components/common/Textarea/CustomPromptEditor';
 import {
   QuestionGuideFooterPrompt,
   QuestionGuidePrompt
-} from '@fastgpt/global/core/ai/prompt/agent';
+} from '@libchat/global/core/ai/prompt/agent';
 
 // question generator config
 const QGConfig = ({

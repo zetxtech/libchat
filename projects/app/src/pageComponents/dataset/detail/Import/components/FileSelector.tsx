@@ -1,12 +1,12 @@
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { Box, type FlexProps } from '@chakra-ui/react';
-import { formatFileSize } from '@fastgpt/global/common/file/tools';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { formatFileSize } from '@libchat/global/common/file/tools';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 import React, { type DragEvent, useCallback, useMemo, useState } from 'react';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import type { ImportSourceItemType } from '@/web/core/dataset/type';
 

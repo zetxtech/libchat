@@ -1,5 +1,5 @@
 import axios, { type Method, type AxiosResponse } from 'axios';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 import type {
   DashboardDataItemType,
   ChannelInfoType,

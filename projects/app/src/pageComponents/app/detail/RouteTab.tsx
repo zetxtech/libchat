@@ -4,7 +4,7 @@ import { AppContext, TabEnum } from './context';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { useContextSelector } from 'use-context-selector';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 
 const RouteTab = () => {
   const { t } = useTranslation();

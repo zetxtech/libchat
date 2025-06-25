@@ -22,7 +22,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve('projects/app/src'),
-      '@fastgpt': resolve('packages'),
+      '@libchat': resolve('packages'),
       '@test': resolve('test')
     }
   }

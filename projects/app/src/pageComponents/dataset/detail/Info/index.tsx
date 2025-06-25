@@ -1,23 +1,23 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Box, Flex, Switch, Input } from '@chakra-ui/react';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
 import { useForm } from 'react-hook-form';
-import type { DatasetItemType } from '@fastgpt/global/core/dataset/type.d';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import type { DatasetItemType } from '@libchat/global/core/dataset/type.d';
+import Avatar from '@libchat/web/components/common/Avatar';
 import { useTranslation } from 'next-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import AIModelSelector from '@/components/Select/AIModelSelector';
 import { postRebuildEmbedding } from '@/web/core/dataset/api';
-import type { EmbeddingModelItemType } from '@fastgpt/global/core/ai/model.d';
+import type { EmbeddingModelItemType } from '@libchat/global/core/ai/model.d';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import MyDivider from '@fastgpt/web/components/common/MyDivider/index';
-import { DatasetTypeEnum, DatasetTypeMap } from '@fastgpt/global/core/dataset/constants';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { DatasetPermissionList } from '@fastgpt/global/support/permission/dataset/constant';
+import MyDivider from '@libchat/web/components/common/MyDivider/index';
+import { DatasetTypeEnum, DatasetTypeMap } from '@libchat/global/core/dataset/constants';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { DatasetPermissionList } from '@libchat/global/support/permission/dataset/constant';
 import MemberManager from '../../MemberManager';
 import {
   getCollaboratorList,
@@ -28,7 +28,7 @@ import DatasetTypeTag from '@/components/core/dataset/DatasetTypeTag';
 import dynamic from 'next/dynamic';
 import type { EditAPIDatasetInfoFormType } from './components/EditApiServiceModal';
 import { type EditResourceInfoFormType } from '@/components/common/Modal/EditResourceModal';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 
 const EditResourceModal = dynamic(() => import('@/components/common/Modal/EditResourceModal'));
 const EditAPIDatasetInfoModal = dynamic(() => import('./components/EditApiServiceModal'));

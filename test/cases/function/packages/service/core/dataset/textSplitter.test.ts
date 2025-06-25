@@ -1,6 +1,6 @@
 import { it, expect } from 'vitest'; // 必须显式导入
-import { rawText2Chunks } from '@fastgpt/service/core/dataset/read';
-import { ChunkTriggerConfigTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import { rawText2Chunks } from '@libchat/service/core/dataset/read';
+import { ChunkTriggerConfigTypeEnum } from '@libchat/global/core/dataset/constants';
 
 const formatChunks = (
   chunks: {

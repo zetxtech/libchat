@@ -2,14 +2,14 @@ import { Box, Flex, Grid, Button, VStack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React, { useState } from 'react';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useForm } from 'react-hook-form';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { postCreatePayBill } from '@/web/support/wallet/bill/api';
-import { BillTypeEnum } from '@fastgpt/global/support/wallet/bill/constants';
+import { BillTypeEnum } from '@libchat/global/support/wallet/bill/constants';
 import QRCodePayModal, { type QRPayProps } from '@/components/support/wallet/QRCodePayModal';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 
 const ExtraPlan = ({ onPaySuccess }: { onPaySuccess?: () => void }) => {
   const { t } = useTranslation();

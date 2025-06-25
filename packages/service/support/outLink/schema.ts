@@ -1,10 +1,10 @@
 import { connectionMongo, getMongoModel } from '../../common/mongo';
 const { Schema } = connectionMongo;
-import { type OutLinkSchema as SchemaType } from '@fastgpt/global/support/outLink/type';
+import { type OutLinkSchema as SchemaType } from '@libchat/global/support/outLink/type';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 import { AppCollectionName } from '../../core/app/schema';
 
 const OutLinkSchema = new Schema({

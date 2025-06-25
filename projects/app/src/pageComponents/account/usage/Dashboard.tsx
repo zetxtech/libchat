@@ -1,8 +1,8 @@
 import { getDashboardData } from '@/web/support/wallet/usage/api';
 import { Box, Flex } from '@chakra-ui/react';
-import { formatNumber } from '@fastgpt/global/common/math/tools';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { formatNumber } from '@libchat/global/common/math/tools';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { addDays } from 'date-fns';
 import { useTranslation } from 'next-i18next';
 import React, { useMemo } from 'react';

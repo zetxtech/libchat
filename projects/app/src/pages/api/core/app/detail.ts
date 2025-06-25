@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
+import { authApp } from '@libchat/service/support/permission/app/auth';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { rewriteAppWorkflowToDetail } from '@fastgpt/service/core/app/utils';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { rewriteAppWorkflowToDetail } from '@libchat/service/core/app/utils';
 /* 获取应用详情 */
 async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { appId } = req.query as { appId: string };

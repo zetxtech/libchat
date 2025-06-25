@@ -1,15 +1,15 @@
 import { Button, HStack, ModalBody, ModalFooter } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { Box } from '@chakra-ui/react';
-import { type AppSimpleEditFormType } from '@fastgpt/global/core/app/type';
+import { type AppSimpleEditFormType } from '@libchat/global/core/app/type';
 import { childAppSystemKey } from './ToolSelectModal';
 import { Controller, useForm } from 'react-hook-form';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import RenderPluginInput from '@/components/core/chat/ChatContainer/PluginRunBox/components/renderPluginInput';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import UseGuideModal from '@/components/common/Modal/UseGuideModal';
 
 const ConfigToolModal = ({

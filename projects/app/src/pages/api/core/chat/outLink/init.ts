@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { InitOutLinkChatProps } from '@/global/core/chat/api.d';
-import { getGuideModule, getAppChatConfig } from '@fastgpt/global/core/workflow/utils';
+import { getGuideModule, getAppChatConfig } from '@libchat/global/core/workflow/utils';
 import { authOutLink } from '@/service/support/permission/auth/outLink';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { AppErrEnum } from '@fastgpt/global/common/error/code/app';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { AppErrEnum } from '@libchat/global/common/error/code/app';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { NextAPI } from '@/service/middleware/entry';
-import { getRandomUserAvatar } from '@fastgpt/global/support/user/utils';
+import { getRandomUserAvatar } from '@libchat/global/support/user/utils';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   let { chatId, shareId, outLinkUid } = req.query as InitOutLinkChatProps;

@@ -1,8 +1,8 @@
-import { ChatCompletionMessageParam } from '@fastgpt/global/core/ai/type';
-import type { ChatFileTypeEnum } from '@fastgpt/global/core/chat/constants';
-import type { ChatSiteItemType } from '@fastgpt/global/core/chat/type';
-import { ChatItemValueItemType, ToolModuleResponseItemType } from '@fastgpt/global/core/chat/type';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { ChatCompletionMessageParam } from '@libchat/global/core/ai/type';
+import type { ChatFileTypeEnum } from '@libchat/global/core/chat/constants';
+import type { ChatSiteItemType } from '@libchat/global/core/chat/type';
+import { ChatItemValueItemType, ToolModuleResponseItemType } from '@libchat/global/core/chat/type';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
 
 export type UserInputFileItemType = {
   id: string;

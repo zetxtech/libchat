@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoPlugin } from '@fastgpt/service/core/plugin/schema';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoPlugin } from '@libchat/service/core/plugin/schema';
+import { MongoApp } from '@libchat/service/core/app/schema';
 import { NextAPI } from '@/service/middleware/entry';
-import { PluginTypeEnum } from '@fastgpt/global/core/plugin/constants';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
+import { PluginTypeEnum } from '@libchat/global/core/plugin/constants';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
 
 /* 
   1. 先读取 HTTP plugin 内容,并找到所有的子plugin,然后事务批量创建,最后修改 inited

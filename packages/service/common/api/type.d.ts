@@ -2,13 +2,13 @@ import type {
   ApiDatasetDetailResponse,
   FeishuServer,
   YuqueServer
-} from '@fastgpt/global/core/dataset/apiDataset/type';
+} from '@libchat/global/core/dataset/apiDataset/type';
 import type {
   DeepRagSearchProps,
   SearchDatasetDataResponse
 } from '../../core/dataset/search/controller';
 import type { AuthOpenApiLimitProps } from '../../support/openapi/auth';
-import type { CreateUsageProps, ConcatUsageProps } from '@fastgpt/global/support/wallet/usage/api';
+import type { CreateUsageProps, ConcatUsageProps } from '@libchat/global/support/wallet/usage/api';
 
 declare global {
   var textCensorHandler: (params: { text: string }) => Promise<{ code: number; message?: string }>;

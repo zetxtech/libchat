@@ -5,11 +5,11 @@ import { LoginPageTypeEnum } from '@/web/support/user/login/constants';
 import { postFindPassword } from '@/web/support/user/api';
 import { useSendCode } from '@/web/support/user/hooks/useSendCode';
 import type { ResLogin } from '@/global/support/api/userRes.d';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { checkPasswordRule } from '@fastgpt/global/common/string/password';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { checkPasswordRule } from '@libchat/global/common/string/password';
 
 interface Props {
   setPageType: Dispatch<`${LoginPageTypeEnum}`>;

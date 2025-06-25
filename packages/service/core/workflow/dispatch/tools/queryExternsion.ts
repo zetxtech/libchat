@@ -1,15 +1,15 @@
-import type { ChatItemType } from '@fastgpt/global/core/chat/type.d';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import type { ChatItemType } from '@libchat/global/core/chat/type.d';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import { getLLMModel } from '../../../../core/ai/model';
 import { formatModelChars2Points } from '../../../../support/wallet/usage/utils';
 import { queryExtension } from '../../../../core/ai/functions/queryExtension';
 import { getHistories } from '../utils';
-import { hashStr } from '@fastgpt/global/common/string/tools';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import { hashStr } from '@libchat/global/common/string/tools';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.aiModel]: string;

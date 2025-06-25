@@ -1,4 +1,4 @@
-import { TeamPermission } from '@fastgpt/global/support/permission/user/controller';
+import { TeamPermission } from '@libchat/global/support/permission/user/controller';
 
 export const processAssignPermissionSpecific = (metadata: any) => {
   const permissionValue = parseInt(metadata.permission, 10);

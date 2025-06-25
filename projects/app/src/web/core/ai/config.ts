@@ -2,7 +2,7 @@ import { GET, PUT, DELETE, POST } from '@/web/common/api/request';
 import type { listResponse } from '@/pages/api/core/ai/model/list';
 import type { updateBody } from '@/pages/api/core/ai/model/update';
 import type { deleteQuery } from '@/pages/api/core/ai/model/delete';
-import type { SystemModelItemType } from '@fastgpt/service/core/ai/type';
+import type { SystemModelItemType } from '@libchat/service/core/ai/type';
 import type { updateWithJsonBody } from '@/pages/api/core/ai/model/updateWithJson';
 import type { updateDefaultBody } from '@/pages/api/core/ai/model/updateDefault';
 import type { testQuery } from '@/pages/api/core/ai/model/test';

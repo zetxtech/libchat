@@ -1,17 +1,17 @@
 import React, { useCallback } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { filterSensitiveNodesData } from '@/web/core/workflow/utils';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
+import MyPopover from '@libchat/web/components/common/MyPopover';
 import { fileDownload } from '@/web/common/file/utils';
-import { type AppChatConfigType, type AppSimpleEditFormType } from '@fastgpt/global/core/app/type';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import { type AppChatConfigType, type AppSimpleEditFormType } from '@libchat/global/core/app/type';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { filterSensitiveFormData } from '@/web/core/app/utils';
-import { type RequireOnlyOne } from '@fastgpt/global/common/type/utils';
-import { type StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
-import { type StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
+import { type RequireOnlyOne } from '@libchat/global/common/type/utils';
+import { type StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
+import { type StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
 
 const ExportConfigPopover = ({
   appForm,

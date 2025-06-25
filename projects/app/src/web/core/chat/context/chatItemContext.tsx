@@ -5,11 +5,11 @@ import { createContext } from 'use-context-selector';
 import { type ComponentRef as ChatComponentRef } from '@/components/core/chat/ChatContainer/ChatBox/type';
 import { useForm, type UseFormReturn } from 'react-hook-form';
 import { defaultChatData } from '@/global/core/chat/constants';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { type AppChatConfigType, type VariableItemType } from '@fastgpt/global/core/app/type';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
-import { type SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { type AppChatConfigType, type VariableItemType } from '@libchat/global/core/app/type';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
+import { type SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
 
 type ContextProps = {
   showRouteToAppDetail: boolean;

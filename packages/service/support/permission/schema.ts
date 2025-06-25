@@ -1,12 +1,12 @@
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 import { connectionMongo, getMongoModel } from '../../common/mongo';
-import type { ResourcePermissionType } from '@fastgpt/global/support/permission/type';
-import { PerResourceTypeEnum } from '@fastgpt/global/support/permission/constant';
+import type { ResourcePermissionType } from '@libchat/global/support/permission/type';
+import { PerResourceTypeEnum } from '@libchat/global/support/permission/constant';
 import { MemberGroupCollectionName } from './memberGroup/memberGroupSchema';
-import { OrgCollectionName } from '@fastgpt/global/support/user/team/org/constant';
+import { OrgCollectionName } from '@libchat/global/support/user/team/org/constant';
 const { Schema } = connectionMongo;
 
 export const ResourcePermissionCollectionName = 'resource_permissions';

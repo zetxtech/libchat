@@ -84,7 +84,7 @@ async function request(url: string, data: any, config: ConfigType, method: strin
     }
   }
 
-  const baseURL = `${process.env.FASTGPT_ENDPOINT}/api`;
+  const baseURL = `${process.env.LIBCHAT_ENDPOINT}/api`;
   let fullUrl = `${baseURL}${url}`;
 
   // Default timeout from config or 600 seconds

@@ -1,7 +1,7 @@
 import { getTmbInfoByTmbId } from '../../support/user/team/controller';
 import { getResourcePermission } from '../../support/permission/controller';
-import { PerResourceTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { DatasetPermission } from '@fastgpt/global/support/permission/dataset/controller';
+import { PerResourceTypeEnum } from '@libchat/global/support/permission/constant';
+import { DatasetPermission } from '@libchat/global/support/permission/dataset/controller';
 
 // TODO: 需要优化成批量获取权限
 export const filterDatasetsByTmbId = async ({

@@ -6,9 +6,9 @@ import type {
   ChatCompletionContentPartText,
   ChatCompletionMessageParam,
   SdkChatCompletionMessageParam
-} from '@fastgpt/global/core/ai/type.d';
+} from '@libchat/global/core/ai/type.d';
 import axios from 'axios';
-import { ChatCompletionRequestMessageRoleEnum } from '@fastgpt/global/core/ai/constants';
+import { ChatCompletionRequestMessageRoleEnum } from '@libchat/global/core/ai/constants';
 import { i18nT } from '../../../web/i18n/utils';
 import { addLog } from '../../common/system/log';
 import { getImageBase64 } from '../../common/file/image/utils';

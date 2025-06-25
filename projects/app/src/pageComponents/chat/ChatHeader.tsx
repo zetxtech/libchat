@@ -1,24 +1,24 @@
 import React, { useState, useCallback } from 'react';
 import { Flex, Box, useDisclosure } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
 import ToolMenu from './ToolMenu';
-import type { ChatItemType } from '@fastgpt/global/core/chat/type';
+import type { ChatItemType } from '@libchat/global/core/chat/type';
 import { useTranslation } from 'next-i18next';
 
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import { useContextSelector } from 'use-context-selector';
 import { ChatContext } from '@/web/core/chat/context/chatContext';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { AppFolderTypeList, AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { AppFolderTypeList, AppTypeEnum } from '@libchat/global/core/app/constants';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import { useRouter } from 'next/router';
-import { type AppListItemType } from '@fastgpt/global/core/app/type';
+import { type AppListItemType } from '@libchat/global/core/app/type';
 import {
   type GetResourceFolderListProps,
   type GetResourceListItemResponse
-} from '@fastgpt/global/common/parentFolder/type';
+} from '@libchat/global/common/parentFolder/type';
 import { getMyApps } from '@/web/core/app/api';
 import SelectOneResource from '@/components/common/folder/SelectOneResource';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';

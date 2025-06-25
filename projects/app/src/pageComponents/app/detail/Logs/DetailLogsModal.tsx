@@ -1,23 +1,23 @@
 import React, { useMemo } from 'react';
 import { Flex, Box } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { HUMAN_ICON } from '@fastgpt/global/common/system/constants';
+import { HUMAN_ICON } from '@libchat/global/common/system/constants';
 import { getInitChatInfo } from '@/web/core/chat/api';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 
 import dynamic from 'next/dynamic';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import { PluginRunBoxTabEnum } from '@/components/core/chat/ChatContainer/PluginRunBox/constants';
-import CloseIcon from '@fastgpt/web/components/common/Icon/close';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import CloseIcon from '@libchat/web/components/common/Icon/close';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { PcHeader } from '@/pageComponents/chat/ChatHeader';
 import { GetChatTypeEnum } from '@/global/core/chat/constants';
 import ChatItemContextProvider, { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import ChatRecordContextProvider, {
   ChatRecordContext
 } from '@/web/core/chat/context/chatRecordContext';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useContextSelector } from 'use-context-selector';
 import ChatQuoteList from '@/pageComponents/chat/ChatQuoteList';
 

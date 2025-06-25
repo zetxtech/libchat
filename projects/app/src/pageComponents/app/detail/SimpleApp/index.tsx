@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { appWorkflow2Form, getDefaultAppForm } from '@fastgpt/global/core/app/utils';
+import { appWorkflow2Form, getDefaultAppForm } from '@libchat/global/core/app/utils';
 
 import Header from './Header';
 import Edit from './Edit';

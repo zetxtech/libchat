@@ -9,15 +9,15 @@ import {
   type GetResourceFolderListProps,
   type ParentIdType,
   type ParentTreePathItemType
-} from '@fastgpt/global/common/parentFolder/type';
+} from '@libchat/global/common/parentFolder/type';
 import { useRouter } from 'next/router';
 import React, { useCallback, useState } from 'react';
 import { createContext } from 'use-context-selector';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { type DatasetUpdateBody } from '@fastgpt/global/core/dataset/api';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { type DatasetUpdateBody } from '@libchat/global/core/dataset/api';
 import dynamic from 'next/dynamic';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { type DatasetItemType, type DatasetListItemType } from '@fastgpt/global/core/dataset/type';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { type DatasetItemType, type DatasetListItemType } from '@libchat/global/core/dataset/type';
 import { type EditResourceInfoFormType } from '@/components/common/Modal/EditResourceModal';
 import { useTranslation } from 'next-i18next';
 

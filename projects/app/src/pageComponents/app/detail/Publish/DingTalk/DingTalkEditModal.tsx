@@ -1,17 +1,17 @@
 import React from 'react';
 import { Flex, Box, Button, ModalBody, Input, Link } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { PublishChannelEnum } from '@fastgpt/global/support/outLink/constant';
-import type { DingtalkAppType, OutLinkEditType } from '@fastgpt/global/support/outLink/type';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { PublishChannelEnum } from '@libchat/global/support/outLink/constant';
+import type { DingtalkAppType, OutLinkEditType } from '@libchat/global/support/outLink/type';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
 import { createShareChat, updateShareChat } from '@/web/support/outLink/api';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import BasicInfo from '../components/BasicInfo';
 import { getDocPath } from '@/web/common/system/doc';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import MyIcon from '@libchat/web/components/common/Icon';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 const DingTalkEditModal = ({
   appId,

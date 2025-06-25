@@ -1,14 +1,14 @@
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { it, expect, vi } from 'vitest';
-import { dispatchWorkFlow } from '@fastgpt/service/core/workflow/dispatch';
+import { dispatchWorkFlow } from '@libchat/service/core/workflow/dispatch';
 import {
   getWorkflowEntryNodeIds,
   storeNodes2RuntimeNodes
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import { ChatItemValueTypeEnum } from '@fastgpt/global/core/chat/constants';
+} from '@libchat/global/core/workflow/runtime/utils';
+import { ChatItemValueTypeEnum } from '@libchat/global/core/chat/constants';
 
-vi.mock(import('@fastgpt/service/common/string/tiktoken'), async (importOriginal) => {
+vi.mock(import('@libchat/service/common/string/tiktoken'), async (importOriginal) => {
   const mod = await importOriginal();
   return {
     ...mod,
@@ -18,7 +18,7 @@ vi.mock(import('@fastgpt/service/common/string/tiktoken'), async (importOriginal
   };
 });
 
-vi.mock(import('@fastgpt/service/support/wallet/usage/utils'), async (importOriginal) => {
+vi.mock(import('@libchat/service/support/wallet/usage/utils'), async (importOriginal) => {
   const mod = await importOriginal();
   return {
     ...mod,

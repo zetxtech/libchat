@@ -1,12 +1,12 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
-import { type AppChatConfigType } from '@fastgpt/global/core/app/type';
-import { type StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
-import { type StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
-import { rewriteAppWorkflowToDetail } from '@fastgpt/service/core/app/utils';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
+import { type AppChatConfigType } from '@libchat/global/core/app/type';
+import { type StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
+import { type StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
+import { rewriteAppWorkflowToDetail } from '@libchat/service/core/app/utils';
 
 export type getLatestVersionQuery = {
   appId: string;

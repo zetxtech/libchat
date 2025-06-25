@@ -1,16 +1,16 @@
 import { NextAPI } from '@/service/middleware/entry';
 import { authChatCrud, authCollectionInChat } from '@/service/support/permission/auth/chat';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { useIPFrequencyLimit } from '@fastgpt/service/common/middle/reqFrequencyLimit';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
-import { responseWriteController } from '@fastgpt/service/common/response';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { getCollectionWithDataset } from '@fastgpt/service/core/dataset/controller';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { useIPFrequencyLimit } from '@libchat/service/common/middle/reqFrequencyLimit';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
+import { responseWriteController } from '@libchat/service/common/response';
+import { addLog } from '@libchat/service/common/system/log';
+import { getCollectionWithDataset } from '@libchat/service/core/dataset/controller';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import { type NextApiResponse } from 'next';
 
 export type ExportCollectionBody = {

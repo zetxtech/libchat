@@ -2,14 +2,14 @@
 import React, { useState } from 'react';
 import { Box, Flex, useTheme } from '@chakra-ui/react';
 import { getInforms, readInform } from '@/web/support/user/inform/api';
-import { formatTimeToChatTime } from '@fastgpt/global/common/string/time';
-import { usePagination } from '@fastgpt/web/hooks/usePagination';
-import { useLoading } from '@fastgpt/web/hooks/useLoading';
+import { formatTimeToChatTime } from '@libchat/global/common/string/time';
+import { usePagination } from '@libchat/web/hooks/usePagination';
+import { useLoading } from '@libchat/web/hooks/useLoading';
 import { useTranslation } from 'next-i18next';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import AccountContainer from '@/pageComponents/account/AccountContainer';
 import { serviceSideProps } from '@/web/common/i18n/utils';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import Markdown from '@/components/Markdown';
 import NotificationDetailsModal from '@/pageComponents/account/NotificationDetailsModal';
 

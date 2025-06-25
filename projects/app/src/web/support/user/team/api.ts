@@ -3,29 +3,29 @@ import type {
   CollaboratorItemType,
   DeletePermissionQuery,
   UpdateClbPermissionProps
-} from '@fastgpt/global/support/permission/collaborator';
+} from '@libchat/global/support/permission/collaborator';
 import type {
   CreateTeamProps,
   UpdateInviteProps,
   UpdateTeamProps
-} from '@fastgpt/global/support/user/team/controller.d';
-import type { TeamTagItemType, TeamTagSchema } from '@fastgpt/global/support/user/team/type';
+} from '@libchat/global/support/user/team/controller.d';
+import type { TeamTagItemType, TeamTagSchema } from '@libchat/global/support/user/team/type';
 import type {
   TeamTmbItemType,
   TeamMemberItemType,
   TeamMemberSchema
-} from '@fastgpt/global/support/user/team/type.d';
+} from '@libchat/global/support/user/team/type.d';
 import type {
   ClientTeamPlanStatusType,
   TeamSubSchema
-} from '@fastgpt/global/support/wallet/sub/type';
-import type { TeamInvoiceHeaderType } from '@fastgpt/global/support/user/team/type';
-import type { PaginationProps, PaginationResponse } from '@fastgpt/web/common/fetch/type';
+} from '@libchat/global/support/wallet/sub/type';
+import type { TeamInvoiceHeaderType } from '@libchat/global/support/user/team/type';
+import type { PaginationProps, PaginationResponse } from '@libchat/web/common/fetch/type';
 import type {
   InvitationInfoType,
   InvitationLinkCreateType,
   InvitationType
-} from '@fastgpt/service/support/user/team/invitationLink/type';
+} from '@libchat/service/support/user/team/invitationLink/type';
 
 /* --------------- team  ---------------- */
 export const getTeamList = (status: `${TeamMemberSchema['status']}`) =>

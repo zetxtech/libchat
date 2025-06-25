@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
-import type { FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io.d';
+import type { FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io.d';
 import { Box } from '@chakra-ui/react';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import dynamic from 'next/dynamic';
 
 import InputLabel from './Label';

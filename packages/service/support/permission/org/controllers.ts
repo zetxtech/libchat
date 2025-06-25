@@ -1,9 +1,9 @@
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
-import type { OrgSchemaType } from '@fastgpt/global/support/user/team/org/type';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
+import type { OrgSchemaType } from '@libchat/global/support/user/team/org/type';
 import type { ClientSession } from 'mongoose';
 import { MongoOrgModel } from './orgSchema';
 import { MongoOrgMemberModel } from './orgMemberSchema';
-import { getOrgChildrenPath } from '@fastgpt/global/support/user/team/org/constant';
+import { getOrgChildrenPath } from '@libchat/global/support/user/team/org/constant';
 
 export const getOrgsByTmbId = async ({ teamId, tmbId }: { teamId: string; tmbId: string }) =>
   MongoOrgMemberModel.find({ teamId, tmbId }, 'orgId').lean();

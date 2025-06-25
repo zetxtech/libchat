@@ -1,9 +1,9 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { type NextApiRequest, type NextApiResponse } from 'next';
 
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
 
 async function handler(req: NextApiRequest, _res: NextApiResponse) {
   await authCert({ req, authRoot: true });

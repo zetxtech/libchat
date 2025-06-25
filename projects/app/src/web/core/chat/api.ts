@@ -1,5 +1,5 @@
 import { GET, POST, DELETE, PUT } from '@/web/common/api/request';
-import type { ChatHistoryItemType, ChatHistoryItemResType } from '@fastgpt/global/core/chat/type.d';
+import type { ChatHistoryItemType, ChatHistoryItemResType } from '@libchat/global/core/chat/type.d';
 import type { getResDataQuery } from '@/pages/api/core/chat/getResData';
 import type {
   CloseCustomFeedbackParams,
@@ -17,10 +17,10 @@ import type {
   DeleteChatItemProps,
   UpdateHistoryProps
 } from '@/global/core/chat/api.d';
-import type { UpdateChatFeedbackProps } from '@fastgpt/global/core/chat/api';
-import type { AuthTeamTagTokenProps } from '@fastgpt/global/support/user/team/tag';
-import type { AppListItemType } from '@fastgpt/global/core/app/type';
-import type { PaginationProps, PaginationResponse } from '@fastgpt/web/common/fetch/type';
+import type { UpdateChatFeedbackProps } from '@libchat/global/core/chat/api';
+import type { AuthTeamTagTokenProps } from '@libchat/global/support/user/team/tag';
+import type { AppListItemType } from '@libchat/global/core/app/type';
+import type { PaginationProps, PaginationResponse } from '@libchat/web/common/fetch/type';
 import type {
   getPaginationRecordsBody,
   getPaginationRecordsResponse

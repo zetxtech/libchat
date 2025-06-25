@@ -1,11 +1,11 @@
 import { type PluginRunBoxProps } from '@/components/core/chat/ChatContainer/PluginRunBox/type';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import React, { useEffect } from 'react';
 import PluginRunBox from '@/components/core/chat/ChatContainer/PluginRunBox';
 import { Box, Grid, Stack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { PluginRunBoxTabEnum } from '@/components/core/chat/ChatContainer/PluginRunBox/constants';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { useContextSelector } from 'use-context-selector';
 

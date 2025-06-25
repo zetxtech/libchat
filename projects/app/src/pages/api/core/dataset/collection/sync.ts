@@ -1,9 +1,9 @@
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { syncCollection } from '@fastgpt/service/core/dataset/collection/utils';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { syncCollection } from '@libchat/service/core/dataset/collection/utils';
 
 /* 
   Collection sync

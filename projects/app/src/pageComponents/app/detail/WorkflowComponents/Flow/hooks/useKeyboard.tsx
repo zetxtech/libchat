@@ -1,13 +1,13 @@
 import { useCallback } from 'react';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import { useTranslation } from 'next-i18next';
 import { type Node, useKeyPress } from 'reactflow';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { useContextSelector } from 'use-context-selector';
 import { useWorkflowUtils } from './useUtils';
 import { useKeyPress as useKeyPressEffect } from 'ahooks';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { WorkflowNodeEdgeContext } from '../../context/workflowInitContext';
 import { WorkflowEventContext } from '../../context/workflowEventContext';
 

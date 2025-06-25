@@ -14,19 +14,19 @@ import {
   type NodeSelectionChange,
   type EdgeRemoveChange
 } from 'reactflow';
-import { EDGE_TYPE, FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { EDGE_TYPE, FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import 'reactflow/dist/style.css';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useTranslation } from 'next-i18next';
 import { useKeyboard } from './useKeyboard';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
-import { type THelperLine } from '@fastgpt/global/core/workflow/type';
-import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { type THelperLine } from '@libchat/global/core/workflow/type';
+import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { useDebounceEffect, useMemoizedFn } from 'ahooks';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { WorkflowNodeEdgeContext, WorkflowInitContext } from '../../context/workflowInitContext';
-import { formatTime2YMDHMS } from '@fastgpt/global/common/string/time';
+import { formatTime2YMDHMS } from '@libchat/global/common/string/time';
 import { AppContext } from '../../../context';
 import { WorkflowEventContext } from '../../context/workflowEventContext';
 import { WorkflowStatusContext } from '../../context/workflowStatusContext';

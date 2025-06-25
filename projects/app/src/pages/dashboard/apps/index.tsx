@@ -6,28 +6,28 @@ import { serviceSideProps } from '@/web/common/i18n/utils';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
-import { FolderIcon } from '@fastgpt/global/common/file/image/constants';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyMenu from '@libchat/web/components/common/MyMenu';
+import { FolderIcon } from '@libchat/global/common/file/image/constants';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { postCreateAppFolder } from '@/web/core/app/api/app';
-import type { EditFolderFormType } from '@fastgpt/web/components/common/MyModal/EditFolderModal';
+import type { EditFolderFormType } from '@libchat/web/components/common/MyModal/EditFolderModal';
 import { useContextSelector } from 'use-context-selector';
 import AppListContextProvider, { AppListContext } from '@/pageComponents/dashboard/apps/context';
 import FolderPath from '@/components/common/folder/Path';
 import { useRouter } from 'next/router';
 import FolderSlideCard from '@/components/common/folder/SlideCard';
 import { delAppById, resumeInheritPer } from '@/web/core/app/api';
-import { AppPermissionList } from '@fastgpt/global/support/permission/app/constant';
+import { AppPermissionList } from '@libchat/global/support/permission/app/constant';
 import {
   deleteAppCollaborators,
   getCollaboratorList,
   postUpdateAppCollaborators
 } from '@/web/core/app/api/collaborator';
 import type { CreateAppType } from '@/pageComponents/dashboard/apps/CreateModal';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import MyIcon from '@libchat/web/components/common/Icon';
 import JsonImportModal from '@/pageComponents/dashboard/apps/JsonImportModal';
 import DashboardContainer from '@/pageComponents/dashboard/Container';
 import List from '@/pageComponents/dashboard/apps/List';
@@ -37,7 +37,7 @@ import { useMount } from 'ahooks';
 
 const CreateModal = dynamic(() => import('@/pageComponents/dashboard/apps/CreateModal'));
 const EditFolderModal = dynamic(
-  () => import('@fastgpt/web/components/common/MyModal/EditFolderModal')
+  () => import('@libchat/web/components/common/MyModal/EditFolderModal')
 );
 const HttpEditModal = dynamic(() => import('@/pageComponents/dashboard/apps/HttpPluginEditModal'));
 

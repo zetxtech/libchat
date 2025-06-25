@@ -1,6 +1,6 @@
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { delay } from '@fastgpt/global/common/system/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { addLog } from '@libchat/service/common/system/log';
+import { delay } from '@libchat/global/common/system/utils';
 import wiki from 'wikijs';
 
 type Props = {

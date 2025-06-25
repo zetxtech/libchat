@@ -1,29 +1,29 @@
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { pushLLMTrainingUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { createChatCompletion } from '@fastgpt/service/core/ai/config';
-import type { ChatCompletionMessageParam } from '@fastgpt/global/core/ai/type.d';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
-import { Prompt_AgentQA } from '@fastgpt/global/core/ai/prompt/agent';
-import type { PushDatasetDataChunkProps } from '@fastgpt/global/core/dataset/api.d';
-import { getLLMModel } from '@fastgpt/service/core/ai/model';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { pushLLMTrainingUsage } from '@libchat/service/support/wallet/usage/controller';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
+import { createChatCompletion } from '@libchat/service/core/ai/config';
+import type { ChatCompletionMessageParam } from '@libchat/global/core/ai/type.d';
+import { addLog } from '@libchat/service/common/system/log';
+import { replaceVariable } from '@libchat/global/common/string/tools';
+import { Prompt_AgentQA } from '@libchat/global/core/ai/prompt/agent';
+import type { PushDatasetDataChunkProps } from '@libchat/global/core/dataset/api.d';
+import { getLLMModel } from '@libchat/service/core/ai/model';
 import { checkTeamAiPointsAndLock } from './utils';
 import { addMinutes } from 'date-fns';
 import {
   countGptMessagesTokens,
   countPromptTokens
-} from '@fastgpt/service/common/string/tiktoken/index';
-import { loadRequestMessages } from '@fastgpt/service/core/chat/utils';
-import { llmCompletionsBodyFormat, formatLLMResponse } from '@fastgpt/service/core/ai/utils';
-import type { LLMModelItemType } from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/service/common/string/tiktoken/index';
+import { loadRequestMessages } from '@libchat/service/core/chat/utils';
+import { llmCompletionsBodyFormat, formatLLMResponse } from '@libchat/service/core/ai/utils';
+import type { LLMModelItemType } from '@libchat/global/core/ai/model.d';
 import {
   chunkAutoChunkSize,
   getLLMMaxChunkSize
-} from '@fastgpt/global/core/dataset/training/utils';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { text2Chunks } from '@fastgpt/service/worker/function';
-import { pushDataListToTrainingQueue } from '@fastgpt/service/core/dataset/training/controller';
+} from '@libchat/global/core/dataset/training/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { text2Chunks } from '@libchat/service/worker/function';
+import { pushDataListToTrainingQueue } from '@libchat/service/core/dataset/training/controller';
 
 const reduceQueue = () => {
   global.qaQueueLen = global.qaQueueLen > 0 ? global.qaQueueLen - 1 : 0;

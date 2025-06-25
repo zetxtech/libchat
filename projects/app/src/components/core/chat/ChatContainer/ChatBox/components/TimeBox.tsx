@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import { formatTimeToChatItemTime } from '@fastgpt/global/common/string/time';
+import { formatTimeToChatItemTime } from '@libchat/global/common/string/time';
 import dayjs from 'dayjs';
 
 const TimeBox = ({ time }: { time: Date }) => {

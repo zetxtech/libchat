@@ -1,25 +1,25 @@
-import type { StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import type { StoreNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import React, { useMemo } from 'react';
 import { SmallCloseIcon } from '@chakra-ui/icons';
 import { Box, Flex, IconButton } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
-import { type StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
+import { type StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
 
 import { useContextSelector } from 'use-context-selector';
 import { AppContext } from '@/pageComponents/app/detail/context';
 import { useChatTest } from '../../useChatTest';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import { PluginRunBoxTabEnum } from '@/components/core/chat/ChatContainer/PluginRunBox/constants';
-import CloseIcon from '@fastgpt/web/components/common/Icon/close';
+import CloseIcon from '@libchat/web/components/common/Icon/close';
 import ChatItemContextProvider, { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import ChatRecordContextProvider, {
   ChatRecordContext
 } from '@/web/core/chat/context/chatRecordContext';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import ChatQuoteList from '@/pageComponents/chat/ChatQuoteList';
 import VariablePopover from '@/components/core/chat/ChatContainer/ChatBox/components/VariablePopover';
 

@@ -1,18 +1,18 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { getUploadModel } from '@fastgpt/service/common/file/multer';
-import { removeFilesByPaths } from '@fastgpt/service/common/file/utils';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { readRawTextByLocalFile } from '@fastgpt/service/common/file/read/utils';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { createCollectionAndInsertData } from '@fastgpt/service/core/dataset/collection/controller';
+import { getUploadModel } from '@libchat/service/common/file/multer';
+import { removeFilesByPaths } from '@libchat/service/common/file/utils';
+import { addLog } from '@libchat/service/common/system/log';
+import { readRawTextByLocalFile } from '@libchat/service/common/file/read/utils';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { createCollectionAndInsertData } from '@libchat/service/core/dataset/collection/controller';
 import {
   DatasetCollectionDataProcessModeEnum,
   DatasetCollectionTypeEnum
-} from '@fastgpt/global/core/dataset/constants';
-import { i18nT } from '@fastgpt/web/i18n/utils';
-import { uploadFile } from '@fastgpt/service/common/file/gridfs/controller';
+} from '@libchat/global/core/dataset/constants';
+import { i18nT } from '@libchat/web/i18n/utils';
+import { uploadFile } from '@libchat/service/common/file/gridfs/controller';
 
 export type backupQuery = {};
 

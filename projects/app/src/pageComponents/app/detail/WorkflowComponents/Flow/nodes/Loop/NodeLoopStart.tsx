@@ -1,4 +1,4 @@
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { useTranslation } from 'next-i18next';
 import { type NodeProps } from 'reactflow';
 import NodeCard from '../render/NodeCard';
@@ -8,14 +8,14 @@ import {
   NodeInputKeyEnum,
   NodeOutputKeyEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 import { Box, Flex, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react';
 import React, { useEffect, useMemo } from 'react';
 import {
   FlowNodeOutputTypeEnum,
   FlowValueTypeMap
-} from '@fastgpt/global/core/workflow/node/constant';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+} from '@libchat/global/core/workflow/node/constant';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 const typeMap = {
   [WorkflowIOValueTypeEnum.arrayString]: WorkflowIOValueTypeEnum.string,

@@ -1,9 +1,9 @@
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import { createUsage, concatUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { formatModelChars2Points } from '@fastgpt/service/support/wallet/usage/utils';
-import { i18nT } from '@fastgpt/web/i18n/utils';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import { getDefaultTTSModel } from '@fastgpt/service/core/ai/model';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import { createUsage, concatUsage } from '@libchat/service/support/wallet/usage/controller';
+import { formatModelChars2Points } from '@libchat/service/support/wallet/usage/utils';
+import { i18nT } from '@libchat/web/i18n/utils';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
+import { getDefaultTTSModel } from '@libchat/service/core/ai/model';
 
 export const pushGenerateVectorUsage = ({
   billId,
@@ -11,7 +11,7 @@ export const pushGenerateVectorUsage = ({
   tmbId,
   inputTokens,
   model,
-  source = UsageSourceEnum.fastgpt,
+  source = UsageSourceEnum.libchat,
   extensionModel,
   extensionInputTokens,
   extensionOutputTokens,
@@ -154,7 +154,7 @@ export const pushQuestionGuideUsage = ({
     tmbId,
     appName: 'core.app.Question Guide',
     totalPoints,
-    source: UsageSourceEnum.fastgpt,
+    source: UsageSourceEnum.libchat,
     list: [
       {
         moduleName: 'core.app.Question Guide',
@@ -173,7 +173,7 @@ export const pushAudioSpeechUsage = ({
   charsLength,
   teamId,
   tmbId,
-  source = UsageSourceEnum.fastgpt
+  source = UsageSourceEnum.libchat
 }: {
   appName?: string;
   model: string;
@@ -232,7 +232,7 @@ export const pushWhisperUsage = ({
     tmbId,
     appName: name,
     totalPoints,
-    source: UsageSourceEnum.fastgpt,
+    source: UsageSourceEnum.libchat,
     list: [
       {
         moduleName: name,
@@ -249,7 +249,7 @@ export const pushRerankUsage = ({
   tmbId,
   model,
   inputTokens,
-  source = UsageSourceEnum.fastgpt
+  source = UsageSourceEnum.libchat
 }: {
   teamId: string;
   tmbId: string;

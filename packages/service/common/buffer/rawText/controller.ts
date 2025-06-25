@@ -1,4 +1,4 @@
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 import { connectionMongo } from '../../mongo';
 import { MongoRawTextBufferSchema, bucketName } from './schema';
 import { addLog } from '../../system/log';

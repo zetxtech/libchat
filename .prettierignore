@@ -2,7 +2,6 @@ dist
 .vscode
 **/.DS_Store
 node_modules
-docSite/
 *.md
 
 pnpm-lock.yaml

@@ -1,5 +1,5 @@
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
 import { i18nT } from '../../../../web/i18n/utils';
 import { MongoOperationLog } from './schema';
 import type {
@@ -7,8 +7,8 @@ import type {
   AuditEventEnum,
   AdminAuditEventParamsType,
   AuditEventParamsType
-} from '@fastgpt/global/support/user/audit/constants';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+} from '@libchat/global/support/user/audit/constants';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 export function getI18nAppType(type: AppTypeEnum): string {
   if (type === AppTypeEnum.folder) return i18nT('account_team:type.Folder');

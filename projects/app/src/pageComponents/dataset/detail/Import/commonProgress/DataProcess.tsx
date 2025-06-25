@@ -13,12 +13,12 @@ import {
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetImportContext } from '../Context';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { shadowLight } from '@fastgpt/web/styles/theme';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { shadowLight } from '@libchat/web/styles/theme';
 import CollectionChunkForm from '../../Form/CollectionChunkForm';
 
 function DataProcess() {

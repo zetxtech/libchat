@@ -1,11 +1,11 @@
 import { connectionMongo, getMongoModel, type Model } from '../../../common/mongo';
 const { Schema } = connectionMongo;
-import { type UsageSchemaType } from '@fastgpt/global/support/wallet/usage/type';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
+import { type UsageSchemaType } from '@libchat/global/support/wallet/usage/type';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 
 export const UsageCollectionName = 'usages';
 

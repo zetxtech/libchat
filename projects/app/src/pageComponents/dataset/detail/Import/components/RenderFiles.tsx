@@ -13,10 +13,10 @@ import {
   Box
 } from '@chakra-ui/react';
 import { type ImportSourceItemType } from '@/web/core/dataset/type.d';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyTag from '@libchat/web/components/common/Tag/index';
 
 export const RenderUploadFiles = ({
   files,

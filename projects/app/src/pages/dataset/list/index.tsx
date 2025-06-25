@@ -9,30 +9,30 @@ import List from '@/pageComponents/dataset/list/List';
 import { DatasetsContext } from './context';
 import DatasetContextProvider from './context';
 import { useContextSelector } from 'use-context-selector';
-import MultipleMenu from '@fastgpt/web/components/common/MyMenu/Multiple';
+import MultipleMenu from '@libchat/web/components/common/MyMenu/Multiple';
 import { AddIcon } from '@chakra-ui/icons';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { FolderIcon } from '@fastgpt/global/common/file/image/constants';
-import { type EditFolderFormType } from '@fastgpt/web/components/common/MyModal/EditFolderModal';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { FolderIcon } from '@libchat/global/common/file/image/constants';
+import { type EditFolderFormType } from '@libchat/web/components/common/MyModal/EditFolderModal';
 import dynamic from 'next/dynamic';
 import { postCreateDatasetFolder, resumeInheritPer } from '@/web/core/dataset/api';
 import FolderSlideCard from '@/components/common/folder/SlideCard';
-import { DatasetPermissionList } from '@fastgpt/global/support/permission/dataset/constant';
+import { DatasetPermissionList } from '@libchat/global/support/permission/dataset/constant';
 import {
   postUpdateDatasetCollaborators,
   deleteDatasetCollaborators,
   getCollaboratorList
 } from '@/web/core/dataset/api/collaborator';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { type CreateDatasetType } from '@/pageComponents/dataset/list/CreateModal';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { useToast } from '@libchat/web/hooks/useToast';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 
 const EditFolderModal = dynamic(
-  () => import('@fastgpt/web/components/common/MyModal/EditFolderModal')
+  () => import('@libchat/web/components/common/MyModal/EditFolderModal')
 );
 
 const CreateModal = dynamic(() => import('@/pageComponents/dataset/list/CreateModal'));

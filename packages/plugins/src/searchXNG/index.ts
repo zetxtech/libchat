@@ -1,4 +1,4 @@
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 import * as cheerio from 'cheerio';
 import { i18nT } from '../../../web/i18n/utils';
 

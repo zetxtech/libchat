@@ -1,14 +1,14 @@
 import React from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { ModalBody, Button, ModalFooter, Textarea } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io.d';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io.d';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useForm } from 'react-hook-form';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
-import { parseCurl } from '@fastgpt/global/common/string/http';
+import { parseCurl } from '@libchat/global/common/string/http';
 
 const CurlImportModal = ({
   nodeId,

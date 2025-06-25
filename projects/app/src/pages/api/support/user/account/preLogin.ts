@@ -1,9 +1,9 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { UserAuthTypeEnum } from '@fastgpt/global/support/user/auth/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { UserAuthTypeEnum } from '@libchat/global/support/user/auth/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { addSeconds } from 'date-fns';
-import { addAuthCode } from '@fastgpt/service/support/user/auth/controller';
+import { addAuthCode } from '@libchat/service/support/user/auth/controller';
 
 export type preLoginQuery = {
   username: string;

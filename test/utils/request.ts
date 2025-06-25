@@ -1,4 +1,4 @@
-import type { NextApiHandler } from '@fastgpt/service/common/middle/entry';
+import type { NextApiHandler } from '@libchat/service/common/middle/entry';
 import type { MockReqType } from '../mocks/request';
 import { vi } from 'vitest';
 

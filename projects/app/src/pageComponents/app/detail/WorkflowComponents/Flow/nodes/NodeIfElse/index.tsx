@@ -2,19 +2,19 @@ import React, { useCallback, useMemo } from 'react';
 import NodeCard from '../render/NodeCard';
 import { useTranslation } from 'next-i18next';
 import { Box, Button, Flex } from '@chakra-ui/react';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { type NodeProps, Position } from 'reactflow';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
-import { type IfElseListItemType } from '@fastgpt/global/core/workflow/template/system/ifElse/type';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
+import { type IfElseListItemType } from '@libchat/global/core/workflow/template/system/ifElse/type';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
 import Container from '../../components/Container';
-import DndDrag, { Draggable } from '@fastgpt/web/components/common/DndDrag/index';
+import DndDrag, { Draggable } from '@libchat/web/components/common/DndDrag/index';
 import { MySourceHandle } from '../render/Handle';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
 import ListItem from './ListItem';
-import { IfElseResultEnum } from '@fastgpt/global/core/workflow/template/system/ifElse/constant';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { IfElseResultEnum } from '@libchat/global/core/workflow/template/system/ifElse/constant';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 const NodeIfElse = ({ data, selected }: NodeProps<FlowNodeItemType>) => {
   const { t } = useTranslation();

@@ -17,25 +17,25 @@ import {
   VariableInputEnum,
   variableMap,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
-import type { VariableItemType } from '@fastgpt/global/core/app/type.d';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+} from '@libchat/global/core/workflow/constants';
+import type { VariableItemType } from '@libchat/global/core/app/type.d';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useForm, type UseFormReset } from 'react-hook-form';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { formatEditorVariablePickerIcon } from '@fastgpt/global/core/workflow/utils';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { formatEditorVariablePickerIcon } from '@libchat/global/core/workflow/utils';
 import ChatFunctionTip from './Tip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import InputTypeConfig from '@/pageComponents/app/detail/WorkflowComponents/Flow/nodes/NodePluginIO/InputTypeConfig';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 import DndDrag, {
   Draggable,
   type DraggableProvided,
   type DraggableStateSnapshot
-} from '@fastgpt/web/components/common/DndDrag';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+} from '@libchat/web/components/common/DndDrag';
+import { getNanoid } from '@libchat/global/common/string/tools';
 
 export const defaultVariable: VariableItemType = {
   id: getNanoid(6),

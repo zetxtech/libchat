@@ -15,23 +15,23 @@ import { useForm } from 'react-hook-form';
 import { postCreateApp } from '@/web/core/app/api';
 import { useRouter } from 'next/router';
 import { emptyTemplates, parsePluginFromCurlString } from '@/web/core/app/templates';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { useContextSelector } from 'use-context-selector';
 import { AppListContext } from './context';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import {
   getTemplateMarketItemDetail,
   getTemplateMarketItemList
 } from '@/web/core/app/api/template';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
 import { appTypeMap } from '@/pageComponents/app/constants';
 
 type FormType = {

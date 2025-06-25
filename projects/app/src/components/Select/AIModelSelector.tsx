@@ -2,15 +2,15 @@ import React, { useCallback, useMemo, useState } from 'react';
 
 import { useTranslation } from 'next-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MySelect, { type SelectProps } from '@fastgpt/web/components/common/MySelect';
-import { HUGGING_FACE_ICON } from '@fastgpt/global/common/system/constants';
+import MySelect, { type SelectProps } from '@libchat/web/components/common/MySelect';
+import { HUGGING_FACE_ICON } from '@libchat/global/common/system/constants';
 import { Box, Flex, HStack } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import dynamic from 'next/dynamic';
-import { ModelProviderList } from '@fastgpt/global/core/ai/provider';
-import MultipleRowSelect from '@fastgpt/web/components/common/MySelect/MultipleRowSelect';
-import { getModelFromList } from '@fastgpt/global/core/ai/model';
+import { ModelProviderList } from '@libchat/global/core/ai/provider';
+import MultipleRowSelect from '@libchat/web/components/common/MySelect/MultipleRowSelect';
+import { getModelFromList } from '@libchat/global/core/ai/model';
 
 const ModelPriceModal = dynamic(() =>
   import('@/components/core/ai/ModelTable').then((mod) => mod.ModelPriceModal)

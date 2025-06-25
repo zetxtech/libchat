@@ -9,18 +9,18 @@ import {
   DEFAULT_ORG_AVATAR,
   DEFAULT_TEAM_AVATAR,
   DEFAULT_USER_AVATAR
-} from '@fastgpt/global/common/system/constants';
-import { type UpdateClbPermissionProps } from '@fastgpt/global/support/permission/collaborator';
-import { type MemberGroupListItemType } from '@fastgpt/global/support/permission/memberGroup/type';
-import { DefaultGroupName } from '@fastgpt/global/support/user/team/group/constant';
-import { type OrgListItemType } from '@fastgpt/global/support/user/team/org/type';
-import { type TeamMemberItemType } from '@fastgpt/global/support/user/team/type';
-import MyAvatar from '@fastgpt/web/components/common/Avatar';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+} from '@libchat/global/common/system/constants';
+import { type UpdateClbPermissionProps } from '@libchat/global/support/permission/collaborator';
+import { type MemberGroupListItemType } from '@libchat/global/support/permission/memberGroup/type';
+import { DefaultGroupName } from '@libchat/global/support/user/team/group/constant';
+import { type OrgListItemType } from '@libchat/global/support/user/team/org/type';
+import { type TeamMemberItemType } from '@libchat/global/support/user/team/type';
+import MyAvatar from '@libchat/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { useTranslation } from 'next-i18next';
 import { type ValueOf } from 'next/dist/shared/lib/constants';
 import { useMemo, useRef, useState } from 'react';

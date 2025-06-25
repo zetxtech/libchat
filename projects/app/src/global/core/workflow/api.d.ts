@@ -1,10 +1,10 @@
-import { AppSchema } from '@fastgpt/global/core/app/type';
-import type { ChatHistoryItemResType } from '@fastgpt/global/core/chat/type';
-import type { RuntimeNodeItemType } from '@fastgpt/global/core/workflow/runtime/type';
-import type { WorkflowInteractiveResponseType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
-import { StoreNodeItemType } from '@fastgpt/global/core/workflow/type';
-import type { RuntimeEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
-import { StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
+import { AppSchema } from '@libchat/global/core/app/type';
+import type { ChatHistoryItemResType } from '@libchat/global/core/chat/type';
+import type { RuntimeNodeItemType } from '@libchat/global/core/workflow/runtime/type';
+import type { WorkflowInteractiveResponseType } from '@libchat/global/core/workflow/template/system/interactive/type';
+import { StoreNodeItemType } from '@libchat/global/core/workflow/type';
+import type { RuntimeEdgeItemType } from '@libchat/global/core/workflow/type/edge';
+import { StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
 
 export type PostWorkflowDebugProps = {
   nodes: RuntimeNodeItemType[];

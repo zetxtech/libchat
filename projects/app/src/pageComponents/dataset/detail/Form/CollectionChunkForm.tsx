@@ -1,4 +1,4 @@
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { type UseFormReturn } from 'react-hook-form';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
@@ -16,24 +16,24 @@ import {
   HStack,
   Grid
 } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import LeftRadio from '@fastgpt/web/components/common/Radio/LeftRadio';
-import { ParagraphChunkAIModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { ChunkTriggerConfigTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
+import LeftRadio from '@libchat/web/components/common/Radio/LeftRadio';
+import { ParagraphChunkAIModeEnum } from '@libchat/global/core/dataset/constants';
+import { ChunkTriggerConfigTypeEnum } from '@libchat/global/core/dataset/constants';
 import {
   DataChunkSplitModeEnum,
   DatasetCollectionDataProcessModeEnum,
   DatasetCollectionDataProcessModeMap
-} from '@fastgpt/global/core/dataset/constants';
-import { ChunkSettingModeEnum } from '@fastgpt/global/core/dataset/constants';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { Prompt_AgentQA } from '@fastgpt/global/core/ai/prompt/agent';
+} from '@libchat/global/core/dataset/constants';
+import { ChunkSettingModeEnum } from '@libchat/global/core/dataset/constants';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { Prompt_AgentQA } from '@libchat/global/core/ai/prompt/agent';
 import { useContextSelector } from 'use-context-selector';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import {
   chunkAutoChunkSize,
   getIndexSizeSelectList,
@@ -42,8 +42,8 @@ import {
   getMaxChunkSize,
   getMaxIndexSize,
   minChunkSize
-} from '@fastgpt/global/core/dataset/training/utils';
-import RadioGroup from '@fastgpt/web/components/common/Radio/RadioGroup';
+} from '@libchat/global/core/dataset/training/utils';
+import RadioGroup from '@libchat/web/components/common/Radio/RadioGroup';
 
 const PromptTextarea = ({
   defaultValue = '',

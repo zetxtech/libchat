@@ -1,14 +1,14 @@
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import React, { useMemo, useState } from 'react';
 import { type NodeProps, useViewport } from 'reactflow';
 import NodeCard from '../render/NodeCard';
 import Container from '../../components/Container';
 import RenderInput from '../render/RenderInput';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import {
   type FlowNodeInputItemType,
   type FlowNodeOutputItemType
-} from '@fastgpt/global/core/workflow/type/io';
+} from '@libchat/global/core/workflow/type/io';
 import {
   Box,
   Button,
@@ -22,27 +22,27 @@ import {
   Thead,
   Tr
 } from '@chakra-ui/react';
-import { type UserInputFormItemType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
+import { type UserInputFormItemType } from '@libchat/global/core/workflow/template/system/interactive/type';
 import { useTranslation } from 'next-i18next';
-import type { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import type { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import {
   FlowNodeInputMap,
   FlowNodeOutputTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+} from '@libchat/global/core/workflow/node/constant';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { SmallAddIcon } from '@chakra-ui/icons';
 import IOTitle from '../../components/IOTitle';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
 import InputFormEditModal, { defaultFormInput } from './InputFormEditModal';
 import RenderOutput from '../render/RenderOutput';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 import DndDrag, {
   Draggable,
   type DraggableProvided,
   type DraggableStateSnapshot
-} from '@fastgpt/web/components/common/DndDrag';
+} from '@libchat/web/components/common/DndDrag';
 
 const NodeFormInput = ({ data, selected }: NodeProps<FlowNodeItemType>) => {
   const { nodeId, inputs, outputs } = data;

@@ -3,7 +3,7 @@ import { IconButton, Flex, Box, Input, type BoxProps } from '@chakra-ui/react';
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons';
 import { useTranslation } from 'next-i18next';
 import { useToast } from './useToast';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import {
   useBoolean,
   useLockFn,

@@ -7,18 +7,18 @@ import {
   DatasetCollectionDataProcessModeEnum,
   ImportDataSourceEnum,
   ParagraphChunkAIModeEnum
-} from '@fastgpt/global/core/dataset/constants';
-import { useMyStep } from '@fastgpt/web/hooks/useStep';
+} from '@libchat/global/core/dataset/constants';
+import { useMyStep } from '@libchat/web/hooks/useStep';
 import { Box, Button, Flex, IconButton } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { TabEnum } from '../NavBar';
-import { ChunkSettingModeEnum } from '@fastgpt/global/core/dataset/constants';
+import { ChunkSettingModeEnum } from '@libchat/global/core/dataset/constants';
 import { type UseFormReturn, useForm } from 'react-hook-form';
 import { type ImportSourceItemType } from '@/web/core/dataset/type';
-import { Prompt_AgentQA } from '@fastgpt/global/core/ai/prompt/agent';
+import { Prompt_AgentQA } from '@libchat/global/core/ai/prompt/agent';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import { DataChunkSplitModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { chunkAutoChunkSize, getAutoIndexSize } from '@fastgpt/global/core/dataset/training/utils';
+import { DataChunkSplitModeEnum } from '@libchat/global/core/dataset/constants';
+import { chunkAutoChunkSize, getAutoIndexSize } from '@libchat/global/core/dataset/training/utils';
 import { type CollectionChunkFormType } from '../Form/CollectionChunkForm';
 
 export type ImportFormType = {

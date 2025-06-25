@@ -1,12 +1,12 @@
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { replaceRegChars } from '@fastgpt/global/common/string/tools';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { replaceRegChars } from '@libchat/global/common/string/tools';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import { type DatasetDataListItemType } from '@/global/core/dataset/type';
-import { parsePaginationRequest } from '@fastgpt/service/common/api/pagination';
-import { type PaginationResponse } from '@fastgpt/web/common/fetch/type';
+import { parsePaginationRequest } from '@libchat/service/common/api/pagination';
+import { type PaginationResponse } from '@libchat/web/common/fetch/type';
 
 export type GetDatasetDataListProps = {
   searchText?: string;

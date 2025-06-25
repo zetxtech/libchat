@@ -1,14 +1,14 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { type NextApiRequest, type NextApiResponse } from 'next';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { jiebaSplit } from '@fastgpt/service/common/string/jieba';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { delay } from '@fastgpt/global/common/system/utils';
-import { MongoDatasetDataText } from '@fastgpt/service/core/dataset/data/dataTextSchema';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { type DatasetDataTextSchemaType } from '@fastgpt/global/core/dataset/type';
-import type { AnyBulkWriteOperation } from '@fastgpt/service/common/mongo';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { jiebaSplit } from '@libchat/service/common/string/jieba';
+import { addLog } from '@libchat/service/common/system/log';
+import { delay } from '@libchat/global/common/system/utils';
+import { MongoDatasetDataText } from '@libchat/service/core/dataset/data/dataTextSchema';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { type DatasetDataTextSchemaType } from '@libchat/global/core/dataset/type';
+import type { AnyBulkWriteOperation } from '@libchat/service/common/mongo';
 
 const updateData = async () => {
   let success = 0;

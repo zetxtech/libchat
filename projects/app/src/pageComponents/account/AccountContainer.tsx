@@ -3,12 +3,12 @@ import { Box, Flex, useTheme } from '@chakra-ui/react';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useRouter } from 'next/router';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
 import PageContainer from '@/components/PageContainer';
 import SideTabs from '@/components/SideTabs';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import { useTranslation } from 'next-i18next';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 
 export enum TabEnum {
   'info' = 'info',

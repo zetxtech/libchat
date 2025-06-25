@@ -1,18 +1,18 @@
 import type { NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { getGuideModule, getAppChatConfig } from '@fastgpt/global/core/workflow/utils';
+import { jsonRes } from '@libchat/service/common/response';
+import { getGuideModule, getAppChatConfig } from '@libchat/global/core/workflow/utils';
 import { getChatModelNameListByModules } from '@/service/core/app/workflow';
 import type { InitChatResponse, InitTeamChatProps } from '@/global/core/chat/api.d';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { AppErrEnum } from '@fastgpt/global/common/error/code/app';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { AppErrEnum } from '@libchat/global/common/error/code/app';
 import { authTeamSpaceToken } from '@/service/support/permission/auth/team';
-import { MongoTeam } from '@fastgpt/service/support/user/team/teamSchema';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { MongoTeam } from '@libchat/service/support/user/team/teamSchema';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 
 async function handler(req: ApiRequestProps<InitTeamChatProps>, res: NextApiResponse) {
   let { teamId, appId, chatId, teamToken } = req.query;

@@ -1,5 +1,5 @@
 {
-  "name": "@fastgpt/global",
+  "name": "@libchat/global",
   "version": "1.0.0",
   "dependencies": {
     "@apidevtools/swagger-parser": "^10.1.0",

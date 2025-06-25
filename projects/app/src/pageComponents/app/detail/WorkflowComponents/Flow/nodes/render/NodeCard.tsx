@@ -1,42 +1,42 @@
 import React, { useCallback, useMemo } from 'react';
 import { Box, Button, Flex, useDisclosure, type FlexProps } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import type { FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
+import type { FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import { useTranslation } from 'next-i18next';
 import { useEditTitle } from '@/web/common/hooks/useEditTitle';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import {
   AppNodeFlowNodeTypeMap,
   FlowNodeTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
-import { LOGO_ICON } from '@fastgpt/global/common/system/constants';
+} from '@libchat/global/core/workflow/node/constant';
+import { LOGO_ICON } from '@libchat/global/common/system/constants';
 import { ToolSourceHandle, ToolTargetHandle } from './Handle/ToolHandle';
-import { useEditTextarea } from '@fastgpt/web/hooks/useEditTextarea';
+import { useEditTextarea } from '@libchat/web/hooks/useEditTextarea';
 import { ConnectionSourceHandle, ConnectionTargetHandle } from './Handle/ConnectionHandle';
 import { useDebug } from '../../hooks/useDebug';
 import { getPreviewPluginNode, getToolVersionList } from '@/web/core/app/api/plugin';
 import { storeNode2FlowNode } from '@/web/core/workflow/utils';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
-import { moduleTemplatesFlat } from '@fastgpt/global/core/workflow/template/constants';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { moduleTemplatesFlat } from '@libchat/global/core/workflow/template/constants';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useWorkflowUtils } from '../../hooks/useUtils';
 import { WorkflowNodeEdgeContext } from '../../../context/workflowInitContext';
 import { WorkflowEventContext } from '../../../context/workflowEventContext';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 import UseGuideModal from '@/components/common/Modal/UseGuideModal';
 import NodeDebugResponse from './RenderDebug/NodeDebugResponse';
 import { getAppVersionList } from '@/web/core/app/api/version';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
+import MyTag from '@libchat/web/components/common/Tag/index';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { useCreation } from 'ahooks';
-import { formatToolError } from '@fastgpt/global/core/app/utils';
-import HighlightText from '@fastgpt/web/components/common/String/HighlightText';
+import { formatToolError } from '@libchat/global/core/app/utils';
+import HighlightText from '@libchat/web/components/common/String/HighlightText';
 
 type Props = FlowNodeItemType & {
   children?: React.ReactNode | React.ReactNode[] | string;

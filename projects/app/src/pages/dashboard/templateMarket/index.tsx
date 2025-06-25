@@ -6,25 +6,25 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import {
   type AppTemplateSchemaType,
   type TemplateTypeSchemaType
-} from '@fastgpt/global/core/app/type';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+} from '@libchat/global/core/app/type';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getTemplateMarketItemDetail } from '@/web/core/app/api/template';
 import { postCreateApp } from '@/web/core/app/api';
 import { webPushTrack } from '@/web/common/middle/tracks/utils';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import Avatar from '@libchat/web/components/common/Avatar';
 import AppTypeTag from '@/pageComponents/dashboard/apps/TypeTag';
 
 import dynamic from 'next/dynamic';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
+import MySelect from '@libchat/web/components/common/MySelect';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 const UseGuideModal = dynamic(() => import('@/components/common/Modal/UseGuideModal'), {
   ssr: false
 });

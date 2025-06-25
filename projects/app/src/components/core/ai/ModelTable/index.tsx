@@ -18,17 +18,17 @@ import {
   ModelProviderList,
   type ModelProviderIdType,
   getModelProvider
-} from '@fastgpt/global/core/ai/provider';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { modelTypeList, ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
+} from '@libchat/global/core/ai/provider';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { modelTypeList, ModelTypeEnum } from '@libchat/global/core/ai/model';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import dynamic from 'next/dynamic';
-import CopyBox from '@fastgpt/web/components/common/String/CopyBox';
+import CopyBox from '@libchat/web/components/common/String/CopyBox';
 
-const MyModal = dynamic(() => import('@fastgpt/web/components/common/MyModal'));
+const MyModal = dynamic(() => import('@libchat/web/components/common/MyModal'));
 
 const ModelTable = () => {
   const { t } = useTranslation();

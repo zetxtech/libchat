@@ -1,23 +1,23 @@
 import { Box, Button, Flex, Grid, useDisclosure } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { SmallAddIcon } from '@chakra-ui/icons';
-import { type AppSimpleEditFormType } from '@fastgpt/global/core/app/type';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { theme } from '@fastgpt/web/styles/theme';
-import DeleteIcon, { hoverDeleteStyles } from '@fastgpt/web/components/common/Icon/delete';
+import { type AppSimpleEditFormType } from '@libchat/global/core/app/type';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { theme } from '@libchat/web/styles/theme';
+import DeleteIcon, { hoverDeleteStyles } from '@libchat/web/components/common/Icon/delete';
 import ToolSelectModal, { childAppSystemKey } from './ToolSelectModal';
 import {
   FlowNodeInputTypeEnum,
   FlowNodeTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+} from '@libchat/global/core/workflow/node/constant';
+import Avatar from '@libchat/web/components/common/Avatar';
 import ConfigToolModal from './ConfigToolModal';
 import { getWebLLMModel } from '@/web/common/system/utils';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import { formatToolError } from '@fastgpt/global/core/app/utils';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import { formatToolError } from '@libchat/global/core/app/utils';
 
 const ToolSelect = ({
   appForm,

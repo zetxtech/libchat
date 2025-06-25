@@ -10,8 +10,8 @@ import {
 } from 'reactflow';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { Box } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import styles from './index.module.scss';

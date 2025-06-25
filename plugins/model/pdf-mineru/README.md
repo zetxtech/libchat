@@ -56,10 +56,10 @@ pip install --force-reinstall torch==2.3.1 torchvision==0.18.1 "numpy<2.0.0" --i
 pip install paddlepaddle-gpu==2.6.1
 ```
 
-5、克隆一个FastGPT的项目文件
+5、克隆一个LibChat的项目文件
 
 ```
-git clone https://github.com/labring/FastGPT.git
+git clone https://github.com/labring/LibChat.git
 ```
 
 6、将主目录设置为 plugins/model 下的pdf-mineru文件夹

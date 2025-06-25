@@ -1,12 +1,12 @@
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { Box, Flex, HStack } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyBox from '@libchat/web/components/common/MyBox';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { type NodeTemplateListItemType } from '@fastgpt/global/core/workflow/type/node';
-import { type PluginGroupSchemaType } from '@fastgpt/service/core/app/plugin/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { type NodeTemplateListItemType } from '@libchat/global/core/workflow/type/node';
+import { type PluginGroupSchemaType } from '@libchat/service/core/app/plugin/type';
 import UseGuideModal from '@/components/common/Modal/UseGuideModal';
 
 const PluginCard = ({

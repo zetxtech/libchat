@@ -4,8 +4,8 @@ import 'katex/dist/katex.min.css';
 import ChatBoxDivider from '@/components/core/chat/Divider';
 import { useTranslation } from 'next-i18next';
 import { EventNameEnum, eventBus } from '@/web/common/utils/eventbus';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 const QuestionGuide = ({ text }: { text: string }) => {
   const theme = useTheme();

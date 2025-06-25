@@ -1,14 +1,14 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import React from 'react';
 import styles from '../SimpleApp/styles.module.scss';
 import { cardStyles } from '../constants';
 import AppCard from './AppCard';
 import ChatTest from './ChatTest';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import EditForm from './EditForm';
-import { type McpToolConfigType } from '@fastgpt/global/core/app/type';
-import { type StoreSecretValueType } from '@fastgpt/global/common/secret/type';
+import { type McpToolConfigType } from '@libchat/global/core/app/type';
+import { type StoreSecretValueType } from '@libchat/global/common/secret/type';
 
 const Edit = ({
   url,

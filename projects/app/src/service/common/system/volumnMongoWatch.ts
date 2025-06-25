@@ -1,13 +1,13 @@
 import { getSystemPluginCb } from '@/service/core/app/plugin';
 import { initSystemConfig } from '.';
 import { createDatasetTrainingMongoWatch } from '@/service/core/dataset/training/utils';
-import { MongoSystemConfigs } from '@fastgpt/service/common/system/config/schema';
-import { MongoSystemPlugin } from '@fastgpt/service/core/app/plugin/systemPluginSchema';
+import { MongoSystemConfigs } from '@libchat/service/common/system/config/schema';
+import { MongoSystemPlugin } from '@libchat/service/core/app/plugin/systemPluginSchema';
 import { debounce } from 'lodash';
-import { MongoAppTemplate } from '@fastgpt/service/core/app/templates/templateSchema';
-import { getAppTemplatesAndLoadThem } from '@fastgpt/templates/register';
-import { watchSystemModelUpdate } from '@fastgpt/service/core/ai/config/utils';
-import { SystemConfigsTypeEnum } from '@fastgpt/global/common/system/config/constants';
+import { MongoAppTemplate } from '@libchat/service/core/app/templates/templateSchema';
+import { getAppTemplatesAndLoadThem } from '@libchat/templates/register';
+import { watchSystemModelUpdate } from '@libchat/service/core/ai/config/utils';
+import { SystemConfigsTypeEnum } from '@libchat/global/common/system/config/constants';
 
 export const startMongoWatch = async () => {
   reloadConfigWatch();
@@ -25,7 +25,7 @@ const reloadConfigWatch = () => {
       if (
         change.operationType === 'update' ||
         (change.operationType === 'insert' &&
-          [SystemConfigsTypeEnum.fastgptPro, SystemConfigsTypeEnum.license].includes(
+          [SystemConfigsTypeEnum.libchatPro, SystemConfigsTypeEnum.license].includes(
             change.fullDocument.type
           ))
       ) {

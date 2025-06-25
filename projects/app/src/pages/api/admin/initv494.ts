@@ -1,10 +1,10 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { retryFn } from '@fastgpt/global/common/system/utils';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { upsertWebsiteSyncJobScheduler } from '@fastgpt/service/core/dataset/websiteSync';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { retryFn } from '@libchat/global/common/system/utils';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { upsertWebsiteSyncJobScheduler } from '@libchat/service/core/dataset/websiteSync';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { addHours } from 'date-fns';
 import { type NextApiRequest, type NextApiResponse } from 'next';
 

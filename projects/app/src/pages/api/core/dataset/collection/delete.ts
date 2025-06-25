@@ -1,14 +1,14 @@
 import type { NextApiRequest } from 'next';
-import { findCollectionAndChild } from '@fastgpt/service/core/dataset/collection/utils';
-import { delCollection } from '@fastgpt/service/core/dataset/collection/controller';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
+import { findCollectionAndChild } from '@libchat/service/core/dataset/collection/utils';
+import { delCollection } from '@libchat/service/core/dataset/collection/controller';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 
 async function handler(req: NextApiRequest) {
   const { id: collectionId } = req.query as { id: string };

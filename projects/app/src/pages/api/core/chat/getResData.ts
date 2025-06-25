@@ -1,11 +1,11 @@
 import { authChatCrud } from '@/service/support/permission/auth/chat';
-import { MongoChatItem } from '@fastgpt/service/core/chat/chatItemSchema';
-import { ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import { MongoChatItem } from '@libchat/service/core/chat/chatItemSchema';
+import { ChatRoleEnum } from '@libchat/global/core/chat/constants';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ChatHistoryItemResType } from '@fastgpt/global/core/chat/type';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { filterPublicNodeResponseData } from '@fastgpt/global/core/chat/utils';
+import { type ChatHistoryItemResType } from '@libchat/global/core/chat/type';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { filterPublicNodeResponseData } from '@libchat/global/core/chat/utils';
 
 export type getResDataQuery = OutLinkChatAuthProps & {
   chatId?: string;

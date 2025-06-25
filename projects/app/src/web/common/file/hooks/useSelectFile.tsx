@@ -1,11 +1,11 @@
 import React, { useRef, useCallback } from 'react';
 import { Box } from '@chakra-ui/react';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useMemoizedFn } from 'ahooks';
 import { compressImgFileAndUpload } from '../controller';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 
 export const useSelectFile = (props?: {
   fileType?: string;

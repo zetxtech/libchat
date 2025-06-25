@@ -14,11 +14,11 @@ import {
 import {
   type InvitationLinkCreateType,
   type InvitationLinkExpiresType
-} from '@fastgpt/service/support/user/team/invitationLink/type';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+} from '@libchat/service/support/user/team/invitationLink/type';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
 

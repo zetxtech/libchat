@@ -11,18 +11,18 @@ import {
   Flex,
   useDisclosure
 } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import React, { useMemo } from 'react';
 import { getQuoteData } from '@/web/core/dataset/api';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { getCollectionSourceData } from '@fastgpt/global/core/dataset/collection/utils';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { getCollectionSourceData } from '@libchat/global/core/dataset/collection/utils';
 import Markdown from '.';
-import { getSourceNameIcon } from '@fastgpt/global/core/dataset/utils';
+import { getSourceNameIcon } from '@libchat/global/core/dataset/utils';
 import { Types } from 'mongoose';
-import type { OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
+import type { OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
 import { useCreation } from 'ahooks';
 
 export type AProps = {

@@ -1,19 +1,19 @@
-import type { AIChatItemType, UserChatItemType } from '@fastgpt/global/core/chat/type.d';
+import type { AIChatItemType, UserChatItemType } from '@libchat/global/core/chat/type.d';
 import { MongoApp } from '../app/schema';
-import type { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
-import { ChatItemValueTypeEnum, ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
+import type { ChatSourceEnum } from '@libchat/global/core/chat/constants';
+import { ChatItemValueTypeEnum, ChatRoleEnum } from '@libchat/global/core/chat/constants';
 import { MongoChatItem } from './chatItemSchema';
 import { MongoChat } from './chatSchema';
 import { addLog } from '../../common/system/log';
 import { mongoSessionRun } from '../../common/mongo/sessionRun';
-import { type StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
-import { getAppChatConfig, getGuideModule } from '@fastgpt/global/core/workflow/utils';
-import { type AppChatConfigType } from '@fastgpt/global/core/app/type';
-import { mergeChatResponseData } from '@fastgpt/global/core/chat/utils';
+import { type StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
+import { getAppChatConfig, getGuideModule } from '@libchat/global/core/workflow/utils';
+import { type AppChatConfigType } from '@libchat/global/core/app/type';
+import { mergeChatResponseData } from '@libchat/global/core/chat/utils';
 import { pushChatLog } from './pushChatLog';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { extractDeepestInteractive } from '@fastgpt/global/core/workflow/runtime/utils';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { extractDeepestInteractive } from '@libchat/global/core/workflow/runtime/utils';
 
 type Props = {
   chatId: string;

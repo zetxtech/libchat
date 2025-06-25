@@ -2,7 +2,7 @@ import axios from 'axios';
 import { addLog } from '../../system/log';
 import { serverRequestBaseUrl } from '../../api/serverRequest';
 import { getFileContentTypeFromHeader, guessBase64ImageType } from '../utils';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 export const getImageBase64 = async (url: string) => {
   addLog.debug(`Load image to base64: ${url}`);

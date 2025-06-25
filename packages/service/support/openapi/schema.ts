@@ -1,10 +1,10 @@
 import { connectionMongo, getMongoModel, type Model } from '../../common/mongo';
 const { Schema, model, models } = connectionMongo;
-import { type OpenApiSchema } from '@fastgpt/global/support/openapi/type';
+import { type OpenApiSchema } from '@libchat/global/support/openapi/type';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 
 const OpenApiSchema = new Schema(
   {

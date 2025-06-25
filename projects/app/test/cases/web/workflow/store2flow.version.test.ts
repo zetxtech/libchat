@@ -1,11 +1,11 @@
 import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
-import type { StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import type { StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { storeNode2FlowNode } from '@/web/core/workflow/utils';
-import type { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import type { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 
 describe('storeNode2FlowNode with version and avatar inheritance', () => {
   beforeEach(() => {
-    vi.mock('@fastgpt/global/core/workflow/template/constants', () => {
+    vi.mock('@libchat/global/core/workflow/template/constants', () => {
       return {
         moduleTemplatesFlat: [
           {
@@ -20,7 +20,7 @@ describe('storeNode2FlowNode with version and avatar inheritance', () => {
         ]
       };
     });
-    vi.mock('@fastgpt/global/core/workflow/node/constant', () => {
+    vi.mock('@libchat/global/core/workflow/node/constant', () => {
       return {
         FlowNodeTypeEnum: { userInput: 'userInput' },
         FlowNodeInputTypeEnum: {

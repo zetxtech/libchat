@@ -1,8 +1,8 @@
-import { TeamPermission } from '@fastgpt/global/support/permission/user/controller';
+import { TeamPermission } from '@libchat/global/support/permission/user/controller';
 import { type AuthModeType, type AuthResponseType } from '../type';
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
 import { authUserPer } from '../user/auth';
-import { TeamManagePermissionVal } from '@fastgpt/global/support/permission/user/constant';
+import { TeamManagePermissionVal } from '@libchat/global/support/permission/user/constant';
 
 /*
   Team manager can control org

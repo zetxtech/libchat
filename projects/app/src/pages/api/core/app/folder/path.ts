@@ -3,11 +3,11 @@ import type {
   GetPathProps,
   ParentIdType,
   ParentTreePathItemType
-} from '@fastgpt/global/common/parentFolder/type.d';
+} from '@libchat/global/common/parentFolder/type.d';
 import { NextAPI } from '@/service/middleware/entry';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { MongoApp } from '@libchat/service/core/app/schema';
 
 async function handler(
   req: NextApiRequest,

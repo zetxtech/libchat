@@ -2,18 +2,18 @@
     Get one dataset collection detail
 */
 import type { NextApiRequest } from 'next';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
-import { getFileById } from '@fastgpt/service/common/file/gridfs/controller';
-import { getCollectionSourceData } from '@fastgpt/global/core/dataset/collection/utils';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
+import { getFileById } from '@libchat/service/common/file/gridfs/controller';
+import { getCollectionSourceData } from '@libchat/global/core/dataset/collection/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { type DatasetCollectionItemType } from '@fastgpt/global/core/dataset/type';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { collectionTagsToTagLabel } from '@fastgpt/service/core/dataset/collection/utils';
-import { getVectorCountByCollectionId } from '@fastgpt/service/common/vectorDB/controller';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { type DatasetCollectionItemType } from '@libchat/global/core/dataset/type';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { collectionTagsToTagLabel } from '@libchat/service/core/dataset/collection/utils';
+import { getVectorCountByCollectionId } from '@libchat/service/common/vectorDB/controller';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
 
 async function handler(req: NextApiRequest): Promise<DatasetCollectionItemType> {
   const { id } = req.query as { id: string };

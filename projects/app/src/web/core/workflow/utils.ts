@@ -1,39 +1,39 @@
 import type {
   StoreNodeItemType,
   FlowNodeItemType
-} from '@fastgpt/global/core/workflow/type/node.d';
-import type { FlowNodeTemplateType } from '@fastgpt/global/core/workflow/type/node';
+} from '@libchat/global/core/workflow/type/node.d';
+import type { FlowNodeTemplateType } from '@libchat/global/core/workflow/type/node';
 import type { Edge, Node, XYPosition } from 'reactflow';
-import { moduleTemplatesFlat } from '@fastgpt/global/core/workflow/template/constants';
+import { moduleTemplatesFlat } from '@libchat/global/core/workflow/template/constants';
 import {
   EDGE_TYPE,
   FlowNodeInputTypeEnum,
   FlowNodeOutputTypeEnum,
   FlowNodeTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
-import { EmptyNode } from '@fastgpt/global/core/workflow/template/system/emptyNode';
-import { type StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+} from '@libchat/global/core/workflow/node/constant';
+import { EmptyNode } from '@libchat/global/core/workflow/template/system/emptyNode';
+import { type StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { getGlobalVariableNode } from './adapt';
-import { VARIABLE_NODE_ID, WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { type EditorVariablePickerType } from '@fastgpt/web/components/common/Textarea/PromptEditor/type';
+import { VARIABLE_NODE_ID, WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { type EditorVariablePickerType } from '@libchat/web/components/common/Textarea/PromptEditor/type';
 import {
   formatEditorVariablePickerIcon,
   getAppChatConfig,
   getGuideModule
-} from '@fastgpt/global/core/workflow/utils';
+} from '@libchat/global/core/workflow/utils';
 import { type TFunction } from 'next-i18next';
 import {
   type FlowNodeInputItemType,
   type FlowNodeOutputItemType,
   type ReferenceItemValueType
-} from '@fastgpt/global/core/workflow/type/io';
-import { type IfElseListItemType } from '@fastgpt/global/core/workflow/template/system/ifElse/type';
-import { VariableConditionEnum } from '@fastgpt/global/core/workflow/template/system/ifElse/constant';
-import { type AppChatConfigType } from '@fastgpt/global/core/app/type';
+} from '@libchat/global/core/workflow/type/io';
+import { type IfElseListItemType } from '@libchat/global/core/workflow/template/system/ifElse/type';
+import { VariableConditionEnum } from '@libchat/global/core/workflow/template/system/ifElse/constant';
+import { type AppChatConfigType } from '@libchat/global/core/app/type';
 import { cloneDeep, isEqual } from 'lodash';
-import { getInputComponentProps } from '@fastgpt/global/core/workflow/node/io/utils';
+import { getInputComponentProps } from '@libchat/global/core/workflow/node/io/utils';
 import { workflowSystemVariables } from '../app/utils';
 
 export const nodeTemplate2FlowNode = ({

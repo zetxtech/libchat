@@ -1,7 +1,7 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { getAppBasicInfoByIds } from '@fastgpt/service/core/app/controller';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { getAppBasicInfoByIds } from '@libchat/service/core/app/controller';
 
 export type getBasicInfoQuery = {};
 

@@ -1,8 +1,8 @@
 import { getCaptchaPic } from '@/web/support/user/api';
 import { Button, Input, ModalBody, ModalFooter, Skeleton } from '@chakra-ui/react';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
 

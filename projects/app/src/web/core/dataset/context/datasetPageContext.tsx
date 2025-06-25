@@ -12,13 +12,13 @@ import {
   putDatasetById
 } from '../api';
 import { defaultDatasetDetail } from '../constants';
-import { type DatasetUpdateBody } from '@fastgpt/global/core/dataset/api';
-import { type DatasetItemType, type DatasetTagType } from '@fastgpt/global/core/dataset/type';
+import { type DatasetUpdateBody } from '@libchat/global/core/dataset/api';
+import { type DatasetItemType, type DatasetTagType } from '@libchat/global/core/dataset/type';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { type ParentTreePathItemType } from '@fastgpt/global/common/parentFolder/type';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { type ParentTreePathItemType } from '@libchat/global/common/parentFolder/type';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getWebLLMModel } from '@/web/common/system/utils';
-import { filterApiDatasetServerPublicData } from '@fastgpt/global/core/dataset/apiDataset/utils';
+import { filterApiDatasetServerPublicData } from '@libchat/global/core/dataset/apiDataset/utils';
 
 type DatasetPageContextType = {
   datasetId: string;

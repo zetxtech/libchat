@@ -1,4 +1,4 @@
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 
 type Props = {
   ms: number;

@@ -1,22 +1,22 @@
-import { SystemConfigsTypeEnum } from '@fastgpt/global/common/system/config/constants';
+import { SystemConfigsTypeEnum } from '@libchat/global/common/system/config/constants';
 import { MongoSystemConfigs } from './schema';
-import { type FastGPTConfigFileType } from '@fastgpt/global/common/system/types';
-import { FastGPTProUrl } from '../constants';
-import { type LicenseDataType } from '@fastgpt/global/common/system/types';
+import { type LibChatConfigFileType } from '@libchat/global/common/system/types';
+import { LibChatProUrl } from '../constants';
+import { type LicenseDataType } from '@libchat/global/common/system/types';
 
-export const getFastGPTConfigFromDB = async (): Promise<{
-  fastgptConfig: FastGPTConfigFileType;
+export const getLibChatConfigFromDB = async (): Promise<{
+  libchatConfig: LibChatConfigFileType;
   licenseData?: LicenseDataType;
 }> => {
-  if (!FastGPTProUrl) {
+  if (!LibChatProUrl) {
     return {
-      fastgptConfig: {} as FastGPTConfigFileType
+      libchatConfig: {} as LibChatConfigFileType
     };
   }
 
-  const [fastgptConfig, licenseConfig] = await Promise.all([
+  const [libchatConfig, licenseConfig] = await Promise.all([
     MongoSystemConfigs.findOne({
-      type: SystemConfigsTypeEnum.fastgpt
+      type: SystemConfigsTypeEnum.libchat
     }).sort({
       createTime: -1
     }),
@@ -27,25 +27,25 @@ export const getFastGPTConfigFromDB = async (): Promise<{
     })
   ]);
 
-  const config = fastgptConfig?.value || {};
+  const config = libchatConfig?.value || {};
   const licenseData = licenseConfig?.value?.data as LicenseDataType | undefined;
 
-  const fastgptConfigTime = fastgptConfig?.createTime.getTime().toString();
+  const libchatConfigTime = libchatConfig?.createTime.getTime().toString();
   const licenseConfigTime = licenseConfig?.createTime.getTime().toString();
   // 利用配置文件的创建时间（更新时间）来做缓存，如果前端命中缓存，则不需要再返回配置文件
-  global.systemInitBufferId = fastgptConfigTime
-    ? `${fastgptConfigTime}-${licenseConfigTime}`
+  global.systemInitBufferId = libchatConfigTime
+    ? `${libchatConfigTime}-${licenseConfigTime}`
     : undefined;
 
   return {
-    fastgptConfig: config as FastGPTConfigFileType,
+    libchatConfig: config as LibChatConfigFileType,
     licenseData
   };
 };
 
-export const updateFastGPTConfigBuffer = async () => {
+export const updateLibChatConfigBuffer = async () => {
   const res = await MongoSystemConfigs.findOne({
-    type: SystemConfigsTypeEnum.fastgpt
+    type: SystemConfigsTypeEnum.libchat
   }).sort({
     createTime: -1
   });
@@ -58,9 +58,9 @@ export const updateFastGPTConfigBuffer = async () => {
   global.systemInitBufferId = res.createTime.getTime().toString();
 };
 
-export const reloadFastGPTConfigBuffer = async () => {
+export const reloadLibChatConfigBuffer = async () => {
   const res = await MongoSystemConfigs.findOne({
-    type: SystemConfigsTypeEnum.fastgpt
+    type: SystemConfigsTypeEnum.libchat
   }).sort({
     createTime: -1
   });

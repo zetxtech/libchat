@@ -1,8 +1,8 @@
-import { ChatSiteItemType } from '@fastgpt/global/core/chat/type';
-import { FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
+import { ChatSiteItemType } from '@libchat/global/core/chat/type';
+import { FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
 import { FieldValues, UseFormReturn } from 'react-hook-form';
 import type { PluginRunBoxTabEnum } from './constants';
-import type { OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
+import type { OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
 import React from 'react';
 import type { onStartChatType } from '../type';
 import { ChatBoxInputFormType } from '../ChatBox/type';

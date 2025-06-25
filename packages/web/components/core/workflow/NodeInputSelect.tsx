@@ -3,7 +3,7 @@ import MyMenu, { type MenuItemType } from '../../common/MyMenu';
 import {
   FlowNodeInputMap,
   FlowNodeInputTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
+} from '@libchat/global/core/workflow/node/constant';
 import { Button, useTheme } from '@chakra-ui/react';
 import MyIcon from '../../common/Icon';
 import { useTranslation } from 'next-i18next';

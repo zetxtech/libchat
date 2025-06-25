@@ -1,8 +1,8 @@
 import { Box, type BoxProps, Flex } from '@chakra-ui/react';
-import { type ParentTreePathItemType } from '@fastgpt/global/common/parentFolder/type';
+import { type ParentTreePathItemType } from '@libchat/global/common/parentFolder/type';
 import React, { useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 const FolderPath = (props: {
   paths: ParentTreePathItemType[];

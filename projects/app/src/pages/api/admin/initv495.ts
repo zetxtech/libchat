@@ -1,14 +1,14 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { type NextApiRequest, type NextApiResponse } from 'next';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
-import { TeamPermission } from '@fastgpt/global/support/permission/user/controller';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
+import { TeamPermission } from '@libchat/global/support/permission/user/controller';
 import {
   TeamApikeyCreatePermissionVal,
   TeamAppCreatePermissionVal,
   TeamDatasetCreatePermissionVal
-} from '@fastgpt/global/support/permission/user/constant';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+} from '@libchat/global/support/permission/user/constant';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 async function handler(req: NextApiRequest, _res: NextApiResponse) {
   await authCert({ req, authRoot: true });

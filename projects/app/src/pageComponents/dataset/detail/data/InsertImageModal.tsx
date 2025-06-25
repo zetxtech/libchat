@@ -1,11 +1,11 @@
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box, Button, Flex, ModalBody, ModalFooter } from '@chakra-ui/react';
 import FileSelector, { type SelectFileItemType } from '../components/FileSelector';
 import MyImage from '@/components/MyImage';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { insertImagesToCollection } from '@/web/core/dataset/image/api';
 
 const fileType = '.jpg, .jpeg, .png';

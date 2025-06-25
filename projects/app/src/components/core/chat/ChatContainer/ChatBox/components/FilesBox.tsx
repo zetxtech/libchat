@@ -1,12 +1,12 @@
 import { Box, Flex, Grid, Text } from '@chakra-ui/react';
 import MdImage from '@/components/Markdown/img/Image';
 import { type UserInputFileItemType } from '@/components/core/chat/ChatContainer/ChatBox/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { clone } from 'lodash';
-import { ChatFileTypeEnum } from '@fastgpt/global/core/chat/constants';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import { useWidthVariable } from '@fastgpt/web/hooks/useWidthVariable';
+import { ChatFileTypeEnum } from '@libchat/global/core/chat/constants';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import { useWidthVariable } from '@libchat/web/hooks/useWidthVariable';
 
 const FilesBlock = ({ files }: { files: UserInputFileItemType[] }) => {
   const chartRef = useRef<HTMLDivElement>(null);

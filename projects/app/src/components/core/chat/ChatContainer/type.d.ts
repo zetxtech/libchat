@@ -1,11 +1,11 @@
 import type { StreamResponseType } from '@/web/common/api/fetch';
-import type { ChatCompletionMessageParam } from '@fastgpt/global/core/ai/type';
+import type { ChatCompletionMessageParam } from '@libchat/global/core/ai/type';
 import type {
   ChatHistoryItemResType,
   ToolModuleResponseItemType
-} from '@fastgpt/global/core/chat/type';
-import { ChatSiteItemType } from '@fastgpt/global/core/chat/type';
-import type { WorkflowInteractiveResponseType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
+} from '@libchat/global/core/chat/type';
+import { ChatSiteItemType } from '@libchat/global/core/chat/type';
+import type { WorkflowInteractiveResponseType } from '@libchat/global/core/workflow/template/system/interactive/type';
 
 export type generatingMessageProps = {
   event: SseResponseEventEnum;

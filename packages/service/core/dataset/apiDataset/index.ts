@@ -1,7 +1,7 @@
 import { useApiDatasetRequest } from './custom/api';
 import { useYuqueDatasetRequest } from './yuqueDataset/api';
 import { useFeishuDatasetRequest } from './feishuDataset/api';
-import type { ApiDatasetServerType } from '@fastgpt/global/core/dataset/apiDataset/type';
+import type { ApiDatasetServerType } from '@libchat/global/core/dataset/apiDataset/type';
 
 export const getApiDatasetRequest = async (apiDatasetServer?: ApiDatasetServerType) => {
   const { apiServer, yuqueServer, feishuServer } = apiDatasetServer || {};

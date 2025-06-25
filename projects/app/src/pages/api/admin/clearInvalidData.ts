@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { jsonRes } from '@libchat/service/common/response';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { addHours } from 'date-fns';
 import {
   checkInvalidDatasetFiles,
@@ -8,11 +8,11 @@ import {
   checkInvalidVector
 } from '@/service/common/system/cronTask';
 import dayjs from 'dayjs';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { useIPFrequencyLimit } from '@fastgpt/service/common/middle/reqFrequencyLimit';
-import { MongoImage } from '@fastgpt/service/common/file/image/schema';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
+import { useIPFrequencyLimit } from '@libchat/service/common/middle/reqFrequencyLimit';
+import { MongoImage } from '@libchat/service/common/file/image/schema';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
 
 let deleteImageAmount = 0;
 async function checkInvalidImg(start: Date, end: Date) {

@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { Box, type BoxProps } from '@chakra-ui/react';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
 import { getCollectionSourceAndOpen } from '@/web/core/dataset/hooks/readCollectionSource';
-import { getCollectionIcon } from '@fastgpt/global/core/dataset/utils';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { getCollectionIcon } from '@libchat/global/core/dataset/utils';
+import MyIcon from '@libchat/web/components/common/Icon';
 import type { readCollectionSourceBody } from '@/pages/api/core/dataset/collection/read';
-import type { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import type { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
 
 type Props = BoxProps &
   readCollectionSourceBody & {

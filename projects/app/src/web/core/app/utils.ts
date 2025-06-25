@@ -3,42 +3,42 @@ import {
   type AppDetailType,
   type AppSchema,
   type AppSimpleEditFormType
-} from '@fastgpt/global/core/app/type';
-import { type StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+} from '@libchat/global/core/app/type';
+import { type StoreNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import {
   chatHistoryValueDesc,
   FlowNodeInputTypeEnum,
   FlowNodeTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
+} from '@libchat/global/core/workflow/node/constant';
 import {
   NodeInputKeyEnum,
   NodeOutputKeyEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { type StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
-import { type EditorVariablePickerType } from '@fastgpt/web/components/common/Textarea/PromptEditor/type';
-import { ToolModule } from '@fastgpt/global/core/workflow/template/system/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { type StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
+import { type EditorVariablePickerType } from '@libchat/web/components/common/Textarea/PromptEditor/type';
+import { ToolModule } from '@libchat/global/core/workflow/template/system/tools';
 import {
   WorkflowStart,
   userFilesInput
-} from '@fastgpt/global/core/workflow/template/system/workflowStart';
-import { SystemConfigNode } from '@fastgpt/global/core/workflow/template/system/systemConfig';
+} from '@libchat/global/core/workflow/template/system/workflowStart';
+import { SystemConfigNode } from '@libchat/global/core/workflow/template/system/systemConfig';
 import {
   AiChatModule,
   AiChatQuotePrompt,
   AiChatQuoteRole,
   AiChatQuoteTemplate
-} from '@fastgpt/global/core/workflow/template/system/aiChat/index';
-import { DatasetSearchModule } from '@fastgpt/global/core/workflow/template/system/datasetSearch';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+} from '@libchat/global/core/workflow/template/system/aiChat/index';
+import { DatasetSearchModule } from '@libchat/global/core/workflow/template/system/datasetSearch';
+import { i18nT } from '@libchat/web/i18n/utils';
 import {
   Input_Template_File_Link,
   Input_Template_UserChatInput
-} from '@fastgpt/global/core/workflow/template/input';
+} from '@libchat/global/core/workflow/template/input';
 import { workflowStartNodeId } from './constants';
-import { getDefaultAppForm } from '@fastgpt/global/core/app/utils';
+import { getDefaultAppForm } from '@libchat/global/core/app/utils';
 
 type WorkflowType = {
   nodes: StoreNodeItemType[];

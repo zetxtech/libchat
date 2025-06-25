@@ -1,7 +1,7 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoUser } from '@fastgpt/service/support/user/schema';
-import { MongoTeam } from '@fastgpt/service/support/user/team/teamSchema';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoUser } from '@libchat/service/support/user/schema';
+import { MongoTeam } from '@libchat/service/support/user/team/teamSchema';
 import { type NextApiRequest, type NextApiResponse } from 'next';
 
 /*

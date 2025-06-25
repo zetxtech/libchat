@@ -14,19 +14,19 @@ import {
   Box,
   Flex
 } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import { useLoading } from '@fastgpt/web/hooks/useLoading';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { useLoading } from '@libchat/web/hooks/useLoading';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { getTeamPlans } from '@/web/support/user/team/api';
 import {
   subTypeMap,
   standardSubLevelMap,
   SubTypeEnum
-} from '@fastgpt/global/support/wallet/sub/constants';
-import { formatTime2YMDHM } from '@fastgpt/global/common/string/time';
+} from '@libchat/global/support/wallet/sub/constants';
+import { formatTime2YMDHM } from '@libchat/global/common/string/time';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 
 type packageStatus = 'active' | 'inactive' | 'expired';
 

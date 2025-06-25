@@ -8,12 +8,12 @@ import dynamic from 'next/dynamic';
 import { RenderUploadFiles } from '../components/RenderFiles';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetImportContext } from '../Context';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { uploadFile2DB } from '@/web/common/file/controller';
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { formatFileSize } from '@fastgpt/global/common/file/tools';
-import { getFileIcon } from '@fastgpt/global/common/file/icon';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { formatFileSize } from '@libchat/global/common/file/tools';
+import { getFileIcon } from '@libchat/global/common/file/icon';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 
 const DataProcess = dynamic(() => import('../commonProgress/DataProcess'));

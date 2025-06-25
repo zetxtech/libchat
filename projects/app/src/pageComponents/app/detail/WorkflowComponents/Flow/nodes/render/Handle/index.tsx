@@ -1,15 +1,15 @@
 import React, { useMemo } from 'react';
 import { Handle, Position } from 'reactflow';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../../context';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import {
   WorkflowNodeEdgeContext,
   WorkflowInitContext
 } from '../../../../context/workflowInitContext';
 import { WorkflowEventContext } from '../../../../context/workflowEventContext';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'react-i18next';
 import { Box, Flex } from '@chakra-ui/react';
 

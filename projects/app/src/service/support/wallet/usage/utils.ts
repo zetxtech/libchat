@@ -1,5 +1,5 @@
-import { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
+import { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
 
 export function authType2UsageSource({
   authType,
@@ -13,5 +13,5 @@ export function authType2UsageSource({
   if (source) return source;
   if (shareId) return UsageSourceEnum.shareLink;
   if (authType === AuthUserTypeEnum.apikey) return UsageSourceEnum.api;
-  return UsageSourceEnum.fastgpt;
+  return UsageSourceEnum.libchat;
 }

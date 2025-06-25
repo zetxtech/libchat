@@ -22,7 +22,7 @@ import type { EditorState, LexicalEditor } from 'lexical';
 import OnBlurPlugin from './plugins/OnBlurPlugin';
 import MyIcon from '../../Icon';
 import { type EditorVariableLabelPickerType, type EditorVariablePickerType } from './type.d';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import FocusPlugin from './plugins/FocusPlugin';
 import { textToEditorState } from './utils';
 import { MaxLengthPlugin } from './plugins/MaxLengthPlugin';

@@ -1,24 +1,24 @@
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
 import { NextAPI } from '@/service/middleware/entry';
-import { DatasetPermission } from '@fastgpt/global/support/permission/dataset/controller';
+import { DatasetPermission } from '@libchat/global/support/permission/dataset/controller';
 import {
   PerResourceTypeEnum,
   ReadPermissionVal
-} from '@fastgpt/global/support/permission/constant';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
-import { DatasetDefaultPermissionVal } from '@fastgpt/global/support/permission/dataset/constant';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import { parseParentIdInMongo } from '@fastgpt/global/common/parentFolder/utils';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { replaceRegChars } from '@fastgpt/global/common/string/tools';
-import { getGroupsByTmbId } from '@fastgpt/service/support/permission/memberGroup/controllers';
-import { concatPer } from '@fastgpt/service/support/permission/controller';
-import { getOrgIdSetWithParentByTmbId } from '@fastgpt/service/support/permission/org/controllers';
-import { addSourceMember } from '@fastgpt/service/support/user/utils';
-import { getEmbeddingModel } from '@fastgpt/service/core/ai/model';
+} from '@libchat/global/support/permission/constant';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
+import { DatasetDefaultPermissionVal } from '@libchat/global/support/permission/dataset/constant';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
+import { parseParentIdInMongo } from '@libchat/global/common/parentFolder/utils';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { replaceRegChars } from '@libchat/global/common/string/tools';
+import { getGroupsByTmbId } from '@libchat/service/support/permission/memberGroup/controllers';
+import { concatPer } from '@libchat/service/support/permission/controller';
+import { getOrgIdSetWithParentByTmbId } from '@libchat/service/support/permission/org/controllers';
+import { addSourceMember } from '@libchat/service/support/user/utils';
+import { getEmbeddingModel } from '@libchat/service/core/ai/model';
 
 export type GetDatasetListBody = {
   parentId: ParentIdType;

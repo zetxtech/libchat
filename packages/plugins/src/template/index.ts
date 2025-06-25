@@ -1,4 +1,4 @@
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 
 type Props = {
   text: string;

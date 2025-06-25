@@ -1,4 +1,4 @@
-import { DatasetPermission } from '@fastgpt/global/support/permission/dataset/controller';
+import { DatasetPermission } from '@libchat/global/support/permission/dataset/controller';
 
 export const processUpdateDatasetCollaboratorSpecific = (metadata: any) => {
   const permissionValue = parseInt(metadata.permission, 10);

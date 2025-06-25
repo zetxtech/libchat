@@ -16,7 +16,7 @@ import LexicalErrorBoundary from '@lexical/react/LexicalErrorBoundary';
 import { Box, Flex } from '@chakra-ui/react';
 import styles from './index.module.scss';
 import type { EditorState, LexicalEditor } from 'lexical';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import {
   type EditorVariableLabelPickerType,
   type EditorVariablePickerType

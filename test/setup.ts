@@ -1,18 +1,18 @@
 import './mocks';
 import { existsSync, readFileSync } from 'fs';
-import { connectMongo } from '@fastgpt/service/common/mongo/init';
+import { connectMongo } from '@libchat/service/common/mongo/init';
 import { initGlobalVariables } from '@/service/common/system';
 import { afterAll, beforeAll, beforeEach, inject, onTestFinished, vi } from 'vitest';
 import setupModels from './setupModels';
 import { clean } from './datas/users';
-import type { Mongoose } from '@fastgpt/service/common/mongo';
-import { connectionLogMongo, connectionMongo } from '@fastgpt/service/common/mongo';
+import type { Mongoose } from '@libchat/service/common/mongo';
+import { connectionLogMongo, connectionMongo } from '@libchat/service/common/mongo';
 import { randomUUID } from 'crypto';
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 
 vi.stubEnv('NODE_ENV', 'test');
 
-vi.mock(import('@fastgpt/service/common/mongo/init'), async (importOriginal: any) => {
+vi.mock(import('@libchat/service/common/mongo/init'), async (importOriginal: any) => {
   const mod = await importOriginal();
   return {
     ...mod,

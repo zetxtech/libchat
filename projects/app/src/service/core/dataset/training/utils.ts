@@ -1,8 +1,8 @@
 import { generateQA } from '@/service/core/dataset/queues/generateQA';
 import { generateVector } from '@/service/core/dataset/queues/generateVector';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { type DatasetTrainingSchemaType } from '@fastgpt/global/core/dataset/type';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
+import { type DatasetTrainingSchemaType } from '@libchat/global/core/dataset/type';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
 import { datasetParseQueue } from '../queues/datasetParse';
 
 export const createDatasetTrainingMongoWatch = () => {

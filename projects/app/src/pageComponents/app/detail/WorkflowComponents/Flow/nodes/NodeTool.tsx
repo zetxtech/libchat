@@ -1,4 +1,4 @@
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import React from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from './render/NodeCard';

@@ -3,7 +3,7 @@ import type { CreateAppFolderBody } from '@/pages/api/core/app/folder/create';
 import type {
   GetPathProps,
   ParentTreePathItemType
-} from '@fastgpt/global/common/parentFolder/type';
+} from '@libchat/global/common/parentFolder/type';
 import type {
   transitionWorkflowBody,
   transitionWorkflowResponse

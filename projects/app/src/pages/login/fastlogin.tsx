@@ -4,10 +4,10 @@ import type { ResLogin } from '@/global/support/api/userRes.d';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { clearToken } from '@/web/support/user/auth';
 import { postFastLogin } from '@/web/support/user/api';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import { useToast } from '@libchat/web/hooks/useToast';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { serviceSideProps } from '@/web/common/i18n/utils';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { useTranslation } from 'next-i18next';
 const FastLogin = ({
   code,

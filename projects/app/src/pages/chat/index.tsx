@@ -5,7 +5,7 @@ import { getInitChatInfo } from '@/web/core/chat/api';
 import { Box, Flex, Drawer, DrawerOverlay, DrawerContent, useTheme } from '@chakra-ui/react';
 import { streamFetch } from '@/web/common/api/fetch';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useTranslation } from 'next-i18next';
 
 import type { StartChatFnProps } from '@/components/core/chat/ChatContainer/type';
@@ -16,22 +16,22 @@ import SliderApps from '@/pageComponents/chat/SliderApps';
 import ChatHeader from '@/pageComponents/chat/ChatHeader';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { serviceSideProps } from '@/web/common/i18n/utils';
-import { getChatTitleFromChatMessage } from '@fastgpt/global/core/chat/utils';
-import { GPTMessages2Chats } from '@fastgpt/global/core/chat/adapt';
+import { getChatTitleFromChatMessage } from '@libchat/global/core/chat/utils';
+import { GPTMessages2Chats } from '@libchat/global/core/chat/adapt';
 import { getMyApps } from '@/web/core/app/api';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 
 import { useMount } from 'ahooks';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 
 import { GetChatTypeEnum } from '@/global/core/chat/constants';
 import ChatContextProvider, { ChatContext } from '@/web/core/chat/context/chatContext';
-import { type AppListItemType } from '@fastgpt/global/core/app/type';
+import { type AppListItemType } from '@libchat/global/core/app/type';
 import { useContextSelector } from 'use-context-selector';
 import dynamic from 'next/dynamic';
 import ChatBox from '@/components/core/chat/ChatContainer/ChatBox';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import { ChatSourceEnum } from '@libchat/global/core/chat/constants';
 import ChatItemContextProvider, { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import ChatRecordContextProvider, {
   ChatRecordContext

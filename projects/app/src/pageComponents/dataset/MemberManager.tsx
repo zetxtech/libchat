@@ -3,7 +3,7 @@ import React from 'react';
 import CollaboratorContextProvider, {
   type MemberManagerInputPropsType
 } from '@/components/support/permission/MemberManager/context';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 
 function MemberManager({ managePer }: { managePer: MemberManagerInputPropsType }) {

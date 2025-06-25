@@ -1,5 +1,5 @@
 import { type ImportSourceItemType } from '@/web/core/dataset/type';
-import { DatasetSourceReadTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import { DatasetSourceReadTypeEnum } from '@libchat/global/core/dataset/constants';
 
 export const getPreviewSourceReadType = (previewSource: ImportSourceItemType) => {
   if (previewSource.dbFileId) {

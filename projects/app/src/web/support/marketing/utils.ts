@@ -1,7 +1,7 @@
 import {
   type ShortUrlParams,
   type TrackRegisterParams
-} from '@fastgpt/global/support/marketing/type';
+} from '@libchat/global/support/marketing/type';
 
 export const getInviterId = () => {
   return localStorage.getItem('inviterId') || undefined;
@@ -49,21 +49,21 @@ export const removeUtmParams = () => {
   localStorage.removeItem('utm_params');
 };
 
-export const getFastGPTSem = () => {
+export const getLibChatSem = () => {
   try {
-    return localStorage.getItem('fastgpt_sem')
-      ? JSON.parse(localStorage.getItem('fastgpt_sem')!)
+    return localStorage.getItem('libchat_sem')
+      ? JSON.parse(localStorage.getItem('libchat_sem')!)
       : undefined;
   } catch {
     return undefined;
   }
 };
-export const setFastGPTSem = (fastgptSem?: TrackRegisterParams['fastgpt_sem']) => {
-  if (!fastgptSem) return;
-  localStorage.setItem('fastgpt_sem', JSON.stringify(fastgptSem));
+export const setLibChatSem = (libchatSem?: TrackRegisterParams['libchat_sem']) => {
+  if (!libchatSem) return;
+  localStorage.setItem('libchat_sem', JSON.stringify(libchatSem));
 };
-export const removeFastGPTSem = () => {
-  localStorage.removeItem('fastgpt_sem');
+export const removeLibChatSem = () => {
+  localStorage.removeItem('libchat_sem');
 };
 
 export const getSourceDomain = () => {

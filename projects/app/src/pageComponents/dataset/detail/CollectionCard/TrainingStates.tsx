@@ -11,12 +11,12 @@ import {
   Thead,
   Tr
 } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
+import MyTag from '@libchat/web/components/common/Tag/index';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
 import { useMemo, useState } from 'react';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import {
   deleteTrainingData,
   getDatasetCollectionTrainingDetail,
@@ -24,19 +24,19 @@ import {
   getTrainingError,
   updateTrainingData
 } from '@/web/core/dataset/api';
-import { DatasetCollectionDataProcessModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import { DatasetCollectionDataProcessModeEnum } from '@libchat/global/core/dataset/constants';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { type getTrainingDataDetailResponse } from '@/pages/api/core/dataset/training/getTrainingDataDetail';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
 import { TrainingProcess } from '@/web/core/dataset/constants';
 import { useForm } from 'react-hook-form';
 import type { getTrainingDetailResponse } from '@/pages/api/core/dataset/collection/trainingDetail';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import MyImage from '@/components/MyImage';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 enum TrainingStatus {
   NotStart = 'NotStart',

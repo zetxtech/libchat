@@ -13,26 +13,26 @@ import {
   ModalBody
 } from '@chakra-ui/react';
 import { getBills, checkBalancePayResult } from '@/web/support/wallet/bill/api';
-import type { BillSchemaType } from '@fastgpt/global/support/wallet/bill/type.d';
+import type { BillSchemaType } from '@libchat/global/support/wallet/bill/type.d';
 import dayjs from 'dayjs';
-import { formatStorePrice2Read } from '@fastgpt/global/support/wallet/usage/tools';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { formatStorePrice2Read } from '@libchat/global/support/wallet/usage/tools';
+import { useToast } from '@libchat/web/hooks/useToast';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import type { BillTypeEnum } from '@fastgpt/global/support/wallet/bill/constants';
+import type { BillTypeEnum } from '@libchat/global/support/wallet/bill/constants';
 import {
   BillStatusEnum,
   billPayWayMap,
   billStatusMap,
   billTypeMap
-} from '@fastgpt/global/support/wallet/bill/constants';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { standardSubLevelMap, subModeMap } from '@fastgpt/global/support/wallet/sub/constants';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { usePagination } from '@fastgpt/web/hooks/usePagination';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+} from '@libchat/global/support/wallet/bill/constants';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { standardSubLevelMap, subModeMap } from '@libchat/global/support/wallet/sub/constants';
+import MySelect from '@libchat/web/components/common/MySelect';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { usePagination } from '@libchat/web/hooks/usePagination';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 const BillTable = () => {
   const { t } = useTranslation();

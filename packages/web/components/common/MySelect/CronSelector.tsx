@@ -2,7 +2,7 @@ import React, { useCallback, useRef } from 'react';
 import MultipleRowSelect from './MultipleRowSelect';
 import { useTranslation } from 'next-i18next';
 import { type MultipleSelectProps } from './type';
-import { cronParser2Fields } from '@fastgpt/global/common/string/time';
+import { cronParser2Fields } from '@libchat/global/common/string/time';
 
 type CronType = 'month' | 'week' | 'day' | 'interval';
 

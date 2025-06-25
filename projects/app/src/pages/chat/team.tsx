@@ -13,26 +13,26 @@ import { useTranslation } from 'next-i18next';
 import ChatBox from '@/components/core/chat/ChatContainer/ChatBox';
 import type { StartChatFnProps } from '@/components/core/chat/ChatContainer/type';
 import { streamFetch } from '@/web/common/api/fetch';
-import { getChatTitleFromChatMessage } from '@fastgpt/global/core/chat/utils';
+import { getChatTitleFromChatMessage } from '@libchat/global/core/chat/utils';
 import SliderApps from '@/pageComponents/chat/SliderApps';
-import { GPTMessages2Chats } from '@fastgpt/global/core/chat/adapt';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { GPTMessages2Chats } from '@libchat/global/core/chat/adapt';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import ChatContextProvider, { ChatContext } from '@/web/core/chat/context/chatContext';
-import { type AppListItemType } from '@fastgpt/global/core/app/type';
+import { type AppListItemType } from '@libchat/global/core/app/type';
 import { useContextSelector } from 'use-context-selector';
 import { GetChatTypeEnum } from '@/global/core/chat/constants';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
 
 import dynamic from 'next/dynamic';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import ChatItemContextProvider, { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import ChatRecordContextProvider, {
   ChatRecordContext
 } from '@/web/core/chat/context/chatRecordContext';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
 import { useMount } from 'ahooks';
-import { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
+import { ChatSourceEnum } from '@libchat/global/core/chat/constants';
 import ChatQuoteList from '@/pageComponents/chat/ChatQuoteList';
 const CustomPluginRunBox = dynamic(() => import('@/pageComponents/chat/CustomPluginRunBox'));
 

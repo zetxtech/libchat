@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
+import { jsonRes } from '@libchat/service/common/response';
 
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { checkDatasetIndexLimit } from '@fastgpt/service/support/permission/teamLimit';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { checkDatasetIndexLimit } from '@libchat/service/support/permission/teamLimit';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   try {

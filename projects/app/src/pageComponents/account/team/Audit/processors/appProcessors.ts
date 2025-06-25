@@ -1,4 +1,4 @@
-import { AppPermission } from '@fastgpt/global/support/permission/app/controller';
+import { AppPermission } from '@libchat/global/support/permission/app/controller';
 
 export const processUpdateAppCollaboratorSpecific = (metadata: any) => {
   const permissionValue = parseInt(metadata.permission, 10);

@@ -1,19 +1,19 @@
-import { create, devtools, persist, immer } from '@fastgpt/web/common/zustand';
+import { create, devtools, persist, immer } from '@libchat/web/common/zustand';
 import axios from 'axios';
-import type { OAuthEnum } from '@fastgpt/global/support/user/constant';
+import type { OAuthEnum } from '@libchat/global/support/user/constant';
 import type {
   TTSModelType,
   LLMModelItemType,
   RerankModelItemType,
   EmbeddingModelItemType,
   STTModelType
-} from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/global/core/ai/model.d';
 import { type InitDateResponse } from '@/global/common/api/systemRes';
-import { type FastGPTFeConfigsType } from '@fastgpt/global/common/system/types';
-import { type SubPlanType } from '@fastgpt/global/support/wallet/sub/type';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import type { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
-import { type SystemDefaultModelType } from '@fastgpt/service/core/ai/type';
+import { type LibChatFeConfigsType } from '@libchat/global/common/system/types';
+import { type SubPlanType } from '@libchat/global/support/wallet/sub/type';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
+import type { TeamErrEnum } from '@libchat/global/common/error/code/team';
+import { type SystemDefaultModelType } from '@libchat/service/core/ai/type';
 
 type LoginStoreType = { provider: `${OAuthEnum}`; lastRoute: string; state: string };
 
@@ -45,7 +45,7 @@ type State = {
   setNotSufficientModalType: (val?: NotSufficientModalType) => void;
 
   initDataBufferId?: string;
-  feConfigs: FastGPTFeConfigsType;
+  feConfigs: LibChatFeConfigsType;
   subPlans?: SubPlanType;
   systemVersion: string;
   defaultModels: SystemDefaultModelType;
@@ -107,7 +107,7 @@ export const useSystemStore = create<State>()(
         async loadGitStar() {
           if (!get().feConfigs?.show_git) return;
           try {
-            const { data: git } = await axios.get('https://api.github.com/repos/labring/FastGPT');
+            const { data: git } = await axios.get('https://api.github.com/repos/labring/LibChat');
 
             set((state) => {
               state.gitStar = git.stargazers_count;

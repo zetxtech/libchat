@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import type { JSONSchemaInputType } from '@fastgpt/global/core/app/jsonschema';
-import { jsonSchema2NodeInput } from '@fastgpt/global/core/app/jsonschema';
+import type { JSONSchemaInputType } from '@libchat/global/core/app/jsonschema';
+import { jsonSchema2NodeInput } from '@libchat/global/core/app/jsonschema';
 
 describe('jsonSchema2NodeInput', () => {
   it('should return correct node input', () => {

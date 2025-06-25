@@ -13,36 +13,36 @@ import {
   useToast
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getPluginGroups, getPreviewPluginNode } from '@/web/core/app/api/plugin';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import type {
   FlowNodeItemType,
   NodeTemplateListItemType,
   NodeTemplateListType
-} from '@fastgpt/global/core/workflow/type/node';
+} from '@libchat/global/core/workflow/type/node';
 import { TemplateTypeEnum } from './header';
 import { useMemoizedFn } from 'ahooks';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyAvatar from '@fastgpt/web/components/common/Avatar';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyAvatar from '@libchat/web/components/common/Avatar';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import CostTooltip from '@/components/core/app/plugin/CostTooltip';
 import {
   FlowNodeTypeEnum,
   AppNodeFlowNodeTypeMap
-} from '@fastgpt/global/core/workflow/node/constant';
+} from '@libchat/global/core/workflow/node/constant';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
 import { cloneDeep } from 'lodash';
-import { workflowNodeTemplateList } from '@fastgpt/web/core/workflow/constants';
+import { workflowNodeTemplateList } from '@libchat/web/core/workflow/constants';
 import { sliderWidth } from '../../NodeTemplatesModal';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { useWorkflowUtils } from '../../hooks/useUtils';
-import { moduleTemplatesFlat } from '@fastgpt/global/core/workflow/template/constants';
-import { LoopStartNode } from '@fastgpt/global/core/workflow/template/system/loop/loopStart';
-import { LoopEndNode } from '@fastgpt/global/core/workflow/template/system/loop/loopEnd';
+import { moduleTemplatesFlat } from '@libchat/global/core/workflow/template/constants';
+import { LoopStartNode } from '@libchat/global/core/workflow/template/system/loop/loopStart';
+import { LoopEndNode } from '@libchat/global/core/workflow/template/system/loop/loopEnd';
 import { useReactFlow, type Node } from 'reactflow';
-import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { nodeTemplate2FlowNode } from '@/web/core/workflow/utils';
 import { WorkflowEventContext } from '../../../context/workflowEventContext';
 

@@ -1,20 +1,20 @@
 import type { NextApiRequest } from 'next';
-import { Types } from '@fastgpt/service/common/mongo';
+import { Types } from '@libchat/service/common/mongo';
 import type { DatasetCollectionsListItemType } from '@/global/core/dataset/type.d';
 import type { GetDatasetCollectionsProps } from '@/global/core/api/datasetReq';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
 import { startTrainingQueue } from '@/service/core/dataset/training/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
-import { collectionTagsToTagLabel } from '@fastgpt/service/core/dataset/collection/utils';
-import { type PaginationResponse } from '@fastgpt/web/common/fetch/type';
-import { parsePaginationRequest } from '@fastgpt/service/common/api/pagination';
-import { type DatasetCollectionSchemaType } from '@fastgpt/global/core/dataset/type';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
+import { collectionTagsToTagLabel } from '@libchat/service/core/dataset/collection/utils';
+import { type PaginationResponse } from '@libchat/web/common/fetch/type';
+import { parsePaginationRequest } from '@libchat/service/common/api/pagination';
+import { type DatasetCollectionSchemaType } from '@libchat/global/core/dataset/type';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
 
 async function handler(
   req: NextApiRequest

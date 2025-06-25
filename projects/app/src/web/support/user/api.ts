@@ -1,19 +1,19 @@
 import { GET, POST, PUT } from '@/web/common/api/request';
-import { hashStr } from '@fastgpt/global/common/string/tools';
+import { hashStr } from '@libchat/global/common/string/tools';
 import type { ResLogin } from '@/global/support/api/userRes.d';
-import type { UserAuthTypeEnum } from '@fastgpt/global/support/user/auth/constants';
+import type { UserAuthTypeEnum } from '@libchat/global/support/user/auth/constants';
 import type { UserUpdateParams } from '@/types/user';
-import type { UserType } from '@fastgpt/global/support/user/type.d';
+import type { UserType } from '@libchat/global/support/user/type.d';
 import type {
   FastLoginProps,
   OauthLoginProps,
   PostLoginProps,
   SearchResult
-} from '@fastgpt/global/support/user/api.d';
+} from '@libchat/global/support/user/api.d';
 import type {
   AccountRegisterBody,
   GetWXLoginQRResponse
-} from '@fastgpt/global/support/user/login/api.d';
+} from '@libchat/global/support/user/login/api.d';
 import type { preLoginResponse } from '@/pages/api/support/user/account/preLogin';
 
 export const sendAuthCode = (data: {
@@ -37,14 +37,14 @@ export const postRegister = ({
   code,
   inviterId,
   bd_vid,
-  fastgpt_sem
+  libchat_sem
 }: AccountRegisterBody) =>
   POST<ResLogin>(`/proApi/support/user/account/register/emailAndPhone`, {
     username,
     code,
     inviterId,
     bd_vid,
-    fastgpt_sem,
+    libchat_sem,
     password: hashStr(password)
   });
 

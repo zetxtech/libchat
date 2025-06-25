@@ -14,13 +14,13 @@ import {
   Tr,
   VStack
 } from '@chakra-ui/react';
-import type { OrgListItemType } from '@fastgpt/global/support/user/team/org/type';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import type { IconNameType } from '@fastgpt/web/components/common/Icon/type';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import type { OrgListItemType } from '@libchat/global/support/user/team/org/type';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
+import type { IconNameType } from '@libchat/web/components/common/Icon/type';
+import MyMenu from '@libchat/web/components/common/MyMenu';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { useMemo, useState } from 'react';
 import MemberTag from '@/components/support/user/team/Info/MemberTag';
@@ -30,11 +30,11 @@ import IconButton from './IconButton';
 import { defaultOrgForm, type OrgFormType } from './OrgInfoModal';
 
 import dynamic from 'next/dynamic';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import Path from '@/components/common/folder/Path';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { delRemoveMember } from '@/web/support/user/team/api';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
 import useOrg from '@/web/support/user/team/org/hooks/useOrg';
 
 const OrgInfoModal = dynamic(() => import('./OrgInfoModal'));

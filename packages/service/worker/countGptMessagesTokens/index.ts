@@ -6,8 +6,8 @@ import {
   type ChatCompletionContentPart,
   type ChatCompletionCreateParams,
   type ChatCompletionTool
-} from '@fastgpt/global/core/ai/type';
-import { ChatCompletionRequestMessageRoleEnum } from '@fastgpt/global/core/ai/constants';
+} from '@libchat/global/core/ai/type';
+import { ChatCompletionRequestMessageRoleEnum } from '@libchat/global/core/ai/constants';
 import { parentPort } from 'worker_threads';
 
 const enc = new Tiktoken(cl100k_base.bpe_ranks, cl100k_base.special_tokens, cl100k_base.pat_str);

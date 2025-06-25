@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoPlugin } from '@fastgpt/service/core/plugin/schema';
-import { PluginTypeEnum } from '@fastgpt/global/core/plugin/constants';
+import { jsonRes } from '@libchat/service/common/response';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoPlugin } from '@libchat/service/core/plugin/schema';
+import { PluginTypeEnum } from '@libchat/global/core/plugin/constants';
 
 /* pg 中的数据搬到 mongo dataset.datas 中，并做映射 */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

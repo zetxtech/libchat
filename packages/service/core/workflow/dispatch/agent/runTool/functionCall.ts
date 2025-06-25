@@ -9,15 +9,15 @@ import type {
   ChatCompletionFunctionMessageParam,
   ChatCompletionAssistantMessageParam,
   CompletionFinishReason
-} from '@fastgpt/global/core/ai/type.d';
+} from '@libchat/global/core/ai/type.d';
 import { type NextApiResponse } from 'next';
 import { responseWriteController } from '../../../../../common/response';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { textAdaptGptResponse } from '@fastgpt/global/core/workflow/runtime/utils';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { textAdaptGptResponse } from '@libchat/global/core/workflow/runtime/utils';
 import {
   ChatCompletionRequestMessageRoleEnum,
   getLLMDefaultUsage
-} from '@fastgpt/global/core/ai/constants';
+} from '@libchat/global/core/ai/constants';
 import { dispatchWorkFlow } from '../../index';
 import {
   type DispatchToolModuleProps,
@@ -27,9 +27,9 @@ import {
 import json5 from 'json5';
 import { type DispatchFlowResponse, type WorkflowResponseType } from '../../type';
 import { countGptMessagesTokens } from '../../../../../common/string/tiktoken/index';
-import { getNanoid, sliceStrStartEnd } from '@fastgpt/global/common/string/tools';
-import { type AIChatItemType } from '@fastgpt/global/core/chat/type';
-import { GPTMessages2Chats } from '@fastgpt/global/core/chat/adapt';
+import { getNanoid, sliceStrStartEnd } from '@libchat/global/common/string/tools';
+import { type AIChatItemType } from '@libchat/global/core/chat/type';
+import { GPTMessages2Chats } from '@libchat/global/core/chat/adapt';
 import { formatToolResponse, initToolCallEdges, initToolNodes } from './utils';
 import {
   computedMaxToken,
@@ -37,9 +37,9 @@ import {
   removeDatasetCiteText,
   parseLLMStreamResponse
 } from '../../../../ai/utils';
-import { toolValueTypeList, valueTypeJsonSchemaMap } from '@fastgpt/global/core/workflow/constants';
-import { type WorkflowInteractiveResponseType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
-import { ChatItemValueTypeEnum } from '@fastgpt/global/core/chat/constants';
+import { toolValueTypeList, valueTypeJsonSchemaMap } from '@libchat/global/core/workflow/constants';
+import { type WorkflowInteractiveResponseType } from '@libchat/global/core/workflow/template/system/interactive/type';
+import { ChatItemValueTypeEnum } from '@libchat/global/core/chat/constants';
 
 type FunctionRunResponseType = {
   toolRunResponse: DispatchFlowResponse;

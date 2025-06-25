@@ -8,7 +8,7 @@ import * as ReactDOM from 'react-dom';
 import { Box, Flex } from '@chakra-ui/react';
 import { useBasicTypeaheadTriggerMatch } from '../../utils';
 import { type EditorVariableLabelPickerType } from '../../type';
-import type { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import type { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import { useTranslation } from 'next-i18next';
 import Avatar from '../../../../Avatar';
 

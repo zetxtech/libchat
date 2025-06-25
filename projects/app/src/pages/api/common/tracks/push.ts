@@ -1,10 +1,10 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { addLog } from '@fastgpt/service/common/system/log';
-import type { TrackEnum } from '@fastgpt/global/common/middle/tracks/constants';
-import { TrackModel } from '@fastgpt/service/common/middle/tracks/schema';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { useIPFrequencyLimit } from '@fastgpt/service/common/middle/reqFrequencyLimit';
+import { addLog } from '@libchat/service/common/system/log';
+import type { TrackEnum } from '@libchat/global/common/middle/tracks/constants';
+import { TrackModel } from '@libchat/service/common/middle/tracks/schema';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { useIPFrequencyLimit } from '@libchat/service/common/middle/reqFrequencyLimit';
 
 export type pushQuery = {};
 

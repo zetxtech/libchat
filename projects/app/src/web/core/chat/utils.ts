@@ -1,7 +1,7 @@
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { type StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { type StoreNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { getWebLLMModel } from '@/web/common/system/utils';
 
 export function checkChatSupportSelectFileByChatModels(models: string[] = []) {

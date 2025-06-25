@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, Flex, Input } from '@chakra-ui/react';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import dayjs from 'dayjs';
 import { useTranslation } from 'next-i18next';
 import { type UseFormRegister, type UseFormSetValue } from 'react-hook-form';
-import { type OutLinkEditType } from '@fastgpt/global/support/outLink/type';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import { type OutLinkEditType } from '@libchat/global/support/outLink/type';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 function BasicInfo({
   register,

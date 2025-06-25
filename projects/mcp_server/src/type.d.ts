@@ -1,5 +1,5 @@
 declare namespace NodeJS {
   interface ProcessEnv {
-    FASTGPT_ENDPOINT: string;
+    LIBCHAT_ENDPOINT: string;
   }
 }

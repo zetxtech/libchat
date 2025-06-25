@@ -1,17 +1,17 @@
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
 import {
   ChunkTriggerConfigTypeEnum,
   DatasetSourceReadTypeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import { readFileContentFromMongo } from '../../common/file/gridfs/controller';
 import { urlsFetch } from '../../common/string/cheerio';
-import { type TextSplitProps } from '@fastgpt/global/common/string/textSplitter';
+import { type TextSplitProps } from '@libchat/global/common/string/textSplitter';
 import axios from 'axios';
 import { readRawContentByFileBuffer } from '../../common/file/read/utils';
-import { parseFileExtensionFromUrl } from '@fastgpt/global/common/string/tools';
+import { parseFileExtensionFromUrl } from '@libchat/global/common/string/tools';
 import { getApiDatasetRequest } from './apiDataset';
 import Papa from 'papaparse';
-import type { ApiDatasetServerType } from '@fastgpt/global/core/dataset/apiDataset/type';
+import type { ApiDatasetServerType } from '@libchat/global/core/dataset/apiDataset/type';
 import { text2Chunks } from '../../worker/function';
 
 export const readFileRawTextByUrl = async ({

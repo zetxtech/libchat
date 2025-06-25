@@ -16,20 +16,20 @@ import {
   Tr
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { deleteMcpServer, getMcpServerList } from '@/web/support/mcp/api';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import EditMcpModal, {
   defaultForm,
   type EditMcForm
 } from '@/pageComponents/dashboard/mcp/EditModal';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 import dynamic from 'next/dynamic';
-import { type McpKeyType } from '@fastgpt/global/support/mcp/type';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { type McpKeyType } from '@libchat/global/support/mcp/type';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
 
 const UsageWay = dynamic(() => import('@/pageComponents/dashboard/mcp/usageWay'), {
   ssr: false

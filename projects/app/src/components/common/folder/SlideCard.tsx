@@ -1,17 +1,17 @@
 import { Box, Button, Flex, HStack } from '@chakra-ui/react';
 import React from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { FolderIcon } from '@fastgpt/global/common/file/image/constants';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { FolderIcon } from '@libchat/global/common/file/image/constants';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 import { useTranslation } from 'next-i18next';
 import CollaboratorContextProvider, {
   type MemberManagerInputPropsType
 } from '../../support/permission/MemberManager/context';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import ResumeInherit from '@/components/support/permission/ResumeInheritText';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
 
 const FolderSlideCard = ({
   refreshDeps,

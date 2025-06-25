@@ -11,13 +11,13 @@ import {
   useDisclosure,
   ModalCloseButton
 } from '@chakra-ui/react';
-import Icon from '@fastgpt/web/components/common/Icon';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import Icon from '@libchat/web/components/common/Icon';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import { useTranslation } from 'next-i18next';
 import { useMarkdownWidth } from '../hooks';
-import type { IconNameType } from '@fastgpt/web/components/common/Icon/type.d';
+import type { IconNameType } from '@libchat/web/components/common/Icon/type.d';
 import { codeLight } from './CodeLight';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 
 const StyledButton = ({
   label,

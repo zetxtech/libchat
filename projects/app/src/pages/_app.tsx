@@ -12,8 +12,8 @@ import '@/web/styles/reset.scss';
 import NextHead from '@/components/common/NextHead';
 import { type ReactElement, useEffect } from 'react';
 import { type NextPage } from 'next';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
-import SystemStoreContextProvider from '@fastgpt/web/context/useSystem';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
+import SystemStoreContextProvider from '@libchat/web/context/useSystem';
 import { useRouter } from 'next/router';
 
 type NextPageWithLayout = NextPage & {

@@ -1,22 +1,22 @@
 import type { SearchTestProps, SearchTestResponse } from '@/global/core/dataset/api.d';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
 import { pushGenerateVectorUsage, pushRerankUsage } from '@/service/support/wallet/usage/push';
 import {
   deepRagSearch,
   defaultSearchDatasetData
-} from '@fastgpt/service/core/dataset/search/controller';
-import { updateApiKeyUsage } from '@fastgpt/service/support/openapi/tools';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import { checkTeamAIPoints } from '@fastgpt/service/support/permission/teamLimit';
+} from '@libchat/service/core/dataset/search/controller';
+import { updateApiKeyUsage } from '@libchat/service/support/openapi/tools';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import { checkTeamAIPoints } from '@libchat/service/support/permission/teamLimit';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { useIPFrequencyLimit } from '@fastgpt/service/common/middle/reqFrequencyLimit';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { getRerankModel } from '@fastgpt/service/core/ai/model';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { useIPFrequencyLimit } from '@libchat/service/common/middle/reqFrequencyLimit';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { getRerankModel } from '@libchat/service/core/ai/model';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 async function handler(req: ApiRequestProps<SearchTestProps>): Promise<SearchTestResponse> {
   const {
     datasetId,
@@ -97,7 +97,7 @@ async function handler(req: ApiRequestProps<SearchTestProps>): Promise<SearchTes
       });
 
   // push bill
-  const source = apikey ? UsageSourceEnum.api : UsageSourceEnum.fastgpt;
+  const source = apikey ? UsageSourceEnum.api : UsageSourceEnum.libchat;
   const { totalPoints: embeddingTotalPoints } = pushGenerateVectorUsage({
     teamId,
     tmbId,

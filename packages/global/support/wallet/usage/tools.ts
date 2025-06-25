@@ -20,7 +20,7 @@ export const getUsageSourceByAuthType = ({
 }) => {
   if (shareId) return UsageSourceEnum.shareLink;
   if (authType === AuthUserTypeEnum.apikey) return UsageSourceEnum.api;
-  return UsageSourceEnum.fastgpt;
+  return UsageSourceEnum.libchat;
 };
 
 export const getUsageSourceByPublishChannel = (publishchannel: PublishChannelEnum) => {
@@ -40,6 +40,6 @@ export const getUsageSourceByPublishChannel = (publishchannel: PublishChannelEnu
     case PublishChannelEnum.dingtalk:
       return UsageSourceEnum.dingtalk;
     default:
-      return UsageSourceEnum.fastgpt;
+      return UsageSourceEnum.libchat;
   }
 };

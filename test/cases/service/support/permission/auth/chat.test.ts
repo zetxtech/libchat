@@ -1,26 +1,26 @@
 import { describe, expect, it, vi } from 'vitest';
 import { authChatCrud, authCollectionInChat } from '@/service/support/permission/auth/chat';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { MongoChatItem } from '@fastgpt/service/core/chat/chatItemSchema';
-import { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { MongoChatItem } from '@libchat/service/core/chat/chatItemSchema';
+import { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import { authApp } from '@libchat/service/support/permission/app/auth';
 import { authOutLink } from '@/service/support/permission/auth/outLink';
 
-vi.mock('@fastgpt/service/core/chat/chatSchema', () => ({
+vi.mock('@libchat/service/core/chat/chatSchema', () => ({
   MongoChat: {
     findOne: vi.fn()
   }
 }));
 
-vi.mock('@fastgpt/service/core/chat/chatItemSchema', () => ({
+vi.mock('@libchat/service/core/chat/chatItemSchema', () => ({
   MongoChatItem: {
     findOne: vi.fn()
   }
 }));
 
-vi.mock('@fastgpt/service/support/permission/app/auth');
+vi.mock('@libchat/service/support/permission/app/auth');
 vi.mock('@/service/support/permission/auth/outLink');
 
 describe('authChatCrud', () => {

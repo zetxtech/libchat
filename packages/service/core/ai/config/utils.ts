@@ -1,7 +1,7 @@
 import path from 'path';
 import * as fs from 'fs';
 import { type SystemModelItemType } from '../type';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
 import { MongoSystemModel } from './schema';
 import {
   type LLMModelItemType,
@@ -9,19 +9,19 @@ import {
   type TTSModelType,
   type STTModelType,
   type RerankModelItemType
-} from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/global/core/ai/model.d';
 import { debounce } from 'lodash';
 import {
   getModelProvider,
   type ModelProviderIdType,
   type ModelProviderType
-} from '@fastgpt/global/core/ai/provider';
+} from '@libchat/global/core/ai/provider';
 import { findModelFromAlldata } from '../model';
 import {
-  reloadFastGPTConfigBuffer,
-  updateFastGPTConfigBuffer
+  reloadLibChatConfigBuffer,
+  updateLibChatConfigBuffer
 } from '../../../common/system/config/controller';
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 
 const getModelConfigBaseUrl = () => {
   const currentFileUrl = new URL(import.meta.url);
@@ -222,7 +222,7 @@ export const watchSystemModelUpdate = () => {
         // Main node will reload twice
         await loadSystemModels(true);
         // All node reaload buffer
-        await reloadFastGPTConfigBuffer();
+        await reloadLibChatConfigBuffer();
       } catch (error) {}
     }, 500)
   );
@@ -233,7 +233,7 @@ export const updatedReloadSystemModel = async () => {
   // 1. 更新模型（所有节点都会触发）
   await loadSystemModels(true);
   // 2. 更新缓存（仅主节点触发）
-  await updateFastGPTConfigBuffer();
+  await updateLibChatConfigBuffer();
   // 3. 延迟1秒，等待其他节点刷新
   await delay(1000);
 };

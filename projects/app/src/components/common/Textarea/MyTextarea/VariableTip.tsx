@@ -1,6 +1,6 @@
 import { Box, HStack, type StackProps } from '@chakra-ui/react';
 import React from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 
 const VariableTip = (props: StackProps) => {

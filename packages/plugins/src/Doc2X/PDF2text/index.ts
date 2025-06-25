@@ -1,6 +1,6 @@
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 import axios from 'axios';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 type Props = {
   apikey: string;

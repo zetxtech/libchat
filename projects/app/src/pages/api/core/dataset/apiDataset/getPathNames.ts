@@ -1,15 +1,15 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import type { ParentIdType } from '@fastgpt/global/common/parentFolder/type';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import type { ParentIdType } from '@libchat/global/common/parentFolder/type';
 import type {
   ApiDatasetDetailResponse,
   ApiDatasetServerType
-} from '@fastgpt/global/core/dataset/apiDataset/type';
-import { getApiDatasetRequest } from '@fastgpt/service/core/dataset/apiDataset';
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
+} from '@libchat/global/core/dataset/apiDataset/type';
+import { getApiDatasetRequest } from '@libchat/service/core/dataset/apiDataset';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
 
 export type GetApiDatasetPathQuery = {};
 

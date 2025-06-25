@@ -3,23 +3,23 @@
   manual input or mark data
 */
 import type { NextApiRequest } from 'next';
-import { countPromptTokens } from '@fastgpt/service/common/string/tiktoken/index';
-import { getEmbeddingModel, getLLMModel } from '@fastgpt/service/core/ai/model';
+import { countPromptTokens } from '@libchat/service/common/string/tiktoken/index';
+import { getEmbeddingModel, getLLMModel } from '@libchat/service/core/ai/model';
 import { hasSameValue } from '@/service/core/dataset/data/utils';
 import { insertData2Dataset } from '@/service/core/dataset/data/controller';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { getCollectionWithDataset } from '@fastgpt/service/core/dataset/controller';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { getCollectionWithDataset } from '@libchat/service/core/dataset/controller';
 import { pushGenerateVectorUsage } from '@/service/support/wallet/usage/push';
 import type { InsertOneDatasetDataProps } from '@/global/core/dataset/api';
-import { simpleText } from '@fastgpt/global/common/string/tools';
-import { checkDatasetIndexLimit } from '@fastgpt/service/support/permission/teamLimit';
+import { simpleText } from '@libchat/global/common/string/tools';
+import { checkDatasetIndexLimit } from '@libchat/service/support/permission/teamLimit';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { getLLMMaxChunkSize } from '@fastgpt/global/core/dataset/training/utils';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { getLLMMaxChunkSize } from '@libchat/global/core/dataset/training/utils';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 
 async function handler(req: NextApiRequest) {
   const { collectionId, q, a, indexes } = req.body as InsertOneDatasetDataProps;

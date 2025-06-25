@@ -15,12 +15,12 @@ import {
   TableContainer,
   Input
 } from '@chakra-ui/react';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetImportContext } from '../Context';
-import { getFileIcon } from '@fastgpt/global/common/file/icon';
+import { getFileIcon } from '@libchat/global/common/file/icon';
 import { SmallAddIcon } from '@chakra-ui/icons';
 
 const DataProcess = dynamic(() => import('../commonProgress/DataProcess'), {

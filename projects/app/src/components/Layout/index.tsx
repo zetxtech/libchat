@@ -1,19 +1,19 @@
 import React, { useMemo } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import { useLoading } from '@fastgpt/web/hooks/useLoading';
+import { useLoading } from '@libchat/web/hooks/useLoading';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useQuery } from '@tanstack/react-query';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { getUnreadCount } from '@/web/support/user/inform/api';
 import dynamic from 'next/dynamic';
-import { useI18nLng } from '@fastgpt/web/hooks/useI18n';
+import { useI18nLng } from '@libchat/web/hooks/useI18n';
 
 import Auth from './auth';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useDebounceEffect, useMount } from 'ahooks';
 import { useTranslation } from 'next-i18next';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import WorkorderButton from './WorkorderButton';
 
 const Navbar = dynamic(() => import('./navbar'));
@@ -36,7 +36,7 @@ const UpdateContact = dynamic(() => import('@/components/support/user/inform/Upd
   ssr: false
 });
 const ManualCopyModal = dynamic(
-  () => import('@fastgpt/web/hooks/useCopyData').then((mod) => mod.ManualCopyModal),
+  () => import('@libchat/web/hooks/useCopyData').then((mod) => mod.ManualCopyModal),
   { ssr: false }
 );
 

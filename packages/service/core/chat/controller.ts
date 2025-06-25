@@ -1,8 +1,8 @@
-import type { ChatItemType } from '@fastgpt/global/core/chat/type';
+import type { ChatItemType } from '@libchat/global/core/chat/type';
 import { MongoChatItem } from './chatItemSchema';
 import { addLog } from '../../common/system/log';
 import { delFileByFileIdList, getGFSCollection } from '../../common/file/gridfs/controller';
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
 import { MongoChat } from './chatSchema';
 
 export async function getChatItems({

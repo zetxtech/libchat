@@ -1,15 +1,15 @@
-import type { ApiDatasetCreateDatasetCollectionParams } from '@fastgpt/global/core/dataset/api.d';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { createCollectionAndInsertData } from '@fastgpt/service/core/dataset/collection/controller';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import type { ApiDatasetCreateDatasetCollectionParams } from '@libchat/global/core/dataset/api.d';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { createCollectionAndInsertData } from '@libchat/service/core/dataset/collection/controller';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
 
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 import { type CreateCollectionResponse } from '@/global/core/dataset/api';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
-import { getApiDatasetRequest } from '@fastgpt/service/core/dataset/apiDataset';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import type { ApiRequestProps } from '@libchat/service/type/next';
+import { getApiDatasetRequest } from '@libchat/service/core/dataset/apiDataset';
 
 async function handler(
   req: ApiRequestProps<ApiDatasetCreateDatasetCollectionParams>

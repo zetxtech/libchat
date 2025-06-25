@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo } from 'react';
 import type { RenderInputProps } from '../type';
 import { Flex, Box, type ButtonProps, Grid } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import {
   computedNodeInputReference,
   filterWorkflowNodeOutputsByType
@@ -10,30 +10,30 @@ import { useTranslation } from 'next-i18next';
 import {
   NodeOutputKeyEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 import type {
   ReferenceArrayValueType,
   ReferenceItemValueType,
   ReferenceValueType
-} from '@fastgpt/global/core/workflow/type/io';
+} from '@libchat/global/core/workflow/type/io';
 import dynamic from 'next/dynamic';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { AppContext } from '@/pageComponents/app/detail/context';
 import { WorkflowNodeEdgeContext } from '../../../../../context/workflowInitContext';
 
 const MultipleRowSelect = dynamic(() =>
-  import('@fastgpt/web/components/common/MySelect/MultipleRowSelect').then(
+  import('@libchat/web/components/common/MySelect/MultipleRowSelect').then(
     (v) => v.MultipleRowSelect
   )
 );
 const MultipleRowArraySelect = dynamic(() =>
-  import('@fastgpt/web/components/common/MySelect/MultipleRowSelect').then(
+  import('@libchat/web/components/common/MySelect/MultipleRowSelect').then(
     (v) => v.MultipleRowArraySelect
   )
 );
-const Avatar = dynamic(() => import('@fastgpt/web/components/common/Avatar'));
+const Avatar = dynamic(() => import('@libchat/web/components/common/Avatar'));
 
 type CommonSelectProps = {
   placeholder?: string;

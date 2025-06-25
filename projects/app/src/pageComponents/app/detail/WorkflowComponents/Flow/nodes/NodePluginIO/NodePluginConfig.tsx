@@ -1,23 +1,23 @@
 import React, { type Dispatch, useMemo } from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from '../render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import { Box, Flex } from '@chakra-ui/react';
 import Container from '../../components/Container';
 import { useTranslation } from 'next-i18next';
 import { useContextSelector } from 'use-context-selector';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
 import { AppContext } from '../../../../context';
-import { type AppChatConfigType, type AppDetailType } from '@fastgpt/global/core/app/type';
-import { getAppChatConfig } from '@fastgpt/global/core/workflow/utils';
+import { type AppChatConfigType, type AppDetailType } from '@libchat/global/core/app/type';
+import { getAppChatConfig } from '@libchat/global/core/workflow/utils';
 import { useMount } from 'ahooks';
 import ChatFunctionTip from '@/components/core/app/Tip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { WorkflowContext } from '../../../context';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import FileSelect from '@/components/core/app/FileSelect';
-import { userFilesInput } from '@fastgpt/global/core/workflow/template/system/workflowStart';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { userFilesInput } from '@libchat/global/core/workflow/template/system/workflowStart';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 type ComponentProps = {
   chatConfig: AppChatConfigType;

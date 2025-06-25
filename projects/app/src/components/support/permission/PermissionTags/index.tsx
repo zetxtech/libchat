@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import { Permission } from '@fastgpt/global/support/permission/controller';
-import { type PermissionListType } from '@fastgpt/global/support/permission/type';
-import { PermissionList } from '@fastgpt/global/support/permission/constant';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import { Permission } from '@libchat/global/support/permission/controller';
+import { type PermissionListType } from '@libchat/global/support/permission/type';
+import { PermissionList } from '@libchat/global/support/permission/constant';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import { HStack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 

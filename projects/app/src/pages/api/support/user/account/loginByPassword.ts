@@ -1,19 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { MongoUser } from '@fastgpt/service/support/user/schema';
-import { setCookie } from '@fastgpt/service/support/permission/controller';
-import { getUserDetail } from '@fastgpt/service/support/user/controller';
-import type { PostLoginProps } from '@fastgpt/global/support/user/api.d';
-import { UserStatusEnum } from '@fastgpt/global/support/user/constant';
+import { MongoUser } from '@libchat/service/support/user/schema';
+import { setCookie } from '@libchat/service/support/permission/controller';
+import { getUserDetail } from '@libchat/service/support/user/controller';
+import type { PostLoginProps } from '@libchat/global/support/user/api.d';
+import { UserStatusEnum } from '@libchat/global/support/user/constant';
 import { NextAPI } from '@/service/middleware/entry';
-import { useIPFrequencyLimit } from '@fastgpt/service/common/middle/reqFrequencyLimit';
-import { pushTrack } from '@fastgpt/service/common/middle/tracks/utils';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { UserErrEnum } from '@fastgpt/global/common/error/code/user';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { UserAuthTypeEnum } from '@fastgpt/global/support/user/auth/constants';
-import { authCode } from '@fastgpt/service/support/user/auth/controller';
-import { createUserSession } from '@fastgpt/service/support/user/session';
+import { useIPFrequencyLimit } from '@libchat/service/common/middle/reqFrequencyLimit';
+import { pushTrack } from '@libchat/service/common/middle/tracks/utils';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { UserErrEnum } from '@libchat/global/common/error/code/user';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { UserAuthTypeEnum } from '@libchat/global/support/user/auth/constants';
+import { authCode } from '@libchat/service/support/user/auth/controller';
+import { createUserSession } from '@libchat/service/support/user/session';
 import requestIp from 'request-ip';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {

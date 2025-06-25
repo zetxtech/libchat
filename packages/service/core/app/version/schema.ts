@@ -1,8 +1,8 @@
 import { connectionMongo, getMongoModel, type Model } from '../../../common/mongo';
 const { Schema, model, models } = connectionMongo;
-import { type AppVersionSchemaType } from '@fastgpt/global/core/app/version';
+import { type AppVersionSchemaType } from '@libchat/global/core/app/version';
 import { chatConfigType } from '../schema';
-import { TeamMemberCollectionName } from '@fastgpt/global/support/user/team/constant';
+import { TeamMemberCollectionName } from '@libchat/global/support/user/team/constant';
 
 export const AppVersionCollectionName = 'app_versions';
 

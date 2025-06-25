@@ -1,17 +1,17 @@
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { httpApiSchema2Plugins } from '@fastgpt/global/core/app/httpPlugin/utils';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { httpApiSchema2Plugins } from '@libchat/global/core/app/httpPlugin/utils';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
 import { onCreateApp, type CreateAppBody } from '../create';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { pushTrack } from '@fastgpt/service/common/middle/tracks/utils';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { TeamAppCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { checkTeamAppLimit } from '@fastgpt/service/support/permission/teamLimit';
+import { type AppSchema } from '@libchat/global/core/app/type';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { pushTrack } from '@libchat/service/common/middle/tracks/utils';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { TeamAppCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { checkTeamAppLimit } from '@libchat/service/support/permission/teamLimit';
 
 export type createHttpPluginQuery = {};
 

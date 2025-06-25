@@ -1,23 +1,23 @@
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { Box, Button, Flex, ModalBody, useDisclosure, Image, HStack } from '@chakra-ui/react';
 import React, { useCallback, useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
 import { TTSTypeEnum } from '@/web/core/app/constants';
-import type { AppTTSConfigType } from '@fastgpt/global/core/app/type.d';
+import type { AppTTSConfigType } from '@libchat/global/core/app/type.d';
 import { useAudioPlay } from '@/web/common/utils/voice';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import MySlider from '@/components/Slider';
-import { defaultTTSConfig } from '@fastgpt/global/core/app/constants';
+import { defaultTTSConfig } from '@libchat/global/core/app/constants';
 import ChatFunctionTip from './Tip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
 import { useContextSelector } from 'use-context-selector';
 import { AppContext } from '@/pageComponents/app/detail/context';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { getModelProvider } from '@fastgpt/global/core/ai/provider';
-import MultipleRowSelect from '@fastgpt/web/components/common/MySelect/MultipleRowSelect';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { getModelProvider } from '@libchat/global/core/ai/provider';
+import MultipleRowSelect from '@libchat/web/components/common/MySelect/MultipleRowSelect';
 
 const TTSSelect = ({
   value = defaultTTSConfig,

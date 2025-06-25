@@ -20,14 +20,14 @@ import dynamic from 'next/dynamic';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import { clearToken } from '@/web/support/user/auth';
 import Script from 'next/script';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { useLocalStorageState, useMount } from 'ahooks';
 import { useTranslation } from 'next-i18next';
 import I18nLngSelector from '@/components/Select/I18nLngSelector';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { GET } from '@/web/common/api/request';
 import { getDocPath } from '@/web/common/system/doc';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 import LoginForm from '@/pageComponents/login/LoginForm/LoginForm';
 import { getBdVId } from '@/web/support/marketing/utils';
 

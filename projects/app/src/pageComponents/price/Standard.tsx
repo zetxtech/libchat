@@ -1,15 +1,15 @@
 import React, { useMemo, useState } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { Box, Button, Flex, Grid, HStack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { StandardSubLevelEnum, SubModeEnum } from '@fastgpt/global/support/wallet/sub/constants';
+import { StandardSubLevelEnum, SubModeEnum } from '@libchat/global/support/wallet/sub/constants';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { standardSubLevelMap } from '@fastgpt/global/support/wallet/sub/constants';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { type TeamSubSchema } from '@fastgpt/global/support/wallet/sub/type';
+import { standardSubLevelMap } from '@libchat/global/support/wallet/sub/constants';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { type TeamSubSchema } from '@libchat/global/support/wallet/sub/type';
 import QRCodePayModal, { type QRPayProps } from '@/components/support/wallet/QRCodePayModal';
 import { postCreatePayBill } from '@/web/support/wallet/bill/api';
-import { BillTypeEnum } from '@fastgpt/global/support/wallet/bill/constants';
+import { BillTypeEnum } from '@libchat/global/support/wallet/bill/constants';
 import StandardPlanContentList from '@/components/support/wallet/StandardPlanContentList';
 
 export enum PackageChangeStatusEnum {

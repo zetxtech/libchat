@@ -1,14 +1,14 @@
 'use client';
 
 import { useState, useCallback, useMemo, useRef } from 'react';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import type { AppTTSConfigType } from '@fastgpt/global/core/app/type.d';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { getErrText } from '@libchat/global/common/error/utils';
+import type { AppTTSConfigType } from '@libchat/global/core/app/type.d';
 import { TTSTypeEnum } from '@/web/core/app/constants';
 import { useTranslation } from 'next-i18next';
-import type { OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat.d';
+import type { OutLinkChatAuthProps } from '@libchat/global/support/permission/chat.d';
 import { useMount } from 'ahooks';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 
 const splitMarker = 'SPLIT_MARKER';
 const contentType = 'audio/mpeg';

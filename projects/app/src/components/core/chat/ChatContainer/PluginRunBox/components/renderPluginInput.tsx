@@ -1,21 +1,21 @@
 import { Box, Button, Flex, Switch, Textarea, useDisclosure } from '@chakra-ui/react';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MySelect from '@libchat/web/components/common/MySelect';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import { useFileUpload } from '../../ChatBox/hooks/useFileUpload';
 import { useContextSelector } from 'use-context-selector';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import FilePreview from '../../components/FilePreview';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useEffect, useMemo } from 'react';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import { useFieldArray } from 'react-hook-form';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 import { isEqual } from 'lodash';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { ChatRecordContext } from '@/web/core/chat/context/chatRecordContext';
@@ -23,7 +23,7 @@ import { PluginRunContext } from '../context';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import AIModelSelector from '@/components/Select/AIModelSelector';
 
-const JsonEditor = dynamic(() => import('@fastgpt/web/components/common/Textarea/JsonEditor'));
+const JsonEditor = dynamic(() => import('@libchat/web/components/common/Textarea/JsonEditor'));
 
 const FileSelector = ({
   input,

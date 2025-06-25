@@ -1,6 +1,6 @@
-import { type TrackSchemaType } from '@fastgpt/global/common/middle/tracks/type';
+import { type TrackSchemaType } from '@libchat/global/common/middle/tracks/type';
 import { getMongoModel, Schema } from '../../mongo';
-import { TrackEnum } from '@fastgpt/global/common/middle/tracks/constants';
+import { TrackEnum } from '@libchat/global/common/middle/tracks/constants';
 
 const TrackSchema = new Schema({
   event: { type: String, required: true, enum: Object.values(TrackEnum) },

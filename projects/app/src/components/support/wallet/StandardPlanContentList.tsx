@@ -1,14 +1,14 @@
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import type { StandardSubLevelEnum } from '@fastgpt/global/support/wallet/sub/constants';
-import { SubModeEnum } from '@fastgpt/global/support/wallet/sub/constants';
+import type { StandardSubLevelEnum } from '@libchat/global/support/wallet/sub/constants';
+import { SubModeEnum } from '@libchat/global/support/wallet/sub/constants';
 import React, { useMemo } from 'react';
-import { standardSubLevelMap } from '@fastgpt/global/support/wallet/sub/constants';
+import { standardSubLevelMap } from '@libchat/global/support/wallet/sub/constants';
 import { Box, Flex, Grid } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import dynamic from 'next/dynamic';
-import type { TeamSubSchema } from '@fastgpt/global/support/wallet/sub/type';
+import type { TeamSubSchema } from '@libchat/global/support/wallet/sub/type';
 
 const ModelPriceModal = dynamic(() =>
   import('@/components/core/ai/ModelTable').then((mod) => mod.ModelPriceModal)

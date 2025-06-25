@@ -1,22 +1,22 @@
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import { strIsLink } from '@fastgpt/global/common/string/tools';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { strIsLink } from '@libchat/global/common/string/tools';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useForm } from 'react-hook-form';
 import { getDocPath } from '@/web/common/system/doc';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { useMyStep } from '@fastgpt/web/hooks/useStep';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import { useMyStep } from '@libchat/web/hooks/useStep';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 import React from 'react';
 import { Box, Link, Input, Button, ModalBody, ModalFooter, Stack } from '@chakra-ui/react';
-import { Prompt_AgentQA } from '@fastgpt/global/core/ai/prompt/agent';
+import { Prompt_AgentQA } from '@libchat/global/core/ai/prompt/agent';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import CollectionChunkForm, { type CollectionChunkFormType } from '../Form/CollectionChunkForm';
-import { type ChunkSettingsType } from '@fastgpt/global/core/dataset/type';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
+import { type ChunkSettingsType } from '@libchat/global/core/dataset/type';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
 import { defaultFormData } from '../Import/Context';
-import { computedCollectionChunkSettings } from '@fastgpt/global/core/dataset/training/utils';
+import { computedCollectionChunkSettings } from '@libchat/global/core/dataset/training/utils';
 
 export type WebsiteConfigFormType = {
   websiteConfig: {

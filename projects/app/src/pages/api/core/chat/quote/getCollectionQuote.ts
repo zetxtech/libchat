@@ -3,19 +3,19 @@ import { authChatCrud, authCollectionInChat } from '@/service/support/permission
 import {
   type DatasetCiteItemType,
   type DatasetDataSchemaType
-} from '@fastgpt/global/core/dataset/type';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+} from '@libchat/global/core/dataset/type';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import {
   type LinkedListResponse,
   type LinkedPaginationProps
-} from '@fastgpt/web/common/fetch/type';
+} from '@libchat/web/common/fetch/type';
 import { type FilterQuery, Types } from 'mongoose';
 import { quoteDataFieldSelector } from '@/service/core/chat/constants';
 import { processChatTimeFilter } from '@/service/core/chat/utils';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { getCollectionWithDataset } from '@fastgpt/service/core/dataset/controller';
-import { getFormatDatasetCiteList } from '@fastgpt/service/core/dataset/data/controller';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { getCollectionWithDataset } from '@libchat/service/core/dataset/controller';
+import { getFormatDatasetCiteList } from '@libchat/service/core/dataset/data/controller';
 
 export type GetCollectionQuoteProps = LinkedPaginationProps & {
   chatId: string;

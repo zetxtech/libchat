@@ -1,10 +1,10 @@
 import Markdown from '@/components/Markdown';
 import { Box, Flex } from '@chakra-ui/react';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { type Dispatch, type MutableRefObject, type SetStateAction, useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import InputDataModal from '@/pageComponents/dataset/detail/InputDataModal';
 
 const CollectionQuoteItem = ({

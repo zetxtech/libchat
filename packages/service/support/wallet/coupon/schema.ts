@@ -1,7 +1,7 @@
 import { addDays } from 'date-fns';
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 const { Schema } = connectionMongo;
-import type { TeamCouponSchema } from '@fastgpt/global/support/wallet/sub/coupon/type';
+import type { TeamCouponSchema } from '@libchat/global/support/wallet/sub/coupon/type';
 
 export const couponCollectionName = 'team_sub_coupons';
 

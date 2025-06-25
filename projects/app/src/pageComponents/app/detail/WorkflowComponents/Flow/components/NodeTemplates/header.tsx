@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Flex, IconButton, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'react-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useRouter } from 'next/router';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getSystemPluginPaths } from '@/web/core/app/api/plugin';
 import { getAppFolderPath } from '@/web/core/app/api/app';
 import FolderPath from '@/components/common/folder/Path';

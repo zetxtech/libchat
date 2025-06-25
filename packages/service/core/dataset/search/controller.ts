@@ -2,7 +2,7 @@ import {
   DatasetSearchModeEnum,
   DatasetSearchModeMap,
   SearchScoreTypeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import { recallFromVectorStore } from '../../../common/vectorDB/controller';
 import { getVectorsByText } from '../../ai/embedding';
 import { getEmbeddingModel, getDefaultRerankModel, getLLMModel } from '../../ai/model';
@@ -10,23 +10,23 @@ import { MongoDatasetData } from '../data/schema';
 import {
   type DatasetDataTextSchemaType,
   type SearchDataResponseItemType
-} from '@fastgpt/global/core/dataset/type';
+} from '@libchat/global/core/dataset/type';
 import { MongoDatasetCollection } from '../collection/schema';
 import { reRankRecall } from '../../../core/ai/rerank';
 import { countPromptTokens } from '../../../common/string/tiktoken/index';
-import { datasetSearchResultConcat } from '@fastgpt/global/core/dataset/search/utils';
-import { hashStr } from '@fastgpt/global/common/string/tools';
+import { datasetSearchResultConcat } from '@libchat/global/core/dataset/search/utils';
+import { hashStr } from '@libchat/global/common/string/tools';
 import { jiebaSplit } from '../../../common/string/jieba/index';
-import { getCollectionSourceData } from '@fastgpt/global/core/dataset/collection/utils';
+import { getCollectionSourceData } from '@libchat/global/core/dataset/collection/utils';
 import { Types } from '../../../common/mongo';
 import json5 from 'json5';
 import { MongoDatasetCollectionTags } from '../tag/schema';
 import { readFromSecondary } from '../../../common/mongo/utils';
 import { MongoDatasetDataText } from '../data/dataTextSchema';
-import { type ChatItemType } from '@fastgpt/global/core/chat/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { type ChatItemType } from '@libchat/global/core/chat/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { datasetSearchQueryExtension } from './utils';
-import type { RerankModelItemType } from '@fastgpt/global/core/ai/model.d';
+import type { RerankModelItemType } from '@libchat/global/core/ai/model.d';
 import { addLog } from '../../../common/system/log';
 import { formatDatasetDataValue } from '../data/controller';
 

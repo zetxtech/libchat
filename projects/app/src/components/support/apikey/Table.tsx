@@ -26,19 +26,19 @@ import {
 import type { EditApiKeyProps } from '@/global/support/openapi/api.d';
 import dayjs from 'dayjs';
 import { AddIcon } from '@chakra-ui/icons';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useForm } from 'react-hook-form';
-import { useRequest, useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest, useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getDocPath } from '@/web/common/system/doc';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyMenu from '@libchat/web/components/common/MyMenu';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import MyBox from '@libchat/web/components/common/MyBox';
 
 type EditProps = EditApiKeyProps & { _id?: string };
 const defaultEditData: EditProps = {
@@ -53,7 +53,7 @@ const ApiKeyTable = ({ tips, appId }: { tips: string; appId?: string }) => {
   const theme = useTheme();
   const { copyData } = useCopyData();
   const { feConfigs } = useSystemStore();
-  const [baseUrl, setBaseUrl] = useState('https://tryfastgpt.ai/api');
+  const [baseUrl, setBaseUrl] = useState('https://trylibchat.ai/api');
   const [editData, setEditData] = useState<EditProps>();
   const [apiKey, setApiKey] = useState('');
 

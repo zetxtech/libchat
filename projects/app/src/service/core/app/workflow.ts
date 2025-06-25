@@ -1,6 +1,6 @@
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import type { StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
-import { getLLMModel } from '@fastgpt/service/core/ai/model';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import type { StoreNodeItemType } from '@libchat/global/core/workflow/type/node.d';
+import { getLLMModel } from '@libchat/service/core/ai/model';
 
 export const getChatModelNameListByModules = (nodes: StoreNodeItemType[]): string[] => {
   const modelList = nodes

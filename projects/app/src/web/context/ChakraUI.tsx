@@ -1,5 +1,5 @@
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
-import { theme } from '@fastgpt/web/styles/theme';
+import { theme } from '@libchat/web/styles/theme';
 import { Router } from 'next/router';
 import { type ReactNode } from 'react';
 import NProgress from 'nprogress'; //nprogress module

@@ -1,17 +1,17 @@
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io.d';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io.d';
 import React, { useCallback } from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box, Flex } from '@chakra-ui/react';
 
-import NodeInputSelect from '@fastgpt/web/components/core/workflow/NodeInputSelect';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import NodeInputSelect from '@libchat/web/components/core/workflow/NodeInputSelect';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import ValueTypeLabel from '../ValueTypeLabel';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 
 type Props = {
   nodeId: string;

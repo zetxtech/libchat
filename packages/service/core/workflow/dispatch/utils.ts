@@ -1,20 +1,20 @@
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
-import type { ChatItemType } from '@fastgpt/global/core/chat/type.d';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { ChatRoleEnum } from '@libchat/global/core/chat/constants';
+import type { ChatItemType } from '@libchat/global/core/chat/type.d';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import {
   type RuntimeEdgeItemType,
   type RuntimeNodeItemType,
   type SystemVariablesType
-} from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/type';
 import { responseWrite } from '../../../common/response';
 import { type NextApiResponse } from 'next';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { type SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
-import { getMCPToolRuntimeNode } from '@fastgpt/global/core/app/mcpTools/utils';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import type { McpToolSetDataType } from '@fastgpt/global/core/app/mcpTools/type';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { type SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
+import { getMCPToolRuntimeNode } from '@libchat/global/core/app/mcpTools/utils';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import type { McpToolSetDataType } from '@libchat/global/core/app/mcpTools/type';
 
 export const getWorkflowResponseWrite = ({
   res,

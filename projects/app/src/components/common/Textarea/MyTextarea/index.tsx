@@ -9,10 +9,10 @@ import {
   type TextareaProps,
   useDisclosure
 } from '@chakra-ui/react';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
 import ResizeTextarea from 'react-textarea-autosize';
 
 type Props = TextareaProps & {

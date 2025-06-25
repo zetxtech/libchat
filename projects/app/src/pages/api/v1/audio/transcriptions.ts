@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { getUploadModel } from '@fastgpt/service/common/file/multer';
-import { removeFilesByPaths } from '@fastgpt/service/common/file/utils';
+import { jsonRes } from '@libchat/service/common/response';
+import { getUploadModel } from '@libchat/service/common/file/multer';
+import { removeFilesByPaths } from '@libchat/service/common/file/utils';
 import fs from 'fs';
 import { pushWhisperUsage } from '@/service/support/wallet/usage/push';
 import { authChatCrud } from '@/service/support/permission/auth/chat';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
 import { NextAPI } from '@/service/middleware/entry';
-import { aiTranscriptions } from '@fastgpt/service/core/ai/audio/transcriptions';
-import { useIPFrequencyLimit } from '@fastgpt/service/common/middle/reqFrequencyLimit';
-import { getDefaultSTTModel } from '@fastgpt/service/core/ai/model';
+import { aiTranscriptions } from '@libchat/service/core/ai/audio/transcriptions';
+import { useIPFrequencyLimit } from '@libchat/service/common/middle/reqFrequencyLimit';
+import { getDefaultSTTModel } from '@libchat/service/core/ai/model';
 
 const upload = getUploadModel({
   maxSize: 5

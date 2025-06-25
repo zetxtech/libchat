@@ -1,11 +1,11 @@
-import { getOrgChildrenPath } from '@fastgpt/global/support/user/team/org/constant';
-import { type OrgListItemType } from '@fastgpt/global/support/user/team/org/type';
+import { getOrgChildrenPath } from '@libchat/global/support/user/team/org/constant';
+import { type OrgListItemType } from '@libchat/global/support/user/team/org/type';
 import { memo, useEffect, useMemo, useState } from 'react';
 import { useUserStore } from '../../../useUserStore';
-import { type ParentTreePathItemType } from '@fastgpt/global/common/parentFolder/type';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { type ParentTreePathItemType } from '@libchat/global/common/parentFolder/type';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getOrgList, getOrgMembers } from '../api';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { getTeamMembers } from '../../api';
 import _ from 'lodash';
 

@@ -1,10 +1,10 @@
 // pages/api/fetchContent.ts
 import { type NextApiRequest, type NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { jsonRes } from '@libchat/service/common/response';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 
-import { type UrlFetchParams, type UrlFetchResponse } from '@fastgpt/global/common/file/api.d';
-import { urlsFetch } from '@fastgpt/service/common/string/cheerio';
+import { type UrlFetchParams, type UrlFetchResponse } from '@libchat/global/common/file/api.d';
+import { urlsFetch } from '@libchat/service/common/string/cheerio';
 
 const fetchContent = async (req: NextApiRequest, res: NextApiResponse) => {
   try {

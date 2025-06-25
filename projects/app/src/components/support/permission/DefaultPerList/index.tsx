@@ -1,10 +1,10 @@
 import { Box, type BoxProps } from '@chakra-ui/react';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import React from 'react';
-import type { PermissionValueType } from '@fastgpt/global/support/permission/type';
-import { ReadPermissionVal, WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
+import type { PermissionValueType } from '@libchat/global/support/permission/type';
+import { ReadPermissionVal, WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
 import { useTranslation } from 'next-i18next';
 
 export enum defaultPermissionEnum {

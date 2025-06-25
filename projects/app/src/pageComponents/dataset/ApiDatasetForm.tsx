@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
 import { Flex, Input, Button, ModalBody, ModalFooter, Box } from '@chakra-ui/react';
 import type { UseFormReturn } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
@@ -8,16 +8,16 @@ import type {
   GetResourceFolderListItemResponse,
   GetResourceFolderListProps,
   ParentIdType
-} from '@fastgpt/global/common/parentFolder/type';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+} from '@libchat/global/common/parentFolder/type';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import type { GetApiDatasetCataLogProps } from '@/pages/api/core/dataset/apiDataset/getCatalog';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useBoolean, useMemoizedFn, useMount } from 'ahooks';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { FolderIcon } from '@fastgpt/global/common/file/image/constants';
-import type { ApiDatasetServerType } from '@fastgpt/global/core/dataset/apiDataset/type';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { FolderIcon } from '@libchat/global/common/file/image/constants';
+import type { ApiDatasetServerType } from '@libchat/global/core/dataset/apiDataset/type';
 
 const ApiDatasetForm = ({
   type,

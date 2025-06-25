@@ -1,7 +1,7 @@
 import * as createapi from '@/pages/api/core/dataset/create';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { TeamDatasetCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { TeamDatasetCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
 import { getFakeUsers } from '@test/datas/users';
 import { Call } from '@test/utils/request';
 import { vi, describe, it, expect } from 'vitest';

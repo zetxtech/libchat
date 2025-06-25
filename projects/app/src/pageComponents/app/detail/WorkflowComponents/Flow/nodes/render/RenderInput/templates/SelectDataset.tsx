@@ -1,16 +1,16 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import type { RenderInputProps } from '../type';
 import { Box, Button, Flex, Grid, Switch, useDisclosure, useTheme } from '@chakra-ui/react';
-import { type SelectedDatasetType } from '@fastgpt/global/core/workflow/api';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import { type SelectedDatasetType } from '@libchat/global/core/workflow/api';
+import Avatar from '@libchat/web/components/common/Avatar';
 import { useTranslation } from 'next-i18next';
-import { DatasetSearchModeEnum } from '@fastgpt/global/core/dataset/constants';
+import { DatasetSearchModeEnum } from '@libchat/global/core/dataset/constants';
 import dynamic from 'next/dynamic';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 
 const DatasetSelectModal = dynamic(() => import('@/components/core/app/DatasetSelectModal'));
 

@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
+import { jsonRes } from '@libchat/service/common/response';
 
 import { request } from 'http';
-import { FastGPTProUrl } from '@fastgpt/service/common/system/constants';
+import { LibChatProUrl } from '@libchat/service/common/system/constants';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -12,11 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!requestPath) {
       throw new Error('url is empty');
     }
-    if (!FastGPTProUrl) {
+    if (!LibChatProUrl) {
       throw new Error(`未配置商业版链接: ${path}`);
     }
 
-    const parsedUrl = new URL(FastGPTProUrl);
+    const parsedUrl = new URL(LibChatProUrl);
     delete req.headers?.rootkey;
 
     const requestResult = request({

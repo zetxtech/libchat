@@ -1,12 +1,12 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { type SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import { type SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import QuoteItem from './QuoteItem';
 import { useMemo } from 'react';
-import { getSourceNameIcon } from '@fastgpt/global/core/dataset/utils';
+import { getSourceNameIcon } from '@libchat/global/core/dataset/utils';
 import { formatScore } from '@/components/core/dataset/QuoteItem';
 import { type GetAllQuoteDataProps } from '@/web/core/chat/context/chatItemContext';
 import { getQuoteDataList } from '@/web/core/chat/api';

@@ -1,15 +1,15 @@
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import { Flex, type FlexProps, css, useTheme } from '@chakra-ui/react';
-import { type ChatSiteItemType } from '@fastgpt/global/core/chat/type';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import { type ChatSiteItemType } from '@libchat/global/core/chat/type';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import React, { useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { formatChatValue2InputType } from '../utils';
-import { ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
+import { ChatRoleEnum } from '@libchat/global/core/chat/constants';
 import { ChatBoxContext } from '../Provider';
 import { useContextSelector } from 'use-context-selector';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
 import { ChatRecordContext } from '@/web/core/chat/context/chatRecordContext';
 
 export type ChatControllerProps = {

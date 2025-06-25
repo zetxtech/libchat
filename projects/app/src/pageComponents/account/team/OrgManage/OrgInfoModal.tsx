@@ -1,11 +1,11 @@
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
 import { postCreateOrg, putUpdateOrg } from '@/web/support/user/team/org/api';
 import { Button, HStack, Input, ModalBody, ModalFooter, Textarea } from '@chakra-ui/react';
-import { DEFAULT_ORG_AVATAR } from '@fastgpt/global/common/system/constants';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { DEFAULT_ORG_AVATAR } from '@libchat/global/common/system/constants';
+import Avatar from '@libchat/web/components/common/Avatar';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
 

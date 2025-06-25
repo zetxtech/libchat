@@ -3,11 +3,11 @@ import {
   type ChatCompletionCreateParams,
   type ChatCompletionMessageParam,
   type ChatCompletionTool
-} from '@fastgpt/global/core/ai/type';
-import { chats2GPTMessages } from '@fastgpt/global/core/chat/adapt';
-import { type ChatItemType } from '@fastgpt/global/core/chat/type';
+} from '@libchat/global/core/ai/type';
+import { chats2GPTMessages } from '@libchat/global/core/chat/adapt';
+import { type ChatItemType } from '@libchat/global/core/chat/type';
 import { WorkerNameEnum, getWorkerController } from '../../../worker/utils';
-import type { ChatCompletionRequestMessageRoleEnum } from '@fastgpt/global/core/ai/constants';
+import type { ChatCompletionRequestMessageRoleEnum } from '@libchat/global/core/ai/constants';
 import { addLog } from '../../system/log';
 
 export const countGptMessagesTokens = async (

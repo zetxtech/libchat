@@ -1,16 +1,16 @@
-import { AuthUserTypeEnum, PerResourceTypeEnum } from '@fastgpt/global/support/permission/constant';
-import type { MemberGroupSchemaType } from '@fastgpt/global/support/permission/memberGroup/type';
-import type { PermissionValueType } from '@fastgpt/global/support/permission/type';
-import { TeamManagePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { DefaultGroupName } from '@fastgpt/global/support/user/team/group/constant';
-import type { OrgSchemaType } from '@fastgpt/global/support/user/team/org/type';
-import { OrgType } from '@fastgpt/global/support/user/team/org/type';
-import { MongoMemberGroupModel } from '@fastgpt/service/support/permission/memberGroup/memberGroupSchema';
-import { MongoOrgModel } from '@fastgpt/service/support/permission/org/orgSchema';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
-import { MongoUser } from '@fastgpt/service/support/user/schema';
-import { MongoTeamMember } from '@fastgpt/service/support/user/team/teamMemberSchema';
-import { MongoTeam } from '@fastgpt/service/support/user/team/teamSchema';
+import { AuthUserTypeEnum, PerResourceTypeEnum } from '@libchat/global/support/permission/constant';
+import type { MemberGroupSchemaType } from '@libchat/global/support/permission/memberGroup/type';
+import type { PermissionValueType } from '@libchat/global/support/permission/type';
+import { TeamManagePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { DefaultGroupName } from '@libchat/global/support/user/team/group/constant';
+import type { OrgSchemaType } from '@libchat/global/support/user/team/org/type';
+import { OrgType } from '@libchat/global/support/user/team/org/type';
+import { MongoMemberGroupModel } from '@libchat/service/support/permission/memberGroup/memberGroupSchema';
+import { MongoOrgModel } from '@libchat/service/support/permission/org/orgSchema';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
+import { MongoUser } from '@libchat/service/support/user/schema';
+import { MongoTeamMember } from '@libchat/service/support/user/team/teamMemberSchema';
+import { MongoTeam } from '@libchat/service/support/user/team/teamSchema';
 import type { parseHeaderCertRet } from 'test/mocks/request';
 
 export async function getRootUser(): Promise<parseHeaderCertRet> {

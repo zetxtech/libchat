@@ -1,15 +1,15 @@
-import { getFileById } from '@fastgpt/service/common/file/gridfs/controller';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { type FileIdCreateDatasetCollectionParams } from '@fastgpt/global/core/dataset/api';
-import { createCollectionAndInsertData } from '@fastgpt/service/core/dataset/collection/controller';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
+import { getFileById } from '@libchat/service/common/file/gridfs/controller';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { type FileIdCreateDatasetCollectionParams } from '@libchat/global/core/dataset/api';
+import { createCollectionAndInsertData } from '@libchat/service/core/dataset/collection/controller';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 import { type CreateCollectionResponse } from '@/global/core/dataset/api';
-import { deleteRawTextBuffer } from '@fastgpt/service/common/buffer/rawText/controller';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
+import { deleteRawTextBuffer } from '@libchat/service/common/buffer/rawText/controller';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
 
 async function handler(
   req: ApiRequestProps<FileIdCreateDatasetCollectionParams>

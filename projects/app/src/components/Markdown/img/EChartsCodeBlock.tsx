@@ -4,8 +4,8 @@ import type { ECharts } from 'echarts';
 import { Box, Skeleton } from '@chakra-ui/react';
 import json5 from 'json5';
 import { useMount } from 'ahooks';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import { useScreen } from '@fastgpt/web/hooks/useScreen';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import { useScreen } from '@libchat/web/hooks/useScreen';
 
 const EChartsCodeBlock = ({ code }: { code: string }) => {
   const chartRef = useRef<HTMLDivElement>(null);

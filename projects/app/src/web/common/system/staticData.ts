@@ -1,13 +1,13 @@
 import { getSystemInitData } from '@/web/common/system/api';
-import { delay } from '@fastgpt/global/common/system/utils';
-import type { FastGPTFeConfigsType } from '@fastgpt/global/common/system/types/index.d';
+import { delay } from '@libchat/global/common/system/utils';
+import type { LibChatFeConfigsType } from '@libchat/global/common/system/types/index.d';
 
 import { useSystemStore } from './useSystemStore';
 
 export const clientInitData = async (
   retry = 3
 ): Promise<{
-  feConfigs: FastGPTFeConfigsType;
+  feConfigs: LibChatFeConfigsType;
 }> => {
   try {
     const res = await getSystemInitData(useSystemStore.getState().initDataBufferId);

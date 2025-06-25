@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Input, Button, Flex, Box, Checkbox } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import { CollectionPageContext } from './Context';
-import { getCollectionIcon } from '@fastgpt/global/core/dataset/utils';
+import { getCollectionIcon } from '@libchat/global/core/dataset/utils';
 import {
   delDatasetCollectionTag,
   getDatasetCollectionTags,
@@ -15,15 +15,15 @@ import {
   postAddTagsToCollections,
   updateDatasetCollectionTag
 } from '@/web/core/dataset/api';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import MyInput from '@/components/MyInput';
-import { type DatasetTagType } from '@fastgpt/global/core/dataset/type';
+import { type DatasetTagType } from '@libchat/global/core/dataset/type';
 import {
   type ScrollListType,
   useVirtualScrollPagination
-} from '@fastgpt/web/hooks/useScrollPagination';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
+} from '@libchat/web/hooks/useScrollPagination';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
 import { type DatasetCollectionsListItemType } from '@/global/core/dataset/type';
 
 const TagManageModal = ({ onClose }: { onClose: () => void }) => {

@@ -2,17 +2,17 @@ import React, { useCallback } from 'react';
 import { Flex, Box, IconButton, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { type AppListItemType } from '@fastgpt/global/core/app/type';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
-import MyPopover from '@fastgpt/web/components/common/MyPopover/index';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { type AppListItemType } from '@libchat/global/core/app/type';
+import MyDivider from '@libchat/web/components/common/MyDivider';
+import MyPopover from '@libchat/web/components/common/MyPopover/index';
 import { getMyApps } from '@/web/core/app/api';
 import {
   type GetResourceFolderListProps,
   type GetResourceListItemResponse
-} from '@fastgpt/global/common/parentFolder/type';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+} from '@libchat/global/common/parentFolder/type';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import dynamic from 'next/dynamic';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { useContextSelector } from 'use-context-selector';

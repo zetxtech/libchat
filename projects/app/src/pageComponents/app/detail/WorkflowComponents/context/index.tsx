@@ -5,22 +5,22 @@ import {
   storeEdge2RenderEdge,
   storeNode2FlowNode
 } from '@/web/core/workflow/utils';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { type RuntimeNodeItemType } from '@fastgpt/global/core/workflow/runtime/type';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { type RuntimeNodeItemType } from '@libchat/global/core/workflow/runtime/type';
 import {
   type FlowNodeItemType,
   type StoreNodeItemType
-} from '@fastgpt/global/core/workflow/type/node';
-import type { FlowNodeTemplateType } from '@fastgpt/global/core/workflow/type/node';
+} from '@libchat/global/core/workflow/type/node';
+import type { FlowNodeTemplateType } from '@libchat/global/core/workflow/type/node';
 import {
   type RuntimeEdgeItemType,
   type StoreEdgeItemType
-} from '@fastgpt/global/core/workflow/type/edge';
-import { type FlowNodeChangeProps } from '@fastgpt/global/core/workflow/type/fe';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+} from '@libchat/global/core/workflow/type/edge';
+import { type FlowNodeChangeProps } from '@libchat/global/core/workflow/type/fe';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useMemoizedFn, useUpdateEffect } from 'ahooks';
 import React, {
   type Dispatch,
@@ -39,23 +39,23 @@ import {
 } from 'reactflow';
 import { createContext, useContextSelector } from 'use-context-selector';
 import { defaultRunningStatus } from '../constants';
-import { checkNodeRunStatus } from '@fastgpt/global/core/workflow/runtime/utils';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
-import { type AppChatConfigType } from '@fastgpt/global/core/app/type';
+import { checkNodeRunStatus } from '@libchat/global/core/workflow/runtime/utils';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
+import { type AppChatConfigType } from '@libchat/global/core/app/type';
 import { AppContext } from '@/pageComponents/app/detail/context';
 import ChatTest from '../Flow/ChatTest';
 import { useDisclosure } from '@chakra-ui/react';
 import { uiWorkflow2StoreWorkflow } from '../utils';
 import { useTranslation } from 'next-i18next';
-import { formatTime2YMDHMS, formatTime2YMDHMW } from '@fastgpt/global/common/string/time';
+import { formatTime2YMDHMS, formatTime2YMDHMW } from '@libchat/global/common/string/time';
 import { cloneDeep } from 'lodash';
-import { type AppVersionSchemaType } from '@fastgpt/global/core/app/version';
+import { type AppVersionSchemaType } from '@libchat/global/core/app/version';
 import WorkflowInitContextProvider, { WorkflowNodeEdgeContext } from './workflowInitContext';
 import WorkflowEventContextProvider from './workflowEventContext';
 import { getAppConfigByDiff } from '@/web/core/app/diff';
 import WorkflowStatusContextProvider from './workflowStatusContext';
-import { type ChatItemType, type UserChatItemValueItemType } from '@fastgpt/global/core/chat/type';
-import { type WorkflowInteractiveResponseType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
+import { type ChatItemType, type UserChatItemValueItemType } from '@libchat/global/core/chat/type';
+import { type WorkflowInteractiveResponseType } from '@libchat/global/core/workflow/template/system/interactive/type';
 
 /* 
   Context

@@ -1,15 +1,15 @@
 import { putUpdateOrgMembers } from '@/web/support/user/team/org/api';
 import { Box, Button, Flex, Grid, HStack, ModalBody, ModalFooter } from '@chakra-ui/react';
-import type { GroupMemberRole } from '@fastgpt/global/support/permission/memberGroup/constant';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import type { GroupMemberRole } from '@libchat/global/support/permission/memberGroup/constant';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { useEffect, useState } from 'react';
-import { type OrgListItemType } from '@fastgpt/global/support/user/team/org/type';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { type OrgListItemType } from '@libchat/global/support/user/team/org/type';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { getTeamMembers } from '@/web/support/user/team/api';
 import MemberItemCard from '@/components/support/permission/MemberManager/MemberItemCard';
 

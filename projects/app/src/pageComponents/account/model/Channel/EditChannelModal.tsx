@@ -17,28 +17,28 @@ import {
   HStack,
   useOutsideClick
 } from '@chakra-ui/react';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { useTranslation } from 'next-i18next';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AddModelButton } from '../AddModelBox';
 import dynamic from 'next/dynamic';
-import { type SystemModelItemType } from '@fastgpt/service/core/ai/type';
-import type { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import { type SystemModelItemType } from '@libchat/service/core/ai/type';
+import type { ModelTypeEnum } from '@libchat/global/core/ai/model';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { getSystemModelList } from '@/web/core/ai/config';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { getModelProvider } from '@fastgpt/global/core/ai/provider';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyAvatar from '@fastgpt/web/components/common/Avatar';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import JsonEditor from '@fastgpt/web/components/common/Textarea/JsonEditor';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { getModelProvider } from '@libchat/global/core/ai/provider';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyAvatar from '@libchat/web/components/common/Avatar';
+import MyTag from '@libchat/web/components/common/Tag/index';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import JsonEditor from '@libchat/web/components/common/Textarea/JsonEditor';
 import { getChannelProviders, postCreateChannel, putChannel } from '@/web/core/ai/channel';
-import CopyBox from '@fastgpt/web/components/common/String/CopyBox';
+import CopyBox from '@libchat/web/components/common/String/CopyBox';
 
 const ModelEditModal = dynamic(() => import('../AddModelBox').then((mod) => mod.ModelEditModal));
 

@@ -1,12 +1,10 @@
 {
-  "name": "fastgpt",
+  "name": "libchat",
   "version": "4.0",
   "private": true,
   "scripts": {
     "prepare": "husky install",
     "format-code": "prettier --config \"./.prettierrc.js\" --write \"./**/src/**/*.{ts,tsx,scss}\"",
-    "format-doc": "zhlint --dir ./docSite *.md --fix",
-    "gen:llms": "node ./docSite/doc-generate-llms.js",
     "gen:theme-typings": "chakra-cli tokens packages/web/styles/theme.ts --out node_modules/.pnpm/node_modules/@chakra-ui/styled-system/dist/theming.types.d.ts",
     "postinstall": "pnpm gen:theme-typings",
     "initIcon": "node ./scripts/icon/init.js",
@@ -42,8 +40,7 @@
     ],
     "./**/**/*.{ts,tsx}": [
       "pnpm lint:fix"
-    ],
-    "./docSite/**/**/*.md": "pnpm format-doc && pnpm gen:llms"
+    ]
   },
   "resolutions": {
     "mdast-util-gfm-autolink-literal": "2.0.0"

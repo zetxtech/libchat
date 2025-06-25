@@ -1,26 +1,26 @@
 import type { CreateDatasetParams } from '@/global/core/dataset/api.d';
 import { NextAPI } from '@/service/middleware/entry';
-import { parseParentIdInMongo } from '@fastgpt/global/common/parentFolder/utils';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { TeamDatasetCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { refreshSourceAvatar } from '@fastgpt/service/common/file/image/controller';
-import { pushTrack } from '@fastgpt/service/common/middle/tracks/utils';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
+import { parseParentIdInMongo } from '@libchat/global/common/parentFolder/utils';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { TeamDatasetCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { refreshSourceAvatar } from '@libchat/service/common/file/image/controller';
+import { pushTrack } from '@libchat/service/common/middle/tracks/utils';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
 import {
   getDatasetModel,
   getDefaultEmbeddingModel,
   getEmbeddingModel,
   getLLMModel
-} from '@fastgpt/service/core/ai/model';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { checkTeamDatasetLimit } from '@fastgpt/service/support/permission/teamLimit';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+} from '@libchat/service/core/ai/model';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { checkTeamDatasetLimit } from '@libchat/service/support/permission/teamLimit';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import type { ApiRequestProps } from '@libchat/service/type/next';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 
 export type DatasetCreateQuery = {};
 export type DatasetCreateBody = CreateDatasetParams;

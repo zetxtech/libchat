@@ -1,5 +1,5 @@
 import { getInvoiceRecords } from '@/web/support/wallet/bill/invoice/api';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
 import {
@@ -16,13 +16,13 @@ import {
   Thead,
   Tr
 } from '@chakra-ui/react';
-import { usePagination } from '@fastgpt/web/hooks/usePagination';
-import { type InvoiceSchemaType } from '@fastgpt/global/support/wallet/bill/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { usePagination } from '@libchat/web/hooks/usePagination';
+import { type InvoiceSchemaType } from '@libchat/global/support/wallet/bill/type';
+import MyIcon from '@libchat/web/components/common/Icon';
 import dayjs from 'dayjs';
-import { formatStorePrice2Read } from '@fastgpt/global/support/wallet/usage/tools';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { formatStorePrice2Read } from '@libchat/global/support/wallet/usage/tools';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { downloadFetch } from '@/web/common/system/utils';
 
 const InvoiceTable = () => {

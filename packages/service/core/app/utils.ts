@@ -1,13 +1,13 @@
 import { MongoDataset } from '../dataset/schema';
 import { getEmbeddingModel } from '../ai/model';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import type { StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import type { StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { getChildAppPreviewNode, splitCombineToolId } from './plugin/controller';
-import { PluginSourceEnum } from '@fastgpt/global/core/plugin/constants';
+import { PluginSourceEnum } from '@libchat/global/core/plugin/constants';
 import { authAppByTmbId } from '../../support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 export async function listAppDatasetDataByTeamIdAndDatasetIds({
   teamId,

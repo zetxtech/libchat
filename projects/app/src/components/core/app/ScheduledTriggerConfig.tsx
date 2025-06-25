@@ -9,18 +9,18 @@ import {
   HStack
 } from '@chakra-ui/react';
 import React, { useCallback, useEffect, useMemo } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { type AppScheduledTriggerConfigType } from '@fastgpt/global/core/app/type';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import TimezoneSelect from '@fastgpt/web/components/common/MySelect/TimezoneSelect';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { type AppScheduledTriggerConfigType } from '@libchat/global/core/app/type';
+import MyModal from '@libchat/web/components/common/MyModal';
+import TimezoneSelect from '@libchat/web/components/common/MySelect/TimezoneSelect';
 import ScheduleTimeSelect, {
   cronString2Label,
   defaultCronString
-} from '@fastgpt/web/components/common/MySelect/CronSelector';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+} from '@libchat/web/components/common/MySelect/CronSelector';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 const ScheduledTriggerConfig = ({
   value,

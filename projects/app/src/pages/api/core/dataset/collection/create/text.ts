@@ -1,12 +1,12 @@
 import type { NextApiRequest } from 'next';
-import type { TextCreateDatasetCollectionParams } from '@fastgpt/global/core/dataset/api.d';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { createCollectionAndInsertData } from '@fastgpt/service/core/dataset/collection/controller';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import type { TextCreateDatasetCollectionParams } from '@libchat/global/core/dataset/api.d';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { createCollectionAndInsertData } from '@libchat/service/core/dataset/collection/controller';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 import { type CreateCollectionResponse } from '@/global/core/dataset/api';
-import { createFileFromText } from '@fastgpt/service/common/file/gridfs/utils';
+import { createFileFromText } from '@libchat/service/common/file/gridfs/utils';
 
 async function handler(req: NextApiRequest): CreateCollectionResponse {
   const { name, text, ...body } = req.body as TextCreateDatasetCollectionParams;

@@ -1,5 +1,5 @@
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { i18nT } from '@libchat/web/i18n/utils';
 
 export const appTypeMap = {
   [AppTypeEnum.simple]: {

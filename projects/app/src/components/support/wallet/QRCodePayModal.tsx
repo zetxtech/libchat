@@ -1,21 +1,21 @@
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box, ModalBody, Flex, Button } from '@chakra-ui/react';
 import { checkBalancePayResult, putUpdatePayment } from '@/web/support/wallet/bill/api';
-import LightTip from '@fastgpt/web/components/common/LightTip';
+import LightTip from '@libchat/web/components/common/LightTip';
 import QRCode from 'qrcode';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import {
   BillPayWayEnum,
   BillStatusEnum,
   QR_CODE_SIZE
-} from '@fastgpt/global/support/wallet/bill/constants';
+} from '@libchat/global/support/wallet/bill/constants';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import Markdown from '@/components/Markdown';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { type CreateBillResponse } from '@fastgpt/global/support/wallet/bill/api';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { type CreateBillResponse } from '@libchat/global/support/wallet/bill/api';
 
 export type QRPayProps = CreateBillResponse & {
   tip?: string;

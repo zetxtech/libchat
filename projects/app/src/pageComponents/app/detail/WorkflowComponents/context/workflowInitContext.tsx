@@ -1,5 +1,5 @@
 import { createContext } from 'use-context-selector';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 
 import { useCreation, useMemoizedFn } from 'ahooks';
 import React, {

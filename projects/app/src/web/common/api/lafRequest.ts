@@ -6,7 +6,7 @@ import axios, {
 } from 'axios';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { putUpdateTeam } from '@/web/support/user/team/api';
-import { type LafAccountType } from '@fastgpt/global/support/user/team/type';
+import { type LafAccountType } from '@libchat/global/support/user/team/type';
 
 interface ConfigType {
   headers?: { [key: string]: string };

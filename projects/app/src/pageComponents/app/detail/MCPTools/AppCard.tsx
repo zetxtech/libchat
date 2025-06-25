@@ -2,11 +2,11 @@ import { Box, Button, Flex, HStack, IconButton } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { AppContext } from '../context';
 import { useContextSelector } from 'use-context-selector';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import Avatar from '@libchat/web/components/common/Avatar';
 import { useTranslation } from 'react-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyMenu from '@libchat/web/components/common/MyMenu';
+import { type AppSchema } from '@libchat/global/core/app/type';
 import TagsEditModal from '../TagsEditModal';
 
 const AppCard = () => {

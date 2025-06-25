@@ -1,21 +1,21 @@
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import type { ImageCreateDatasetCollectionParams } from '@fastgpt/global/core/dataset/api';
-import { createCollectionAndInsertData } from '@fastgpt/service/core/dataset/collection/controller';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import type { ImageCreateDatasetCollectionParams } from '@libchat/global/core/dataset/api';
+import { createCollectionAndInsertData } from '@libchat/service/core/dataset/collection/controller';
 import {
   DatasetCollectionTypeEnum,
   DatasetCollectionDataProcessModeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 import type { CreateCollectionResponse } from '@/global/core/dataset/api';
-import { getUploadModel } from '@fastgpt/service/common/file/multer';
-import { removeFilesByPaths } from '@fastgpt/service/common/file/utils';
+import { getUploadModel } from '@libchat/service/common/file/multer';
+import { removeFilesByPaths } from '@libchat/service/common/file/utils';
 import type { NextApiResponse } from 'next';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+import { i18nT } from '@libchat/web/i18n/utils';
 import { authFrequencyLimit } from '@/service/common/frequencyLimit/api';
 import { addSeconds } from 'date-fns';
-import { createDatasetImage } from '@fastgpt/service/core/dataset/image/controller';
+import { createDatasetImage } from '@libchat/service/core/dataset/image/controller';
 
 const authUploadLimit = (tmbId: string, num: number) => {
   if (!global.feConfigs.uploadFileMaxAmount) return;

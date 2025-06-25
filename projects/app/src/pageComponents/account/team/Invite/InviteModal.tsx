@@ -20,14 +20,14 @@ import {
   Tr,
   useDisclosure
 } from '@chakra-ui/react';
-import AvatarGroup from '@fastgpt/web/components/common/Avatar/AvatarGroup';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import Icon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
-import Tag from '@fastgpt/web/components/common/Tag';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import AvatarGroup from '@libchat/web/components/common/Avatar/AvatarGroup';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import Icon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyPopover from '@libchat/web/components/common/MyPopover';
+import Tag from '@libchat/web/components/common/Tag';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import format from 'date-fns/format';
 import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';

@@ -1,4 +1,4 @@
-name: Build fastgpt-mcp-server images
+name: Build libchat-mcp-server images
 on:
   workflow_dispatch:
   push:
@@ -7,7 +7,7 @@ on:
     tags:
       - 'v*'
 jobs:
-  build-fastgpt-mcp_server-images:
+  build-libchat-mcp_server-images:
     permissions:
       packages: write
       contents: read
@@ -66,8 +66,8 @@ jobs:
           platforms: linux/${{ matrix.arch }}
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
-            org.opencontainers.image.description=fastgpt-mcp_server image
-          outputs: type=image,"name=ghcr.io/${{ github.repository_owner }}/fastgpt-mcp_server,${{ secrets.ALI_IMAGE_NAME }}/fastgpt-mcp_server,${{ secrets.DOCKER_IMAGE_NAME }}/fastgpt-mcp_server",push-by-digest=true,push=true
+            org.opencontainers.image.description=libchat-mcp_server image
+          outputs: type=image,"name=ghcr.io/${{ github.repository_owner }}/libchat-mcp_server,${{ secrets.ALI_IMAGE_NAME }}/libchat-mcp_server,${{ secrets.DOCKER_IMAGE_NAME }}/libchat-mcp_server",push-by-digest=true,push=true
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
@@ -80,18 +80,18 @@ jobs:
       - name: Upload digest
         uses: actions/upload-artifact@v4
         with:
-          name: digests-fastgpt-mcp_server-${{ github.sha }}-${{ matrix.arch }}
+          name: digests-libchat-mcp_server-${{ github.sha }}-${{ matrix.arch }}
           path: ${{ runner.temp }}/digests/*
           if-no-files-found: error
           retention-days: 1
 
-  release-fastgpt-mcp_server-images:
+  release-libchat-mcp_server-images:
     permissions:
       packages: write
       contents: read
       attestations: write
       id-token: write
-    needs: build-fastgpt-mcp_server-images
+    needs: build-libchat-mcp_server-images
     runs-on: ubuntu-24.04
     steps:
       - name: Login to GitHub Container Registry
@@ -116,7 +116,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: ${{ runner.temp }}/digests
-          pattern: digests-fastgpt-mcp_server-${{ github.sha }}-*
+          pattern: digests-libchat-mcp_server-${{ github.sha }}-*
           merge-multiple: true
 
       - name: Set up Docker Buildx
@@ -125,19 +125,19 @@ jobs:
       - name: Set image name and tag
         run: |
           if [[ "${{ github.ref_name }}" == "main" ]]; then
-            echo "Git_Tag=ghcr.io/${{ github.repository_owner }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
-            echo "Git_Latest=ghcr.io/${{ github.repository_owner }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
-            echo "Ali_Tag=${{ secrets.ALI_IMAGE_NAME }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
-            echo "Ali_Latest=${{ secrets.ALI_IMAGE_NAME }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
-            echo "Docker_Hub_Tag=${{ secrets.DOCKER_IMAGE_NAME }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
-            echo "Docker_Hub_Latest=${{ secrets.DOCKER_IMAGE_NAME }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
+            echo "Git_Tag=ghcr.io/${{ github.repository_owner }}/libchat-mcp_server:latest" >> $GITHUB_ENV
+            echo "Git_Latest=ghcr.io/${{ github.repository_owner }}/libchat-mcp_server:latest" >> $GITHUB_ENV
+            echo "Ali_Tag=${{ secrets.ALI_IMAGE_NAME }}/libchat-mcp_server:latest" >> $GITHUB_ENV
+            echo "Ali_Latest=${{ secrets.ALI_IMAGE_NAME }}/libchat-mcp_server:latest" >> $GITHUB_ENV
+            echo "Docker_Hub_Tag=${{ secrets.DOCKER_IMAGE_NAME }}/libchat-mcp_server:latest" >> $GITHUB_ENV
+            echo "Docker_Hub_Latest=${{ secrets.DOCKER_IMAGE_NAME }}/libchat-mcp_server:latest" >> $GITHUB_ENV
           else
-            echo "Git_Tag=ghcr.io/${{ github.repository_owner }}/fastgpt-mcp_server:${{ github.ref_name }}" >> $GITHUB_ENV
-            echo "Git_Latest=ghcr.io/${{ github.repository_owner }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
-            echo "Ali_Tag=${{ secrets.ALI_IMAGE_NAME }}/fastgpt-mcp_server:${{ github.ref_name }}" >> $GITHUB_ENV
-            echo "Ali_Latest=${{ secrets.ALI_IMAGE_NAME }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
-            echo "Docker_Hub_Tag=${{ secrets.DOCKER_IMAGE_NAME }}/fastgpt-mcp_server:${{ github.ref_name }}" >> $GITHUB_ENV
-            echo "Docker_Hub_Latest=${{ secrets.DOCKER_IMAGE_NAME }}/fastgpt-mcp_server:latest" >> $GITHUB_ENV
+            echo "Git_Tag=ghcr.io/${{ github.repository_owner }}/libchat-mcp_server:${{ github.ref_name }}" >> $GITHUB_ENV
+            echo "Git_Latest=ghcr.io/${{ github.repository_owner }}/libchat-mcp_server:latest" >> $GITHUB_ENV
+            echo "Ali_Tag=${{ secrets.ALI_IMAGE_NAME }}/libchat-mcp_server:${{ github.ref_name }}" >> $GITHUB_ENV
+            echo "Ali_Latest=${{ secrets.ALI_IMAGE_NAME }}/libchat-mcp_server:latest" >> $GITHUB_ENV
+            echo "Docker_Hub_Tag=${{ secrets.DOCKER_IMAGE_NAME }}/libchat-mcp_server:${{ github.ref_name }}" >> $GITHUB_ENV
+            echo "Docker_Hub_Latest=${{ secrets.DOCKER_IMAGE_NAME }}/libchat-mcp_server:latest" >> $GITHUB_ENV
           fi
 
       - name: Create manifest list and push
@@ -146,6 +146,6 @@ jobs:
           TAGS="$(echo -e "${Git_Tag}\n${Git_Latest}\n${Ali_Tag}\n${Ali_Latest}\n${Docker_Hub_Tag}\n${Docker_Hub_Latest}")"
           for TAG in $TAGS; do
             docker buildx imagetools create -t $TAG \
-              $(printf 'ghcr.io/${{ github.repository_owner }}/fastgpt-mcp_server@sha256:%s ' *)
+              $(printf 'ghcr.io/${{ github.repository_owner }}/libchat-mcp_server@sha256:%s ' *)
             sleep 5
           done

@@ -1,10 +1,10 @@
 import { Schema, getMongoLogModel } from '../../../common/mongo';
-import { type OperationLogSchema } from '@fastgpt/global/support/user/audit/type';
-import { AdminAuditEventEnum, AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
+import { type OperationLogSchema } from '@libchat/global/support/user/audit/type';
+import { AdminAuditEventEnum, AuditEventEnum } from '@libchat/global/support/user/audit/constants';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 
 export const OperationLogCollectionName = 'operationLogs';
 

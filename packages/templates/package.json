@@ -1,10 +1,10 @@
 {
-  "name": "@fastgpt/templates",
+  "name": "@libchat/templates",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {},
   "devDependencies": {
-    "@fastgpt/global": "workspace:*",
-    "@fastgpt/service": "workspace:*"
+    "@libchat/global": "workspace:*",
+    "@libchat/service": "workspace:*"
   }
 }

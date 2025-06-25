@@ -6,7 +6,7 @@ import {
   PopoverTrigger,
   useDisclosure
 } from '@chakra-ui/react';
-import Tag from '@fastgpt/web/components/common/Tag';
+import Tag from '@libchat/web/components/common/Tag';
 import React from 'react';
 
 type Props = {

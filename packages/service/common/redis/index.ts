@@ -27,11 +27,11 @@ export const newWorkerRedisConnection = () => {
   return redis;
 };
 
-export const FASTGPT_REDIS_PREFIX = 'fastgpt:';
+export const LIBCHAT_REDIS_PREFIX = 'libchat:';
 export const getGlobalRedisConnection = () => {
   if (global.redisClient) return global.redisClient;
 
-  global.redisClient = new Redis(REDIS_URL, { keyPrefix: FASTGPT_REDIS_PREFIX });
+  global.redisClient = new Redis(REDIS_URL, { keyPrefix: LIBCHAT_REDIS_PREFIX });
 
   global.redisClient.on('connect', () => {
     addLog.info('Redis connected');
@@ -45,8 +45,8 @@ export const getGlobalRedisConnection = () => {
 
 export const getAllKeysByPrefix = async (key: string) => {
   const redis = getGlobalRedisConnection();
-  const keys = (await redis.keys(`${FASTGPT_REDIS_PREFIX}${key}:*`)).map((key) =>
-    key.replace(FASTGPT_REDIS_PREFIX, '')
+  const keys = (await redis.keys(`${LIBCHAT_REDIS_PREFIX}${key}:*`)).map((key) =>
+    key.replace(LIBCHAT_REDIS_PREFIX, '')
   );
   return keys;
 };

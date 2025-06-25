@@ -1,9 +1,9 @@
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import { Box, Image, Flex, ModalBody } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
 
 export type ShowShareLinkModalProps = {
   shareLink: string;

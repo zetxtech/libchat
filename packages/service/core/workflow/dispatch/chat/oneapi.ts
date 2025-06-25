@@ -1,9 +1,9 @@
 import type { NextApiResponse } from 'next';
 import { filterGPTMessageByMaxContext, loadRequestMessages } from '../../../chat/utils';
-import type { ChatItemType, UserChatItemValueItemType } from '@fastgpt/global/core/chat/type.d';
-import { ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { textAdaptGptResponse } from '@fastgpt/global/core/workflow/runtime/utils';
+import type { ChatItemType, UserChatItemValueItemType } from '@libchat/global/core/chat/type.d';
+import { ChatRoleEnum } from '@libchat/global/core/chat/constants';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { textAdaptGptResponse } from '@libchat/global/core/workflow/runtime/utils';
 import {
   removeDatasetCiteText,
   parseReasoningContent,
@@ -14,17 +14,17 @@ import type {
   ChatCompletionMessageParam,
   CompletionFinishReason,
   StreamChatType
-} from '@fastgpt/global/core/ai/type.d';
+} from '@libchat/global/core/ai/type.d';
 import { formatModelChars2Points } from '../../../../support/wallet/usage/utils';
-import type { LLMModelItemType } from '@fastgpt/global/core/ai/model.d';
+import type { LLMModelItemType } from '@libchat/global/core/ai/model.d';
 import {
   ChatCompletionRequestMessageRoleEnum,
   getLLMDefaultUsage
-} from '@fastgpt/global/core/ai/constants';
+} from '@libchat/global/core/ai/constants';
 import type {
   ChatDispatchProps,
   DispatchNodeResultType
-} from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/type';
 import { countGptMessagesTokens } from '../../../../common/string/tiktoken/index';
 import {
   chats2GPTMessages,
@@ -32,32 +32,32 @@ import {
   getSystemPrompt_ChatItemType,
   GPTMessages2Chats,
   runtimePrompt2ChatsValue
-} from '@fastgpt/global/core/chat/adapt';
+} from '@libchat/global/core/chat/adapt';
 import {
   getQuoteTemplate,
   getQuotePrompt,
   getDocumentQuotePrompt
-} from '@fastgpt/global/core/ai/prompt/AIChat';
-import type { AIChatNodeProps } from '@fastgpt/global/core/workflow/runtime/type.d';
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/ai/prompt/AIChat';
+import type { AIChatNodeProps } from '@libchat/global/core/workflow/runtime/type.d';
+import { replaceVariable } from '@libchat/global/common/string/tools';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
 import { responseWriteController } from '../../../../common/response';
 import { getLLMModel } from '../../../ai/model';
-import type { SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
-import type { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import type { SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
+import type { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import { checkQuoteQAValue, getHistories } from '../utils';
 import { filterSearchResultsByMaxChars } from '../../utils';
-import { getHistoryPreview } from '@fastgpt/global/core/chat/utils';
+import { getHistoryPreview } from '@libchat/global/core/chat/utils';
 import { computedMaxToken, llmCompletionsBodyFormat } from '../../../ai/utils';
 import { type WorkflowResponseType } from '../type';
-import { formatTime2YMDHM } from '@fastgpt/global/common/string/time';
-import { type AiChatQuoteRoleType } from '@fastgpt/global/core/workflow/template/system/aiChat/type';
+import { formatTime2YMDHM } from '@libchat/global/common/string/time';
+import { type AiChatQuoteRoleType } from '@libchat/global/core/workflow/template/system/aiChat/type';
 import { getFileContentFromLinks, getHistoryFileLinks } from '../tools/readFiles';
-import { parseUrlToFileType } from '@fastgpt/global/common/file/tools';
+import { parseUrlToFileType } from '@libchat/global/common/file/tools';
 import { i18nT } from '../../../../../web/i18n/utils';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
 import { postTextCensor } from '../../../chat/postTextCensor';
 
 export type ChatProps = ModuleDispatchProps<

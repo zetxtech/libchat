@@ -1,16 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createChatUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { dispatchWorkFlow } from '@fastgpt/service/core/workflow/dispatch';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { getUserChatInfoAndAuthTeamPoints } from '@fastgpt/service/support/permission/auth/team';
+import { createChatUsage } from '@libchat/service/support/wallet/usage/controller';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { dispatchWorkFlow } from '@libchat/service/core/workflow/dispatch';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { getUserChatInfoAndAuthTeamPoints } from '@libchat/service/support/permission/auth/team';
 import type { PostWorkflowDebugProps, PostWorkflowDebugResponse } from '@/global/core/workflow/api';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
 import { defaultApp } from '@/web/core/app/constants';
-import { WORKFLOW_MAX_RUN_TIMES } from '@fastgpt/service/core/workflow/constants';
-import { getLastInteractiveValue } from '@fastgpt/global/core/workflow/runtime/utils';
+import { WORKFLOW_MAX_RUN_TIMES } from '@libchat/service/core/workflow/constants';
+import { getLastInteractiveValue } from '@libchat/global/core/workflow/runtime/utils';
 
 async function handler(
   req: NextApiRequest,
@@ -81,7 +81,7 @@ async function handler(
     appId,
     teamId,
     tmbId,
-    source: UsageSourceEnum.fastgpt,
+    source: UsageSourceEnum.libchat,
     flowUsages
   });
 

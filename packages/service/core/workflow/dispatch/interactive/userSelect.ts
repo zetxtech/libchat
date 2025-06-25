@@ -1,16 +1,16 @@
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import type {
   DispatchNodeResultType,
   ModuleDispatchProps
-} from '@fastgpt/global/core/workflow/runtime/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
+} from '@libchat/global/core/workflow/runtime/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
 import type {
   UserSelectInteractive,
   UserSelectOptionItemType
-} from '@fastgpt/global/core/workflow/template/system/interactive/type';
-import { chatValue2RuntimePrompt } from '@fastgpt/global/core/chat/adapt';
+} from '@libchat/global/core/workflow/template/system/interactive/type';
+import { chatValue2RuntimePrompt } from '@libchat/global/core/chat/adapt';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.description]: string;

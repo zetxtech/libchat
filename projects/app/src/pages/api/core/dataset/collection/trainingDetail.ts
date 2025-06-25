@@ -1,14 +1,14 @@
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
 import type {
   DatasetCollectionDataProcessModeEnum,
   TrainingModeEnum
-} from '@fastgpt/global/core/dataset/constants';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
+} from '@libchat/global/core/dataset/constants';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 
 type getTrainingDetailParams = {
   collectionId: string;

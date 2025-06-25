@@ -6,9 +6,9 @@ import {
   RerankModelItemType,
   EmbeddingModelItemType,
   STTModelType
-} from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/global/core/ai/model.d';
 import type { TrackEventName } from '@/web/common/system/constants';
-import { SubPlanType } from '@fastgpt/global/support/wallet/sub/type';
+import { SubPlanType } from '@libchat/global/support/wallet/sub/type';
 
 declare global {
   var qaQueueLen: number;

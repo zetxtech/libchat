@@ -1,40 +1,40 @@
-import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import type {
   ChatDispatchProps,
   DispatchNodeResultType,
   RuntimeNodeItemType
-} from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/type';
 import { getLLMModel } from '../../../../ai/model';
 import { filterToolNodeIdByEdges, getHistories } from '../../utils';
 import { runToolWithToolChoice } from './toolChoice';
 import { type DispatchToolModuleProps, type ToolNodeItemType } from './type.d';
-import { type ChatItemType, type UserChatItemValueItemType } from '@fastgpt/global/core/chat/type';
-import { ChatItemValueTypeEnum, ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
+import { type ChatItemType, type UserChatItemValueItemType } from '@libchat/global/core/chat/type';
+import { ChatItemValueTypeEnum, ChatRoleEnum } from '@libchat/global/core/chat/constants';
 import {
   GPTMessages2Chats,
   chatValue2RuntimePrompt,
   chats2GPTMessages,
   getSystemPrompt_ChatItemType,
   runtimePrompt2ChatsValue
-} from '@fastgpt/global/core/chat/adapt';
+} from '@libchat/global/core/chat/adapt';
 import { formatModelChars2Points } from '../../../../../support/wallet/usage/utils';
-import { getHistoryPreview } from '@fastgpt/global/core/chat/utils';
+import { getHistoryPreview } from '@libchat/global/core/chat/utils';
 import { runToolWithFunctionCall } from './functionCall';
 import { runToolWithPromptCall } from './promptCall';
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
+import { replaceVariable } from '@libchat/global/common/string/tools';
 import { getMultiplePrompt, Prompt_Tool_Call } from './constants';
 import { filterToolResponseToPreview } from './utils';
-import { type InteractiveNodeResponseType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
+import { type InteractiveNodeResponseType } from '@libchat/global/core/workflow/template/system/interactive/type';
 import { getFileContentFromLinks, getHistoryFileLinks } from '../../tools/readFiles';
-import { parseUrlToFileType } from '@fastgpt/global/common/file/tools';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import { getDocumentQuotePrompt } from '@fastgpt/global/core/ai/prompt/AIChat';
+import { parseUrlToFileType } from '@libchat/global/common/file/tools';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
+import { getDocumentQuotePrompt } from '@libchat/global/core/ai/prompt/AIChat';
 import { postTextCensor } from '../../../../chat/postTextCensor';
-import type { FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
-import type { McpToolDataType } from '@fastgpt/global/core/app/mcpTools/type';
-import type { JSONSchemaInputType } from '@fastgpt/global/core/app/jsonschema';
+import type { FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
+import type { McpToolDataType } from '@libchat/global/core/app/mcpTools/type';
+import type { JSONSchemaInputType } from '@libchat/global/core/app/jsonschema';
 
 type Response = DispatchNodeResultType<{
   [NodeOutputKeyEnum.answerText]: string;
@@ -185,7 +185,7 @@ export const dispatchRunTools = async (props: DispatchToolModuleProps): Promise<
     toolNodeInputTokens,
     toolNodeOutputTokens,
     completeMessages = [], // The actual message sent to AI(just save text)
-    assistantResponses = [], // FastGPT system store assistant.value response
+    assistantResponses = [], // LibChat system store assistant.value response
     runTimes,
     finish_reason
   } = await (async () => {

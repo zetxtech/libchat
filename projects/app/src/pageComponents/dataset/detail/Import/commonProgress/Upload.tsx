@@ -17,11 +17,11 @@ import {
 import {
   DatasetCollectionDataProcessModeEnum,
   ImportDataSourceEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useRouter } from 'next/router';
 import { TabEnum } from '../../../../../pages/dataset/detail/index';
 import {
@@ -32,11 +32,11 @@ import {
   postCreateDatasetTextCollection,
   postReTrainingDatasetFileCollection
 } from '@/web/core/dataset/api';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import { DatasetImportContext, type ImportFormType } from '../Context';
-import { type ApiCreateDatasetCollectionParams } from '@fastgpt/global/core/dataset/api.d';
+import { type ApiCreateDatasetCollectionParams } from '@libchat/global/core/dataset/api.d';
 
 const Upload = () => {
   const { t } = useTranslation();

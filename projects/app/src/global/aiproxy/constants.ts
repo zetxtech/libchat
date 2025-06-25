@@ -1,6 +1,6 @@
-import { type ModelProviderIdType } from '@fastgpt/global/core/ai/provider';
+import { type ModelProviderIdType } from '@libchat/global/core/ai/provider';
 import { type ChannelInfoType } from './type';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+import { i18nT } from '@libchat/web/i18n/utils';
 
 export enum ChannelStatusEnum {
   ChannelStatusUnknown = 0,

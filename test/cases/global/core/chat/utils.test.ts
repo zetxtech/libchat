@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { ChatItemValueTypeEnum, ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import type { ChatItemType } from '@fastgpt/global/core/chat/type';
+import { ChatItemValueTypeEnum, ChatRoleEnum } from '@libchat/global/core/chat/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import type { ChatItemType } from '@libchat/global/core/chat/type';
 import {
   transformPreviewHistories,
   addStatisticalDataToHistoryItem

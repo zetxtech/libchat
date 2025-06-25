@@ -1,7 +1,7 @@
-import { ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
-import { type ChatHistoryItemResType, type ChatItemType } from '@fastgpt/global/core/chat/type';
-import { type SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { ChatRoleEnum } from '@libchat/global/core/chat/constants';
+import { type ChatHistoryItemResType, type ChatItemType } from '@libchat/global/core/chat/type';
+import { type SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 
 export const isLLMNode = (item: ChatHistoryItemResType) =>
   item.moduleType === FlowNodeTypeEnum.chatNode || item.moduleType === FlowNodeTypeEnum.tools;

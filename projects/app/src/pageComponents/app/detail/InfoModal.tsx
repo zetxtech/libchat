@@ -18,15 +18,15 @@ import {
   ModalFooter,
   Textarea
 } from '@chakra-ui/react';
-import type { RequireOnlyOne } from '@fastgpt/global/common/type/utils';
-import type { AppSchema } from '@fastgpt/global/core/app/type.d';
-import { AppPermissionList } from '@fastgpt/global/support/permission/app/constant';
-import type { PermissionValueType } from '@fastgpt/global/support/permission/type';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import type { RequireOnlyOne } from '@libchat/global/common/type/utils';
+import type { AppSchema } from '@libchat/global/core/app/type.d';
+import { AppPermissionList } from '@libchat/global/support/permission/app/constant';
+import type { PermissionValueType } from '@libchat/global/support/permission/type';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useTranslation } from 'next-i18next';
 import React, { useCallback } from 'react';
 import { useForm } from 'react-hook-form';

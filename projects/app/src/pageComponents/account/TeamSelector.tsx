@@ -3,9 +3,9 @@ import { Box, type ButtonProps } from '@chakra-ui/react';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { useTranslation } from 'next-i18next';
 import { getTeamList, putSwitchTeam } from '@/web/support/user/team/api';
-import { TeamMemberStatusEnum } from '@fastgpt/global/support/user/team/constant';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import { TeamMemberStatusEnum } from '@libchat/global/support/user/team/constant';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useRouter } from 'next/router';
 

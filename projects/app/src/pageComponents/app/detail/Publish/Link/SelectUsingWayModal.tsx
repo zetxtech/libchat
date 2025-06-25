@@ -1,17 +1,17 @@
-import { type OutLinkSchema } from '@fastgpt/global/support/outLink/type';
+import { type OutLinkSchema } from '@libchat/global/support/outLink/type';
 import React, { useCallback, useState } from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { Box, Flex, type FlexProps, Grid, ModalBody, Switch, useTheme } from '@chakra-ui/react';
 import MyRadio from '@/components/common/MyRadio';
 import { useForm } from 'react-hook-form';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
 import { fileToBase64 } from '@/web/common/file/utils';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
-import { subRoute } from '@fastgpt/web/common/system/utils';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
+import { subRoute } from '@libchat/web/common/system/utils';
 
 enum UsingWayEnum {
   link = 'link',

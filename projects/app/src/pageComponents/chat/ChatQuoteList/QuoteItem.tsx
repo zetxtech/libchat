@@ -1,11 +1,11 @@
 import { type ScoreItemType } from '@/components/core/dataset/QuoteItem';
 import { Box, Flex } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import ScoreTag from './ScoreTag';
 import Markdown from '@/components/Markdown';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 
 const QuoteItem = ({
   index,

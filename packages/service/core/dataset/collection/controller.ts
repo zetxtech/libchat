@@ -2,19 +2,19 @@ import {
   DatasetCollectionTypeEnum,
   DatasetCollectionDataProcessModeEnum,
   DatasetTypeEnum
-} from '@fastgpt/global/core/dataset/constants';
-import type { CreateDatasetCollectionParams } from '@fastgpt/global/core/dataset/api.d';
+} from '@libchat/global/core/dataset/constants';
+import type { CreateDatasetCollectionParams } from '@libchat/global/core/dataset/api.d';
 import { MongoDatasetCollection } from './schema';
 import type {
   DatasetCollectionSchemaType,
   DatasetSchemaType
-} from '@fastgpt/global/core/dataset/type';
+} from '@libchat/global/core/dataset/type';
 import { MongoDatasetTraining } from '../training/schema';
 import { MongoDatasetData } from '../data/schema';
 import { delImgByRelatedId } from '../../../common/file/image/controller';
 import { deleteDatasetDataVector } from '../../../common/vectorDB/controller';
 import { delFileByFileIdList } from '../../../common/file/gridfs/controller';
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
 import type { ClientSession } from '../../../common/mongo';
 import { createOrGetCollectionTags } from './utils';
 import { rawText2Chunks } from '../read';
@@ -22,20 +22,20 @@ import { checkDatasetIndexLimit } from '../../../support/permission/teamLimit';
 import { predictDataLimitLength } from '../../../../global/core/dataset/utils';
 import { mongoSessionRun } from '../../../common/mongo/sessionRun';
 import { createTrainingUsage } from '../../../support/wallet/usage/controller';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
 import { getLLMModel, getEmbeddingModel, getVlmModel } from '../../ai/model';
 import { pushDataListToTrainingQueue, pushDatasetToParseQueue } from '../training/controller';
 import { MongoImage } from '../../../common/file/image/schema';
-import { hashStr } from '@fastgpt/global/common/string/tools';
+import { hashStr } from '@libchat/global/common/string/tools';
 import { addDays } from 'date-fns';
 import { MongoDatasetDataText } from '../data/dataTextSchema';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 import { getTrainingModeByCollection } from './utils';
 import {
   computedCollectionChunkSettings,
   getLLMMaxChunkSize
-} from '@fastgpt/global/core/dataset/training/utils';
-import { DatasetDataIndexTypeEnum } from '@fastgpt/global/core/dataset/data/constants';
+} from '@libchat/global/core/dataset/training/utils';
+import { DatasetDataIndexTypeEnum } from '@libchat/global/core/dataset/data/constants';
 import { clearCollectionImages, removeDatasetImageExpiredTime } from '../image/utils';
 
 export const createCollectionAndInsertData = async ({

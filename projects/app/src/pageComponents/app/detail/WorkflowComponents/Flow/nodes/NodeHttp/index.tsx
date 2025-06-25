@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState, useTransition } from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from '../render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import Container from '../../components/Container';
 import RenderInput from '../render/RenderInput';
 import RenderOutput from '../render/RenderOutput';
@@ -27,26 +27,26 @@ import {
   ContentTypes,
   NodeInputKeyEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 import { useTranslation } from 'next-i18next';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io.d';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { type EditorVariableLabelPickerType } from '@fastgpt/web/components/common/Textarea/PromptEditor/type';
-import HttpInput from '@fastgpt/web/components/common/Input/HttpInput';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io.d';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { type EditorVariableLabelPickerType } from '@libchat/web/components/common/Textarea/PromptEditor/type';
+import HttpInput from '@libchat/web/components/common/Input/HttpInput';
 import dynamic from 'next/dynamic';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import RenderToolInput from '../render/RenderToolInput';
 import IOTitle from '../../components/IOTitle';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
 import { useCreation, useMemoizedFn } from 'ahooks';
 import { AppContext } from '@/pageComponents/app/detail/context';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { getEditorVariables } from '../../../utils';
-import PromptEditor from '@fastgpt/web/components/common/Textarea/PromptEditor';
+import PromptEditor from '@libchat/web/components/common/Textarea/PromptEditor';
 import { WorkflowNodeEdgeContext } from '../../../context/workflowInitContext';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 

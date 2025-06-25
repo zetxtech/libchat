@@ -5,22 +5,22 @@ import {
   type SearchTestStoreItemType
 } from '@/web/core/dataset/store/searchTest';
 import { postSearchText } from '@/web/core/dataset/api';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useRequest, useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { formatTimeToChatTime } from '@fastgpt/global/common/string/time';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useRequest, useRequest2 } from '@libchat/web/hooks/useRequest';
+import { formatTimeToChatTime } from '@libchat/global/common/string/time';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { customAlphabet } from 'nanoid';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
 import { type SearchTestResponse } from '@/global/core/dataset/api';
 import {
   DatasetSearchModeEnum,
   DatasetSearchModeMap
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import dynamic from 'next/dynamic';
 import { useForm } from 'react-hook-form';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
 import { fileDownload } from '@/web/common/file/utils';
 import QuoteItem from '@/components/core/dataset/QuoteItem';
@@ -28,9 +28,9 @@ import { useSystemStore } from '@/web/common/system/useSystemStore';
 import SearchParamsTip from '@/components/core/dataset/SearchParamsTip';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { getNanoid } from '@libchat/global/common/string/tools';
 
 const DatasetParamsModal = dynamic(() => import('@/components/core/app/DatasetParamsModal'));
 

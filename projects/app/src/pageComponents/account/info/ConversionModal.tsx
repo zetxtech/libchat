@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
 import { ModalBody, Box, Button, VStack, HStack, Link } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import Icon from '@fastgpt/web/components/common/Icon';
-import Tag from '@fastgpt/web/components/common/Tag';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import Icon from '@libchat/web/components/common/Icon';
+import Tag from '@libchat/web/components/common/Tag';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { balanceConversion } from '@/web/support/wallet/bill/api';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import { formatStorePrice2Read } from '@fastgpt/global/support/wallet/usage/tools';
-import { SUB_EXTRA_POINT_RATE } from '@fastgpt/global/support/wallet/bill/constants';
+import { formatStorePrice2Read } from '@libchat/global/support/wallet/usage/tools';
+import { SUB_EXTRA_POINT_RATE } from '@libchat/global/support/wallet/bill/constants';
 import { useRouter } from 'next/router';
 
 const ConversionModal = ({

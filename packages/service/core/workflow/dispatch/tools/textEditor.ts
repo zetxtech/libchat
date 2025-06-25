@@ -1,9 +1,9 @@
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
+import { replaceVariable } from '@libchat/global/common/string/tools';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.textareaInput]: string;

@@ -1,10 +1,10 @@
-import { chatValue2RuntimePrompt } from '@fastgpt/global/core/chat/adapt';
-import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { chatValue2RuntimePrompt } from '@libchat/global/core/chat/adapt';
+import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import type {
   DispatchNodeResultType,
   ModuleDispatchProps
-} from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/type';
 
 export type UserChatInputProps = ModuleDispatchProps<{
   [NodeInputKeyEnum.userChatInput]: string;

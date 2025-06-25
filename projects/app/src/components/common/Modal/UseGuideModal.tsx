@@ -1,6 +1,6 @@
 import { Box, ModalBody, useDisclosure } from '@chakra-ui/react';
 import Markdown from '@/components/Markdown';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { getDocPath } from '@/web/common/system/doc';
 import React from 'react';
 

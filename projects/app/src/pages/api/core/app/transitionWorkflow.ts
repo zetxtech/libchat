@@ -1,9 +1,9 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { OwnerPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { OwnerPermissionVal } from '@libchat/global/support/permission/constant';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import { onCreateApp } from './create';
 
 export type transitionWorkflowQuery = {};

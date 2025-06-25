@@ -1,11 +1,11 @@
-import { pluginTypeMap } from '@fastgpt/global/core/plugin/constants';
+import { pluginTypeMap } from '@libchat/global/core/plugin/constants';
 import { connectionMongo, type Model } from '../../common/mongo';
 const { Schema, model, models } = connectionMongo;
-import type { PluginItemSchema } from '@fastgpt/global/core/plugin/type.d';
+import type { PluginItemSchema } from '@libchat/global/core/plugin/type.d';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 
 export const PluginCollectionName = 'plugins';
 

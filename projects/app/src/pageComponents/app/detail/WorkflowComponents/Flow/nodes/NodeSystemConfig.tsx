@@ -1,13 +1,13 @@
 import React, { type Dispatch, useMemo } from 'react';
 import { type NodeProps, useViewport } from 'reactflow';
 import { Box } from '@chakra-ui/react';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 
 import QGConfig from '@/components/core/app/QGConfig';
 import TTSSelect from '@/components/core/app/TTSSelect';
 import WhisperConfig from '@/components/core/app/WhisperConfig';
 import InputGuideConfig from '@/components/core/app/InputGuideConfig';
-import { getAppChatConfig } from '@fastgpt/global/core/workflow/utils';
+import { getAppChatConfig } from '@libchat/global/core/workflow/utils';
 import { TTSTypeEnum } from '@/web/core/app/constants';
 import NodeCard from './render/NodeCard';
 import ScheduledTriggerConfig from '@/components/core/app/ScheduledTriggerConfig';
@@ -17,14 +17,14 @@ import {
   type AppChatConfigType,
   type AppDetailType,
   type VariableItemType
-} from '@fastgpt/global/core/app/type';
+} from '@libchat/global/core/app/type';
 import { useMemoizedFn } from 'ahooks';
 import VariableEdit from '@/components/core/app/VariableEdit';
 import { AppContext } from '@/pageComponents/app/detail/context';
 import WelcomeTextConfig from '@/components/core/app/WelcomeTextConfig';
 import FileSelect from '@/components/core/app/FileSelect';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { userFilesInput } from '@fastgpt/global/core/workflow/template/system/workflowStart';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { userFilesInput } from '@libchat/global/core/workflow/template/system/workflowStart';
 import Container from '../components/Container';
 import AutoExecConfig from '@/components/core/app/AutoExecConfig';
 

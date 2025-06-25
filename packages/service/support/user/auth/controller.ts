@@ -1,4 +1,4 @@
-import type { UserAuthTypeEnum } from '@fastgpt/global/support/user/auth/constants';
+import type { UserAuthTypeEnum } from '@libchat/global/support/user/auth/constants';
 import { MongoUserAuth } from './schema';
 import { i18nT } from '../../../../web/i18n/utils';
 import { mongoSessionRun } from '../../../common/mongo/sessionRun';

@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from 'react';
 import { Table, TableContainer, Thead, Tbody, Tr, Th, Td, Button } from '@chakra-ui/react';
-import { formatNumber } from '@fastgpt/global/common/math/tools';
+import { formatNumber } from '@libchat/global/common/math/tools';
 import { useTranslation } from 'next-i18next';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import MyBox from '@libchat/web/components/common/MyBox';
+import MyIcon from '@libchat/web/components/common/Icon';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import type { DashboardDataItemType } from '@/global/aiproxy/type.d';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 

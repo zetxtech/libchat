@@ -1,4 +1,4 @@
-import { FlowValueTypeMap } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowValueTypeMap } from '@libchat/global/core/workflow/node/constant';
 import {
   Box,
   Button,
@@ -10,21 +10,21 @@ import {
   Textarea,
   Switch
 } from '@chakra-ui/react';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import {
   type CustomFieldConfigType,
   type FlowNodeInputItemType
-} from '@fastgpt/global/core/workflow/type/io';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+} from '@libchat/global/core/workflow/type/io';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { useToast } from '@libchat/web/hooks/useToast';
 import React, { useCallback, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
 import { useMount } from 'ahooks';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 
 const PluginOutputEditModal = ({
   customOutputConfig,

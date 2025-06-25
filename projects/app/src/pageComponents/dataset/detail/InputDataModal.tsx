@@ -8,26 +8,26 @@ import {
   getDatasetCollectionById,
   getDatasetDataItemById
 } from '@/web/core/dataset/api';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { getCollectionIcon } from '@fastgpt/global/core/dataset/utils';
-import type { DatasetDataIndexItemType } from '@fastgpt/global/core/dataset/type';
-import DeleteIcon from '@fastgpt/web/components/common/Icon/delete';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { getCollectionIcon } from '@libchat/global/core/dataset/utils';
+import type { DatasetDataIndexItemType } from '@libchat/global/core/dataset/type';
+import DeleteIcon from '@libchat/web/components/common/Icon/delete';
 import { defaultCollectionDetail } from '@/web/core/dataset/constants';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import styles from './styles.module.scss';
 import {
   DatasetDataIndexTypeEnum,
   getDatasetIndexMapData
-} from '@fastgpt/global/core/dataset/data/constants';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+} from '@libchat/global/core/dataset/data/constants';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 import MyImage from '@/components/MyImage/index';
 
 export type InputDataType = {

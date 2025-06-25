@@ -1,10 +1,10 @@
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import {
   type DispatchNodeResultType,
   type ModuleDispatchProps
-} from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/type';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.loopStartInput]: any;

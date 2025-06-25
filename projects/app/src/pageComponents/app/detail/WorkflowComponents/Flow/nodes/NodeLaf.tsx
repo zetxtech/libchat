@@ -1,15 +1,15 @@
 import React, { useMemo } from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from './render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import Container from '../components/Container';
 import { Box, Button, Center, Flex, useDisclosure } from '@chakra-ui/react';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { useTranslation } from 'next-i18next';
 import { getLafAppDetail } from '@/web/support/laf/api';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { getApiSchemaByUrl } from '@/web/core/app/api/plugin';
-import { getType, str2OpenApiSchema } from '@fastgpt/global/core/app/httpPlugin/utils';
+import { getType, str2OpenApiSchema } from '@libchat/global/core/app/httpPlugin/utils';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { ChevronRightIcon } from '@chakra-ui/icons';
@@ -18,23 +18,23 @@ import dynamic from 'next/dynamic';
 import {
   FlowNodeInputTypeEnum,
   FlowNodeOutputTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+} from '@libchat/global/core/workflow/node/constant';
+import { useToast } from '@libchat/web/hooks/useToast';
 import RenderToolInput from './render/RenderToolInput';
 import RenderInput from './render/RenderInput';
 import RenderOutput from './render/RenderOutput';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import {
   type FlowNodeInputItemType,
   type FlowNodeOutputItemType
-} from '@fastgpt/global/core/workflow/type/io';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+} from '@libchat/global/core/workflow/type/io';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import IOTitle from '../components/IOTitle';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
 import { putUpdateTeam } from '@/web/support/user/team/api';
-import { nodeLafCustomInputConfig } from '@fastgpt/global/core/workflow/template/system/laf';
+import { nodeLafCustomInputConfig } from '@libchat/global/core/workflow/template/system/laf';
 
 const LafAccountModal = dynamic(() => import('@/components/support/laf/LafAccountModal'));
 
@@ -268,7 +268,7 @@ const NodeLaf = (props: NodeProps<FlowNodeItemType>) => {
                     );
 
                     if (!lafFunction) return;
-                    const url = `${feConfigs.lafEnv}/app/${lafData?.lafApp?.appid}/function${lafFunction?.path}?templateid=FastGPT_Laf`;
+                    const url = `${feConfigs.lafEnv}/app/${lafData?.lafApp?.appid}/function${lafFunction?.path}?templateid=LibChat_Laf`;
                     window.open(url, '_blank');
                   }}
                 >

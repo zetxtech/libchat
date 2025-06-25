@@ -1,4 +1,4 @@
-import type { ChatCompletionMessageParam } from '@fastgpt/global/core/ai/type.d';
+import type { ChatCompletionMessageParam } from '@libchat/global/core/ai/type.d';
 import { createChatCompletion } from '../config';
 import { countGptMessagesTokens, countPromptTokens } from '../../../common/string/tiktoken/index';
 import { loadRequestMessages } from '../../chat/utils';
@@ -6,7 +6,7 @@ import { llmCompletionsBodyFormat, formatLLMResponse } from '../utils';
 import {
   QuestionGuidePrompt,
   QuestionGuideFooterPrompt
-} from '@fastgpt/global/core/ai/prompt/agent';
+} from '@libchat/global/core/ai/prompt/agent';
 import { addLog } from '../../../common/system/log';
 import json5 from 'json5';
 

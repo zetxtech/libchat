@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import NodeCard from './render/NodeCard';
 import { type NodeProps } from 'reactflow';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { Box, Textarea } from '@chakra-ui/react';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 
 const NodeComment = ({ data }: NodeProps<FlowNodeItemType>) => {

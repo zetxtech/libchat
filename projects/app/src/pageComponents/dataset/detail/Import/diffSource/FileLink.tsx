@@ -3,12 +3,12 @@ import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
 import { Box, Button, Flex, Input, Link, Textarea } from '@chakra-ui/react';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { LinkCollectionIcon } from '@fastgpt/global/core/dataset/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { LinkCollectionIcon } from '@libchat/global/core/dataset/constants';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { getDocPath } from '@/web/common/system/doc';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetImportContext } from '../Context';
 

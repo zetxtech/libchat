@@ -1,17 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { jsonRes } from '@libchat/service/common/response';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { addHours } from 'date-fns';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { delay, retryFn } from '@fastgpt/global/common/system/utils';
-import { delCollection } from '@fastgpt/service/core/dataset/collection/controller';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { MongoDatasetDataText } from '@fastgpt/service/core/dataset/data/dataTextSchema';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { type DatasetCollectionSchemaType } from '@fastgpt/global/core/dataset/type';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { deleteDatasetDataVector } from '@fastgpt/service/common/vectorDB/controller';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { delay, retryFn } from '@libchat/global/common/system/utils';
+import { delCollection } from '@libchat/service/core/dataset/collection/controller';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { MongoDatasetDataText } from '@libchat/service/core/dataset/data/dataTextSchema';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { type DatasetCollectionSchemaType } from '@libchat/global/core/dataset/type';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { deleteDatasetDataVector } from '@libchat/service/common/vectorDB/controller';
 
 // 删了库，没删集合
 const checkInvalidCollection = async () => {

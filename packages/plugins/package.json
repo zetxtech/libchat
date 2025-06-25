@@ -1,5 +1,5 @@
 {
-  "name": "@fastgpt/plugins",
+  "name": "@libchat/plugins",
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
@@ -19,8 +19,8 @@
     "wikijs": "^6.4.1"
   },
   "devDependencies": {
-    "@fastgpt/global": "workspace:*",
-    "@fastgpt/service": "workspace:*",
+    "@libchat/global": "workspace:*",
+    "@libchat/service": "workspace:*",
     "@types/lodash": "^4.14.191",
     "@types/node": "20.14.0"
   }

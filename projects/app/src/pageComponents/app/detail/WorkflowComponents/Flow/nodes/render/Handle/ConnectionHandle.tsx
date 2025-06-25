@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react';
 import { Position } from 'reactflow';
 import { MySourceHandle, MyTargetHandle } from '.';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../../context';
 import { WorkflowNodeEdgeContext } from '../../../../context/workflowInitContext';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 
 export const ConnectionSourceHandle = ({
   nodeId,

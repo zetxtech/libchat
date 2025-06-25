@@ -2,20 +2,20 @@ import { useEffect, useState } from 'react';
 import { clientInitData } from '@/web/common/system/staticData';
 import { useRouter } from 'next/router';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import type { FastGPTFeConfigsType } from '@fastgpt/global/common/system/types/index.d';
+import type { LibChatFeConfigsType } from '@libchat/global/common/system/types/index.d';
 import { useMemoizedFn, useMount } from 'ahooks';
 import { TrackEventName } from '../common/system/constants';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useUserStore } from '../support/user/useUserStore';
 import {
   setBdVId,
-  setFastGPTSem,
+  setLibChatSem,
   setInviterId,
   setSourceDomain,
   setUtmParams,
   setUtmWorkflow
 } from '../support/marketing/utils';
-import { type ShortUrlParams } from '@fastgpt/global/support/marketing/type';
+import { type ShortUrlParams } from '@libchat/global/support/marketing/type';
 
 type MarketingQueryParams = {
   hiId?: string;
@@ -46,7 +46,7 @@ export const useInitApp = () => {
 
   const { loadGitStar, setInitd, feConfigs } = useSystemStore();
   const { userInfo } = useUserStore();
-  const [scripts, setScripts] = useState<FastGPTFeConfigsType['scripts']>([]);
+  const [scripts, setScripts] = useState<LibChatFeConfigsType['scripts']>([]);
   const [title, setTitle] = useState(process.env.SYSTEM_NAME || 'AI');
 
   const getPathWithoutMarketingParams = () => {
@@ -74,14 +74,14 @@ export const useInitApp = () => {
       feConfigs: { scripts, isPlus, systemTitle }
     } = await clientInitData();
 
-    setTitle(systemTitle || 'FastGPT');
+    setTitle(systemTitle || 'LibChat');
 
-    // log fastgpt
+    // log libchat
     if (!isPlus) {
       console.log(
-        '%cWelcome to FastGPT',
+        '%cWelcome to LibChat',
         'font-family:Arial; color:#3370ff ; font-size:18px; font-weight:bold;',
-        `GitHub：https://github.com/labring/FastGPT`
+        `GitHub：https://github.com/labring/LibChat`
       );
     }
 
@@ -132,7 +132,7 @@ export const useInitApp = () => {
     if (utm_workflow) {
       setUtmParams(utmParams);
     }
-    setFastGPTSem({ keyword: k, ...utmParams });
+    setLibChatSem({ keyword: k, ...utmParams });
 
     const newPath = getPathWithoutMarketingParams();
     router.replace(newPath);

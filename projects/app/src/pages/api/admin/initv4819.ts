@@ -1,8 +1,8 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoUser } from '@fastgpt/service/support/user/schema';
-import { MongoTeamMember } from '@fastgpt/service/support/user/team/teamMemberSchema';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoUser } from '@libchat/service/support/user/schema';
+import { MongoTeamMember } from '@libchat/service/support/user/team/teamMemberSchema';
 import { type NextApiRequest, type NextApiResponse } from 'next';
 
 /* 

@@ -4,25 +4,25 @@ import { type PluginRunBoxProps } from './type';
 import {
   type AIChatItemValueItemType,
   type RuntimeUserPromptType
-} from '@fastgpt/global/core/chat/type';
+} from '@libchat/global/core/chat/type';
 import { type FieldValues } from 'react-hook-form';
 import { PluginRunBoxTabEnum } from './constants';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { ChatItemValueTypeEnum, ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { ChatItemValueTypeEnum, ChatRoleEnum } from '@libchat/global/core/chat/constants';
 import { type generatingMessageProps } from '../type';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
 import { useTranslation } from 'next-i18next';
 import { type ChatBoxInputFormType } from '../ChatBox/type';
-import { chats2GPTMessages } from '@fastgpt/global/core/chat/adapt';
-import { getPluginRunUserQuery } from '@fastgpt/global/core/workflow/utils';
+import { chats2GPTMessages } from '@libchat/global/core/chat/adapt';
+import { getPluginRunUserQuery } from '@libchat/global/core/workflow/utils';
 import { cloneDeep } from 'lodash';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { ChatRecordContext } from '@/web/core/chat/context/chatRecordContext';
-import { type AppFileSelectConfigType } from '@fastgpt/global/core/app/type';
-import { defaultAppSelectFileConfig } from '@fastgpt/global/core/app/constants';
-import { mergeChatResponseData } from '@fastgpt/global/core/chat/utils';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { type AppFileSelectConfigType } from '@libchat/global/core/app/type';
+import { defaultAppSelectFileConfig } from '@libchat/global/core/app/constants';
+import { mergeChatResponseData } from '@libchat/global/core/chat/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 type PluginRunContextType = PluginRunBoxProps & {
   isChatting: boolean;

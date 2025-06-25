@@ -1,14 +1,14 @@
 /* push data to training queue */
 import type { NextApiResponse } from 'next';
-import type { PushDatasetDataProps } from '@fastgpt/global/core/dataset/api.d';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { checkDatasetIndexLimit } from '@fastgpt/service/support/permission/teamLimit';
-import { predictDataLimitLength } from '@fastgpt/global/core/dataset/utils';
-import { pushDataListToTrainingQueue } from '@fastgpt/service/core/dataset/training/controller';
+import type { PushDatasetDataProps } from '@libchat/global/core/dataset/api.d';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { checkDatasetIndexLimit } from '@libchat/service/support/permission/teamLimit';
+import { predictDataLimitLength } from '@libchat/global/core/dataset/utils';
+import { pushDataListToTrainingQueue } from '@libchat/service/core/dataset/training/controller';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { getTrainingModeByCollection } from '@fastgpt/service/core/dataset/collection/utils';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { getTrainingModeByCollection } from '@libchat/service/core/dataset/collection/utils';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 
 async function handler(req: ApiRequestProps<PushDatasetDataProps>, res: NextApiResponse<any>) {
   const body = req.body;

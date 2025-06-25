@@ -1,4 +1,4 @@
-import { MongoUser } from '@fastgpt/service/support/user/schema';
+import { MongoUser } from '@libchat/service/support/user/schema';
 import { it, expect } from 'vitest';
 
 it('should be a test', async () => {

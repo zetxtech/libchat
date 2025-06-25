@@ -1,8 +1,8 @@
-import { PluginSourceEnum } from '@fastgpt/global/core/plugin/constants';
+import { PluginSourceEnum } from '@libchat/global/core/plugin/constants';
 import { type SystemPluginResponseType } from './type';
-import { type SystemPluginTemplateItemType } from '@fastgpt/global/core/workflow/type';
+import { type SystemPluginTemplateItemType } from '@libchat/global/core/workflow/type';
 import { cloneDeep } from 'lodash';
-import { WorkerNameEnum, runWorker } from '@fastgpt/service/worker/utils';
+import { WorkerNameEnum, runWorker } from '@libchat/service/worker/utils';
 
 // Run in main thread
 const staticPluginList = [

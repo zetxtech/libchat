@@ -5,18 +5,18 @@ import type { ResLogin } from '@/global/support/api/userRes.d';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { clearToken } from '@/web/support/user/auth';
 import { oauthLogin } from '@/web/support/user/api';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import { useToast } from '@libchat/web/hooks/useToast';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { serviceSideProps } from '@/web/common/i18n/utils';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { useTranslation } from 'next-i18next';
-import { OAuthEnum } from '@fastgpt/global/support/user/constant';
+import { OAuthEnum } from '@libchat/global/support/user/constant';
 import {
   getBdVId,
-  getFastGPTSem,
+  getLibChatSem,
   getInviterId,
   getSourceDomain,
-  removeFastGPTSem
+  removeLibChatSem
 } from '@/web/support/marketing/utils';
 
 let isOauthLogging = false;
@@ -49,7 +49,7 @@ const provider = () => {
           callbackUrl: `${location.origin}/login/provider`,
           inviterId: getInviterId(),
           bd_vid: getBdVId(),
-          fastgpt_sem: getFastGPTSem(),
+          libchat_sem: getLibChatSem(),
           sourceDomain: getSourceDomain()
         });
 
@@ -63,7 +63,7 @@ const provider = () => {
           }, 1000);
         }
 
-        removeFastGPTSem();
+        removeLibChatSem();
         loginSuccess(res);
       } catch (error) {
         toast({

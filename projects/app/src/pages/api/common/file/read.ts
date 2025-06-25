@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { authFileToken } from '@fastgpt/service/support/permission/controller';
-import { getDownloadStream, getFileById } from '@fastgpt/service/common/file/gridfs/controller';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { stream2Encoding } from '@fastgpt/service/common/file/gridfs/utils';
+import { jsonRes } from '@libchat/service/common/response';
+import { authFileToken } from '@libchat/service/support/permission/controller';
+import { getDownloadStream, getFileById } from '@libchat/service/common/file/gridfs/controller';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { stream2Encoding } from '@libchat/service/common/file/gridfs/utils';
 
 const previewableExtensions = [
   'jpg',

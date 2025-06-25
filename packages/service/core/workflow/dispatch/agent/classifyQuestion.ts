@@ -1,23 +1,23 @@
-import { chats2GPTMessages } from '@fastgpt/global/core/chat/adapt';
+import { chats2GPTMessages } from '@libchat/global/core/chat/adapt';
 import {
   countGptMessagesTokens,
   countPromptTokens
 } from '../../../../common/string/tiktoken/index';
-import type { ChatItemType } from '@fastgpt/global/core/chat/type.d';
-import { ChatItemValueTypeEnum, ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
+import type { ChatItemType } from '@libchat/global/core/chat/type.d';
+import { ChatItemValueTypeEnum, ChatRoleEnum } from '@libchat/global/core/chat/constants';
 import { createChatCompletion } from '../../../ai/config';
-import type { ClassifyQuestionAgentItemType } from '@fastgpt/global/core/workflow/template/system/classifyQuestion/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
-import { getCQSystemPrompt } from '@fastgpt/global/core/ai/prompt/agent';
-import { type LLMModelItemType } from '@fastgpt/global/core/ai/model.d';
+import type { ClassifyQuestionAgentItemType } from '@libchat/global/core/workflow/template/system/classifyQuestion/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
+import { getCQSystemPrompt } from '@libchat/global/core/ai/prompt/agent';
+import { type LLMModelItemType } from '@libchat/global/core/ai/model.d';
 import { getLLMModel } from '../../../ai/model';
 import { getHistories } from '../utils';
 import { formatModelChars2Points } from '../../../../support/wallet/usage/utils';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
 import { loadRequestMessages } from '../../../chat/utils';
 import { llmCompletionsBodyFormat, formatLLMResponse } from '../../../ai/utils';
 import { addLog } from '../../../../common/system/log';

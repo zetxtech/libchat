@@ -4,7 +4,7 @@ import axios, {
   type AxiosResponse,
   type AxiosRequestConfig
 } from 'axios';
-import { FastGPTProUrl } from '../system/constants';
+import { LibChatProUrl } from '../system/constants';
 
 interface ConfigType {
   headers?: { [key: string]: string };
@@ -76,7 +76,7 @@ instance.interceptors.request.use(requestStart, (err) => Promise.reject(err));
 instance.interceptors.response.use(responseSuccess, (err) => Promise.reject(err));
 
 export function request(url: string, data: any, config: ConfigType, method: Method): any {
-  if (!FastGPTProUrl) {
+  if (!LibChatProUrl) {
     console.log('未部署商业版接口', url);
     return Promise.reject('The The request was denied...');
   }
@@ -90,7 +90,7 @@ export function request(url: string, data: any, config: ConfigType, method: Meth
 
   return instance
     .request({
-      baseURL: FastGPTProUrl,
+      baseURL: LibChatProUrl,
       url,
       method,
       data: ['POST', 'PUT'].includes(method) ? data : null,
@@ -127,5 +127,5 @@ export function DELETE<T = undefined>(url: string, data = {}, config: ConfigType
 export const plusRequest = (config: AxiosRequestConfig) =>
   instance.request({
     ...config,
-    baseURL: FastGPTProUrl
+    baseURL: LibChatProUrl
   });

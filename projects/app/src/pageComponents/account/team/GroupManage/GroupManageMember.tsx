@@ -1,23 +1,23 @@
 import { Box, ModalBody, Flex, Button, ModalFooter, Grid, HStack } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import Tag from '@fastgpt/web/components/common/Tag';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
+import Tag from '@libchat/web/components/common/Tag';
 
 import { useTranslation } from 'next-i18next';
 import React, { useEffect, useMemo, useState } from 'react';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { putUpdateGroup } from '@/web/support/user/team/group/api';
-import type { GroupMemberRole } from '@fastgpt/global/support/permission/memberGroup/constant';
+import type { GroupMemberRole } from '@libchat/global/support/permission/memberGroup/constant';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { DEFAULT_TEAM_AVATAR } from '@fastgpt/global/common/system/constants';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
-import { type MemberGroupListItemType } from '@fastgpt/global/support/permission/memberGroup/type';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { DEFAULT_TEAM_AVATAR } from '@libchat/global/common/system/constants';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
+import { type MemberGroupListItemType } from '@libchat/global/support/permission/memberGroup/type';
 import { getTeamMembers } from '@/web/support/user/team/api';
-import { type TeamMemberItemType } from '@fastgpt/global/support/user/team/type';
-import { type PaginationResponse } from '@fastgpt/web/common/fetch/type';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { type TeamMemberItemType } from '@libchat/global/support/user/team/type';
+import { type PaginationResponse } from '@libchat/web/common/fetch/type';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import _ from 'lodash';
 import MemberItemCard from '@/components/support/permission/MemberManager/MemberItemCard';
 

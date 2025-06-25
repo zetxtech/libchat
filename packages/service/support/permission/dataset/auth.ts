@@ -1,21 +1,21 @@
-import { type PermissionValueType } from '@fastgpt/global/support/permission/type';
+import { type PermissionValueType } from '@libchat/global/support/permission/type';
 import { getResourcePermission, parseHeaderCert } from '../controller';
 import {
   type CollectionWithDatasetType,
   type DatasetDataItemType,
   type DatasetSchemaType
-} from '@fastgpt/global/core/dataset/type';
+} from '@libchat/global/core/dataset/type';
 import { getTmbInfoByTmbId } from '../../user/team/controller';
 import { MongoDataset } from '../../../core/dataset/schema';
-import { NullPermission, PerResourceTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import { DatasetPermission } from '@fastgpt/global/support/permission/dataset/controller';
+import { NullPermission, PerResourceTypeEnum } from '@libchat/global/support/permission/constant';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import { DatasetPermission } from '@libchat/global/support/permission/dataset/controller';
 import { getCollectionWithDataset } from '../../../core/dataset/controller';
 import { MongoDatasetData } from '../../../core/dataset/data/schema';
 import { type AuthModeType, type AuthResponseType } from '../type';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import { DatasetDefaultPermissionVal } from '@fastgpt/global/support/permission/dataset/constant';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
+import { DatasetDefaultPermissionVal } from '@libchat/global/support/permission/dataset/constant';
 import { getDatasetImagePreviewUrl } from '../../../core/dataset/image/utils';
 import { i18nT } from '../../../../web/i18n/utils';
 

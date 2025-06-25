@@ -1,37 +1,37 @@
 import React, { useMemo, useRef, useState } from 'react';
 import { postChangeOwner, resumeInheritPer } from '@/web/core/dataset/api';
 import { Box, Flex, Grid, HStack } from '@chakra-ui/react';
-import { DatasetTypeEnum, DatasetTypeMap } from '@fastgpt/global/core/dataset/constants';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { DatasetTypeEnum, DatasetTypeMap } from '@libchat/global/core/dataset/constants';
+import MyMenu from '@libchat/web/components/common/MyMenu';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useRouter } from 'next/router';
 import PermissionIconText from '@/components/support/permission/IconText';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
-import { useRequest, useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { type DatasetItemType } from '@fastgpt/global/core/dataset/type';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
+import { useRequest, useRequest2 } from '@libchat/web/hooks/useRequest';
+import { type DatasetItemType } from '@libchat/global/core/dataset/type';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { checkTeamExportDatasetLimit } from '@/web/support/user/team/api';
 import { downloadFetch } from '@/web/common/system/utils';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import dynamic from 'next/dynamic';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetsContext } from '../../../pages/dataset/list/context';
-import { DatasetPermissionList } from '@fastgpt/global/support/permission/dataset/constant';
+import { DatasetPermissionList } from '@libchat/global/support/permission/dataset/constant';
 import ConfigPerModal from '@/components/support/permission/ConfigPerModal';
 import {
   deleteDatasetCollaborators,
   getCollaboratorList,
   postUpdateDatasetCollaborators
 } from '@/web/core/dataset/api/collaborator';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import { useFolderDrag } from '@/components/common/folder/useFolderDrag';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useTranslation } from 'next-i18next';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import SideTag from './SideTag';
-import { getModelProvider } from '@fastgpt/global/core/ai/provider';
-import UserBox from '@fastgpt/web/components/common/UserBox';
+import { getModelProvider } from '@libchat/global/core/ai/provider';
+import UserBox from '@libchat/web/components/common/UserBox';
 
 const EditResourceModal = dynamic(() => import('@/components/common/Modal/EditResourceModal'));
 

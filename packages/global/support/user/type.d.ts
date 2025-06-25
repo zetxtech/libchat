@@ -15,7 +15,7 @@ export type UserModelSchema = {
   status: `${UserStatusEnum}`;
   lastLoginTmbId?: string;
   passwordUpdateTime?: Date;
-  fastgpt_sem?: {
+  libchat_sem?: {
     keyword: string;
   };
   contact?: string;

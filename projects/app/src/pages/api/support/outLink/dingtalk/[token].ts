@@ -1,5 +1,5 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
-import { POST } from '@fastgpt/service/common/api/plusRequest';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
+import { POST } from '@libchat/service/common/api/plusRequest';
 import { NextAPI } from '@/service/middleware/entry';
 
 export type OutLinkDingtalkQuery = any;

@@ -10,13 +10,13 @@ import {
   MenuButton
 } from '@chakra-ui/react';
 import React, { useMemo, useRef, useState } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { type PermissionValueType } from '@fastgpt/global/support/permission/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { type PermissionValueType } from '@libchat/global/support/permission/type';
 import { useContextSelector } from 'use-context-selector';
-import { Permission } from '@fastgpt/global/support/permission/controller';
+import { Permission } from '@libchat/global/support/permission/controller';
 import { CollaboratorContext } from './context';
 import { useTranslation } from 'next-i18next';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 
 export type PermissionSelectProps = {
   value?: PermissionValueType;

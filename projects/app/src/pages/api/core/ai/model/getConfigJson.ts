@@ -1,7 +1,7 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authSystemAdmin } from '@fastgpt/service/support/permission/user/auth';
-import { MongoSystemModel } from '@fastgpt/service/core/ai/config/schema';
+import { authSystemAdmin } from '@libchat/service/support/permission/user/auth';
+import { MongoSystemModel } from '@libchat/service/core/ai/config/schema';
 
 export type getConfigJsonQuery = {};
 

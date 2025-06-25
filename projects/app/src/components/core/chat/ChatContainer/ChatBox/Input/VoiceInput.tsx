@@ -9,13 +9,13 @@ import React, {
   useImperativeHandle
 } from 'react';
 import { useTranslation } from 'next-i18next';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useContextSelector } from 'use-context-selector';
 import { ChatBoxContext } from '../Provider';
 import MyIconButton from '@/pageComponents/account/team/OrgManage/IconButton';
-import { isMobile } from '@fastgpt/web/common/system/utils';
+import { isMobile } from '@libchat/web/common/system/utils';
 
 export interface VoiceInputComponentRef {
   onSpeak: () => void;

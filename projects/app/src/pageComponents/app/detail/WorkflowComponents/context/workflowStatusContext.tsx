@@ -5,16 +5,16 @@ import { WorkflowInitContext, WorkflowNodeEdgeContext } from './workflowInitCont
 import { WorkflowContext } from '.';
 import { AppContext } from '../../context';
 import { compareSnapshot } from '@/web/core/workflow/utils';
-import { useBeforeunload } from '@fastgpt/web/hooks/useBeforeunload';
+import { useBeforeunload } from '@libchat/web/hooks/useBeforeunload';
 import { useTranslation } from 'next-i18next';
 import { type Node } from 'reactflow';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import {
   Input_Template_Node_Height,
   Input_Template_Node_Width
-} from '@fastgpt/global/core/workflow/template/input';
-import { isProduction } from '@fastgpt/global/common/system/constants';
+} from '@libchat/global/core/workflow/template/input';
+import { isProduction } from '@libchat/global/common/system/constants';
 
 type WorkflowStatusContextType = {
   isSaved: boolean;

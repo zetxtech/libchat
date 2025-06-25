@@ -11,12 +11,12 @@ import type {
   AIChatItemValueItemType,
   ChatSiteItemType,
   UserChatItemValueItemType
-} from '@fastgpt/global/core/chat/type.d';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+} from '@libchat/global/core/chat/type.d';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { Box, Checkbox } from '@chakra-ui/react';
 import { EventNameEnum, eventBus } from '@/web/common/utils/eventbus';
-import { chats2GPTMessages } from '@fastgpt/global/core/chat/adapt';
+import { chats2GPTMessages } from '@libchat/global/core/chat/adapt';
 import { useForm } from 'react-hook-form';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useTranslation } from 'next-i18next';
@@ -28,27 +28,27 @@ import {
 } from '@/web/core/chat/api';
 import type { AdminMarkType } from './components/SelectMarkCollection';
 
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 
 import { postQuestionGuide } from '@/web/core/ai/api';
 import type { ChatBoxInputType, ChatBoxInputFormType, SendPromptFnType } from './type.d';
 import type { StartChatFnProps, generatingMessageProps } from '../type';
 import ChatInput from './Input/ChatInput';
 import ChatBoxDivider from '../../Divider';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import {
   ChatItemValueTypeEnum,
   ChatRoleEnum,
   ChatStatusEnum
-} from '@fastgpt/global/core/chat/constants';
+} from '@libchat/global/core/chat/constants';
 import {
   checkIsInteractiveByHistories,
   formatChatValue2InputType,
   setUserSelectResultToHistories
 } from './utils';
 import { textareaMinH } from './constants';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
 import ChatProvider, { ChatBoxContext, type ChatProviderProps } from './Provider';
 
 import ChatItem from './components/ChatItem';
@@ -56,17 +56,17 @@ import ChatItem from './components/ChatItem';
 import dynamic from 'next/dynamic';
 import type { StreamResponseType } from '@/web/common/api/fetch';
 import { useContextSelector } from 'use-context-selector';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useCreation, useDebounceEffect, useMemoizedFn, useThrottleFn } from 'ahooks';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { mergeChatResponseData } from '@fastgpt/global/core/chat/utils';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { mergeChatResponseData } from '@libchat/global/core/chat/utils';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 import { ChatRecordContext } from '@/web/core/chat/context/chatRecordContext';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import TimeBox from './components/TimeBox';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { VariableInputEnum } from '@fastgpt/global/core/workflow/constants';
-import { valueTypeFormat } from '@fastgpt/global/core/workflow/runtime/utils';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { VariableInputEnum } from '@libchat/global/core/workflow/constants';
+import { valueTypeFormat } from '@libchat/global/core/workflow/runtime/utils';
 
 const FeedbackModal = dynamic(() => import('./components/FeedbackModal'));
 const ReadFeedbackModal = dynamic(() => import('./components/ReadFeedbackModal'));

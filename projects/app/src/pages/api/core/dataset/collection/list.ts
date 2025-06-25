@@ -1,16 +1,16 @@
 import type { NextApiRequest } from 'next';
-import { DatasetTrainingCollectionName } from '@fastgpt/service/core/dataset/training/schema';
-import { Types } from '@fastgpt/service/common/mongo';
+import { DatasetTrainingCollectionName } from '@libchat/service/core/dataset/training/schema';
+import { Types } from '@libchat/service/common/mongo';
 import type { DatasetCollectionsListItemType } from '@/global/core/dataset/type.d';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { DatasetDataCollectionName } from '@fastgpt/service/core/dataset/data/schema';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { DatasetDataCollectionName } from '@libchat/service/core/dataset/data/schema';
 import { startTrainingQueue } from '@/service/core/dataset/training/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
-import { collectionTagsToTagLabel } from '@fastgpt/service/core/dataset/collection/utils';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
+import { collectionTagsToTagLabel } from '@libchat/service/core/dataset/collection/utils';
 
 async function handler(req: NextApiRequest) {
   let {

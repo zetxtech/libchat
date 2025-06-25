@@ -1,8 +1,8 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { type ChatCompletionMessageParam } from '@fastgpt/global/core/ai/type';
-import { countGptMessagesTokens } from '@fastgpt/service/common/string/tiktoken';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { type ChatCompletionMessageParam } from '@libchat/global/core/ai/type';
+import { countGptMessagesTokens } from '@libchat/service/common/string/tiktoken';
 
 export type tokenQuery = {};
 

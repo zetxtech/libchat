@@ -1,8 +1,8 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ModelProviderIdType } from '@fastgpt/global/core/ai/provider';
-import type { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import { authSystemAdmin } from '@fastgpt/service/support/permission/user/auth';
+import { type ModelProviderIdType } from '@libchat/global/core/ai/provider';
+import type { ModelTypeEnum } from '@libchat/global/core/ai/model';
+import { authSystemAdmin } from '@libchat/service/support/permission/user/auth';
 
 export type listQuery = {};
 

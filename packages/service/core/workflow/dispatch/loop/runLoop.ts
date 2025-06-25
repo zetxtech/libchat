@@ -1,21 +1,21 @@
-import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import {
   type DispatchNodeResultType,
   type ModuleDispatchProps
-} from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/type';
 import { dispatchWorkFlow } from '..';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import {
   type AIChatItemValueItemType,
   type ChatHistoryItemResType
-} from '@fastgpt/global/core/chat/type';
+} from '@libchat/global/core/chat/type';
 import { cloneDeep } from 'lodash';
 import {
   type LoopInteractive,
   type WorkflowInteractiveResponseType
-} from '@fastgpt/global/core/workflow/template/system/interactive/type';
-import { storeEdges2RuntimeEdges } from '@fastgpt/global/core/workflow/runtime/utils';
+} from '@libchat/global/core/workflow/template/system/interactive/type';
+import { storeEdges2RuntimeEdges } from '@libchat/global/core/workflow/runtime/utils';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.loopInputArray]: Array<any>;

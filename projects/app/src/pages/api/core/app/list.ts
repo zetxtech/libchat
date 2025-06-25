@@ -1,24 +1,24 @@
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { type AppListItemType } from '@fastgpt/global/core/app/type';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { type AppListItemType } from '@libchat/global/core/app/type';
 import { NextAPI } from '@/service/middleware/entry';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
 import {
   PerResourceTypeEnum,
   ReadPermissionVal
-} from '@fastgpt/global/support/permission/constant';
-import { AppPermission } from '@fastgpt/global/support/permission/app/controller';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import { parseParentIdInMongo } from '@fastgpt/global/common/parentFolder/utils';
-import { AppFolderTypeList, AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { AppDefaultPermissionVal } from '@fastgpt/global/support/permission/app/constant';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { replaceRegChars } from '@fastgpt/global/common/string/tools';
-import { concatPer } from '@fastgpt/service/support/permission/controller';
-import { getGroupsByTmbId } from '@fastgpt/service/support/permission/memberGroup/controllers';
-import { getOrgIdSetWithParentByTmbId } from '@fastgpt/service/support/permission/org/controllers';
-import { addSourceMember } from '@fastgpt/service/support/user/utils';
+} from '@libchat/global/support/permission/constant';
+import { AppPermission } from '@libchat/global/support/permission/app/controller';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
+import { parseParentIdInMongo } from '@libchat/global/common/parentFolder/utils';
+import { AppFolderTypeList, AppTypeEnum } from '@libchat/global/core/app/constants';
+import { AppDefaultPermissionVal } from '@libchat/global/support/permission/app/constant';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { replaceRegChars } from '@libchat/global/common/string/tools';
+import { concatPer } from '@libchat/service/support/permission/controller';
+import { getGroupsByTmbId } from '@libchat/service/support/permission/memberGroup/controllers';
+import { getOrgIdSetWithParentByTmbId } from '@libchat/service/support/permission/org/controllers';
+import { addSourceMember } from '@libchat/service/support/user/utils';
 
 export type ListAppBody = {
   parentId?: ParentIdType;

@@ -1,13 +1,13 @@
 import type { NextApiResponse } from 'next';
 import { NextAPI } from '@/service/middleware/entry';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
-import { type PaginationProps, type PaginationResponse } from '@fastgpt/web/common/fetch/type';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { type VersionListItemType } from '@fastgpt/global/core/app/version';
-import { parsePaginationRequest } from '@fastgpt/service/common/api/pagination';
-import { addSourceMember } from '@fastgpt/service/support/user/utils';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
+import { type PaginationProps, type PaginationResponse } from '@libchat/web/common/fetch/type';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { type VersionListItemType } from '@libchat/global/core/app/version';
+import { parsePaginationRequest } from '@libchat/service/common/api/pagination';
+import { addSourceMember } from '@libchat/service/support/user/utils';
 
 export type versionListBody = PaginationProps<{
   appId: string;

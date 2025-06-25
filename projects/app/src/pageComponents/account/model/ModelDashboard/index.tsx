@@ -1,21 +1,21 @@
 import React, { useMemo, useState } from 'react';
 import type { BoxProps } from '@chakra-ui/react';
 import { Box, Grid, HStack, useTheme } from '@chakra-ui/react';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { addHours } from 'date-fns';
 import dayjs from 'dayjs';
 import DateRangePicker, {
   type DateRangeType
-} from '@fastgpt/web/components/common/DateRangePicker';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+} from '@libchat/web/components/common/DateRangePicker';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { getChannelList, getDashboardV2 } from '@/web/core/ai/channel';
 import { getSystemModelList } from '@/web/core/ai/config';
-import { getModelProvider } from '@fastgpt/global/core/ai/provider';
-import LineChartComponent from '@fastgpt/web/components/common/charts/LineChartComponent';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
+import { getModelProvider } from '@libchat/global/core/ai/provider';
+import LineChartComponent from '@libchat/web/components/common/charts/LineChartComponent';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import DataTableComponent from './DataTableComponent';
 

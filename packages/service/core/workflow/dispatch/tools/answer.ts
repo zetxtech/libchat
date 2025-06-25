@@ -1,11 +1,11 @@
 import {
   DispatchNodeResponseKeyEnum,
   SseResponseEventEnum
-} from '@fastgpt/global/core/workflow/runtime/constants';
-import { textAdaptGptResponse } from '@fastgpt/global/core/workflow/runtime/utils';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/constants';
+import { textAdaptGptResponse } from '@libchat/global/core/workflow/runtime/utils';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
 export type AnswerProps = ModuleDispatchProps<{
   text: string;
 }>;

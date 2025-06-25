@@ -1,13 +1,13 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { TeamAppCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { TeamAppCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { onCreateApp } from './create';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { getI18nAppType } from '@fastgpt/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { getI18nAppType } from '@libchat/service/support/user/audit/util';
 
 export type copyAppQuery = {};
 

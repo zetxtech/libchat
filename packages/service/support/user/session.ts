@@ -1,8 +1,8 @@
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 import { getAllKeysByPrefix, getGlobalRedisConnection } from '../../common/redis';
 import { addLog } from '../../common/system/log';
-import { ERROR_ENUM } from '@fastgpt/global/common/error/errorCode';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { ERROR_ENUM } from '@libchat/global/common/error/errorCode';
+import { getNanoid } from '@libchat/global/common/string/tools';
 
 const redisPrefix = 'session:';
 const getSessionKey = (key: string) => `${redisPrefix}${key}`;

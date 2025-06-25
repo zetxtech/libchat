@@ -1,12 +1,12 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { delay } from '@fastgpt/global/common/system/utils';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { jiebaSplit } from '@fastgpt/service/common/string/jieba/index';
-import { MongoDatasetDataText } from '@fastgpt/service/core/dataset/data/dataTextSchema';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoUser } from '@fastgpt/service/support/user/schema';
-import { MongoTeamMember } from '@fastgpt/service/support/user/team/teamMemberSchema';
+import { delay } from '@libchat/global/common/system/utils';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { jiebaSplit } from '@libchat/service/common/string/jieba/index';
+import { MongoDatasetDataText } from '@libchat/service/core/dataset/data/dataTextSchema';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoUser } from '@libchat/service/support/user/schema';
+import { MongoTeamMember } from '@libchat/service/support/user/team/teamMemberSchema';
 import { type NextApiRequest, type NextApiResponse } from 'next';
 
 /* 

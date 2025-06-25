@@ -1,15 +1,15 @@
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
 import { MongoUsage } from './schema';
 import { type ClientSession } from '../../../common/mongo';
 import { addLog } from '../../../common/system/log';
-import { type ChatNodeUsageType } from '@fastgpt/global/support/wallet/bill/type';
+import { type ChatNodeUsageType } from '@libchat/global/support/wallet/bill/type';
 import {
   type ConcatUsageProps,
   type CreateUsageProps
-} from '@fastgpt/global/support/wallet/usage/api';
+} from '@libchat/global/support/wallet/usage/api';
 import { i18nT } from '../../../../web/i18n/utils';
 import { formatModelChars2Points } from './utils';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
 
 export async function createUsage(data: CreateUsageProps) {
   try {

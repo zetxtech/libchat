@@ -1,10 +1,10 @@
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
 
 export type getDatasetTrainingQueueResponse = {
   rebuildingCount: number;

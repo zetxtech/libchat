@@ -1,7 +1,7 @@
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 const { Schema } = connectionMongo;
-import type { UserAuthSchemaType } from '@fastgpt/global/support/user/auth/type';
-import { userAuthTypeMap } from '@fastgpt/global/support/user/auth/constants';
+import type { UserAuthSchemaType } from '@libchat/global/support/user/auth/type';
+import { userAuthTypeMap } from '@libchat/global/support/user/auth/constants';
 import { addMinutes } from 'date-fns';
 
 const UserAuthSchema = new Schema({

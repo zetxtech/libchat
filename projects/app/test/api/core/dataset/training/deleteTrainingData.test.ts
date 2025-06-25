@@ -5,10 +5,10 @@ import handler, {
 import {
   DatasetCollectionTypeEnum,
   TrainingModeEnum
-} from '@fastgpt/global/core/dataset/constants';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
+} from '@libchat/global/core/dataset/constants';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
 import { getRootUser } from '@test/datas/users';
 import { Call } from '@test/utils/request';
 import { describe, expect, it } from 'vitest';

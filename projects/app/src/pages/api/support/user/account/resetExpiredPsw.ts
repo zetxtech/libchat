@@ -1,8 +1,8 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoUser } from '@fastgpt/service/support/user/schema';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoUser } from '@libchat/service/support/user/schema';
 import { NextAPI } from '@/service/middleware/entry';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+import { i18nT } from '@libchat/web/i18n/utils';
 import { checkPswExpired } from '@/service/support/user/account/password';
 
 export type resetExpiredPswQuery = {};

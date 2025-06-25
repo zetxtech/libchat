@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { getTimeZoneList } from '@fastgpt/global/common/time/timezone';
+import { getTimeZoneList } from '@libchat/global/common/time/timezone';
 import { Select } from '@chakra-ui/react';
 
 const TimezoneSelect = ({ value, onChange }: { value?: string; onChange: (e: string) => void }) => {

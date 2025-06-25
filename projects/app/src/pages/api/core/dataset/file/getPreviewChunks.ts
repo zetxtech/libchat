@@ -1,20 +1,20 @@
-import { DatasetSourceReadTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { rawText2Chunks, readDatasetSourceRawText } from '@fastgpt/service/core/dataset/read';
+import { DatasetSourceReadTypeEnum } from '@libchat/global/core/dataset/constants';
+import { rawText2Chunks, readDatasetSourceRawText } from '@libchat/service/core/dataset/read';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import {
   OwnerPermissionVal,
   WritePermissionVal
-} from '@fastgpt/global/support/permission/constant';
-import { authCollectionFile } from '@fastgpt/service/support/permission/auth/file';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
+} from '@libchat/global/support/permission/constant';
+import { authCollectionFile } from '@libchat/service/support/permission/auth/file';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
 import {
   computedCollectionChunkSettings,
   getLLMMaxChunkSize
-} from '@fastgpt/global/core/dataset/training/utils';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { getEmbeddingModel, getLLMModel } from '@fastgpt/service/core/ai/model';
-import type { ChunkSettingsType } from '@fastgpt/global/core/dataset/type';
+} from '@libchat/global/core/dataset/training/utils';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { getEmbeddingModel, getLLMModel } from '@libchat/service/core/ai/model';
+import type { ChunkSettingsType } from '@libchat/global/core/dataset/type';
 
 export type PostPreviewFilesChunksProps = ChunkSettingsType & {
   datasetId: string;

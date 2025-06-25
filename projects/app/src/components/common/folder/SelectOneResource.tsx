@@ -4,13 +4,13 @@ import {
   type GetResourceFolderListProps,
   type GetResourceListItemResponse,
   type ParentIdType
-} from '@fastgpt/global/common/parentFolder/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Loading from '@fastgpt/web/components/common/MyLoading';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+} from '@libchat/global/common/parentFolder/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Loading from '@libchat/web/components/common/MyLoading';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useMemoizedFn } from 'ahooks';
-import { FolderImgUrl } from '@fastgpt/global/common/file/image/constants';
+import { FolderImgUrl } from '@libchat/global/common/file/image/constants';
 import { useTranslation } from 'next-i18next';
 
 type ResourceItemType = GetResourceListItemResponse & {

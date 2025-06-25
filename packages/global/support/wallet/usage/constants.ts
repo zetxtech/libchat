@@ -1,7 +1,7 @@
 import { i18nT } from '../../../../web/i18n/utils';
 
 export enum UsageSourceEnum {
-  fastgpt = 'fastgpt',
+  libchat = 'libchat',
   api = 'api',
   shareLink = 'shareLink',
   training = 'training',
@@ -16,7 +16,7 @@ export enum UsageSourceEnum {
 }
 
 export const UsageSourceMap = {
-  [UsageSourceEnum.fastgpt]: {
+  [UsageSourceEnum.libchat]: {
     label: i18nT('common:core.chat.logs.online')
   },
   [UsageSourceEnum.api]: {

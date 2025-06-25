@@ -1,4 +1,4 @@
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
 import { type ApiRequestProps } from '../../type/next';
 
 export function parsePaginationRequest(req: ApiRequestProps) {

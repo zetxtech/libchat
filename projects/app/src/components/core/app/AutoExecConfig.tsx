@@ -1,12 +1,12 @@
 import { Box, Button, Flex, ModalBody, Switch, Textarea, useDisclosure } from '@chakra-ui/react';
-import { defaultAutoExecuteConfig } from '@fastgpt/global/core/app/constants';
-import { type AppAutoExecuteConfigType } from '@fastgpt/global/core/app/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import { defaultAutoExecuteConfig } from '@libchat/global/core/app/constants';
+import { type AppAutoExecuteConfigType } from '@libchat/global/core/app/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { useTranslation } from 'next-i18next';
 import ChatFunctionTip from './Tip';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyModal from '@libchat/web/components/common/MyModal';
 
 const AutoExecConfig = ({
   value = defaultAutoExecuteConfig,

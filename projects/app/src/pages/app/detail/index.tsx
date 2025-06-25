@@ -2,12 +2,12 @@
 import React, { useEffect } from 'react';
 import { Box } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import NextHead from '@/components/common/NextHead';
 import { useContextSelector } from 'use-context-selector';
 import AppContextProvider, { AppContext } from '@/pageComponents/app/detail/context';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
 
 const SimpleEdit = dynamic(() => import('@/pageComponents/app/detail/SimpleApp'), {

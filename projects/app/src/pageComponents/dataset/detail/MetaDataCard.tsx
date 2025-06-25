@@ -1,19 +1,19 @@
 import React, { useMemo } from 'react';
 import { Box, Flex, Button } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getDatasetCollectionById } from '@/web/core/dataset/api';
 import { useRouter } from 'next/router';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { formatFileSize } from '@fastgpt/global/common/file/tools';
-import { formatTime2YMDHM } from '@fastgpt/global/common/string/time';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { formatFileSize } from '@libchat/global/common/file/tools';
+import { formatTime2YMDHM } from '@libchat/global/common/string/time';
 import {
   DatasetCollectionDataProcessModeMap,
   DatasetCollectionTypeMap,
   DatasetCollectionTypeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import { getCollectionSourceAndOpen } from '@/web/core/dataset/hooks/readCollectionSource';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 const MetaDataCard = ({ datasetId }: { datasetId: string }) => {
   const { t } = useTranslation();

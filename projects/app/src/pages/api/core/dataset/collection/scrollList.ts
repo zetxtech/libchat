@@ -1,16 +1,16 @@
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
 import { NextAPI } from '@/service/middleware/entry';
-import { DatasetTrainingCollectionName } from '@fastgpt/service/core/dataset/training/schema';
-import { Types } from '@fastgpt/service/common/mongo';
-import { DatasetDataCollectionName } from '@fastgpt/service/core/dataset/data/schema';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { type PaginationProps, type PaginationResponse } from '@fastgpt/web/common/fetch/type';
+import { DatasetTrainingCollectionName } from '@libchat/service/core/dataset/training/schema';
+import { Types } from '@libchat/service/common/mongo';
+import { DatasetDataCollectionName } from '@libchat/service/core/dataset/data/schema';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { type PaginationProps, type PaginationResponse } from '@libchat/web/common/fetch/type';
 import type { DatasetCollectionsListItemType } from '@/global/core/dataset/type.d';
-import { parsePaginationRequest } from '@fastgpt/service/common/api/pagination';
+import { parsePaginationRequest } from '@libchat/service/common/api/pagination';
 
 export type GetScrollCollectionsProps = PaginationProps<{
   datasetId: string;

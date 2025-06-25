@@ -1,9 +1,9 @@
 import type { NextApiRequest } from 'next';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { NextAPI } from '@/service/middleware/entry';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
 
 export type GetQueueLenResponse = {
   vectorTrainingCount: number;

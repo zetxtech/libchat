@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
 import type { RenderInputProps } from '../type';
 import { Box, Button, useDisclosure } from '@chakra-ui/react';
-import type { SelectAppItemType } from '@fastgpt/global/core/workflow/template/system/abandoned/runApp/type';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import type { SelectAppItemType } from '@libchat/global/core/workflow/template/system/abandoned/runApp/type';
+import Avatar from '@libchat/web/components/common/Avatar';
 import SelectAppModal from '../../../../SelectAppModal';
 import { useTranslation } from 'next-i18next';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getAppDetailById } from '@/web/core/app/api';
 
 const SelectAppRender = ({ item, nodeId }: RenderInputProps) => {

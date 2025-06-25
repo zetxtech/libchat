@@ -5,9 +5,9 @@ import { useContextSelector } from 'use-context-selector';
 import { WorkflowNodeEdgeContext } from '../../WorkflowComponents/context/workflowInitContext';
 import { useReactFlow } from 'reactflow';
 import { useKeyPress, useThrottleEffect } from 'ahooks';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 
 const SearchButton = (props: ButtonProps) => {
   const { t } = useTranslation();

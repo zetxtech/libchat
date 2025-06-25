@@ -1,15 +1,15 @@
 import React, { useMemo, useState } from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { Box, Button, Flex, ModalBody, ModalFooter, useDisclosure } from '@chakra-ui/react';
 import { type NotSufficientModalType, useSystemStore } from '@/web/common/system/useSystemStore';
 import ExtraPlan from '@/pageComponents/price/ExtraPlan';
 import StandardPlan from '@/pageComponents/price/Standard';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import { standardSubLevelMap } from '@fastgpt/global/support/wallet/sub/constants';
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
+import { standardSubLevelMap } from '@libchat/global/support/wallet/sub/constants';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
 import { useMount } from 'ahooks';
 
 const NotSufficientModal = () => {

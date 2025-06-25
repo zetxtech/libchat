@@ -163,10 +163,10 @@ importers:
         specifier: ^6.4.1
         version: 6.4.1(encoding@0.1.13)
     devDependencies:
-      '@fastgpt/global':
+      '@libchat/global':
         specifier: workspace:*
         version: link:../global
-      '@fastgpt/service':
+      '@libchat/service':
         specifier: workspace:*
         version: link:../service
       '@types/lodash':
@@ -178,7 +178,7 @@ importers:
 
   packages/service:
     dependencies:
-      '@fastgpt/global':
+      '@libchat/global':
         specifier: workspace:*
         version: link:../global
       '@modelcontextprotocol/sdk':
@@ -332,10 +332,10 @@ importers:
 
   packages/templates:
     devDependencies:
-      '@fastgpt/global':
+      '@libchat/global':
         specifier: workspace:*
         version: link:../global
-      '@fastgpt/service':
+      '@libchat/service':
         specifier: workspace:*
         version: link:../service
 
@@ -365,7 +365,7 @@ importers:
       '@emotion/styled':
         specifier: 11.11.0
         version: 11.11.0(@emotion/react@11.11.1(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1)
-      '@fastgpt/global':
+      '@libchat/global':
         specifier: workspace:*
         version: link:../global
       '@fingerprintjs/fingerprintjs':
@@ -495,19 +495,19 @@ importers:
       '@emotion/styled':
         specifier: 11.11.0
         version: 11.11.0(@emotion/react@11.11.1(@types/react@18.3.1)(react@18.3.1))(@types/react@18.3.1)(react@18.3.1)
-      '@fastgpt/global':
+      '@libchat/global':
         specifier: workspace:*
         version: link:../../packages/global
-      '@fastgpt/plugins':
+      '@libchat/plugins':
         specifier: workspace:*
         version: link:../../packages/plugins
-      '@fastgpt/service':
+      '@libchat/service':
         specifier: workspace:*
         version: link:../../packages/service
-      '@fastgpt/templates':
+      '@libchat/templates':
         specifier: workspace:*
         version: link:../../packages/templates
-      '@fastgpt/web':
+      '@libchat/web':
         specifier: workspace:*
         version: link:../../packages/web
       '@fortaine/fetch-event-source':
@@ -697,7 +697,7 @@ importers:
 
   projects/mcp_server:
     dependencies:
-      '@fastgpt/global':
+      '@libchat/global':
         specifier: workspace:*
         version: link:../../packages/global
       '@modelcontextprotocol/sdk':

@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { useContextSelector } from 'use-context-selector';
 import { PluginRunContext } from '../context';
 import Markdown from '@/components/Markdown';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import AIResponseBox from '../../../components/AIResponseBox';
 import { useTranslation } from 'next-i18next';
 import ComplianceTip from '@/components/common/ComplianceTip/index';

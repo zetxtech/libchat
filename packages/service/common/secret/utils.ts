@@ -1,7 +1,7 @@
 import { decryptSecret, encryptSecret } from './aes256gcm';
-import type { SecretValueType } from '@fastgpt/global/common/secret/type';
-import { type StoreSecretValueType } from '@fastgpt/global/common/secret/type';
-import { HeaderSecretTypeEnum } from '@fastgpt/global/common/secret/constants';
+import type { SecretValueType } from '@libchat/global/common/secret/type';
+import { type StoreSecretValueType } from '@libchat/global/common/secret/type';
+import { HeaderSecretTypeEnum } from '@libchat/global/common/secret/constants';
 
 export const storeSecretValue = (
   storeSecret: StoreSecretValueType = {}

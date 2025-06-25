@@ -1,4 +1,4 @@
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useRouter } from 'next/router';
 import React, { type ReactNode, useCallback, useMemo, useRef } from 'react';
 import { createContext } from 'use-context-selector';
@@ -8,12 +8,12 @@ import {
   putChatHistory,
   getChatHistories
 } from '../api';
-import { type ChatHistoryItemType } from '@fastgpt/global/core/chat/type';
+import { type ChatHistoryItemType } from '@libchat/global/core/chat/type';
 import { type UpdateHistoryProps } from '@/global/core/chat/api';
 import { type BoxProps, useDisclosure } from '@chakra-ui/react';
 import { useChatStore } from './useChatStore';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 
 type UpdateHistoryParams = {
   chatId: UpdateHistoryProps['chatId'];

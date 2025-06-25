@@ -1,9 +1,9 @@
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
 
 export type updateTrainingDataBody = {
   datasetId: string;

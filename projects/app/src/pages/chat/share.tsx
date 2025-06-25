@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { Box, Flex, Drawer, DrawerOverlay, DrawerContent } from '@chakra-ui/react';
 import { streamFetch } from '@/web/common/api/fetch';
 import SideBar from '@/components/SideBar';
-import { GPTMessages2Chats } from '@fastgpt/global/core/chat/adapt';
+import { GPTMessages2Chats } from '@libchat/global/core/chat/adapt';
 
 import ChatBox from '@/components/core/chat/ChatContainer/ChatBox';
 import type { StartChatFnProps } from '@/components/core/chat/ChatContainer/type';
@@ -14,31 +14,31 @@ import ChatHistorySlider from '@/pageComponents/chat/ChatHistorySlider';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import { useTranslation } from 'next-i18next';
 import { getInitOutLinkChatInfo } from '@/web/core/chat/api';
-import { getChatTitleFromChatMessage } from '@fastgpt/global/core/chat/utils';
-import { MongoOutLink } from '@fastgpt/service/support/outLink/schema';
-import { addLog } from '@fastgpt/service/common/system/log';
+import { getChatTitleFromChatMessage } from '@libchat/global/core/chat/utils';
+import { MongoOutLink } from '@libchat/service/support/outLink/schema';
+import { addLog } from '@libchat/service/common/system/log';
 
 import NextHead from '@/components/common/NextHead';
 import { useContextSelector } from 'use-context-selector';
 import ChatContextProvider, { ChatContext } from '@/web/core/chat/context/chatContext';
 import { GetChatTypeEnum } from '@/global/core/chat/constants';
 import { useMount } from 'ahooks';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { getNanoid } from '@libchat/global/common/string/tools';
 
 import dynamic from 'next/dynamic';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useShareChatStore } from '@/web/core/chat/storeShareChat';
 import ChatItemContextProvider, { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import ChatRecordContextProvider, {
   ChatRecordContext
 } from '@/web/core/chat/context/chatRecordContext';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
-import { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
-import { useI18nLng } from '@fastgpt/web/hooks/useI18n';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
+import { ChatSourceEnum } from '@libchat/global/core/chat/constants';
+import { useI18nLng } from '@libchat/web/hooks/useI18n';
+import { type AppSchema } from '@libchat/global/core/app/type';
 import ChatQuoteList from '@/pageComponents/chat/ChatQuoteList';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 
 const CustomPluginRunBox = dynamic(() => import('@/pageComponents/chat/CustomPluginRunBox'));
 

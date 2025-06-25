@@ -1,10 +1,10 @@
-import { ERROR_ENUM } from '@fastgpt/global/common/error/errorCode';
+import { ERROR_ENUM } from '@libchat/global/common/error/errorCode';
 import { Types, type ClientSession } from '../../../common/mongo';
 import { deleteDatasetImage } from './controller';
 import { MongoDatasetImageSchema } from './schema';
 import { addMinutes } from 'date-fns';
 import jwt from 'jsonwebtoken';
-import { EndpointUrl } from '@fastgpt/global/common/file/constants';
+import { EndpointUrl } from '@libchat/global/common/file/constants';
 
 export const removeDatasetImageExpiredTime = async ({
   ids = [],

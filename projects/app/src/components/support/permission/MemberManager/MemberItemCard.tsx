@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box, Checkbox, HStack, VStack } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import Avatar from '@libchat/web/components/common/Avatar';
 import PermissionTags from './PermissionTags';
-import { type PermissionValueType } from '@fastgpt/global/support/permission/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { type PermissionValueType } from '@libchat/global/support/permission/type';
+import MyIcon from '@libchat/web/components/common/Icon';
 import OrgTags from '../../user/team/OrgTags';
-import Tag from '@fastgpt/web/components/common/Tag';
+import Tag from '@libchat/web/components/common/Tag';
 
 function MemberItemCard({
   avatar,

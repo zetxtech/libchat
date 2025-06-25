@@ -1,11 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { HttpBodyType } from '@fastgpt/global/core/workflow/api.d';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { addCustomFeedbacks } from '@fastgpt/service/core/chat/controller';
-import { authRequestFromLocal } from '@fastgpt/service/support/permission/auth/common';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { type SystemVariablesType } from '@fastgpt/global/core/workflow/runtime/type';
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
+import type { HttpBodyType } from '@libchat/global/core/workflow/api.d';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { addCustomFeedbacks } from '@libchat/service/core/chat/controller';
+import { authRequestFromLocal } from '@libchat/service/support/permission/auth/common';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { type SystemVariablesType } from '@libchat/global/core/workflow/runtime/type';
+import { replaceVariable } from '@libchat/global/common/string/tools';
 
 type Props = HttpBodyType<
   SystemVariablesType & {

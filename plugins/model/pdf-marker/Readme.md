@@ -42,10 +42,10 @@ export PROCESSES_PER_GPU="1"
 
 ## 基本流程
 
-1. 克隆一个FastGPT的项目文件
+1. 克隆一个LibChat的项目文件
 
    ```
-   git clone https://github.com/labring/FastGPT.git
+   git clone https://github.com/labring/LibChat.git
    ```
 
 2. 将主目录设置为 python下的pdf-marker文件

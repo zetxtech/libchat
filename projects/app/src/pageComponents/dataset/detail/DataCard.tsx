@@ -5,38 +5,38 @@ import {
   delOneDatasetDataById,
   getDatasetCollectionById
 } from '@/web/core/dataset/api';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import MyInput from '@/components/MyInput';
 import InputDataModal from './InputDataModal';
 import RawSourceBox from '@/components/core/dataset/RawSourceBox';
-import { getCollectionSourceData } from '@fastgpt/global/core/dataset/collection/utils';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import { getCollectionSourceData } from '@libchat/global/core/dataset/collection/utils';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import { useContextSelector } from 'use-context-selector';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import MyTag from '@libchat/web/components/common/Tag/index';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import TagsPopOver from './CollectionCard/TagsPopOver';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 import Markdown from '@/components/Markdown';
 import { useBoolean, useMemoizedFn } from 'ahooks';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { TabEnum } from './NavBar';
 import {
   DatasetCollectionTypeEnum,
   ImportDataSourceEnum
-} from '@fastgpt/global/core/dataset/constants';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+} from '@libchat/global/core/dataset/constants';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import TrainingStates from './CollectionCard/TrainingStates';
-import { getTextValidLength } from '@fastgpt/global/common/string/utils';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
-import { formatFileSize } from '@fastgpt/global/common/file/tools';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
+import { getTextValidLength } from '@libchat/global/common/string/utils';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
+import { formatFileSize } from '@libchat/global/common/file/tools';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
 import dynamic from 'next/dynamic';
 
 const InsertImagesModal = dynamic(() => import('./data/InsertImageModal'), {

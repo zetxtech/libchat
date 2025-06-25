@@ -1,15 +1,15 @@
 import { connectionMongo, getMongoModel } from '../../common/mongo';
 const { Schema } = connectionMongo;
-import { type ChatItemSchema as ChatItemType } from '@fastgpt/global/core/chat/type';
-import { ChatRoleMap } from '@fastgpt/global/core/chat/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { type ChatItemSchema as ChatItemType } from '@libchat/global/core/chat/type';
+import { ChatRoleMap } from '@libchat/global/core/chat/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 import { AppCollectionName } from '../app/schema';
 import { userCollectionName } from '../../support/user/schema';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 
 export const ChatItemCollectionName = 'chatitems';
 

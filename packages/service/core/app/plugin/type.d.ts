@@ -1,9 +1,9 @@
-import { SystemPluginListItemType } from '@fastgpt/global/core/app/type';
-import { FlowNodeTemplateTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { SystemPluginListItemType } from '@libchat/global/core/app/type';
+import { FlowNodeTemplateTypeEnum } from '@libchat/global/core/workflow/constants';
 import type {
   SystemPluginTemplateItemType,
   WorkflowTemplateBasicType
-} from '@fastgpt/global/core/workflow/type';
+} from '@libchat/global/core/workflow/type';
 
 export type SystemPluginConfigSchemaType = {
   pluginId: string;

@@ -4,16 +4,16 @@ import type {
   AudioSpeechModels,
   STTModelType,
   RerankModelItemType
-} from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/global/core/ai/model.d';
 
-import type { FastGPTFeConfigsType } from '@fastgpt/global/common/system/types/index.d';
-import type { SubPlanType } from '@fastgpt/global/support/wallet/sub/type';
-import type { SystemDefaultModelType, SystemModelItemType } from '@fastgpt/service/core/ai/type';
+import type { LibChatFeConfigsType } from '@libchat/global/common/system/types/index.d';
+import type { SubPlanType } from '@libchat/global/support/wallet/sub/type';
+import type { SystemDefaultModelType, SystemModelItemType } from '@libchat/service/core/ai/type';
 
 export type InitDateResponse = {
   bufferId?: string;
 
-  feConfigs?: FastGPTFeConfigsType;
+  feConfigs?: LibChatFeConfigsType;
   subPlans?: SubPlanType;
   systemVersion?: string;
 

@@ -1,8 +1,8 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { BezierEdge, getBezierPath, EdgeLabelRenderer, type EdgeProps } from 'reactflow';
 import { Box, Flex } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { NodeOutputKeyEnum, RuntimeEdgeStatusEnum } from '@fastgpt/global/core/workflow/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { NodeOutputKeyEnum, RuntimeEdgeStatusEnum } from '@libchat/global/core/workflow/constants';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
 import { useThrottleEffect } from 'ahooks';

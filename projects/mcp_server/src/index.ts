@@ -6,9 +6,9 @@ import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprot
 import { SSEServerTransport } from '@modelcontextprotocol/sdk/server/sse.js';
 import express from 'express';
 
-import { callTool, getTools } from './api/fastgpt';
+import { callTool, getTools } from './api/libchat';
 import { addLog } from './utils/log';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 const app = express();
 
@@ -24,7 +24,7 @@ app.get('/:key/sse', async (req, res) => {
   // Create server
   const server = new Server(
     {
-      name: 'fastgpt-mcp-server',
+      name: 'libchat-mcp-server',
       version: '1.0.0'
     },
     {

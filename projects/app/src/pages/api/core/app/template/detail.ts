@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { NextAPI } from '@/service/middleware/entry';
-import { type AppTemplateSchemaType } from '@fastgpt/global/core/app/type';
-import { getAppTemplatesAndLoadThem } from '@fastgpt/templates/register';
+import { type AppTemplateSchemaType } from '@libchat/global/core/app/type';
+import { getAppTemplatesAndLoadThem } from '@libchat/templates/register';
 
 type Props = {
   templateId: string;

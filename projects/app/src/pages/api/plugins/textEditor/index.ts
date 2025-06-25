@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 //@ts-ignore
-import type { HttpBodyType } from '@fastgpt/global/core/module/api.d';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
-import { authRequestFromLocal } from '@fastgpt/service/support/permission/auth/common';
+import type { HttpBodyType } from '@libchat/global/core/module/api.d';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { replaceVariable } from '@libchat/global/common/string/tools';
+import { authRequestFromLocal } from '@libchat/service/support/permission/auth/common';
 
 type Props = HttpBodyType<{
   text: string;

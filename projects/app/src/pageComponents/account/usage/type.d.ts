@@ -1,4 +1,4 @@
-import type { DateRangeType } from '@fastgpt/web/components/common/DateRangePicker';
+import type { DateRangeType } from '@libchat/web/components/common/DateRangePicker';
 
 export type UnitType = 'day' | 'month';
 

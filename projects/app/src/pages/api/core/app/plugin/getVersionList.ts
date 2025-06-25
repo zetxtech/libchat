@@ -1,16 +1,16 @@
 import type { NextApiResponse } from 'next';
 import { NextAPI } from '@/service/middleware/entry';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
-import { type PaginationProps, type PaginationResponse } from '@fastgpt/web/common/fetch/type';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { parsePaginationRequest } from '@fastgpt/service/common/api/pagination';
-import { splitCombineToolId } from '@fastgpt/service/core/app/plugin/controller';
-import { PluginSourceEnum } from '@fastgpt/global/core/plugin/constants';
-import { getSystemPluginTemplates } from '@fastgpt/plugins/register';
-import { PluginErrEnum } from '@fastgpt/global/common/error/code/plugin';
-import { Types } from '@fastgpt/service/common/mongo';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
+import { type PaginationProps, type PaginationResponse } from '@libchat/web/common/fetch/type';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { parsePaginationRequest } from '@libchat/service/common/api/pagination';
+import { splitCombineToolId } from '@libchat/service/core/app/plugin/controller';
+import { PluginSourceEnum } from '@libchat/global/core/plugin/constants';
+import { getSystemPluginTemplates } from '@libchat/plugins/register';
+import { PluginErrEnum } from '@libchat/global/common/error/code/plugin';
+import { Types } from '@libchat/service/common/mongo';
 
 export type getToolVersionListProps = PaginationProps<{
   toolId?: string;

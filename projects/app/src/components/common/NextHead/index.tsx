@@ -1,4 +1,4 @@
-import { LOGO_ICON } from '@fastgpt/global/common/system/constants';
+import { LOGO_ICON } from '@libchat/global/common/system/constants';
 import Head from 'next/head';
 import React, { useMemo } from 'react';
 

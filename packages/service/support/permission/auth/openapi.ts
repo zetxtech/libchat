@@ -1,12 +1,12 @@
 import { type AuthModeType, type AuthResponseType } from '../type';
-import { type OpenApiSchema } from '@fastgpt/global/support/openapi/type';
+import { type OpenApiSchema } from '@libchat/global/support/openapi/type';
 import { parseHeaderCert } from '../controller';
 import { getTmbInfoByTmbId } from '../../user/team/controller';
 import { MongoOpenApi } from '../../openapi/schema';
-import { OpenApiErrEnum } from '@fastgpt/global/common/error/code/openapi';
-import { OwnerPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { OpenApiErrEnum } from '@libchat/global/common/error/code/openapi';
+import { OwnerPermissionVal } from '@libchat/global/support/permission/constant';
 import { authAppByTmbId } from '../app/auth';
-import { Permission } from '@fastgpt/global/support/permission/controller';
+import { Permission } from '@libchat/global/support/permission/controller';
 
 export async function authOpenApiKeyCrud({
   id,

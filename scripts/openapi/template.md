@@ -1,5 +1,5 @@
 ```ts
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
 
 // This should be at the top of the file after the imports
@@ -26,7 +26,7 @@ export type TemplateBody = {
 // This is the response type for the API
 export type TemplateResponse = AppDetailType;
 
-// This is the template API for FASTGPT NextAPI
+// This is the template API for LIBCHAT NextAPI
 async function handler(
   req: ApiRequestProps<TemplateBody, TemplateQuery>,
   res: ApiResponseType<any>,

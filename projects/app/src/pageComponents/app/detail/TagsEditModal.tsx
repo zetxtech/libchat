@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import {
   Button,
@@ -18,8 +18,8 @@ import {
   MenuItemOption,
   TagLabel
 } from '@chakra-ui/react';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { useRequest } from '@fastgpt/web/hooks/useRequest';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { useRequest } from '@libchat/web/hooks/useRequest';
 import { getTeamsTags } from '@/web/support/user/team/api';
 import { useQuery } from '@tanstack/react-query';
 import { useContextSelector } from 'use-context-selector';

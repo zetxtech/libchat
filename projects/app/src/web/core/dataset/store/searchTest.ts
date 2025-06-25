@@ -1,7 +1,7 @@
-import { create, devtools, persist, immer } from '@fastgpt/web/common/zustand';
+import { create, devtools, persist, immer } from '@libchat/web/common/zustand';
 
-import type { SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
-import type { DatasetSearchModeEnum } from '@fastgpt/global/core/dataset/constants';
+import type { SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
+import type { DatasetSearchModeEnum } from '@libchat/global/core/dataset/constants';
 
 export type SearchTestStoreItemType = {
   id: string;

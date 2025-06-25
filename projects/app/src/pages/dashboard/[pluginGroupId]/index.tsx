@@ -5,14 +5,14 @@ import PluginCard from '@/pageComponents/dashboard/SystemPlugin/ToolCard';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import { getSystemPlugTemplates } from '@/web/core/app/api/plugin';
 import { Box, Flex, Grid } from '@chakra-ui/react';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useRouter } from 'next/router';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import MyBox from '@libchat/web/components/common/MyBox';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 
 const SystemTools = () => {
   const { t } = useTranslation();

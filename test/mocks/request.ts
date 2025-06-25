@@ -1,8 +1,8 @@
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
-import type { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { TeamPermission } from '@fastgpt/global/support/permission/user/controller';
-import { MongoGroupMemberModel } from '@fastgpt/service/support/permission/memberGroup/groupMemberSchema';
-import { getTmbInfoByTmbId } from '@fastgpt/service/support/user/team/controller';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
+import type { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
+import { TeamPermission } from '@libchat/global/support/permission/user/controller';
+import { MongoGroupMemberModel } from '@libchat/service/support/permission/memberGroup/groupMemberSchema';
+import { getTmbInfoByTmbId } from '@libchat/service/support/user/team/controller';
 import { vi } from 'vitest';
 
 // vi.mock(import('@/service/middleware/entry'), async () => {
@@ -12,7 +12,7 @@ import { vi } from 'vitest';
 //   };
 // });
 
-vi.mock(import('@fastgpt/service/common/middle/entry'), async (importOriginal) => {
+vi.mock(import('@libchat/service/common/middle/entry'), async (importOriginal) => {
   const mod = await importOriginal();
   const NextEntry = vi.fn(({ beforeCallback = [] }: { beforeCallback?: Promise<any>[] }) => {
     return (...args: any) => {
@@ -66,7 +66,7 @@ export type MockReqType<B = any, Q = any> = {
   [key: string]: any;
 };
 
-vi.mock(import('@fastgpt/service/support/permission/controller'), async (importOriginal) => {
+vi.mock(import('@libchat/service/support/permission/controller'), async (importOriginal) => {
   const mod = await importOriginal();
   const parseHeaderCert = vi.fn(
     ({
@@ -94,7 +94,7 @@ vi.mock(import('@fastgpt/service/support/permission/controller'), async (importO
 });
 
 vi.mock(
-  import('@fastgpt/service/support/permission/memberGroup/controllers'),
+  import('@libchat/service/support/permission/memberGroup/controllers'),
   async (importOriginal) => {
     const mod = await importOriginal();
     const parseHeaderCert = vi.fn(

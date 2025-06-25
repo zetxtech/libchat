@@ -12,17 +12,17 @@ import {
 } from '@chakra-ui/react';
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useTranslation } from 'next-i18next';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { getOperationLogs } from '@/web/support/user/team/operantionLog/api';
-import { auditLogMap } from '@fastgpt/web/support/user/audit/constants';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { formatTime2YMDHMS } from '@fastgpt/global/common/string/time';
-import UserBox from '@fastgpt/web/components/common/UserBox';
+import { auditLogMap } from '@libchat/web/support/user/audit/constants';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { formatTime2YMDHMS } from '@libchat/global/common/string/time';
+import UserBox from '@libchat/web/components/common/UserBox';
 import MultipleSelect, {
   useMultipleSelect
-} from '@fastgpt/web/components/common/MySelect/MultipleSelect';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+} from '@libchat/web/components/common/MySelect/MultipleSelect';
+import Avatar from '@libchat/web/components/common/Avatar';
 import { getTeamMembers } from '@/web/support/user/team/api';
 import { specialProcessors } from './processors';
 import { defaultMetadataProcessor } from './processors/commonProcessor';

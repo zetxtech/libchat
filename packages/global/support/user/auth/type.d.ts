@@ -1,4 +1,4 @@
-import type { UserAuthTypeEnum } from '@fastgpt/global/support/user/auth/constants';
+import type { UserAuthTypeEnum } from '@libchat/global/support/user/auth/constants';
 
 export type UserAuthSchemaType = {
   key: string;

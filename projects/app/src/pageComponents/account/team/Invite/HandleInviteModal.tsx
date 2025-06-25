@@ -1,8 +1,8 @@
 import { getInvitationInfo, postAcceptInvitationLink } from '@/web/support/user/team/api';
 import { Box, Button, Flex, ModalBody, ModalCloseButton } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { useContextSelector } from 'use-context-selector';

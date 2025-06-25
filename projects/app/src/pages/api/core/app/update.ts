@@ -1,33 +1,33 @@
-import { MongoApp } from '@fastgpt/service/core/app/schema';
+import { MongoApp } from '@libchat/service/core/app/schema';
 import type { AppUpdateParams } from '@/global/core/app/api';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { beforeUpdateAppFormat } from '@fastgpt/service/core/app/controller';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { beforeUpdateAppFormat } from '@libchat/service/core/app/controller';
 import { NextAPI } from '@/service/middleware/entry';
 import {
   ManagePermissionVal,
   PerResourceTypeEnum,
   ReadPermissionVal
-} from '@fastgpt/global/support/permission/constant';
-import { parseParentIdInMongo } from '@fastgpt/global/common/parentFolder/utils';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+} from '@libchat/global/support/permission/constant';
+import { parseParentIdInMongo } from '@libchat/global/common/parentFolder/utils';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import {
   syncChildrenPermission,
   syncCollaborators
-} from '@fastgpt/service/support/permission/inheritPermission';
-import { AppFolderTypeList, AppTypeEnum } from '@fastgpt/global/core/app/constants';
+} from '@libchat/service/support/permission/inheritPermission';
+import { AppFolderTypeList, AppTypeEnum } from '@libchat/global/core/app/constants';
 import { type ClientSession } from 'mongoose';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { getResourceClbsAndGroups } from '@fastgpt/service/support/permission/controller';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { TeamAppCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { AppErrEnum } from '@fastgpt/global/common/error/code/app';
-import { refreshSourceAvatar } from '@fastgpt/service/common/file/image/controller';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nAppType } from '@fastgpt/service/support/user/audit/util';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { getResourceClbsAndGroups } from '@libchat/service/support/permission/controller';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { TeamAppCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { AppErrEnum } from '@libchat/global/common/error/code/app';
+import { refreshSourceAvatar } from '@libchat/service/common/file/image/controller';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nAppType } from '@libchat/service/support/user/audit/util';
+import { i18nT } from '@libchat/web/i18n/utils';
 
 export type AppUpdateQuery = {
   appId: string;

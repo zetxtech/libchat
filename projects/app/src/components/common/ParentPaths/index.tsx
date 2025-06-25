@@ -1,5 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { type ParentTreePathItemType } from '@fastgpt/global/common/parentFolder/type';
+import { type ParentTreePathItemType } from '@libchat/global/common/parentFolder/type';
 import React, { useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
 

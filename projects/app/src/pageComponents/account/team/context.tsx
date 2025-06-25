@@ -8,12 +8,12 @@ import {
   getTeamMembers,
   putSwitchTeam
 } from '@/web/support/user/team/api';
-import { TeamMemberStatusEnum } from '@fastgpt/global/support/user/team/constant';
+import { TeamMemberStatusEnum } from '@libchat/global/support/user/team/constant';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import type { TeamTmbItemType, TeamMemberItemType } from '@fastgpt/global/support/user/team/type';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import type { TeamTmbItemType, TeamMemberItemType } from '@libchat/global/support/user/team/type';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { useRouter } from 'next/router';
 
 const EditInfoModal = dynamic(() => import('./EditInfoModal'));

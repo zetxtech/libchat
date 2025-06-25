@@ -1,8 +1,8 @@
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { getUserDetail } from '@fastgpt/service/support/user/controller';
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { getUserDetail } from '@libchat/service/support/user/controller';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type UserType } from '@fastgpt/global/support/user/type';
+import { type UserType } from '@libchat/global/support/user/type';
 
 export type TokenLoginQuery = {};
 export type TokenLoginBody = {};

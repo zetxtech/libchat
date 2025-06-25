@@ -5,20 +5,20 @@ import { Box, Button, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { useContextSelector } from 'use-context-selector';
 import { PluginRunContext } from '../context';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import Markdown from '@/components/Markdown';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyIcon from '@libchat/web/components/common/Icon';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useFileUpload } from '../../ChatBox/hooks/useFileUpload';
 import FilePreview from '../../components/FilePreview';
-import { type UserChatItemValueItemType } from '@fastgpt/global/core/chat/type';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import { type UserChatItemValueItemType } from '@libchat/global/core/chat/type';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { type ChatBoxInputFormType } from '../../ChatBox/type';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { ChatRecordContext } from '@/web/core/chat/context/chatRecordContext';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
 
 const RenderInput = () => {
   const { t } = useTranslation();

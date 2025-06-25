@@ -10,13 +10,13 @@ import {
   Button,
   useDisclosure
 } from '@chakra-ui/react';
-import { type TeamMemberItemType } from '@fastgpt/global/support/user/team/type';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import Icon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MyTag from '@fastgpt/web/components/common/Tag';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { type TeamMemberItemType } from '@libchat/global/support/user/team/type';
+import Avatar from '@libchat/web/components/common/Avatar';
+import Icon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MyTag from '@libchat/web/components/common/Tag';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { useTranslation } from 'next-i18next';
 import React, { useState } from 'react';
 

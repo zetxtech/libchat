@@ -1,4 +1,4 @@
-import { create, devtools, immer } from '@fastgpt/web/common/zustand';
+import { create, devtools, immer } from '@libchat/web/common/zustand';
 
 export type MarkDataStore = {
   dataId: string;

@@ -1,8 +1,8 @@
-import { FlowNodeTemplateTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { FlowNodeTemplateTypeEnum } from '@libchat/global/core/workflow/constants';
 import { i18nT } from '../../i18n/utils';
 import type { PluginGroupSchemaType, TGroupType } from '../../../service/core/app/plugin/type';
-import { AppTemplateTypeEnum } from '@fastgpt/global/core/app/constants';
-import { type TemplateTypeSchemaType } from '@fastgpt/global/core/app/type';
+import { AppTemplateTypeEnum } from '@libchat/global/core/app/constants';
+import { type TemplateTypeSchemaType } from '@libchat/global/core/app/type';
 
 export const workflowNodeTemplateList = [
   {

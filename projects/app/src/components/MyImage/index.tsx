@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Skeleton, type ImageProps } from '@chakra-ui/react';
-import CustomImage from '@fastgpt/web/components/common/Image/MyImage';
+import CustomImage from '@libchat/web/components/common/Image/MyImage';
 
 export const MyImage = (props: ImageProps) => {
   const [succeed, setSucceed] = useState(false);

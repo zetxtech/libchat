@@ -5,11 +5,11 @@ import type {
   CreateBillResponse,
   CreateOrderResponse,
   UpdatePaymentProps
-} from '@fastgpt/global/support/wallet/bill/api';
-import type { BillTypeEnum } from '@fastgpt/global/support/wallet/bill/constants';
-import { BillStatusEnum } from '@fastgpt/global/support/wallet/bill/constants';
-import type { BillSchemaType } from '@fastgpt/global/support/wallet/bill/type.d';
-import type { PaginationProps, PaginationResponse } from '@fastgpt/web/common/fetch/type';
+} from '@libchat/global/support/wallet/bill/api';
+import type { BillTypeEnum } from '@libchat/global/support/wallet/bill/constants';
+import { BillStatusEnum } from '@libchat/global/support/wallet/bill/constants';
+import type { BillSchemaType } from '@libchat/global/support/wallet/bill/type.d';
+import type { PaginationProps, PaginationResponse } from '@libchat/web/common/fetch/type';
 
 export const getBills = (
   data: PaginationProps<{

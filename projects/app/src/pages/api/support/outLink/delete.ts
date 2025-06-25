@@ -1,11 +1,11 @@
-import { MongoOutLink } from '@fastgpt/service/support/outLink/schema';
-import { authOutLinkCrud } from '@fastgpt/service/support/permission/publish/authLink';
-import { OwnerPermissionVal } from '@fastgpt/global/support/permission/constant';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import { MongoOutLink } from '@libchat/service/support/outLink/schema';
+import { authOutLinkCrud } from '@libchat/service/support/permission/publish/authLink';
+import { OwnerPermissionVal } from '@libchat/global/support/permission/constant';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nAppType } from '@fastgpt/service/support/user/audit/util';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nAppType } from '@libchat/service/support/user/audit/util';
 
 export type OutLinkDeleteQuery = {
   id: string;

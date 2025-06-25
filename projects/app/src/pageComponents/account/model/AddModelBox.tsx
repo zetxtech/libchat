@@ -22,22 +22,22 @@ import {
   ModelProviderList,
   type ModelProviderIdType,
   getModelProvider
-} from '@fastgpt/global/core/ai/provider';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+} from '@libchat/global/core/ai/provider';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getSystemModelDefaultConfig, putSystemModel } from '@/web/core/ai/config';
-import { type SystemModelItemType } from '@fastgpt/service/core/ai/type';
+import { type SystemModelItemType } from '@libchat/service/core/ai/type';
 import { useForm } from 'react-hook-form';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
-import JsonEditor from '@fastgpt/web/components/common/Textarea/JsonEditor';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
+import JsonEditor from '@libchat/web/components/common/Textarea/JsonEditor';
+import MyMenu from '@libchat/web/components/common/MyMenu';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import MyModal from '@libchat/web/components/common/MyModal';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 export const AddModelButton = ({
   onCreate,

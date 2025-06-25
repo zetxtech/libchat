@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { uploadMongoImg } from '@fastgpt/service/common/file/image/controller';
-import { type UploadImgProps } from '@fastgpt/global/common/file/api';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { uploadMongoImg } from '@libchat/service/common/file/image/controller';
+import { type UploadImgProps } from '@libchat/global/common/file/api';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { NextAPI } from '@/service/middleware/entry';
 
 /* 

@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { uploadFile } from '@fastgpt/service/common/file/gridfs/controller';
-import { getUploadModel } from '@fastgpt/service/common/file/multer';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { type FileCreateDatasetCollectionParams } from '@fastgpt/global/core/dataset/api';
-import { removeFilesByPaths } from '@fastgpt/service/common/file/utils';
-import { createCollectionAndInsertData } from '@fastgpt/service/core/dataset/collection/controller';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
+import { uploadFile } from '@libchat/service/common/file/gridfs/controller';
+import { getUploadModel } from '@libchat/service/common/file/multer';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { type FileCreateDatasetCollectionParams } from '@libchat/global/core/dataset/api';
+import { removeFilesByPaths } from '@libchat/service/common/file/utils';
+import { createCollectionAndInsertData } from '@libchat/service/core/dataset/collection/controller';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 import { type CreateCollectionResponse } from '@/global/core/dataset/api';
 
 async function handler(req: NextApiRequest, res: NextApiResponse<any>): CreateCollectionResponse {

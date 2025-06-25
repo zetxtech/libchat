@@ -3,16 +3,16 @@ import type {
   FlowNodeItemType,
   FlowNodeTemplateType,
   StoreNodeItemType
-} from '@fastgpt/global/core/workflow/type/node';
+} from '@libchat/global/core/workflow/type/node';
 import type { Node, Edge } from 'reactflow';
 import {
   FlowNodeTypeEnum,
   FlowNodeInputTypeEnum,
   FlowNodeOutputTypeEnum,
   EDGE_TYPE
-} from '@fastgpt/global/core/workflow/node/constant';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/node/constant';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import {
   nodeTemplate2FlowNode,
   storeNode2FlowNode,
@@ -20,7 +20,7 @@ import {
   checkWorkflowNodeAndConnection,
   getLatestNodeTemplate
 } from '@/web/core/workflow/utils';
-import type { FlowNodeOutputItemType } from '@fastgpt/global/core/workflow/type/io';
+import type { FlowNodeOutputItemType } from '@libchat/global/core/workflow/type/io';
 
 describe('nodeTemplate2FlowNode', () => {
   it('should convert template to flow node', () => {

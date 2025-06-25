@@ -1,20 +1,20 @@
 import { useCallback, useMemo } from 'react';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useTranslation } from 'next-i18next';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
 import { uploadFile2DB } from '@/web/common/file/controller';
-import { ChatFileTypeEnum } from '@fastgpt/global/core/chat/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { getFileIcon } from '@fastgpt/global/common/file/icon';
-import { formatFileSize } from '@fastgpt/global/common/file/tools';
+import { ChatFileTypeEnum } from '@libchat/global/core/chat/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { getFileIcon } from '@libchat/global/common/file/icon';
+import { formatFileSize } from '@libchat/global/common/file/tools';
 import { clone } from 'lodash';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { type UseFieldArrayReturn } from 'react-hook-form';
 import { type ChatBoxInputFormType, type UserInputFileItemType } from '../type';
-import { type AppFileSelectConfigType } from '@fastgpt/global/core/app/type';
-import { documentFileType } from '@fastgpt/global/common/file/constants';
+import { type AppFileSelectConfigType } from '@libchat/global/core/app/type';
+import { documentFileType } from '@libchat/global/common/file/constants';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
 
 type UseFileUploadOptions = {
   fileSelectConfig: AppFileSelectConfigType;

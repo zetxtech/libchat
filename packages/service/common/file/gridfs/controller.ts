@@ -1,19 +1,19 @@
 import { Types, connectionMongo, ReadPreference } from '../../mongo';
-import type { BucketNameEnum } from '@fastgpt/global/common/file/constants';
+import type { BucketNameEnum } from '@libchat/global/common/file/constants';
 import fsp from 'fs/promises';
 import fs from 'fs';
-import { type DatasetFileSchema } from '@fastgpt/global/core/dataset/type';
+import { type DatasetFileSchema } from '@libchat/global/core/dataset/type';
 import { MongoChatFileSchema, MongoDatasetFileSchema } from './schema';
-import { detectFileEncoding, detectFileEncodingByPath } from '@fastgpt/global/common/file/tools';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
+import { detectFileEncoding, detectFileEncodingByPath } from '@libchat/global/common/file/tools';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
 import { readRawContentByFileBuffer } from '../read/utils';
 import { computeGridFsChunSize, gridFsStream2Buffer, stream2Encoding } from './utils';
 import { addLog } from '../../system/log';
-import { parseFileExtensionFromUrl } from '@fastgpt/global/common/string/tools';
+import { parseFileExtensionFromUrl } from '@libchat/global/common/string/tools';
 import { Readable } from 'stream';
 import { addRawTextBuffer, getRawTextBuffer } from '../../buffer/rawText/controller';
 import { addMinutes } from 'date-fns';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 export function getGFSCollection(bucket: `${BucketNameEnum}`) {
   MongoDatasetFileSchema;

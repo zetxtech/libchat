@@ -1,10 +1,10 @@
 import React from 'react';
 import { ModalBody, Box, Flex, Input, ModalFooter, Button } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import type { OpenaiAccountType } from '@fastgpt/global/support/user/team/type';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import type { OpenaiAccountType } from '@libchat/global/support/user/team/type';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { putUpdateTeam } from '@/web/support/user/team/api';
 

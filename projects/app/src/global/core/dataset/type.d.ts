@@ -1,7 +1,7 @@
-import { ParentTreePathItemType } from '@fastgpt/global/common/parentFolder/type';
-import type { DatasetCollectionSchemaType } from '@fastgpt/global/core/dataset/type.d';
-import { DatasetDataSchemaType, DatasetTagType } from '@fastgpt/global/core/dataset/type.d';
-import type { DatasetPermission } from '@fastgpt/global/support/permission/dataset/controller';
+import { ParentTreePathItemType } from '@libchat/global/common/parentFolder/type';
+import type { DatasetCollectionSchemaType } from '@libchat/global/core/dataset/type.d';
+import { DatasetDataSchemaType, DatasetTagType } from '@libchat/global/core/dataset/type.d';
+import type { DatasetPermission } from '@libchat/global/support/permission/dataset/controller';
 
 /* ================= dataset ===================== */
 

@@ -12,30 +12,30 @@ import {
   Flex
 } from '@chakra-ui/react';
 import { type NodeProps } from 'reactflow';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import { useTranslation } from 'next-i18next';
 import NodeCard from '../render/NodeCard';
 import Container from '../../components/Container';
 import { AddIcon } from '@chakra-ui/icons';
 import RenderInput from '../render/RenderInput';
-import type { ContextExtractAgentItemType } from '@fastgpt/global/core/workflow/template/system/contextExtract/type';
+import type { ContextExtractAgentItemType } from '@libchat/global/core/workflow/template/system/contextExtract/type';
 import RenderOutput from '../render/RenderOutput';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import ExtractFieldModal, { defaultField } from './ExtractFieldModal';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeOutputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeOutputTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import RenderToolInput from '../render/RenderToolInput';
 import {
   type FlowNodeInputItemType,
   type FlowNodeOutputItemType
-} from '@fastgpt/global/core/workflow/type/io.d';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+} from '@libchat/global/core/workflow/type/io.d';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import IOTitle from '../../components/IOTitle';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 
 const NodeExtract = ({ data, selected }: NodeProps<FlowNodeItemType>) => {
   const { inputs, outputs, nodeId } = data;

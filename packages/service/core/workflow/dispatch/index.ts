@@ -1,28 +1,28 @@
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import {
   DispatchNodeResponseKeyEnum,
   SseResponseEventEnum
-} from '@fastgpt/global/core/workflow/runtime/constants';
-import type { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/runtime/constants';
+import type { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import type {
   ChatDispatchProps,
   DispatchNodeResultType,
   ModuleDispatchProps,
   SystemVariablesType
-} from '@fastgpt/global/core/workflow/runtime/type';
-import type { RuntimeNodeItemType } from '@fastgpt/global/core/workflow/runtime/type.d';
+} from '@libchat/global/core/workflow/runtime/type';
+import type { RuntimeNodeItemType } from '@libchat/global/core/workflow/runtime/type.d';
 import type {
   AIChatItemValueItemType,
   ChatHistoryItemResType,
   NodeOutputItemType,
   ToolRunResponseItemType
-} from '@fastgpt/global/core/chat/type.d';
+} from '@libchat/global/core/chat/type.d';
 import {
   FlowNodeInputTypeEnum,
   FlowNodeTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { getSystemTime } from '@fastgpt/global/common/time/timezone';
+} from '@libchat/global/core/workflow/node/constant';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { getSystemTime } from '@libchat/global/common/time/timezone';
 
 import { dispatchWorkflowStart } from './init/workflowStart';
 import { dispatchChatCompletion } from './chat/oneapi';
@@ -38,22 +38,22 @@ import { dispatchRunPlugin } from './plugin/run';
 import { dispatchPluginInput } from './plugin/runInput';
 import { dispatchPluginOutput } from './plugin/runOutput';
 import { formatHttpError, removeSystemVariable, rewriteRuntimeWorkFlow } from './utils';
-import { valueTypeFormat } from '@fastgpt/global/core/workflow/runtime/utils';
+import { valueTypeFormat } from '@libchat/global/core/workflow/runtime/utils';
 import {
   filterWorkflowEdges,
   checkNodeRunStatus,
   textAdaptGptResponse,
   replaceEditorVariable
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import type { ChatNodeUsageType } from '@fastgpt/global/support/wallet/bill/type';
+} from '@libchat/global/core/workflow/runtime/utils';
+import type { ChatNodeUsageType } from '@libchat/global/support/wallet/bill/type';
 import { dispatchRunTools } from './agent/runTool/index';
-import { ChatItemValueTypeEnum } from '@fastgpt/global/core/chat/constants';
+import { ChatItemValueTypeEnum } from '@libchat/global/core/chat/constants';
 import type { DispatchFlowResponse } from './type';
 import { dispatchStopToolCall } from './agent/runTool/stopTool';
 import { dispatchLafRequest } from './tools/runLaf';
 import { dispatchIfElse } from './tools/runIfElse';
-import type { RuntimeEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
-import { getReferenceVariableValue } from '@fastgpt/global/core/workflow/runtime/utils';
+import type { RuntimeEdgeItemType } from '@libchat/global/core/workflow/type/edge';
+import { getReferenceVariableValue } from '@libchat/global/core/workflow/runtime/utils';
 import { dispatchSystemConfig } from './init/systemConfig';
 import { dispatchUpdateVariable } from './tools/runUpdateVar';
 import { addLog } from '../../../common/system/log';
@@ -66,15 +66,15 @@ import { dispatchUserSelect } from './interactive/userSelect';
 import type {
   WorkflowInteractiveResponseType,
   InteractiveNodeResponseType
-} from '@fastgpt/global/core/workflow/template/system/interactive/type';
+} from '@libchat/global/core/workflow/template/system/interactive/type';
 import { dispatchRunAppNode } from './plugin/runApp';
 import { dispatchLoop } from './loop/runLoop';
 import { dispatchLoopEnd } from './loop/runLoopEnd';
 import { dispatchLoopStart } from './loop/runLoopStart';
 import { dispatchFormInput } from './interactive/formInput';
 import { dispatchToolParams } from './agent/runTool/toolParams';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { filterPublicNodeResponseData } from '@fastgpt/global/core/chat/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { filterPublicNodeResponseData } from '@libchat/global/core/chat/utils';
 import { dispatchRunTool } from './plugin/runTool';
 
 const callbackMap: Record<FlowNodeTypeEnum, Function> = {

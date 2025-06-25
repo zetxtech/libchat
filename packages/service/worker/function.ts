@@ -2,10 +2,10 @@ import {
   splitText2Chunks,
   type SplitProps,
   type SplitResponse
-} from '@fastgpt/global/common/string/textSplitter';
+} from '@libchat/global/common/string/textSplitter';
 import { runWorker, WorkerNameEnum } from './utils';
 import type { ReadFileResponse } from './readFile/type';
-import { isTestEnv } from '@fastgpt/global/common/system/constants';
+import { isTestEnv } from '@libchat/global/common/system/constants';
 
 export const text2Chunks = (props: SplitProps) => {
   // Test env, not run worker

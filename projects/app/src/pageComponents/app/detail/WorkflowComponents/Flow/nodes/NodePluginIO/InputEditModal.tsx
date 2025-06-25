@@ -1,16 +1,16 @@
 import React, { useCallback, useMemo } from 'react';
 import { Box, Flex, Stack } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import { FlowNodeInputTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { FlowNodeInputTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
 
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import InputTypeConfig from './InputTypeConfig';
 
 export const defaultInput: FlowNodeInputItemType = {

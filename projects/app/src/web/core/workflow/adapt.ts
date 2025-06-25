@@ -3,27 +3,27 @@ import {
   NodeInputKeyEnum,
   NodeOutputKeyEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 import {
   FlowNodeInputTypeEnum,
   FlowNodeOutputTypeEnum,
   FlowNodeTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
-import { getHandleConfig } from '@fastgpt/global/core/workflow/template/utils';
-import type { FlowNodeItemType, StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
-import type { FlowNodeTemplateType } from '@fastgpt/global/core/workflow/type/node';
-import { VARIABLE_NODE_ID } from '@fastgpt/global/core/workflow/constants';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
-import type { StoreEdgeItemType } from '@fastgpt/global/core/workflow/type/edge';
-import type { LLMModelTypeEnum } from '@fastgpt/global/core/ai/constants';
+} from '@libchat/global/core/workflow/node/constant';
+import { getHandleConfig } from '@libchat/global/core/workflow/template/utils';
+import type { FlowNodeItemType, StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
+import type { FlowNodeTemplateType } from '@libchat/global/core/workflow/type/node';
+import { VARIABLE_NODE_ID } from '@libchat/global/core/workflow/constants';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
+import type { StoreEdgeItemType } from '@libchat/global/core/workflow/type/edge';
+import type { LLMModelTypeEnum } from '@libchat/global/core/ai/constants';
 import type {
   FlowNodeInputItemType,
   FlowNodeOutputItemType
-} from '@fastgpt/global/core/workflow/type/io';
-import type { PluginTypeEnum } from '@fastgpt/global/core/plugin/constants';
+} from '@libchat/global/core/workflow/type/io';
+import type { PluginTypeEnum } from '@libchat/global/core/plugin/constants';
 import { getWorkflowGlobalVariables } from './utils';
 import type { TFunction } from 'next-i18next';
-import type { AppChatConfigType } from '@fastgpt/global/core/app/type';
+import type { AppChatConfigType } from '@libchat/global/core/app/type';
 
 export const getGlobalVariableNode = ({
   nodes,

@@ -1,21 +1,21 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { TeamAppCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
+import { TeamAppCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
 import { type CreateAppBody, onCreateApp } from '../create';
-import { type McpToolConfigType } from '@fastgpt/global/core/app/type';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { type McpToolConfigType } from '@libchat/global/core/app/type';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import {
   getMCPToolRuntimeNode,
   getMCPToolSetRuntimeNode
-} from '@fastgpt/global/core/app/mcpTools/utils';
-import { pushTrack } from '@fastgpt/service/common/middle/tracks/utils';
-import { checkTeamAppLimit } from '@fastgpt/service/support/permission/teamLimit';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { type StoreSecretValueType } from '@fastgpt/global/common/secret/type';
-import { storeSecretValue } from '@fastgpt/service/common/secret/utils';
+} from '@libchat/global/core/app/mcpTools/utils';
+import { pushTrack } from '@libchat/service/common/middle/tracks/utils';
+import { checkTeamAppLimit } from '@libchat/service/support/permission/teamLimit';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { type StoreSecretValueType } from '@libchat/global/common/secret/type';
+import { storeSecretValue } from '@libchat/service/common/secret/utils';
 
 export type createMCPToolsQuery = {};
 

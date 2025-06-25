@@ -1,14 +1,14 @@
 import { Box, HStack, VStack } from '@chakra-ui/react';
-import type { OrgListItemType, OrgType } from '@fastgpt/global/support/user/team/org/type';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import type { OrgListItemType, OrgType } from '@libchat/global/support/user/team/org/type';
+import Avatar from '@libchat/web/components/common/Avatar';
 import { useToggle } from 'ahooks';
 import { useState } from 'react';
 import IconButton from './IconButton';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getOrgList } from '@/web/support/user/team/org/api';
-import { getChildrenByOrg } from '@fastgpt/service/support/permission/org/controllers';
-import { getOrgChildrenPath } from '@fastgpt/global/support/user/team/org/constant';
+import { getChildrenByOrg } from '@libchat/service/support/permission/org/controllers';
+import { getOrgChildrenPath } from '@libchat/global/support/user/team/org/constant';
 
 function OrgTreeNode({
   org,

@@ -1,4 +1,4 @@
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import fs from 'fs';
 import decompress from 'decompress';
 import { DOMParser } from '@xmldom/xmldom';

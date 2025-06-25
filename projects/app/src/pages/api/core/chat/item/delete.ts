@@ -1,10 +1,10 @@
 import type { NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { MongoChatItem } from '@fastgpt/service/core/chat/chatItemSchema';
+import { jsonRes } from '@libchat/service/common/response';
+import { MongoChatItem } from '@libchat/service/core/chat/chatItemSchema';
 import { authChatCrud } from '@/service/support/permission/auth/chat';
 import type { DeleteChatItemProps } from '@/global/core/chat/api.d';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 
 async function handler(req: ApiRequestProps<{}, DeleteChatItemProps>, res: NextApiResponse) {
   const { appId, chatId, contentId } = req.query;

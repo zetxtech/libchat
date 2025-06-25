@@ -1,12 +1,12 @@
 import type { NextApiResponse } from 'next';
-import { MongoChatInputGuide } from '@fastgpt/service/core/chat/inputGuide/schema';
-import { type PaginationProps, type PaginationResponse } from '@fastgpt/web/common/fetch/type';
+import { MongoChatInputGuide } from '@libchat/service/core/chat/inputGuide/schema';
+import { type PaginationProps, type PaginationResponse } from '@libchat/web/common/fetch/type';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { type ChatInputGuideSchemaType } from '@fastgpt/global/core/chat/inputGuide/type';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { parsePaginationRequest } from '@fastgpt/service/common/api/pagination';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { type ChatInputGuideSchemaType } from '@libchat/global/core/chat/inputGuide/type';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { parsePaginationRequest } from '@libchat/service/common/api/pagination';
 
 export type ChatInputGuideProps = PaginationProps<{
   appId: string;

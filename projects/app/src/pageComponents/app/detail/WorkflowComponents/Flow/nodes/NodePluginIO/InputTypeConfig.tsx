@@ -12,29 +12,29 @@ import {
 import {
   VariableInputEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 import {
   FlowNodeInputTypeEnum,
   FlowValueTypeMap
-} from '@fastgpt/global/core/workflow/node/constant';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+} from '@libchat/global/core/workflow/node/constant';
+import MySelect from '@libchat/web/components/common/MySelect';
 import MultipleSelect, {
   useMultipleSelect
-} from '@fastgpt/web/components/common/MySelect/MultipleSelect';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import JsonEditor from '@fastgpt/web/components/common/Textarea/JsonEditor';
+} from '@libchat/web/components/common/MySelect/MultipleSelect';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import JsonEditor from '@libchat/web/components/common/Textarea/JsonEditor';
 import React, { useMemo } from 'react';
 import { useFieldArray, type UseFormReturn } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import DndDrag, { Draggable } from '@fastgpt/web/components/common/DndDrag';
+import MyIcon from '@libchat/web/components/common/Icon';
+import DndDrag, { Draggable } from '@libchat/web/components/common/DndDrag';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 
 import ChatFunctionTip from '@/components/core/app/Tip';
 import MySlider from '@/components/Slider';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 const InputTypeConfig = ({
   form,

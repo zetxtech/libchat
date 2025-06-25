@@ -3,7 +3,7 @@
   When the childNodes of loopFlow change, it automatically calculates the rectangular width, height, and position of the childNodes, 
   thereby further updating the width and height properties of the loop node.
 */
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import React, { useEffect, useMemo, useRef } from 'react';
 import { Background, type NodeProps } from 'reactflow';
 import NodeCard from '../render/NodeCard';
@@ -12,24 +12,24 @@ import IOTitle from '../../components/IOTitle';
 import { useTranslation } from 'next-i18next';
 import RenderInput from '../render/RenderInput';
 import { Box } from '@chakra-ui/react';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import RenderOutput from '../render/RenderOutput';
 import {
   ArrayTypeMap,
   NodeInputKeyEnum,
   VARIABLE_NODE_ID,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 import {
   Input_Template_Children_Node_List,
   Input_Template_LOOP_NODE_OFFSET
-} from '@fastgpt/global/core/workflow/template/input';
+} from '@libchat/global/core/workflow/template/input';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
 import { getWorkflowGlobalVariables } from '@/web/core/workflow/utils';
 import { AppContext } from '../../../../context';
-import { isValidArrayReferenceValue } from '@fastgpt/global/core/workflow/utils';
-import { type ReferenceArrayValueType } from '@fastgpt/global/core/workflow/type/io';
+import { isValidArrayReferenceValue } from '@libchat/global/core/workflow/utils';
+import { type ReferenceArrayValueType } from '@libchat/global/core/workflow/type/io';
 import { useSize } from 'ahooks';
 import { WorkflowStatusContext } from '../../../context/workflowStatusContext';
 

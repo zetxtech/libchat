@@ -22,9 +22,9 @@
 
 3 个模型代码分别为：
 
-1. [https://github.com/labring/FastGPT/tree/main/plugins/model/rerank-bge/bge-reranker-base](https://github.com/labring/FastGPT/tree/main/plugins/model/rerank-bge/bge-reranker-base)
-2. [https://github.com/labring/FastGPT/tree/main/plugins/model/rerank-bge/bge-reranker-large](https://github.com/labring/FastGPT/tree/main/plugins/model/rerank-bge/bge-reranker-large)
-3. [https://github.com/labring/FastGPT/tree/main/plugins/model/rerank-bge/bge-reranker-v2-m3](https://github.com/labring/FastGPT/tree/main/plugins/model/rerank-bge/bge-reranker-v2-m3)
+1. [https://github.com/labring/LibChat/tree/main/plugins/model/rerank-bge/bge-reranker-base](https://github.com/labring/LibChat/tree/main/plugins/model/rerank-bge/bge-reranker-base)
+2. [https://github.com/labring/LibChat/tree/main/plugins/model/rerank-bge/bge-reranker-large](https://github.com/labring/LibChat/tree/main/plugins/model/rerank-bge/bge-reranker-large)
+3. [https://github.com/labring/LibChat/tree/main/plugins/model/rerank-bge/bge-reranker-v2-m3](https://github.com/labring/LibChat/tree/main/plugins/model/rerank-bge/bge-reranker-v2-m3)
 
 ### 3. 安装依赖
 
@@ -65,9 +65,9 @@ python app.py
 
 **镜像名分别为:**
 
-1. registry.cn-hangzhou.aliyuncs.com/fastgpt/bge-rerank-base:v0.1
-2. registry.cn-hangzhou.aliyuncs.com/fastgpt/bge-rerank-large:v0.1
-3. registry.cn-hangzhou.aliyuncs.com/fastgpt/bge-rerank-v2-m3:v0.1
+1. registry.cn-hangzhou.aliyuncs.com/libchat/bge-rerank-base:v0.1
+2. registry.cn-hangzhou.aliyuncs.com/libchat/bge-rerank-large:v0.1
+3. registry.cn-hangzhou.aliyuncs.com/libchat/bge-rerank-v2-m3:v0.1
 
 **端口**
 
@@ -83,7 +83,7 @@ ACCESS_TOKEN=访问安全凭证，请求时，Authorization: Bearer ${ACCESS_TOK
 
 ```sh
 # auth token 为mytoken
-docker run -d --name reranker -p 6006:6006 -e ACCESS_TOKEN=mytoken --gpus all registry.cn-hangzhou.aliyuncs.com/fastgpt/bge-rerank-base:v0.1
+docker run -d --name reranker -p 6006:6006 -e ACCESS_TOKEN=mytoken --gpus all registry.cn-hangzhou.aliyuncs.com/libchat/bge-rerank-base:v0.1
 ```
 
 **docker-compose.yml示例**
@@ -92,7 +92,7 @@ docker run -d --name reranker -p 6006:6006 -e ACCESS_TOKEN=mytoken --gpus all re
 version: "3"
 services:
   reranker:
-    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/bge-rerank-base:v0.1
+    image: registry.cn-hangzhou.aliyuncs.com/libchat/bge-rerank-base:v0.1
     container_name: reranker
     # GPU运行环境，如果宿主机未安装，将deploy配置隐藏即可
     deploy:
@@ -109,6 +109,6 @@ services:
 
 ```
 
-## 接入 FastGPT
+## 接入 LibChat
 
-参考 [ReRank模型接入](https://doc.tryfastgpt.ai/docs/development/configuration/#rerank-接入)
+参考 [ReRank模型接入](https://doc.trylibchat.ai/docs/development/configuration/#rerank-接入)

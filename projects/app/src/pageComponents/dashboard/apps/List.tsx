@@ -2,28 +2,28 @@ import React, { useMemo, useState } from 'react';
 import { Box, Grid, Flex, IconButton, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { delAppById, putAppById, resumeInheritPer, changeOwner } from '@/web/core/app/api';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
 import PermissionIconText from '@/components/support/permission/IconText';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import { useTranslation } from 'next-i18next';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useContextSelector } from 'use-context-selector';
 import { AppListContext } from './context';
-import { AppFolderTypeList, AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppFolderTypeList, AppTypeEnum } from '@libchat/global/core/app/constants';
 import { useFolderDrag } from '@/components/common/folder/useFolderDrag';
 import dynamic from 'next/dynamic';
 import type { EditResourceInfoFormType } from '@/components/common/Modal/EditResourceModal';
-import MyMenu, { type MenuItemType } from '@fastgpt/web/components/common/MyMenu';
-import { AppPermissionList } from '@fastgpt/global/support/permission/app/constant';
+import MyMenu, { type MenuItemType } from '@libchat/web/components/common/MyMenu';
+import { AppPermissionList } from '@libchat/global/support/permission/app/constant';
 import {
   deleteAppCollaborators,
   getCollaboratorList,
   postUpdateAppCollaborators
 } from '@/web/core/app/api/collaborator';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import AppTypeTag from './TypeTag';
 
 const EditResourceModal = dynamic(() => import('@/components/common/Modal/EditResourceModal'));
@@ -31,12 +31,12 @@ const ConfigPerModal = dynamic(() => import('@/components/support/permission/Con
 
 import type { EditHttpPluginProps } from './HttpPluginEditModal';
 import { postCopyApp } from '@/web/core/app/api/app';
-import { formatTimeToChatTime } from '@fastgpt/global/common/string/time';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { formatTimeToChatTime } from '@libchat/global/common/string/time';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
-import { type RequireOnlyOne } from '@fastgpt/global/common/type/utils';
-import UserBox from '@fastgpt/web/components/common/UserBox';
-import { type PermissionValueType } from '@fastgpt/global/support/permission/type';
+import { type RequireOnlyOne } from '@libchat/global/common/type/utils';
+import UserBox from '@libchat/web/components/common/UserBox';
+import { type PermissionValueType } from '@libchat/global/support/permission/type';
 const HttpEditModal = dynamic(() => import('./HttpPluginEditModal'));
 
 const ListItem = () => {

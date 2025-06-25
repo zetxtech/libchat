@@ -1,28 +1,28 @@
 'use client';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Flex, Box, HStack } from '@chakra-ui/react';
-import { UsageSourceEnum, UsageSourceMap } from '@fastgpt/global/support/wallet/usage/constants';
+import { UsageSourceEnum, UsageSourceMap } from '@libchat/global/support/wallet/usage/constants';
 import DateRangePicker, {
   type DateRangeType
-} from '@fastgpt/web/components/common/DateRangePicker';
+} from '@libchat/web/components/common/DateRangePicker';
 import { addDays, startOfMonth, startOfWeek } from 'date-fns';
 import { useTranslation } from 'next-i18next';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import Avatar from '@libchat/web/components/common/Avatar';
 import AccountContainer from '@/pageComponents/account/AccountContainer';
 import { serviceSideProps } from '@/web/common/i18n/utils';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { getTeamMembers } from '@/web/support/user/team/api';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
 import MultipleSelect, {
   useMultipleSelect
-} from '@fastgpt/web/components/common/MySelect/MultipleSelect';
+} from '@libchat/web/components/common/MySelect/MultipleSelect';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 
 import UsageTableList from '@/pageComponents/account/usage/UsageTable';
 import { type UnitType } from '@/pageComponents/account/usage/type';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 const UsageDashboard = dynamic(() => import('@/pageComponents/account/usage/Dashboard'));
 
 export enum UsageTabEnum {

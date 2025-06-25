@@ -1,8 +1,8 @@
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import React, { useMemo } from 'react';
 import { useContextSelector } from 'use-context-selector';
-import { EDGE_TYPE, FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import type { FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { EDGE_TYPE, FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import type { FlowNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { type Node, useReactFlow } from 'reactflow';
 import { WorkflowInitContext, WorkflowNodeEdgeContext } from '../context/workflowInitContext';
 import { useMemoizedFn } from 'ahooks';
@@ -11,7 +11,7 @@ import NodeTemplateList from './components/NodeTemplates/list';
 import { Popover, PopoverContent, PopoverBody } from '@chakra-ui/react';
 import { WorkflowEventContext } from '../context/workflowEventContext';
 import { useNodeTemplates } from './components/NodeTemplates/useNodeTemplates';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { popoverHeight, popoverWidth } from './hooks/useWorkflow';
 
 const NodeTemplatesPopover = () => {

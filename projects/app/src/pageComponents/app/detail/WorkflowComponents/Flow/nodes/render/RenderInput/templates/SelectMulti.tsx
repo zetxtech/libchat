@@ -1,4 +1,4 @@
-import MultipleSelect from '@fastgpt/web/components/common/MySelect/MultipleSelect';
+import MultipleSelect from '@libchat/web/components/common/MySelect/MultipleSelect';
 import { type RenderInputProps } from '../type';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
 import { useContextSelector } from 'use-context-selector';

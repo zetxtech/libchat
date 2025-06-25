@@ -1,22 +1,22 @@
 import { Box, Flex, useDisclosure } from '@chakra-ui/react';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
-import { AppTemplateTypeEnum, AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTemplateTypeEnum, AppTypeEnum } from '@libchat/global/core/app/constants';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useRouter } from 'next/router';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { navbarWidth } from '@/components/Layout';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getTemplateMarketItemList, getTemplateTagList } from '@/web/core/app/api/template';
 import {
   type AppTemplateSchemaType,
   type TemplateTypeSchemaType
-} from '@fastgpt/global/core/app/type';
+} from '@libchat/global/core/app/type';
 import { getPluginGroups } from '@/web/core/app/api/plugin';
-import { type PluginGroupSchemaType } from '@fastgpt/service/core/app/plugin/type';
+import { type PluginGroupSchemaType } from '@libchat/service/core/app/plugin/type';
 
 export enum TabEnum {
   apps = 'apps',

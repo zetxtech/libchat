@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactFlow, { type NodeProps, SelectionMode } from 'reactflow';
 import { Box, IconButton, useDisclosure } from '@chakra-ui/react';
-import { EDGE_TYPE, FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { EDGE_TYPE, FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 
 import dynamic from 'next/dynamic';
 
@@ -9,7 +9,7 @@ import ButtonEdge from './components/ButtonEdge';
 import NodeTemplatesModal from './NodeTemplatesModal';
 
 import 'reactflow/dist/style.css';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import { connectionLineStyle, defaultEdgeOptions, maxZoom, minZoom } from '../constants';
 import { useContextSelector } from 'use-context-selector';
 import { useWorkflow } from './hooks/useWorkflow';
@@ -20,7 +20,7 @@ import { WorkflowNodeEdgeContext, WorkflowInitContext } from '../context/workflo
 import { WorkflowEventContext } from '../context/workflowEventContext';
 import NodeTemplatesPopover from './NodeTemplatesPopover';
 import SearchButton from '../../Workflow/components/SearchButton';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 const NodeSimple = dynamic(() => import('./nodes/NodeSimple'));
 const nodeTypes: Record<FlowNodeTypeEnum, any> = {

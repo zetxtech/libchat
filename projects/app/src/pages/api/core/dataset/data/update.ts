@@ -1,13 +1,13 @@
 import { updateData2Dataset } from '@/service/core/dataset/data/controller';
 import { pushGenerateVectorUsage } from '@/service/support/wallet/usage/push';
-import { type UpdateDatasetDataProps } from '@fastgpt/global/core/dataset/controller';
+import { type UpdateDatasetDataProps } from '@libchat/global/core/dataset/controller';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { authDatasetData } from '@fastgpt/service/support/permission/dataset/auth';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { authDatasetData } from '@libchat/service/support/permission/dataset/auth';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 
 async function handler(req: ApiRequestProps<UpdateDatasetDataProps>) {
   const { dataId, q, a, indexes = [] } = req.body;

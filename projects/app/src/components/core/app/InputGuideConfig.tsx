@@ -1,5 +1,5 @@
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import {
   Box,
   Button,
@@ -12,10 +12,10 @@ import {
 } from '@chakra-ui/react';
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import type { ChatInputGuideConfigType } from '@fastgpt/global/core/app/type.d';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import type { ChatInputGuideConfigType } from '@libchat/global/core/app/type.d';
+import MyModal from '@libchat/web/components/common/MyModal';
 import MyInput from '@/components/MyInput';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { fileDownload } from '@/web/common/file/utils';
 import { getDocPath } from '@/web/common/system/doc';
 import {
@@ -27,17 +27,17 @@ import {
   putChatInputGuide
 } from '@/web/core/chat/inputGuide/api';
 import { useQuery } from '@tanstack/react-query';
-import { useVirtualScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useVirtualScrollPagination } from '@libchat/web/hooks/useScrollPagination';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
-import { readCsvRawText } from '@fastgpt/web/common/file/utils';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import HighlightText from '@fastgpt/web/components/common/String/HighlightText';
-import { defaultChatInputGuideConfig } from '@fastgpt/global/core/app/constants';
+import { readCsvRawText } from '@libchat/web/common/file/utils';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import HighlightText from '@libchat/web/components/common/String/HighlightText';
+import { defaultChatInputGuideConfig } from '@libchat/global/core/app/constants';
 import ChatFunctionTip from './Tip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
 
 const csvTemplate = `"第一列内容"
 "只会将第一列内容导入，其余列会被忽略"

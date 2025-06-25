@@ -1,8 +1,8 @@
 import React from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 const VariableTable = ({
   variables = [],

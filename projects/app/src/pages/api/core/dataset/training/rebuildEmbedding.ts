@@ -1,15 +1,15 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { createTrainingUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import { getLLMModel, getEmbeddingModel, getVlmModel } from '@fastgpt/service/core/ai/model';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { OwnerPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { createTrainingUsage } from '@libchat/service/support/wallet/usage/controller';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import { getLLMModel, getEmbeddingModel, getVlmModel } from '@libchat/service/core/ai/model';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { OwnerPermissionVal } from '@libchat/global/support/permission/constant';
 
 export type rebuildEmbeddingBody = {
   datasetId: string;

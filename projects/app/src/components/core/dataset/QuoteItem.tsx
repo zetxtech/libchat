@@ -1,18 +1,18 @@
 import React, { useMemo, useState } from 'react';
 import { Box, Flex, Link, Progress } from '@chakra-ui/react';
 import RawSourceBox from '@/components/core/dataset/RawSourceBox';
-import type { SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type.d';
+import type { SearchDataResponseItemType } from '@libchat/global/core/dataset/type.d';
 import NextLink from 'next/link';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import dynamic from 'next/dynamic';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import {
   DatasetCollectionTypeEnum,
   SearchScoreTypeEnum,
   SearchScoreTypeMap
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import type { readCollectionSourceBody } from '@/pages/api/core/dataset/collection/read';
 import Markdown from '@/components/Markdown';
 

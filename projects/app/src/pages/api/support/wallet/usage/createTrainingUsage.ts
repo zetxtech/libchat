@@ -1,10 +1,10 @@
 import type { NextApiRequest } from 'next';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import { type CreateTrainingUsageProps } from '@fastgpt/global/support/wallet/usage/api.d';
-import { getLLMModel, getEmbeddingModel, getVlmModel } from '@fastgpt/service/core/ai/model';
-import { createTrainingUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import { type CreateTrainingUsageProps } from '@libchat/global/support/wallet/usage/api.d';
+import { getLLMModel, getEmbeddingModel, getVlmModel } from '@libchat/service/core/ai/model';
+import { createTrainingUsage } from '@libchat/service/support/wallet/usage/controller';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 import { NextAPI } from '@/service/middleware/entry';
 
 async function handler(req: NextApiRequest) {

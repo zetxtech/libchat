@@ -1,15 +1,15 @@
 import { Input, HStack, ModalBody, Button, ModalFooter } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import MyModal from '@libchat/web/components/common/MyModal';
+import Avatar from '@libchat/web/components/common/Avatar';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useForm } from 'react-hook-form';
 import { postCreateGroup, putUpdateGroup } from '@/web/support/user/team/group/api';
-import { DEFAULT_TEAM_AVATAR } from '@fastgpt/global/common/system/constants';
-import { type MemberGroupListItemType } from '@fastgpt/global/support/permission/memberGroup/type';
+import { DEFAULT_TEAM_AVATAR } from '@libchat/global/common/system/constants';
+import { type MemberGroupListItemType } from '@libchat/global/support/permission/memberGroup/type';
 
 export type GroupFormType = {
   avatar: string;

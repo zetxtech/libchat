@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import type { RenderInputProps } from '../type';
-import JSONEditor from '@fastgpt/web/components/common/Textarea/JsonEditor';
-import { formatEditorVariablePickerIcon } from '@fastgpt/global/core/workflow/utils';
+import JSONEditor from '@libchat/web/components/common/Textarea/JsonEditor';
+import { formatEditorVariablePickerIcon } from '@libchat/global/core/workflow/utils';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
 import { getWorkflowGlobalVariables } from '@/web/core/workflow/utils';

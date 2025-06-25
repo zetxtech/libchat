@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 
 const NavButton = ({
   direction,

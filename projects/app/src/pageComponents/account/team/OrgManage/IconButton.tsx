@@ -1,6 +1,6 @@
 import { type IconProps } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import type { IconNameType } from '@fastgpt/web/components/common/Icon/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import type { IconNameType } from '@libchat/web/components/common/Icon/type';
 
 function IconButton({
   name,

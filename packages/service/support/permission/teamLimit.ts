@@ -1,12 +1,12 @@
 import { getTeamPlanStatus, getTeamStandPlan, getTeamPoints } from '../../support/wallet/sub/utils';
 import { MongoApp } from '../../core/app/schema';
 import { MongoDataset } from '../../core/dataset/schema';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
-import { SystemErrEnum } from '@fastgpt/global/common/error/code/system';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
+import { SystemErrEnum } from '@libchat/global/common/error/code/system';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import { MongoTeamMember } from '../user/team/teamMemberSchema';
-import { TeamMemberStatusEnum } from '@fastgpt/global/support/user/team/constant';
+import { TeamMemberStatusEnum } from '@libchat/global/support/user/team/constant';
 import { getVectorCountByTeamId } from '../../common/vectorDB/controller';
 
 export const checkTeamAIPoints = async (teamId: string) => {

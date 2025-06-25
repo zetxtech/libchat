@@ -1,13 +1,13 @@
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
 import {
   ManagePermissionVal,
   PerResourceTypeEnum
-} from '@fastgpt/global/support/permission/constant';
-import { resumeInheritPermission } from '@fastgpt/service/support/permission/inheritPermission';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/support/permission/constant';
+import { resumeInheritPermission } from '@libchat/service/support/permission/inheritPermission';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
 export type ResumeInheritPermissionQuery = {
   datasetId: string;
 };

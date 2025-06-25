@@ -1,4 +1,4 @@
-import { addLog } from '@fastgpt/service/common/system/log';
+import { addLog } from '@libchat/service/common/system/log';
 import axios, { type Method } from 'axios';
 
 const url = process.env.API_PROXY_URL;

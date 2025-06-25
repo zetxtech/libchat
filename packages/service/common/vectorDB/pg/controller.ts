@@ -1,4 +1,4 @@
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 import { addLog } from '../../system/log';
 import { Pool } from 'pg';
 import type { QueryResultRow } from 'pg';

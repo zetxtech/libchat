@@ -1,24 +1,24 @@
-import { chats2GPTMessages } from '@fastgpt/global/core/chat/adapt';
+import { chats2GPTMessages } from '@libchat/global/core/chat/adapt';
 import { filterGPTMessageByMaxContext, loadRequestMessages } from '../../../chat/utils';
-import type { ChatItemType } from '@fastgpt/global/core/chat/type.d';
+import type { ChatItemType } from '@libchat/global/core/chat/type.d';
 import {
   countMessagesTokens,
   countGptMessagesTokens,
   countPromptTokens
 } from '../../../../common/string/tiktoken/index';
-import { ChatItemValueTypeEnum, ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
+import { ChatItemValueTypeEnum, ChatRoleEnum } from '@libchat/global/core/chat/constants';
 import { createChatCompletion } from '../../../ai/config';
-import type { ContextExtractAgentItemType } from '@fastgpt/global/core/workflow/template/system/contextExtract/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import type { ContextExtractAgentItemType } from '@libchat/global/core/workflow/template/system/contextExtract/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import {
   NodeOutputKeyEnum,
   toolValueTypeList,
   valueTypeJsonSchemaMap
-} from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
-import { sliceJsonStr } from '@fastgpt/global/common/string/tools';
-import { type LLMModelItemType } from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
+import { sliceJsonStr } from '@libchat/global/common/string/tools';
+import { type LLMModelItemType } from '@libchat/global/core/ai/model.d';
 import { getHistories } from '../utils';
 import { getLLMModel } from '../../../ai/model';
 import { formatModelChars2Points } from '../../../../support/wallet/usage/utils';
@@ -26,15 +26,15 @@ import json5 from 'json5';
 import {
   type ChatCompletionMessageParam,
   type ChatCompletionTool
-} from '@fastgpt/global/core/ai/type';
-import { ChatCompletionRequestMessageRoleEnum } from '@fastgpt/global/core/ai/constants';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/ai/type';
+import { ChatCompletionRequestMessageRoleEnum } from '@libchat/global/core/ai/constants';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
 import { llmCompletionsBodyFormat, formatLLMResponse } from '../../../ai/utils';
 import { ModelTypeEnum } from '../../../../../global/core/ai/model';
 import {
   getExtractJsonPrompt,
   getExtractJsonToolPrompt
-} from '@fastgpt/global/core/ai/prompt/agent';
+} from '@libchat/global/core/ai/prompt/agent';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.history]?: ChatItemType[];

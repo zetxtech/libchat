@@ -1,4 +1,4 @@
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import Avatar from '@libchat/web/components/common/Avatar';
 import { Box } from '@chakra-ui/react';
 import { useTheme } from '@chakra-ui/system';
 import React from 'react';

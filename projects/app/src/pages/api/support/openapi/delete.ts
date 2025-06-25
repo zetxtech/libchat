@@ -1,11 +1,11 @@
-import { MongoOpenApi } from '@fastgpt/service/support/openapi/schema';
-import { authOpenApiKeyCrud } from '@fastgpt/service/support/permission/auth/openapi';
-import { OwnerPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import { MongoOpenApi } from '@libchat/service/support/openapi/schema';
+import { authOpenApiKeyCrud } from '@libchat/service/support/permission/auth/openapi';
+import { OwnerPermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
 export type OpenAPIDeleteQuery = { id: string };
 export type OpenAPIDeleteBody = {};
 export type OpenAPIDeleteResponse = {};

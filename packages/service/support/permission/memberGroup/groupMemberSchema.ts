@@ -1,8 +1,8 @@
-import { TeamMemberCollectionName } from '@fastgpt/global/support/user/team/constant';
+import { TeamMemberCollectionName } from '@libchat/global/support/user/team/constant';
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 import { MemberGroupCollectionName } from './memberGroupSchema';
-import { type GroupMemberSchemaType } from '@fastgpt/global/support/permission/memberGroup/type';
-import { GroupMemberRole } from '@fastgpt/global/support/permission/memberGroup/constant';
+import { type GroupMemberSchemaType } from '@libchat/global/support/permission/memberGroup/type';
+import { GroupMemberRole } from '@libchat/global/support/permission/memberGroup/constant';
 const { Schema } = connectionMongo;
 
 export const GroupMemberCollectionName = 'team_group_members';

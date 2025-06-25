@@ -1,31 +1,31 @@
 import React, { useCallback, useMemo } from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from './render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import Container from '../components/Container';
 import RenderInput from './render/RenderInput';
 import { Box, Button, Flex, HStack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import { SmallAddIcon } from '@chakra-ui/icons';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { getOneQuoteInputTemplate } from '@fastgpt/global/core/workflow/template/system/datasetConcat';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { getOneQuoteInputTemplate } from '@libchat/global/core/workflow/template/system/datasetConcat';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import MySlider from '@/components/Slider';
 import {
   type FlowNodeInputItemType,
   type ReferenceItemValueType
-} from '@fastgpt/global/core/workflow/type/io.d';
+} from '@libchat/global/core/workflow/type/io.d';
 import RenderOutput from './render/RenderOutput';
 import IOTitle from '../components/IOTitle';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
 import { ReferSelector, useReference } from './render/RenderInput/templates/Reference';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import ValueTypeLabel from './render/ValueTypeLabel';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { getWebLLMModel } from '@/web/common/system/utils';
-import InputSlider from '@fastgpt/web/components/common/MySlider/InputSlider';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import InputSlider from '@libchat/web/components/common/MySlider/InputSlider';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 
 const NodeDatasetConcat = ({ data, selected }: NodeProps<FlowNodeItemType>) => {
   const { t } = useTranslation();

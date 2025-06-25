@@ -3,14 +3,14 @@ import { Box, type BoxProps, Flex, Link, type LinkProps } from '@chakra-ui/react
 import { useRouter } from 'next/router';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
-import { HUMAN_ICON } from '@fastgpt/global/common/system/constants';
+import { HUMAN_ICON } from '@libchat/global/common/system/constants';
 import NextLink from 'next/link';
 import Badge from '../Badge';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 
 export enum NavbarTypeEnum {
   normal = 'normal',
@@ -216,7 +216,7 @@ const Navbar = ({ unread }: { unread: number }) => {
         <MyTooltip label={`Git Star: ${gitStar}`} placement={'right-end'}>
           <Link
             as={NextLink}
-            href="https://github.com/labring/FastGPT"
+            href="https://github.com/labring/LibChat"
             target={'_blank'}
             {...itemStyles}
             {...hoverStyle}

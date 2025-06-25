@@ -20,12 +20,12 @@ import { useQuery } from '@tanstack/react-query';
 import { getPromotionInitData, getPromotionRecords } from '@/web/support/activity/promotion/api';
 import { useUserStore } from '@/web/support/user/useUserStore';
 
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import dayjs from 'dayjs';
-import { usePagination } from '@fastgpt/web/hooks/usePagination';
-import { useLoading } from '@fastgpt/web/hooks/useLoading';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import { usePagination } from '@libchat/web/hooks/usePagination';
+import { useLoading } from '@libchat/web/hooks/useLoading';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import AccountContainer from '@/pageComponents/account/AccountContainer';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 

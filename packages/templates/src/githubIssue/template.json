@@ -3,7 +3,9 @@
   "intro": "定时获取GitHub Issue信息,使用AI进行总结,并推送到飞书群中",
   "author": "",
   "avatar": "core/app/templates/githubIssue",
-  "tags": ["office-services"],
+  "tags": [
+    "office-services"
+  ],
   "type": "advanced",
   "userGuide": {
     "type": "link",
@@ -25,14 +27,18 @@
         "inputs": [
           {
             "key": "welcomeText",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "string",
             "label": "core.app.Welcome Text",
             "value": ""
           },
           {
             "key": "variables",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "label": "core.app.Chat Variable",
             "value": []
@@ -40,7 +46,9 @@
           {
             "key": "questionGuide",
             "valueType": "hidden",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "core.app.Question Guide",
             "value": {
               "open": false
@@ -48,7 +56,9 @@
           },
           {
             "key": "tts",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "label": "",
             "value": {
@@ -57,7 +67,9 @@
           },
           {
             "key": "whisper",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "label": "",
             "value": {
@@ -68,7 +80,9 @@
           },
           {
             "key": "scheduleTrigger",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "label": "",
             "value": null
@@ -90,7 +104,10 @@
         "inputs": [
           {
             "key": "userChatInput",
-            "renderTypeList": ["reference", "textarea"],
+            "renderTypeList": [
+              "reference",
+              "textarea"
+            ],
             "valueType": "string",
             "label": "common:core.module.input.label.user question",
             "required": true,
@@ -124,7 +141,9 @@
         "inputs": [
           {
             "key": "system_addInputParam",
-            "renderTypeList": ["addInputParam"],
+            "renderTypeList": [
+              "addInputParam"
+            ],
             "valueType": "dynamic",
             "label": "",
             "required": false,
@@ -156,7 +175,9 @@
           },
           {
             "key": "codeType",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "value": "js",
             "valueDesc": "",
@@ -166,7 +187,9 @@
           },
           {
             "key": "code",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "label": "",
             "value": "function main() {\n  const date = new Date();\n  date.setDate(date.getDate() - 3);\n  const day = date.getDate();\n  const month = date.getMonth() + 1;\n  const year = date.getFullYear();\n  const hours = date.getHours();\n  const minutes = date.getMinutes();\n\n  return {\n    date: `${year}-${month}-${day}T${hours}:${minutes}:000Z`,\n  }\n }",
             "valueDesc": "",
@@ -247,7 +270,10 @@
         "inputs": [
           {
             "key": "text",
-            "renderTypeList": ["textarea", "reference"],
+            "renderTypeList": [
+              "textarea",
+              "reference"
+            ],
             "valueType": "any",
             "required": true,
             "label": "回复的内容",
@@ -276,7 +302,9 @@
         "inputs": [
           {
             "key": "system_addInputParam",
-            "renderTypeList": ["addInputParam"],
+            "renderTypeList": [
+              "addInputParam"
+            ],
             "valueType": "dynamic",
             "label": "",
             "required": false,
@@ -308,7 +336,9 @@
           },
           {
             "key": "system_httpMethod",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "valueType": "string",
             "label": "",
             "value": "GET",
@@ -320,7 +350,9 @@
           },
           {
             "key": "system_httpTimeout",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "valueType": "number",
             "label": "",
             "value": 30,
@@ -334,20 +366,24 @@
           },
           {
             "key": "system_httpReqUrl",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "string",
             "label": "",
             "description": "common:core.module.input.description.Http Request Url",
             "placeholder": "https://api.ai.com/getInventory",
             "required": false,
-            "value": "https://api.github.com/repos/labring/FastGPT/issues",
+            "value": "https://api.github.com/repos/labring/LibChat/issues",
             "valueDesc": "",
             "debugLabel": "",
             "toolDescription": ""
           },
           {
             "key": "system_httpHeader",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "valueType": "any",
             "value": [],
             "label": "",
@@ -360,7 +396,9 @@
           },
           {
             "key": "system_httpParams",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "value": [
               {
@@ -383,7 +421,9 @@
           },
           {
             "key": "system_httpJsonBody",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "value": "",
             "label": "",
@@ -395,7 +435,9 @@
           },
           {
             "key": "system_httpFormBody",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "value": [],
             "label": "",
@@ -407,7 +449,9 @@
           },
           {
             "key": "system_httpContentType",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "string",
             "value": "json",
             "label": "",
@@ -483,7 +527,9 @@
         "inputs": [
           {
             "key": "system_addInputParam",
-            "renderTypeList": ["addInputParam"],
+            "renderTypeList": [
+              "addInputParam"
+            ],
             "valueType": "dynamic",
             "label": "",
             "required": false,
@@ -515,7 +561,9 @@
           },
           {
             "key": "codeType",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "value": "js",
             "valueDesc": "",
@@ -525,7 +573,9 @@
           },
           {
             "key": "code",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "label": "",
             "value": "function main({res}) {\n    const issues = JSON.parse(res);\n    const ret = [];\n    for(const issue of issues) {\n        if (issue.pull_request) continue;\n        ret.push({\n            title: issue.title,\n            body: issue.body,\n            url: issue.html_url\n        })\n    }\n\n    return {\n        ret: JSON.stringify(ret)\n    }\n}",
             "valueDesc": "",
@@ -534,7 +584,9 @@
             "toolDescription": ""
           },
           {
-            "renderTypeList": ["reference"],
+            "renderTypeList": [
+              "reference"
+            ],
             "valueType": "string",
             "canEdit": true,
             "key": "res",
@@ -565,7 +617,10 @@
             "description": "",
             "debugLabel": "",
             "toolDescription": "",
-            "value": ["mCaalLpFoZFk", "httpRawResponse"]
+            "value": [
+              "mCaalLpFoZFk",
+              "httpRawResponse"
+            ]
           }
         ],
         "outputs": [
@@ -641,7 +696,10 @@
         "inputs": [
           {
             "key": "model",
-            "renderTypeList": ["settingLLMModel", "reference"],
+            "renderTypeList": [
+              "settingLLMModel",
+              "reference"
+            ],
             "label": "AI 模型",
             "valueType": "string",
             "valueDesc": "",
@@ -652,7 +710,9 @@
           },
           {
             "key": "temperature",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "value": 0,
             "valueType": "number",
@@ -663,7 +723,9 @@
           },
           {
             "key": "maxToken",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "value": 8000,
             "valueType": "number",
@@ -674,7 +736,9 @@
           },
           {
             "key": "isResponseAnswerText",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "value": true,
             "valueType": "boolean",
@@ -685,7 +749,9 @@
           },
           {
             "key": "aiChatQuoteRole",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "valueType": "string",
             "value": "system",
@@ -696,7 +762,9 @@
           },
           {
             "key": "quoteTemplate",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "valueType": "string",
             "valueDesc": "",
@@ -706,7 +774,9 @@
           },
           {
             "key": "quotePrompt",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "valueType": "string",
             "valueDesc": "",
@@ -716,7 +786,9 @@
           },
           {
             "key": "aiChatVision",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "label": "",
             "valueType": "boolean",
             "value": false,
@@ -727,7 +799,10 @@
           },
           {
             "key": "systemPrompt",
-            "renderTypeList": ["textarea", "reference"],
+            "renderTypeList": [
+              "textarea",
+              "reference"
+            ],
             "max": 3000,
             "valueType": "string",
             "label": "提示词",
@@ -740,7 +815,10 @@
           },
           {
             "key": "history",
-            "renderTypeList": ["numberInput", "reference"],
+            "renderTypeList": [
+              "numberInput",
+              "reference"
+            ],
             "valueType": "chatHistory",
             "label": "聊天记录",
             "description": "workflow:max_dialog_rounds",
@@ -754,7 +832,9 @@
           },
           {
             "key": "quoteQA",
-            "renderTypeList": ["settingDatasetQuotePrompt"],
+            "renderTypeList": [
+              "settingDatasetQuotePrompt"
+            ],
             "label": "",
             "debugLabel": "知识库引用",
             "description": "",
@@ -764,7 +844,10 @@
           },
           {
             "key": "stringQuoteText",
-            "renderTypeList": ["reference", "textarea"],
+            "renderTypeList": [
+              "reference",
+              "textarea"
+            ],
             "label": "文档引用",
             "debugLabel": "文档引用",
             "description": "app:document_quote_tip",
@@ -774,12 +857,18 @@
           },
           {
             "key": "userChatInput",
-            "renderTypeList": ["reference", "textarea"],
+            "renderTypeList": [
+              "reference",
+              "textarea"
+            ],
             "valueType": "string",
             "label": "用户问题",
             "toolDescription": "用户问题",
             "required": true,
-            "value": ["gALvyJcXPoep", "qLUQfhG0ILRX"],
+            "value": [
+              "gALvyJcXPoep",
+              "qLUQfhG0ILRX"
+            ],
             "valueDesc": "",
             "description": "",
             "debugLabel": ""
@@ -822,7 +911,9 @@
         "inputs": [
           {
             "key": "system_forbid_stream",
-            "renderTypeList": ["switch"],
+            "renderTypeList": [
+              "switch"
+            ],
             "valueType": "boolean",
             "label": "禁用流输出",
             "description": "强制设置嵌套运行的应用，均以非流模式运行",
@@ -832,7 +923,9 @@
             "toolDescription": ""
           },
           {
-            "renderTypeList": ["reference"],
+            "renderTypeList": [
+              "reference"
+            ],
             "selectedTypeIndex": 0,
             "valueType": "string",
             "canEdit": false,
@@ -841,12 +934,17 @@
             "description": "需要发送的消息",
             "required": true,
             "toolDescription": "需要发送的消息",
-            "value": ["aLrp6IjV8zAf", "answerText"],
+            "value": [
+              "aLrp6IjV8zAf",
+              "answerText"
+            ],
             "valueDesc": "",
             "debugLabel": ""
           },
           {
-            "renderTypeList": ["input"],
+            "renderTypeList": [
+              "input"
+            ],
             "selectedTypeIndex": 0,
             "valueType": "string",
             "canEdit": false,

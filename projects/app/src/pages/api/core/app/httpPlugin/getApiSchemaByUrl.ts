@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { loadOpenAPISchemaFromUrl } from '@fastgpt/global/common/string/swagger';
+import { loadOpenAPISchemaFromUrl } from '@libchat/global/common/string/swagger';
 import { NextAPI } from '@/service/middleware/entry';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { isInternalAddress } from '@fastgpt/service/common/system/utils';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { isInternalAddress } from '@libchat/service/common/system/utils';
 
 async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   const apiURL = req.body.url as string;

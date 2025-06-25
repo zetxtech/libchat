@@ -1,7 +1,7 @@
-import type { ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import type { RequireOnlyOne } from '@fastgpt/global/common/type/utils';
-import type { PerResourceTypeEnum } from '@fastgpt/global/support/permission/constant';
-import type { PermissionValueType } from '@fastgpt/global/support/permission/type';
+import type { ParentIdType } from '@libchat/global/common/parentFolder/type';
+import type { RequireOnlyOne } from '@libchat/global/common/type/utils';
+import type { PerResourceTypeEnum } from '@libchat/global/support/permission/constant';
+import type { PermissionValueType } from '@libchat/global/support/permission/type';
 import type { ClientSession, Model } from 'mongoose';
 import { mongoSessionRun } from '../../common/mongo/sessionRun';
 import { getResourceClbsAndGroups } from './controller';

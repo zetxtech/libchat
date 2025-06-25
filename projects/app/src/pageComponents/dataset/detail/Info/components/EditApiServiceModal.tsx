@@ -1,17 +1,17 @@
 import React from 'react';
 import { ModalFooter, ModalBody, Button, Flex, Box } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal/index';
+import MyModal from '@libchat/web/components/common/MyModal/index';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useForm } from 'react-hook-form';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import ApiDatasetForm from '@/pageComponents/dataset/ApiDatasetForm';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import { getDocPath } from '@/web/common/system/doc';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import type { ApiDatasetServerType } from '@fastgpt/global/core/dataset/apiDataset/type';
-import { DatasetTypeMap } from '@fastgpt/global/core/dataset/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
+import type { ApiDatasetServerType } from '@libchat/global/core/dataset/apiDataset/type';
+import { DatasetTypeMap } from '@libchat/global/core/dataset/constants';
 
 export type EditAPIDatasetInfoFormType = {
   id: string;

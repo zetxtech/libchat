@@ -1,7 +1,7 @@
 import TurndownService from 'turndown';
 import { type ImageType } from '../readFile/type';
-import { matchMdImg } from '@fastgpt/global/common/string/markdown';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { matchMdImg } from '@libchat/global/common/string/markdown';
+import { getNanoid } from '@libchat/global/common/string/tools';
 // @ts-ignore
 const turndownPluginGfm = require('joplin-turndown-plugin-gfm');
 

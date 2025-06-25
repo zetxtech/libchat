@@ -1,27 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { MongoOutLink } from '@fastgpt/service/support/outLink/schema';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { MongoChatItem } from '@fastgpt/service/core/chat/chatItemSchema';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { MongoOutLink } from '@libchat/service/support/outLink/schema';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { MongoChatItem } from '@libchat/service/core/chat/chatItemSchema';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
 import { NextAPI } from '@/service/middleware/entry';
-import { MongoChatInputGuide } from '@fastgpt/service/core/chat/inputGuide/schema';
+import { MongoChatInputGuide } from '@libchat/service/core/chat/inputGuide/schema';
 import {
   OwnerPermissionVal,
   PerResourceTypeEnum
-} from '@fastgpt/global/support/permission/constant';
-import { findAppAndAllChildren } from '@fastgpt/service/core/app/controller';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
-import { type ClientSession } from '@fastgpt/service/common/mongo';
-import { deleteChatFiles } from '@fastgpt/service/core/chat/controller';
-import { pushTrack } from '@fastgpt/service/common/middle/tracks/utils';
-import { MongoOpenApi } from '@fastgpt/service/support/openapi/schema';
-import { removeImageByPath } from '@fastgpt/service/common/file/image/controller';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nAppType } from '@fastgpt/service/support/user/audit/util';
+} from '@libchat/global/support/permission/constant';
+import { findAppAndAllChildren } from '@libchat/service/core/app/controller';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
+import { type ClientSession } from '@libchat/service/common/mongo';
+import { deleteChatFiles } from '@libchat/service/core/chat/controller';
+import { pushTrack } from '@libchat/service/common/middle/tracks/utils';
+import { MongoOpenApi } from '@libchat/service/support/openapi/schema';
+import { removeImageByPath } from '@libchat/service/common/file/image/controller';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nAppType } from '@libchat/service/support/user/audit/util';
 
 async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { appId } = req.query as { appId: string };

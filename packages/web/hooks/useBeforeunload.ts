@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { useEffect } from 'react';
-import { isProduction } from '@fastgpt/global/common/system/constants';
+import { isProduction } from '@libchat/global/common/system/constants';
 
 export const useBeforeunload = (props?: { callback?: () => any; tip?: string }) => {
   const { t } = useTranslation();

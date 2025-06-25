@@ -3,7 +3,7 @@ import { PgVectorCtrl } from './pg';
 import { ObVectorCtrl } from './oceanbase';
 import { getVectorsByText } from '../../core/ai/embedding';
 import { type DelDatasetVectorCtrlProps, type InsertVectorProps } from './controller.d';
-import { type EmbeddingModelItemType } from '@fastgpt/global/core/ai/model.d';
+import { type EmbeddingModelItemType } from '@libchat/global/core/ai/model.d';
 import { MILVUS_ADDRESS, PG_ADDRESS, OCEANBASE_ADDRESS } from './constants';
 import { MilvusCtrl } from './milvus';
 import {
@@ -15,7 +15,7 @@ import {
   CacheKeyEnumTime
 } from '../redis/cache';
 import { throttle } from 'lodash';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 const getVectorObj = () => {
   if (PG_ADDRESS) return new PgVectorCtrl();

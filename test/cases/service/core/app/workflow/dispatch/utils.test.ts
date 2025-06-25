@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import { valueTypeFormat } from '@fastgpt/global/core/workflow/runtime/utils';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import { valueTypeFormat } from '@libchat/global/core/workflow/runtime/utils';
 
 describe('valueTypeFormat', () => {
   // value 为字符串

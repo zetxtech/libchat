@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { MongoOutLink } from './schema';
-import { FastGPTProUrl } from '../../common/system/constants';
-import { type ChatHistoryItemResType } from '@fastgpt/global/core/chat/type';
+import { LibChatProUrl } from '../../common/system/constants';
+import { type ChatHistoryItemResType } from '@libchat/global/core/chat/type';
 
 export const addOutLinkUsage = ({
   shareId,
@@ -32,7 +32,7 @@ export const pushResult2Remote = async ({
   appName: string;
   flowResponses?: ChatHistoryItemResType[];
 }) => {
-  if (!shareId || !outLinkUid || !FastGPTProUrl) return;
+  if (!shareId || !outLinkUid || !LibChatProUrl) return;
   try {
     const outLink = await MongoOutLink.findOne({
       shareId

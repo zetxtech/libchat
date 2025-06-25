@@ -1,7 +1,7 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
-import { authSystemAdmin } from '@fastgpt/service/support/permission/user/auth';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
+import { authSystemAdmin } from '@libchat/service/support/permission/user/auth';
 import axios from 'axios';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 const baseUrl = process.env.AIPROXY_API_ENDPOINT;
 const token = process.env.AIPROXY_API_TOKEN;

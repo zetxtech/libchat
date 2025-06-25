@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
+import { jsonRes } from '@libchat/service/common/response';
 import { request as httpsRequest } from 'https';
 import { request as httpRequest } from 'http';
-import { authSystemAdmin } from '@fastgpt/service/support/permission/user/auth';
+import { authSystemAdmin } from '@libchat/service/support/permission/user/auth';
 
 const baseUrl = process.env.AIPROXY_API_ENDPOINT;
 const token = process.env.AIPROXY_API_TOKEN;

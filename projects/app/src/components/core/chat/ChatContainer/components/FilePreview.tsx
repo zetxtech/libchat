@@ -2,12 +2,12 @@ import React from 'react';
 import { type FieldArrayWithId } from 'react-hook-form';
 import { type ChatBoxInputFormType } from '../ChatBox/type';
 import { Box, CircularProgress, Flex, HStack } from '@chakra-ui/react';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { ChatFileTypeEnum } from '@fastgpt/global/core/chat/constants';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
-import { getFileIcon } from '@fastgpt/global/common/file/icon';
+import MyBox from '@libchat/web/components/common/MyBox';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { ChatFileTypeEnum } from '@libchat/global/core/chat/constants';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
+import { getFileIcon } from '@libchat/global/common/file/icon';
 
 const RenderFilePreview = ({
   fileList,

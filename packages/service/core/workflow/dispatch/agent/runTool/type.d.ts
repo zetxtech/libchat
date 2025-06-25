@@ -1,22 +1,22 @@
 import type {
   ChatCompletionMessageParam,
   CompletionFinishReason
-} from '@fastgpt/global/core/ai/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/ai/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import type {
   ModuleDispatchProps,
   DispatchNodeResponseType
-} from '@fastgpt/global/core/workflow/runtime/type';
-import type { RuntimeNodeItemType } from '@fastgpt/global/core/workflow/runtime/type';
-import { ChatNodeUsageType } from '@fastgpt/global/support/wallet/bill/type';
+} from '@libchat/global/core/workflow/runtime/type';
+import type { RuntimeNodeItemType } from '@libchat/global/core/workflow/runtime/type';
+import { ChatNodeUsageType } from '@libchat/global/support/wallet/bill/type';
 import type { DispatchFlowResponse } from '../../type.d';
-import type { AIChatItemValueItemType } from '@fastgpt/global/core/chat/type';
-import { ChatItemValueItemType } from '@fastgpt/global/core/chat/type';
-import type { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import type { WorkflowInteractiveResponseType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
-import type { LLMModelItemType } from '@fastgpt/global/core/ai/model';
-import type { JSONSchemaInputType } from '@fastgpt/global/core/app/jsonschema';
+import type { AIChatItemValueItemType } from '@libchat/global/core/chat/type';
+import { ChatItemValueItemType } from '@libchat/global/core/chat/type';
+import type { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import type { WorkflowInteractiveResponseType } from '@libchat/global/core/workflow/template/system/interactive/type';
+import type { LLMModelItemType } from '@libchat/global/core/ai/model';
+import type { JSONSchemaInputType } from '@libchat/global/core/app/jsonschema';
 
 export type DispatchToolModuleProps = ModuleDispatchProps<{
   [NodeInputKeyEnum.history]?: ChatItemType[];

@@ -1,13 +1,13 @@
-import { type ChatHistoryItemResType, type ChatSchema } from '@fastgpt/global/core/chat/type';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { type AuthModeType } from '@fastgpt/service/support/permission/type';
+import { type ChatHistoryItemResType, type ChatSchema } from '@libchat/global/core/chat/type';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { type AuthModeType } from '@libchat/service/support/permission/type';
 import { authOutLink } from './outLink';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
 import { authTeamSpaceToken } from './team';
-import { AuthUserTypeEnum, ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { MongoChatItem } from '@fastgpt/service/core/chat/chatItemSchema';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
+import { AuthUserTypeEnum, ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { MongoChatItem } from '@libchat/service/core/chat/chatItemSchema';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
 import { getFlatAppResponses } from '@/global/core/chat/utils';
 
 /* 

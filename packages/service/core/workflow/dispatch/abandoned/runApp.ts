@@ -1,23 +1,23 @@
 /* Abandoned */
-import type { ChatItemType } from '@fastgpt/global/core/chat/type.d';
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
-import { type SelectAppItemType } from '@fastgpt/global/core/workflow/template/system/abandoned/runApp/type';
+import type { ChatItemType } from '@libchat/global/core/chat/type.d';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
+import { type SelectAppItemType } from '@libchat/global/core/workflow/template/system/abandoned/runApp/type';
 import { dispatchWorkFlow } from '../index';
-import { ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { ChatRoleEnum } from '@libchat/global/core/chat/constants';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
 import {
   getWorkflowEntryNodeIds,
   storeEdges2RuntimeEdges,
   storeNodes2RuntimeNodes,
   textAdaptGptResponse
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import type { NodeInputKeyEnum, NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+} from '@libchat/global/core/workflow/runtime/utils';
+import type { NodeInputKeyEnum, NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import { getHistories } from '../utils';
-import { chatValue2RuntimePrompt, runtimePrompt2ChatsValue } from '@fastgpt/global/core/chat/adapt';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
+import { chatValue2RuntimePrompt, runtimePrompt2ChatsValue } from '@libchat/global/core/chat/adapt';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
 import { authAppByTmbId } from '../../../../support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.userChatInput]: string;

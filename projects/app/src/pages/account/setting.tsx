@@ -1,14 +1,14 @@
 'use client';
 import { Box, Card, Flex } from '@chakra-ui/react';
 import React, { useCallback } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import { type UserType } from '@fastgpt/global/support/user/type';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { type UserType } from '@libchat/global/support/user/type';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useForm } from 'react-hook-form';
 import { type UserUpdateParams } from '@/types/user';
-import TimezoneSelect from '@fastgpt/web/components/common/MySelect/TimezoneSelect';
+import TimezoneSelect from '@libchat/web/components/common/MySelect/TimezoneSelect';
 import I18nLngSelector from '@/components/Select/I18nLngSelector';
 import AccountContainer from '@/pageComponents/account/AccountContainer';
 import { serviceSideProps } from '@/web/common/i18n/utils';

@@ -1,11 +1,11 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { queryChatInputGuideList } from '@/web/core/chat/inputGuide/api';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
-import HighlightText from '@fastgpt/web/components/common/String/HighlightText';
+import HighlightText from '@libchat/web/components/common/String/HighlightText';
 import { ChatBoxContext } from '../Provider';
 import { useContextSelector } from 'use-context-selector';
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
-import { useRequest } from '@fastgpt/web/hooks/useRequest';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import { useRequest } from '@libchat/web/hooks/useRequest';
+import MyModal from '@libchat/web/components/common/MyModal';
 import {
   Box,
   Button,
@@ -14,12 +14,12 @@ import {
   ModalFooter,
   useDisclosure
 } from '@chakra-ui/react';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import Avatar from '@libchat/web/components/common/Avatar';
 import { postCreateTeam, putUpdateTeam } from '@/web/support/user/team/api';
-import { type CreateTeamProps } from '@fastgpt/global/support/user/team/controller.d';
-import { DEFAULT_TEAM_AVATAR } from '@fastgpt/global/common/system/constants';
-import Icon from '@fastgpt/web/components/common/Icon';
+import { type CreateTeamProps } from '@libchat/global/support/user/team/controller.d';
+import { DEFAULT_TEAM_AVATAR } from '@libchat/global/common/system/constants';
+import Icon from '@libchat/web/components/common/Icon';
 import dynamic from 'next/dynamic';
 const UpdateContact = dynamic(() => import('@/components/support/user/inform/UpdateContactModal'));
 

@@ -4,7 +4,7 @@ import { serviceSideProps } from '@/web/common/i18n/utils';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { Box } from '@chakra-ui/react';
 import { TrackEventName } from '@/web/common/system/constants';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 
 function Error() {
   const router = useRouter();

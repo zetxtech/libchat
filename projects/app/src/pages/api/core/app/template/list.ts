@@ -1,10 +1,10 @@
 import type { NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { NextAPI } from '@/service/middleware/entry';
-import { getAppTemplatesAndLoadThem } from '@fastgpt/templates/register';
-import { type AppTemplateSchemaType } from '@fastgpt/global/core/app/type';
-import type { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { getAppTemplatesAndLoadThem } from '@libchat/templates/register';
+import { type AppTemplateSchemaType } from '@libchat/global/core/app/type';
+import type { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 
 export type ListParams = {
   isQuickTemplate?: boolean;

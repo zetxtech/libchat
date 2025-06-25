@@ -1,8 +1,8 @@
-import type { Permission } from '@fastgpt/global/support/permission/controller';
+import type { Permission } from '@libchat/global/support/permission/controller';
 import type { ApiRequestProps } from '../../type/next';
-import type { PermissionValueType } from '@fastgpt/global/support/permission/type';
-import type { RequireAtLeastOne } from '@fastgpt/global/common/type/utils';
-import type { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
+import type { PermissionValueType } from '@libchat/global/support/permission/type';
+import type { RequireAtLeastOne } from '@libchat/global/common/type/utils';
+import type { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
 
 export type ReqHeaderAuthType = {
   cookie?: string;

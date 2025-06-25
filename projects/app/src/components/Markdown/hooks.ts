@@ -1,5 +1,5 @@
-import { useScreen } from '@fastgpt/web/hooks/useScreen';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useScreen } from '@libchat/web/hooks/useScreen';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export const useMarkdownWidth = () => {

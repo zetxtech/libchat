@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import type { RenderInputProps } from '../type';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 
 const NumberInputRender = ({ item, nodeId }: RenderInputProps) => {
   const onChangeNode = useContextSelector(WorkflowContext, (v) => v.onChangeNode);

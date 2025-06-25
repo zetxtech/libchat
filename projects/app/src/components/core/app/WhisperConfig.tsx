@@ -1,13 +1,13 @@
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { Box, Button, Flex, ModalBody, useDisclosure, Switch } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import type { AppWhisperConfigType } from '@fastgpt/global/core/app/type.d';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { defaultWhisperConfig } from '@fastgpt/global/core/app/constants';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import type { AppWhisperConfigType } from '@libchat/global/core/app/type.d';
+import MyModal from '@libchat/web/components/common/MyModal';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { defaultWhisperConfig } from '@libchat/global/core/app/constants';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 const WhisperConfig = ({
   isOpenAudio,

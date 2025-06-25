@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { pushGenerateVectorUsage } from '@/service/support/wallet/usage/push';
-import { getVectorsByText } from '@fastgpt/service/core/ai/embedding';
-import { updateApiKeyUsage } from '@fastgpt/service/support/openapi/tools';
-import { getUsageSourceByAuthType } from '@fastgpt/global/support/wallet/usage/tools';
-import { getEmbeddingModel } from '@fastgpt/service/core/ai/model';
-import { checkTeamAIPoints } from '@fastgpt/service/support/permission/teamLimit';
-import type { EmbeddingTypeEnm } from '@fastgpt/global/core/ai/constants';
+import { getVectorsByText } from '@libchat/service/core/ai/embedding';
+import { updateApiKeyUsage } from '@libchat/service/support/openapi/tools';
+import { getUsageSourceByAuthType } from '@libchat/global/support/wallet/usage/tools';
+import { getEmbeddingModel } from '@libchat/service/core/ai/model';
+import { checkTeamAIPoints } from '@libchat/service/support/permission/teamLimit';
+import type { EmbeddingTypeEnm } from '@libchat/global/core/ai/constants';
 import { NextAPI } from '@/service/middleware/entry';
 
 type Props = {

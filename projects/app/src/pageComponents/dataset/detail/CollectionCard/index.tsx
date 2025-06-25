@@ -18,36 +18,36 @@ import {
   postLinkCollectionSync
 } from '@/web/core/dataset/api';
 import { useQuery } from '@tanstack/react-query';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useRouter } from 'next/router';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
+import MyMenu from '@libchat/web/components/common/MyMenu';
 import { useEditTitle } from '@/web/common/hooks/useEditTitle';
 import {
   DatasetCollectionTypeEnum,
   DatasetStatusEnum,
   DatasetCollectionSyncResultMap,
   DatasetCollectionDataProcessModeMap
-} from '@fastgpt/global/core/dataset/constants';
-import { getCollectionIcon } from '@fastgpt/global/core/dataset/utils';
+} from '@libchat/global/core/dataset/constants';
+import { getCollectionIcon } from '@libchat/global/core/dataset/utils';
 import { TabEnum } from '../../../../pages/dataset/detail/index';
 import dynamic from 'next/dynamic';
 import SelectCollections from '@/web/core/dataset/components/SelectCollections';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import type { DatasetCollectionSyncResultEnum } from '@fastgpt/global/core/dataset/constants';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import { useToast } from '@libchat/web/hooks/useToast';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import type { DatasetCollectionSyncResultEnum } from '@libchat/global/core/dataset/constants';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useContextSelector } from 'use-context-selector';
 import { CollectionPageContext } from './Context';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import { formatTime2YMDHM } from '@fastgpt/global/common/string/time';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import { formatTime2YMDHM } from '@libchat/global/common/string/time';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import {
   checkCollectionIsFolder,
   collectionCanSync
-} from '@fastgpt/global/core/dataset/collection/utils';
+} from '@libchat/global/core/dataset/collection/utils';
 import { useFolderDrag } from '@/components/common/folder/useFolderDrag';
 import TagsPopOver from './TagsPopOver';
 import { useSystemStore } from '@/web/common/system/useSystemStore';

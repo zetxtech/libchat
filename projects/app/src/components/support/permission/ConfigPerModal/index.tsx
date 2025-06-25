@@ -1,12 +1,12 @@
 import React from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import CollaboratorContextProvider, {
   type MemberManagerInputPropsType
 } from '../MemberManager/context';
 import { Box, Button, Flex, HStack, ModalBody, useDisclosure } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
 import ResumeInherit from '../ResumeInheritText';
 import { ChangeOwnerModal } from '../ChangeOwnerModal';
 

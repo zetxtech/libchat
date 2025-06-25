@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
+import { jsonRes } from '@libchat/service/common/response';
 
-import { readMongoImg } from '@fastgpt/service/common/file/image/controller';
+import { readMongoImg } from '@libchat/service/common/file/image/controller';
 
 // get the models available to the system
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

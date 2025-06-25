@@ -1,6 +1,6 @@
 import { type Processor } from 'bullmq';
 import { getQueue, getWorker, QueueNames } from '../../../common/bullmq';
-import { DatasetStatusEnum } from '@fastgpt/global/core/dataset/constants';
+import { DatasetStatusEnum } from '@libchat/global/core/dataset/constants';
 
 export type WebsiteSyncJobData = {
   datasetId: string;

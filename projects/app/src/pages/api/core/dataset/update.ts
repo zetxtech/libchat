@@ -1,47 +1,47 @@
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import type { DatasetUpdateBody } from '@fastgpt/global/core/dataset/api.d';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import type { DatasetUpdateBody } from '@libchat/global/core/dataset/api.d';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
 import { NextAPI } from '@/service/middleware/entry';
 import {
   ManagePermissionVal,
   PerResourceTypeEnum,
   ReadPermissionVal
-} from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+} from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import {
   DatasetCollectionTypeEnum,
   DatasetTypeEnum,
   TrainingModeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import { type ClientSession } from 'mongoose';
-import { parseParentIdInMongo } from '@fastgpt/global/common/parentFolder/utils';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { getResourceClbsAndGroups } from '@fastgpt/service/support/permission/controller';
+import { parseParentIdInMongo } from '@libchat/global/common/parentFolder/utils';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { getResourceClbsAndGroups } from '@libchat/service/support/permission/controller';
 import {
   syncChildrenPermission,
   syncCollaborators
-} from '@fastgpt/service/support/permission/inheritPermission';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { TeamDatasetCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
+} from '@libchat/service/support/permission/inheritPermission';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { TeamDatasetCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
 import { addDays } from 'date-fns';
-import { refreshSourceAvatar } from '@fastgpt/service/common/file/image/controller';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
-import { type DatasetSchemaType } from '@fastgpt/global/core/dataset/type';
+import { refreshSourceAvatar } from '@libchat/service/common/file/image/controller';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
+import { type DatasetSchemaType } from '@libchat/global/core/dataset/type';
 import {
   removeWebsiteSyncJobScheduler,
   upsertWebsiteSyncJobScheduler
-} from '@fastgpt/service/core/dataset/websiteSync';
-import { delDatasetRelevantData } from '@fastgpt/service/core/dataset/controller';
+} from '@libchat/service/core/dataset/websiteSync';
+import { delDatasetRelevantData } from '@libchat/service/core/dataset/controller';
 import { isEqual } from 'lodash';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
-import { getEmbeddingModel, getLLMModel } from '@fastgpt/service/core/ai/model';
-import { computedCollectionChunkSettings } from '@fastgpt/global/core/dataset/training/utils';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
+import { getEmbeddingModel, getLLMModel } from '@libchat/service/core/ai/model';
+import { computedCollectionChunkSettings } from '@libchat/global/core/dataset/training/utils';
 
 export type DatasetUpdateQuery = {};
 export type DatasetUpdateResponse = any;

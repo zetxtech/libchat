@@ -1,8 +1,8 @@
-import { type LLMModelItemType } from '@fastgpt/global/core/ai/model.d';
+import { type LLMModelItemType } from '@libchat/global/core/ai/model.d';
 import { queryExtension } from '../../ai/functions/queryExtension';
-import { type ChatItemType } from '@fastgpt/global/core/chat/type';
-import { hashStr } from '@fastgpt/global/common/string/tools';
-import { chatValue2RuntimePrompt } from '@fastgpt/global/core/chat/adapt';
+import { type ChatItemType } from '@libchat/global/core/chat/type';
+import { hashStr } from '@libchat/global/common/string/tools';
+import { chatValue2RuntimePrompt } from '@libchat/global/core/chat/adapt';
 
 export const datasetSearchQueryExtension = async ({
   query,

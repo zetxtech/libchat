@@ -1,8 +1,8 @@
 import { getOrgList, putMoveOrg } from '@/web/support/user/team/org/api';
 import { Button, ModalBody, ModalFooter } from '@chakra-ui/react';
-import type { OrgListItemType, OrgType } from '@fastgpt/global/support/user/team/org/type';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import type { OrgListItemType, OrgType } from '@libchat/global/support/user/team/org/type';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { useMemo, useState } from 'react';
 import OrgTree from './OrgTree';

@@ -1,25 +1,25 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type AppDetailType, type McpToolConfigType } from '@fastgpt/global/core/app/type';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
+import { type AppDetailType, type McpToolConfigType } from '@libchat/global/core/app/type';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
 import { isEqual } from 'lodash';
 import { type ClientSession } from 'mongoose';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
+import { MongoApp } from '@libchat/service/core/app/schema';
 import { onDelOneApp } from '../del';
 import { onCreateApp } from '../create';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 
 import {
   getMCPToolRuntimeNode,
   getMCPToolSetRuntimeNode
-} from '@fastgpt/global/core/app/mcpTools/utils';
+} from '@libchat/global/core/app/mcpTools/utils';
 import { type MCPToolSetData } from '@/pageComponents/dashboard/apps/MCPToolsEditModal';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
-import { type StoreSecretValueType } from '@fastgpt/global/common/secret/type';
-import { storeSecretValue } from '@fastgpt/service/common/secret/utils';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
+import { type StoreSecretValueType } from '@libchat/global/common/secret/type';
+import { storeSecretValue } from '@libchat/service/common/secret/utils';
 
 export type updateMCPToolsQuery = {};
 

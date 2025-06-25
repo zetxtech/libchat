@@ -1,8 +1,8 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
 
 export type listExistIdQuery = {
   datasetId: string;

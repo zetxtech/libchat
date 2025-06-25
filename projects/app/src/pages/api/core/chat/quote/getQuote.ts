@@ -1,12 +1,12 @@
 import { NextAPI } from '@/service/middleware/entry';
 import { authChatCrud, authCollectionInChat } from '@/service/support/permission/auth/chat';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import { quoteDataFieldSelector } from '@/service/core/chat/constants';
 import { processChatTimeFilter } from '@/service/core/chat/utils';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { getFormatDatasetCiteList } from '@fastgpt/service/core/dataset/data/controller';
-import type { DatasetCiteItemType } from '@fastgpt/global/core/dataset/type';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { getFormatDatasetCiteList } from '@libchat/service/core/dataset/data/controller';
+import type { DatasetCiteItemType } from '@libchat/global/core/dataset/type';
 
 export type GetQuoteProps = {
   datasetDataIdList: string[];

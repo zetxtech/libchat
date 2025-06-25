@@ -1,8 +1,8 @@
 /* pg vector crud */
 import { DatasetVectorTableName } from '../constants';
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 import { PgClient, connectPg } from './controller';
-import { type PgSearchRawType } from '@fastgpt/global/core/dataset/api';
+import { type PgSearchRawType } from '@libchat/global/core/dataset/api';
 import type {
   DelDatasetVectorCtrlProps,
   EmbeddingRecallCtrlProps,

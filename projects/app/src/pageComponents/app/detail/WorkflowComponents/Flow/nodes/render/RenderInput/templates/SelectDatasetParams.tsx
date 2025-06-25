@@ -2,17 +2,17 @@ import React, { useEffect, useMemo, useState } from 'react';
 import type { RenderInputProps } from '../type';
 import { Flex, useDisclosure } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { DatasetSearchModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { DatasetSearchModeEnum } from '@libchat/global/core/dataset/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
 import DatasetParamsModal from '@/components/core/app/DatasetParamsModal';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import SearchParamsTip from '@/components/core/dataset/SearchParamsTip';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
 import { getWebLLMModel } from '@/web/common/system/utils';
-import { type AppDatasetSearchParamsType } from '@fastgpt/global/core/app/type';
+import { type AppDatasetSearchParamsType } from '@libchat/global/core/app/type';
 
 const SelectDatasetParam = ({ inputs = [], nodeId }: RenderInputProps) => {
   const onChangeNode = useContextSelector(WorkflowContext, (v) => v.onChangeNode);

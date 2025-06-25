@@ -1,5 +1,5 @@
 import { Box, HStack } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import Avatar from '@libchat/web/components/common/Avatar';
 import React from 'react';
 
 type Props = {

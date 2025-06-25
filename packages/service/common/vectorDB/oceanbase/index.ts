@@ -1,6 +1,6 @@
 /* oceanbase vector crud */
 import { DatasetVectorTableName } from '../constants';
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 import { ObClient } from './controller';
 import { type RowDataPacket } from 'mysql2/promise';
 import {

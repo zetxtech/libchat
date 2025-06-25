@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { getParents } from '@/pages/api/core/dataset/paths';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
 
-vi.mock('@fastgpt/service/core/dataset/schema', () => ({
+vi.mock('@libchat/service/core/dataset/schema', () => ({
   MongoDataset: {
     findById: vi.fn()
   },

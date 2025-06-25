@@ -1,5 +1,5 @@
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
 import { getRootUser } from '@test/datas/users';
 import { Call } from '@test/utils/request';
 import { describe, expect, it } from 'vitest';

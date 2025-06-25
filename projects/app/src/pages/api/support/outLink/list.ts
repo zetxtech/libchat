@@ -1,10 +1,10 @@
-import { MongoOutLink } from '@fastgpt/service/support/outLink/schema';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import { MongoOutLink } from '@libchat/service/support/outLink/schema';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type OutLinkSchema } from '@fastgpt/global/support/outLink/type';
-import type { PublishChannelEnum } from '@fastgpt/global/support/outLink/constant';
+import { type OutLinkSchema } from '@libchat/global/support/outLink/type';
+import type { PublishChannelEnum } from '@libchat/global/support/outLink/constant';
 
 export const ApiMetadata = {
   name: '获取应用内所有 Outlink',

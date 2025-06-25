@@ -1,12 +1,12 @@
 import type { NextApiResponse } from 'next';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { MongoChatItem } from '@fastgpt/service/core/chat/chatItemSchema';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { MongoChatItem } from '@libchat/service/core/chat/chatItemSchema';
 import { type ClearHistoriesProps } from '@/global/core/chat/api';
-import { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
+import { ChatSourceEnum } from '@libchat/global/core/chat/constants';
 import { NextAPI } from '@/service/middleware/entry';
-import { deleteChatFiles } from '@fastgpt/service/core/chat/controller';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { deleteChatFiles } from '@libchat/service/core/chat/controller';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import { authChatCrud } from '@/service/support/permission/auth/chat';
 
 /* clear chat history */

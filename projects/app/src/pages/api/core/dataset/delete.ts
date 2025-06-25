@@ -1,19 +1,19 @@
 import type { NextApiRequest } from 'next';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { delDatasetRelevantData } from '@fastgpt/service/core/dataset/controller';
-import { findDatasetAndAllChildren } from '@fastgpt/service/core/dataset/controller';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { delDatasetRelevantData } from '@libchat/service/core/dataset/controller';
+import { findDatasetAndAllChildren } from '@libchat/service/core/dataset/controller';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
 import { NextAPI } from '@/service/middleware/entry';
-import { OwnerPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { MongoDatasetCollectionTags } from '@fastgpt/service/core/dataset/tag/schema';
-import { removeImageByPath } from '@fastgpt/service/common/file/image/controller';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { removeWebsiteSyncJobScheduler } from '@fastgpt/service/core/dataset/websiteSync';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+import { OwnerPermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { MongoDatasetCollectionTags } from '@libchat/service/core/dataset/tag/schema';
+import { removeImageByPath } from '@libchat/service/common/file/image/controller';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { removeWebsiteSyncJobScheduler } from '@libchat/service/core/dataset/websiteSync';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 
 async function handler(req: NextApiRequest) {
   const { id: datasetId } = req.query as {

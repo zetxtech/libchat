@@ -1,11 +1,11 @@
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { type AppDetailType } from '@fastgpt/global/core/app/type.d';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { type AppDetailType } from '@libchat/global/core/app/type.d';
 import type {
   DingtalkAppType,
   FeishuAppType,
   OutLinkEditType
-} from '@fastgpt/global/support/outLink/type.d';
-import { AppPermission } from '@fastgpt/global/support/permission/app/controller';
+} from '@libchat/global/support/outLink/type.d';
+import { AppPermission } from '@libchat/global/support/permission/app/controller';
 export const defaultApp: AppDetailType = {
   _id: '',
   name: 'AI',

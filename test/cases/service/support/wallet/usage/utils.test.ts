@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { authType2UsageSource } from '@/service/support/wallet/usage/utils';
-import { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
+import { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
 
 describe('authType2UsageSource', () => {
   it('should return source if provided', () => {
@@ -28,16 +28,16 @@ describe('authType2UsageSource', () => {
     expect(result).toBe(UsageSourceEnum.api);
   });
 
-  it('should return fastgpt as default', () => {
+  it('should return libchat as default', () => {
     const result = authType2UsageSource({});
-    expect(result).toBe(UsageSourceEnum.fastgpt);
+    expect(result).toBe(UsageSourceEnum.libchat);
   });
 
-  it('should return fastgpt for non-apikey authType', () => {
+  it('should return libchat for non-apikey authType', () => {
     const result = authType2UsageSource({
       authType: AuthUserTypeEnum.owner
     });
-    expect(result).toBe(UsageSourceEnum.fastgpt);
+    expect(result).toBe(UsageSourceEnum.libchat);
   });
 
   it('should prioritize source over shareId and authType', () => {

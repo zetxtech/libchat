@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { getGuideModule, getAppChatConfig } from '@fastgpt/global/core/workflow/utils';
+import { jsonRes } from '@libchat/service/common/response';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { getGuideModule, getAppChatConfig } from '@libchat/global/core/workflow/utils';
 import { getChatModelNameListByModules } from '@/service/core/app/workflow';
 import type { InitChatProps, InitChatResponse } from '@/global/core/chat/api.d';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 
 async function handler(
   req: NextApiRequest,

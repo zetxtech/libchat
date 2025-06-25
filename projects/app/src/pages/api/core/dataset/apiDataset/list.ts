@@ -1,9 +1,9 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { getApiDatasetRequest } from '@fastgpt/service/core/dataset/apiDataset';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { getApiDatasetRequest } from '@libchat/service/core/dataset/apiDataset';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
 import { type NextApiRequest } from 'next';
 
 export type GetApiDatasetFileListProps = {

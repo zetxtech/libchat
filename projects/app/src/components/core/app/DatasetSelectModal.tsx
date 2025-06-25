@@ -10,16 +10,16 @@ import {
   Grid,
   Divider
 } from '@chakra-ui/react';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import type { SelectedDatasetType } from '@fastgpt/global/core/workflow/api.d';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
+import Avatar from '@libchat/web/components/common/Avatar';
+import type { SelectedDatasetType } from '@libchat/global/core/workflow/api.d';
+import { useToast } from '@libchat/web/hooks/useToast';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
 import { useTranslation } from 'next-i18next';
 import DatasetSelectContainer, { useDatasetSelect } from '@/components/core/dataset/SelectModal';
-import { useLoading } from '@fastgpt/web/hooks/useLoading';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import { useLoading } from '@libchat/web/hooks/useLoading';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 
 export const DatasetSelectModal = ({
   isOpen,

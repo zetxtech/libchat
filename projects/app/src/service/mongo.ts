@@ -1,8 +1,8 @@
-import { MongoUser } from '@fastgpt/service/support/user/schema';
-import { hashStr } from '@fastgpt/global/common/string/tools';
-import { createDefaultTeam } from '@fastgpt/service/support/user/team/controller';
+import { MongoUser } from '@libchat/service/support/user/schema';
+import { hashStr } from '@libchat/global/common/string/tools';
+import { createDefaultTeam } from '@libchat/service/support/user/team/controller';
 import { exit } from 'process';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
 
 export async function initRootUser(retry = 3): Promise<any> {
   try {

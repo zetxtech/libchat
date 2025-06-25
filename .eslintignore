@@ -22,4 +22,3 @@ vitest.config.mts
 bin/
 scripts/
 deploy/
-docSite/

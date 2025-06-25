@@ -4,23 +4,23 @@ import {
   getAppVersionList,
   updateAppVersion
 } from '@/web/core/app/api/version';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
-import CustomRightDrawer from '@fastgpt/web/components/common/MyDrawer/CustomRightDrawer';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
+import CustomRightDrawer from '@libchat/web/components/common/MyDrawer/CustomRightDrawer';
 import { useTranslation } from 'next-i18next';
 import { Box, type BoxProps, Button, Flex, Input } from '@chakra-ui/react';
 import { useContextSelector } from 'use-context-selector';
 import { AppContext } from './context';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import type { WorkflowSnapshotsType } from './WorkflowComponents/context';
-import { formatTime2YMDHMS } from '@fastgpt/global/common/string/time';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import Tag from '@fastgpt/web/components/common/Tag';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import type { AppVersionSchemaType, VersionListItemType } from '@fastgpt/global/core/app/version';
+import { formatTime2YMDHMS } from '@libchat/global/common/string/time';
+import Avatar from '@libchat/web/components/common/Avatar';
+import Tag from '@libchat/web/components/common/Tag';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyPopover from '@libchat/web/components/common/MyPopover';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useToast } from '@libchat/web/hooks/useToast';
+import type { AppVersionSchemaType, VersionListItemType } from '@libchat/global/core/app/version';
 import type { SimpleAppSnapshotType } from './SimpleApp/useSnapshots';
 
 const PublishHistoriesSlider = <T extends SimpleAppSnapshotType | WorkflowSnapshotsType>({

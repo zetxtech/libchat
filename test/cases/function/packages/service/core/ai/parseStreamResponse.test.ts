@@ -1,5 +1,5 @@
-import type { CompletionFinishReason } from '@fastgpt/global/core/ai/type';
-import { parseLLMStreamResponse } from '@fastgpt/service/core/ai/utils';
+import type { CompletionFinishReason } from '@libchat/global/core/ai/type';
+import { parseLLMStreamResponse } from '@libchat/service/core/ai/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('Parse reasoning stream content test', async () => {
@@ -279,26 +279,26 @@ describe('Parse dataset cite content test', async () => {
     },
     {
       // 其他链接
-      data: [{ content: '知识库' }, { content: '问答系统' }, { content: '[](https://fastgpt.cn)' }],
+      data: [{ content: '知识库' }, { content: '问答系统' }, { content: '[](https://libchat.cn)' }],
       correct: {
-        content: '知识库问答系统[](https://fastgpt.cn)',
-        responseContent: '知识库问答系统[](https://fastgpt.cn)'
+        content: '知识库问答系统[](https://libchat.cn)',
+        responseContent: '知识库问答系统[](https://libchat.cn)'
       }
     },
     {
       // 不完整的其他链接
-      data: [{ content: '知识库' }, { content: '问答系统' }, { content: '[](https://fastgp' }],
+      data: [{ content: '知识库' }, { content: '问答系统' }, { content: '[](https://libch' }],
       correct: {
-        content: '知识库问答系统[](https://fastgp',
-        responseContent: '知识库问答系统[](https://fastgp'
+        content: '知识库问答系统[](https://libch',
+        responseContent: '知识库问答系统[](https://libch'
       }
     },
     {
       // 开头
-      data: [{ content: '[知识库' }, { content: '问答系统' }, { content: '[](https://fastgp' }],
+      data: [{ content: '[知识库' }, { content: '问答系统' }, { content: '[](https://libch' }],
       correct: {
-        content: '[知识库问答系统[](https://fastgp',
-        responseContent: '[知识库问答系统[](https://fastgp'
+        content: '[知识库问答系统[](https://libch',
+        responseContent: '[知识库问答系统[](https://libch'
       }
     },
     {
@@ -327,14 +327,14 @@ describe('Parse dataset cite content test', async () => {
       data: [
         { content: '知识库' },
         { content: '问答系统' },
-        { content: '[](https://fastgpt.cn)' },
+        { content: '[](https://libchat.cn)' },
         { content: '[67e517e747' },
         { content: '67063e882d' },
         { content: '6861](CITE)' }
       ],
       correct: {
-        content: '知识库问答系统[](https://fastgpt.cn)[67e517e74767063e882d6861](CITE)',
-        responseContent: '知识库问答系统[](https://fastgpt.cn)'
+        content: '知识库问答系统[](https://libchat.cn)[67e517e74767063e882d6861](CITE)',
+        responseContent: '知识库问答系统[](https://libchat.cn)'
       }
     },
     {
@@ -342,14 +342,14 @@ describe('Parse dataset cite content test', async () => {
       data: [
         { content: '知识库' },
         { content: '问答系统' },
-        { content: '[](https://fastgpt.cn)' },
+        { content: '[](https://libchat.cn)' },
         { content: '[67e517e747' },
         { content: '67063e882d' },
         { content: '6861](CIT' }
       ],
       correct: {
-        content: '知识库问答系统[](https://fastgpt.cn)[67e517e74767063e882d6861](CIT',
-        responseContent: '知识库问答系统[](https://fastgpt.cn)'
+        content: '知识库问答系统[](https://libchat.cn)[67e517e74767063e882d6861](CIT',
+        responseContent: '知识库问答系统[](https://libchat.cn)'
       }
     },
     {

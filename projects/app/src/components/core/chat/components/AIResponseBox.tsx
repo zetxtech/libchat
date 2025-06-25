@@ -10,25 +10,25 @@ import {
   Flex,
   HStack
 } from '@chakra-ui/react';
-import { ChatItemValueTypeEnum } from '@fastgpt/global/core/chat/constants';
+import { ChatItemValueTypeEnum } from '@libchat/global/core/chat/constants';
 import type {
   AIChatItemValueItemType,
   ToolModuleResponseItemType,
   UserChatItemValueItemType
-} from '@fastgpt/global/core/chat/type';
+} from '@libchat/global/core/chat/type';
 import React, { useCallback, useMemo } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
 import type {
   InteractiveBasicType,
   UserInputInteractive,
   UserSelectInteractive
-} from '@fastgpt/global/core/workflow/template/system/interactive/type';
+} from '@libchat/global/core/workflow/template/system/interactive/type';
 import { isEqual } from 'lodash';
 import { useTranslation } from 'next-i18next';
 import { eventBus, EventNameEnum } from '@/web/common/utils/eventbus';
 import { SelectOptionsComponent, FormInputComponent } from './Interactive/InteractiveComponents';
-import { extractDeepestInteractive } from '@fastgpt/global/core/workflow/runtime/utils';
+import { extractDeepestInteractive } from '@libchat/global/core/workflow/runtime/utils';
 import { useContextSelector } from 'use-context-selector';
 import { type OnOpenCiteModalProps } from '@/web/core/chat/context/chatItemContext';
 import { ChatBoxContext } from '../ChatContainer/ChatBox/Provider';

@@ -1,23 +1,23 @@
 import type { NextApiResponse } from 'next';
-import { responseWriteController } from '@fastgpt/service/common/response';
+import { responseWriteController } from '@libchat/service/common/response';
 import { addDays } from 'date-fns';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { readFromSecondary } from '@fastgpt/service/common/mongo/utils';
-import { addLog } from '@fastgpt/service/common/system/log';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { readFromSecondary } from '@libchat/service/common/mongo/utils';
+import { addLog } from '@libchat/service/common/system/log';
 import dayjs from 'dayjs';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { replaceRegChars } from '@fastgpt/global/common/string/tools';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { replaceRegChars } from '@libchat/global/common/string/tools';
 import { NextAPI } from '@/service/middleware/entry';
-import { useIPFrequencyLimit } from '@fastgpt/service/common/middle/reqFrequencyLimit';
+import { useIPFrequencyLimit } from '@libchat/service/common/middle/reqFrequencyLimit';
 import { type GetAppChatLogsProps } from '@/global/core/api/appReq';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
+import { authApp } from '@libchat/service/support/permission/app/auth';
 import { Types } from 'mongoose';
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { ChatItemCollectionName } from '@fastgpt/service/core/chat/chatItemSchema';
-import { MongoTeamMember } from '@fastgpt/service/support/user/team/teamMemberSchema';
-import type { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
-import { ChatItemValueTypeEnum } from '@fastgpt/global/core/chat/constants';
-import { type AIChatItemValueItemType } from '@fastgpt/global/core/chat/type';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { ChatItemCollectionName } from '@libchat/service/core/chat/chatItemSchema';
+import { MongoTeamMember } from '@libchat/service/support/user/team/teamMemberSchema';
+import type { ChatSourceEnum } from '@libchat/global/core/chat/constants';
+import { ChatItemValueTypeEnum } from '@libchat/global/core/chat/constants';
+import { type AIChatItemValueItemType } from '@libchat/global/core/chat/type';
 
 const formatJsonString = (data: any) => {
   return JSON.stringify(data).replace(/"/g, '""').replace(/\n/g, '\\n');

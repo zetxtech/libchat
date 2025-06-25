@@ -1,12 +1,12 @@
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 const { Schema } = connectionMongo;
-import { type DatasetCollectionSchemaType } from '@fastgpt/global/core/dataset/type.d';
-import { DatasetCollectionTypeMap } from '@fastgpt/global/core/dataset/constants';
+import { type DatasetCollectionSchemaType } from '@libchat/global/core/dataset/type.d';
+import { DatasetCollectionTypeMap } from '@libchat/global/core/dataset/constants';
 import { ChunkSettings, DatasetCollectionName } from '../schema';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 
 export const DatasetColCollectionName = 'dataset_collections';
 

@@ -1,7 +1,7 @@
-import { PluginTemplateType } from '@fastgpt/global/core/plugin/type.d';
-import { systemPluginResponseEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import type { SystemPluginTemplateItemType } from '@fastgpt/global/core/workflow/type';
-import type { PluginGroupSchemaType } from '@fastgpt/service/core/app/plugin/type';
+import { PluginTemplateType } from '@libchat/global/core/plugin/type.d';
+import { systemPluginResponseEnum } from '@libchat/global/core/workflow/runtime/constants';
+import type { SystemPluginTemplateItemType } from '@libchat/global/core/workflow/type';
+import type { PluginGroupSchemaType } from '@libchat/service/core/app/plugin/type';
 
 export type SystemPluginResponseType = Promise<Record<string, any>>;
 export type SystemPluginSpecialResponse = {

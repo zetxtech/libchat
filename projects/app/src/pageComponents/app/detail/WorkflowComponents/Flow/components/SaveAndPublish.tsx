@@ -1,7 +1,7 @@
 import { Box, Button, Input, ModalBody, ModalFooter } from '@chakra-ui/react';
-import { formatTime2YMDHMS } from '@fastgpt/global/common/string/time';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { formatTime2YMDHMS } from '@libchat/global/common/string/time';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
 

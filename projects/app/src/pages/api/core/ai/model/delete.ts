@@ -1,10 +1,10 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { MongoSystemModel } from '@fastgpt/service/core/ai/config/schema';
-import { authSystemAdmin } from '@fastgpt/service/support/permission/user/auth';
-import { findModelFromAlldata } from '@fastgpt/service/core/ai/model';
-import { updateFastGPTConfigBuffer } from '@fastgpt/service/common/system/config/controller';
-import { loadSystemModels, updatedReloadSystemModel } from '@fastgpt/service/core/ai/config/utils';
+import { MongoSystemModel } from '@libchat/service/core/ai/config/schema';
+import { authSystemAdmin } from '@libchat/service/support/permission/user/auth';
+import { findModelFromAlldata } from '@libchat/service/core/ai/model';
+import { updateLibChatConfigBuffer } from '@libchat/service/common/system/config/controller';
+import { loadSystemModels, updatedReloadSystemModel } from '@libchat/service/core/ai/config/utils';
 
 export type deleteQuery = {
   model: string;

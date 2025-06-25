@@ -1,9 +1,9 @@
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { Box, type BoxProps, Flex } from '@chakra-ui/react';
-import { DefaultGroupName } from '@fastgpt/global/support/user/team/group/constant';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import Tag, { type TagProps } from '@fastgpt/web/components/common/Tag';
+import { DefaultGroupName } from '@libchat/global/support/user/team/group/constant';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyBox from '@libchat/web/components/common/MyBox';
+import Tag, { type TagProps } from '@libchat/web/components/common/Tag';
 import { useTranslation } from 'next-i18next';
 import React from 'react';
 import { useContextSelector } from 'use-context-selector';

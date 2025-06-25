@@ -1,22 +1,22 @@
-import type { ModuleDispatchProps } from '@fastgpt/global/core/workflow/runtime/type';
+import type { ModuleDispatchProps } from '@libchat/global/core/workflow/runtime/type';
 import { dispatchWorkFlow } from '../index';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 import { getChildAppRuntimeById } from '../../../app/plugin/controller';
 import {
   getWorkflowEntryNodeIds,
   storeEdges2RuntimeEdges,
   storeNodes2RuntimeNodes
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import { type DispatchNodeResultType } from '@fastgpt/global/core/workflow/runtime/type';
+} from '@libchat/global/core/workflow/runtime/utils';
+import { type DispatchNodeResultType } from '@libchat/global/core/workflow/runtime/type';
 import { authPluginByTmbId } from '../../../../support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
 import { computedPluginUsage } from '../../../app/plugin/utils';
 import { filterSystemVariables } from '../utils';
-import { chatValue2RuntimePrompt } from '@fastgpt/global/core/chat/adapt';
-import { getPluginRunUserQuery } from '@fastgpt/global/core/workflow/utils';
-import { getPluginInputsFromStoreNodes } from '@fastgpt/global/core/app/plugin/utils';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import { chatValue2RuntimePrompt } from '@libchat/global/core/chat/adapt';
+import { getPluginRunUserQuery } from '@libchat/global/core/workflow/utils';
+import { getPluginInputsFromStoreNodes } from '@libchat/global/core/app/plugin/utils';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { getUserChatInfoAndAuthTeamPoints } from '../../../../support/permission/auth/team';
 
 type RunPluginProps = ModuleDispatchProps<{

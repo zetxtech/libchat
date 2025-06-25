@@ -5,12 +5,12 @@ import { DatasetImportContext, defaultFormData } from '../Context';
 import dynamic from 'next/dynamic';
 import DataProcess from '../commonProgress/DataProcess';
 import { useRouter } from 'next/router';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getDatasetCollectionById } from '@/web/core/dataset/api';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { getCollectionIcon } from '@fastgpt/global/core/dataset/utils';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { getCollectionIcon } from '@libchat/global/core/dataset/utils';
 import { Box } from '@chakra-ui/react';
-import { Prompt_AgentQA } from '@fastgpt/global/core/ai/prompt/agent';
+import { Prompt_AgentQA } from '@libchat/global/core/ai/prompt/agent';
 
 const Upload = dynamic(() => import('../commonProgress/Upload'));
 const PreviewData = dynamic(() => import('../commonProgress/PreviewData'));

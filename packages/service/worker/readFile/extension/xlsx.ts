@@ -1,4 +1,4 @@
-import { CUSTOM_SPLIT_SIGN } from '@fastgpt/global/common/string/textSplitter';
+import { CUSTOM_SPLIT_SIGN } from '@libchat/global/common/string/textSplitter';
 import { type ReadRawTextByBuffer, type ReadFileResponse } from '../type';
 import xlsx from 'node-xlsx';
 import Papa from 'papaparse';

@@ -2,34 +2,34 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useContextSelector } from 'use-context-selector';
 import { AppContext } from '../context';
 import FolderPath from '@/components/common/folder/Path';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getAppFolderPath } from '@/web/core/app/api/app';
 import { Box, Flex, IconButton } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import RouteTab from '../RouteTab';
 import { useTranslation } from 'next-i18next';
-import { type AppSimpleEditFormType } from '@fastgpt/global/core/app/type';
+import { type AppSimpleEditFormType } from '@libchat/global/core/app/type';
 import { form2AppWorkflow } from '@/web/core/app/utils';
 import { TabEnum } from '../context';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import { publishStatusStyle } from '../constants';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import { formatTime2YMDHMS } from '@fastgpt/global/common/string/time';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import { formatTime2YMDHMS } from '@libchat/global/common/string/time';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import SaveButton from '../Workflow/components/SaveButton';
 import { useBoolean, useDebounceEffect, useLockFn } from 'ahooks';
-import { appWorkflow2Form } from '@fastgpt/global/core/app/utils';
+import { appWorkflow2Form } from '@libchat/global/core/app/utils';
 import {
   compareSimpleAppSnapshot,
   type onSaveSnapshotFnType,
   type SimpleAppSnapshotType
 } from './useSnapshots';
 import PublishHistories from '../PublishHistoriesSlider';
-import { type AppVersionSchemaType } from '@fastgpt/global/core/app/version';
-import { useBeforeunload } from '@fastgpt/web/hooks/useBeforeunload';
-import { isProduction } from '@fastgpt/global/common/system/constants';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { type AppVersionSchemaType } from '@libchat/global/core/app/version';
+import { useBeforeunload } from '@libchat/web/hooks/useBeforeunload';
+import { isProduction } from '@libchat/global/common/system/constants';
+import { useToast } from '@libchat/web/hooks/useToast';
 import {
   checkWorkflowNodeAndConnection,
   storeEdge2RenderEdge,

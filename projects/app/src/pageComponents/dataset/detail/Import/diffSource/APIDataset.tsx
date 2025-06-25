@@ -2,19 +2,19 @@ import { useContextSelector } from 'use-context-selector';
 import { DatasetImportContext } from '../Context';
 import React, { useCallback, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { Box, Button, Checkbox, Flex } from '@chakra-ui/react';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getApiDatasetFileList, getApiDatasetFileListExistId } from '@/web/core/dataset/api';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import { type ParentTreePathItemType } from '@fastgpt/global/common/parentFolder/type';
+import { type ParentTreePathItemType } from '@libchat/global/common/parentFolder/type';
 import FolderPath from '@/components/common/folder/Path';
-import { getSourceNameIcon } from '@fastgpt/global/core/dataset/utils';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { type APIFileItem } from '@fastgpt/global/core/dataset/apiDataset/type';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
+import { getSourceNameIcon } from '@libchat/global/core/dataset/utils';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { type APIFileItem } from '@libchat/global/core/dataset/apiDataset/type';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
 import { useMount } from 'ahooks';
 
 const DataProcess = dynamic(() => import('../commonProgress/DataProcess'), {

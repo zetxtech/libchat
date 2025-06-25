@@ -3,7 +3,7 @@ import type {
   OutlinkAppType,
   OutLinkEditType,
   OutLinkSchema
-} from '@fastgpt/global/support/outLink/type.d';
+} from '@libchat/global/support/outLink/type.d';
 
 // create a shareChat
 export function createShareChat<T>(

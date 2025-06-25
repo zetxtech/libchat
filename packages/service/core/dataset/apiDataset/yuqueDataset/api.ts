@@ -3,10 +3,10 @@ import type {
   ApiFileReadContentResponse,
   YuqueServer,
   ApiDatasetDetailResponse
-} from '@fastgpt/global/core/dataset/apiDataset/type';
+} from '@libchat/global/core/dataset/apiDataset/type';
 import axios, { type Method } from 'axios';
 import { addLog } from '../../../../common/system/log';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
 
 type ResponseDataType = {
   success: boolean;

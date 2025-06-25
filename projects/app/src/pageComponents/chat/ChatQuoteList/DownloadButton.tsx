@@ -1,6 +1,6 @@
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
+import MyMenu from '@libchat/web/components/common/MyMenu';
 import { useTranslation } from 'next-i18next';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 const DownloadButton = ({
   canAccessRawData,

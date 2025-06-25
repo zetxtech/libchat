@@ -2,15 +2,15 @@ import { MongoDatasetTraining } from './schema';
 import type {
   PushDatasetDataChunkProps,
   PushDatasetDataResponse
-} from '@fastgpt/global/core/dataset/api.d';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { simpleText } from '@fastgpt/global/common/string/tools';
+} from '@libchat/global/core/dataset/api.d';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
+import { simpleText } from '@libchat/global/common/string/tools';
 import { type ClientSession } from '../../../common/mongo';
 import { getLLMModel, getEmbeddingModel, getVlmModel } from '../../ai/model';
 import { addLog } from '../../../common/system/log';
 import { getCollectionWithDataset } from '../controller';
 import { mongoSessionRun } from '../../../common/mongo/sessionRun';
-import { type PushDataToTrainingQueueProps } from '@fastgpt/global/core/dataset/training/type';
+import { type PushDataToTrainingQueueProps } from '@libchat/global/core/dataset/training/type';
 import { i18nT } from '../../../../web/i18n/utils';
 import { getLLMMaxChunkSize } from '../../../../global/core/dataset/training/utils';
 

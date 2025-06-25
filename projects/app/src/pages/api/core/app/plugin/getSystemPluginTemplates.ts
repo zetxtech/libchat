@@ -1,13 +1,13 @@
 import type { NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { type NodeTemplateListItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { type NodeTemplateListItemType } from '@libchat/global/core/workflow/type/node.d';
 import { NextAPI } from '@/service/middleware/entry';
 import { getSystemPluginCb, getSystemPlugins } from '@/service/core/app/plugin';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { replaceRegChars } from '@fastgpt/global/common/string/tools';
-import { FlowNodeTemplateTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { replaceRegChars } from '@libchat/global/common/string/tools';
+import { FlowNodeTemplateTypeEnum } from '@libchat/global/core/workflow/constants';
 
 export type GetSystemPluginTemplatesBody = {
   searchKey?: string;

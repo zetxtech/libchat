@@ -1,13 +1,13 @@
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 const { Schema } = connectionMongo;
-import { type TeamMemberSchema as TeamMemberType } from '@fastgpt/global/support/user/team/type.d';
+import { type TeamMemberSchema as TeamMemberType } from '@libchat/global/support/user/team/type.d';
 import { userCollectionName } from '../../user/schema';
 import {
   TeamMemberStatusMap,
   TeamMemberCollectionName,
   TeamCollectionName
-} from '@fastgpt/global/support/user/team/constant';
-import { getRandomUserAvatar } from '@fastgpt/global/support/user/utils';
+} from '@libchat/global/support/user/team/constant';
+import { getRandomUserAvatar } from '@libchat/global/support/user/utils';
 
 const TeamMemberSchema = new Schema({
   teamId: {

@@ -1,12 +1,12 @@
-import { getApiDatasetRequest } from '@fastgpt/service/core/dataset/apiDataset';
+import { getApiDatasetRequest } from '@libchat/service/core/dataset/apiDataset';
 import { NextAPI } from '@/service/middleware/entry';
-import type { ParentIdType } from '@fastgpt/global/common/parentFolder/type';
+import type { ParentIdType } from '@libchat/global/common/parentFolder/type';
 import { type NextApiRequest } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import type {
   ApiDatasetServerType,
   APIFileItem
-} from '@fastgpt/global/core/dataset/apiDataset/type';
+} from '@libchat/global/core/dataset/apiDataset/type';
 
 export type GetApiDatasetCataLogProps = {
   parentId?: ParentIdType;

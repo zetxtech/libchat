@@ -17,23 +17,23 @@ import {
 } from '@chakra-ui/react';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
 import { useForm } from 'react-hook-form';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { useRequest } from '@fastgpt/web/hooks/useRequest';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { useRequest } from '@libchat/web/hooks/useRequest';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import { useTranslation } from 'next-i18next';
-import { HttpPluginImgUrl } from '@fastgpt/global/common/file/image/constants';
+import { HttpPluginImgUrl } from '@libchat/global/common/file/image/constants';
 import {
   postCreateHttpPlugin,
   putUpdateHttpPlugin,
   getApiSchemaByUrl
 } from '@/web/core/app/api/plugin';
-import { str2OpenApiSchema } from '@fastgpt/global/core/app/httpPlugin/utils';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import HttpInput from '@fastgpt/web/components/common/Input/HttpInput';
-import { type OpenApiJsonSchema } from '@fastgpt/global/core/app/httpPlugin/type';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
+import { str2OpenApiSchema } from '@libchat/global/core/app/httpPlugin/utils';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
+import HttpInput from '@libchat/web/components/common/Input/HttpInput';
+import { type OpenApiJsonSchema } from '@libchat/global/core/app/httpPlugin/type';
+import { type AppSchema } from '@libchat/global/core/app/type';
 import { useContextSelector } from 'use-context-selector';
 import { AppListContext } from './context';
 

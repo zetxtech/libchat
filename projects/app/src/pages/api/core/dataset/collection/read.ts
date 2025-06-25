@@ -1,15 +1,15 @@
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { createFileToken } from '@fastgpt/service/support/permission/controller';
-import { BucketNameEnum, ReadFileBaseUrl } from '@fastgpt/global/common/file/constants';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { createFileToken } from '@libchat/service/support/permission/controller';
+import { BucketNameEnum, ReadFileBaseUrl } from '@libchat/global/common/file/constants';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
 import { authChatCrud, authCollectionInChat } from '@/service/support/permission/auth/chat';
-import { getCollectionWithDataset } from '@fastgpt/service/core/dataset/controller';
-import { getApiDatasetRequest } from '@fastgpt/service/core/dataset/apiDataset';
+import { getCollectionWithDataset } from '@libchat/service/core/dataset/controller';
+import { getApiDatasetRequest } from '@libchat/service/core/dataset/apiDataset';
 
 export type readCollectionSourceQuery = {};
 

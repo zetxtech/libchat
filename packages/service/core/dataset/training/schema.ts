@@ -1,15 +1,15 @@
 /* 模型的知识库 */
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 const { Schema } = connectionMongo;
-import { type DatasetTrainingSchemaType } from '@fastgpt/global/core/dataset/type';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
+import { type DatasetTrainingSchemaType } from '@libchat/global/core/dataset/type';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
 import { DatasetColCollectionName } from '../collection/schema';
 import { DatasetCollectionName } from '../schema';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
-import { DatasetDataIndexTypeEnum } from '@fastgpt/global/core/dataset/data/constants';
+} from '@libchat/global/support/user/team/constant';
+import { DatasetDataIndexTypeEnum } from '@libchat/global/core/dataset/data/constants';
 import { DatasetDataCollectionName } from '../data/schema';
 
 export const DatasetTrainingCollectionName = 'dataset_trainings';

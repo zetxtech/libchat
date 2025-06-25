@@ -1,13 +1,13 @@
 import type { EditApiKeyProps } from '@/global/support/openapi/api';
 import * as createapi from '@/pages/api/support/openapi/create';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
 import {
   TeamApikeyCreatePermissionVal,
   TeamDatasetCreatePermissionVal
-} from '@fastgpt/global/support/permission/user/constant';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
+} from '@libchat/global/support/permission/user/constant';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
 import { getFakeUsers } from '@test/datas/users';
 import { Call } from '@test/utils/request';
 import { describe, it, expect } from 'vitest';

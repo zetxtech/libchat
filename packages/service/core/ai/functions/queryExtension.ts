@@ -1,8 +1,8 @@
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
+import { replaceVariable } from '@libchat/global/common/string/tools';
 import { createChatCompletion } from '../config';
-import { type ChatItemType } from '@fastgpt/global/core/chat/type';
+import { type ChatItemType } from '@libchat/global/core/chat/type';
 import { countGptMessagesTokens, countPromptTokens } from '../../../common/string/tiktoken/index';
-import { chats2GPTMessages } from '@fastgpt/global/core/chat/adapt';
+import { chats2GPTMessages } from '@libchat/global/core/chat/adapt';
 import { getLLMModel } from '../model';
 import { llmCompletionsBodyFormat, formatLLMResponse } from '../utils';
 import { addLog } from '../../../common/system/log';

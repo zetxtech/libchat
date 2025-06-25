@@ -1,18 +1,18 @@
 import React, { useCallback } from 'react';
 import { ModalBody, Box, Flex, Input, ModalFooter, Button, Link } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
-import { useRequest } from '@fastgpt/web/hooks/useRequest';
+import { useRequest } from '@libchat/web/hooks/useRequest';
 import { useQuery } from '@tanstack/react-query';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { putUpdateTeam } from '@/web/support/user/team/api';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import type { LafAccountType } from '@fastgpt/global/support/user/team/type.d';
+import type { LafAccountType } from '@libchat/global/support/user/team/type.d';
 import { postLafPat2Token, getLafApplications } from '@/web/support/laf/api';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { getDocPath } from '@/web/common/system/doc';
 
 const LafAccountModal = ({

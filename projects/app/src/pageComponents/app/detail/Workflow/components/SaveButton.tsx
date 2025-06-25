@@ -1,10 +1,10 @@
 import { Box, Button, HStack, useDisclosure } from '@chakra-ui/react';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
+import MyPopover from '@libchat/web/components/common/MyPopover';
 import React, { useState } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useToast } from '@libchat/web/hooks/useToast';
 import SaveAndPublishModal from '../../WorkflowComponents/Flow/components/SaveAndPublish';
 
 const SaveButton = ({

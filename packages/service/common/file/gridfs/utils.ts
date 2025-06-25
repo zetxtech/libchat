@@ -1,8 +1,8 @@
-import { detectFileEncoding } from '@fastgpt/global/common/file/tools';
+import { detectFileEncoding } from '@libchat/global/common/file/tools';
 import { PassThrough } from 'stream';
 import { getGridBucket } from './controller';
-import { type BucketNameEnum } from '@fastgpt/global/common/file/constants';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { type BucketNameEnum } from '@libchat/global/common/file/constants';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 export const createFileFromText = async ({
   bucket,

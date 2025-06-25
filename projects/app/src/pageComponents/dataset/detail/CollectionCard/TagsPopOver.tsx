@@ -1,7 +1,7 @@
 import { Box, Checkbox, Flex, Input } from '@chakra-ui/react';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyPopover from '@libchat/web/components/common/MyPopover';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { putDatasetCollectionById } from '@/web/core/dataset/api';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
@@ -11,7 +11,7 @@ import { useDeepCompareEffect } from 'ahooks';
 import {
   type DatasetCollectionItemType,
   type DatasetTagType
-} from '@fastgpt/global/core/dataset/type';
+} from '@libchat/global/core/dataset/type';
 import { isEqual } from 'lodash';
 import { type DatasetCollectionsListItemType } from '@/global/core/dataset/type';
 

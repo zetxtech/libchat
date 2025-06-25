@@ -1,8 +1,8 @@
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
-import { checkTeamAIPoints } from '@fastgpt/service/support/permission/teamLimit';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
+import { checkTeamAIPoints } from '@libchat/service/support/permission/teamLimit';
 import { sendOneInform } from '../../../support/user/inform/api';
-import { lockTrainingDataByTeamId } from '@fastgpt/service/core/dataset/training/controller';
-import { InformLevelEnum } from '@fastgpt/global/support/user/inform/constants';
+import { lockTrainingDataByTeamId } from '@libchat/service/core/dataset/training/controller';
+import { InformLevelEnum } from '@libchat/global/support/user/inform/constants';
 
 export const checkTeamAiPointsAndLock = async (teamId: string) => {
   try {

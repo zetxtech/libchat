@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
 import { Box, Button, Flex, Input, Textarea } from '@chakra-ui/react';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import Loading from '@fastgpt/web/components/common/MyLoading';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import Loading from '@libchat/web/components/common/MyLoading';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetImportContext } from '../Context';
 

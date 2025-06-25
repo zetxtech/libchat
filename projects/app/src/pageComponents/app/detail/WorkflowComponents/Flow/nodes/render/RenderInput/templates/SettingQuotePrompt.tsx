@@ -1,23 +1,23 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import type { RenderInputProps } from '../type';
 import { Box, type BoxProps, Button, Flex, ModalFooter, useDisclosure } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useForm } from 'react-hook-form';
-import { type PromptTemplateItem } from '@fastgpt/global/core/ai/type';
+import { type PromptTemplateItem } from '@libchat/global/core/ai/type';
 import { useTranslation } from 'next-i18next';
 import { ModalBody } from '@chakra-ui/react';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import {
   Prompt_userQuotePromptList,
   Prompt_QuoteTemplateList,
   Prompt_systemQuotePromptList,
   getQuoteTemplate,
   getQuotePrompt
-} from '@fastgpt/global/core/ai/prompt/AIChat';
-import PromptEditor from '@fastgpt/web/components/common/Textarea/PromptEditor';
+} from '@libchat/global/core/ai/prompt/AIChat';
+import PromptEditor from '@libchat/web/components/common/Textarea/PromptEditor';
 import PromptTemplate from '@/components/PromptTemplate';
-import { NodeInputKeyEnum, WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { NodeInputKeyEnum, WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
 import Reference from './Reference';
 import ValueTypeLabel from '../../ValueTypeLabel';
 import { useContextSelector } from 'use-context-selector';
@@ -25,17 +25,17 @@ import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/
 import { getWorkflowGlobalVariables } from '@/web/core/workflow/utils';
 import { useCreation } from 'ahooks';
 import { AppContext } from '@/pageComponents/app/detail/context';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import { datasetQuoteValueDesc } from '@fastgpt/global/core/workflow/node/constant';
-import type { AiChatQuoteRoleType } from '@fastgpt/global/core/workflow/template/system/aiChat/type';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import { datasetQuoteValueDesc } from '@libchat/global/core/workflow/node/constant';
+import type { AiChatQuoteRoleType } from '@libchat/global/core/workflow/template/system/aiChat/type';
 import {
   AiChatQuotePrompt,
   AiChatQuoteRole,
   AiChatQuoteTemplate
-} from '@fastgpt/global/core/workflow/template/system/aiChat';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import LightTip from '@fastgpt/web/components/common/LightTip';
+} from '@libchat/global/core/workflow/template/system/aiChat';
+import MySelect from '@libchat/web/components/common/MySelect';
+import LightTip from '@libchat/web/components/common/LightTip';
 
 const LabelStyles: BoxProps = {
   fontSize: ['sm', 'md']

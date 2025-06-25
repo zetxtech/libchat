@@ -1,16 +1,16 @@
 export enum SystemConfigsTypeEnum {
-  fastgpt = 'fastgpt',
-  fastgptPro = 'fastgptPro',
+  libchat = 'libchat',
+  libchatPro = 'libchatPro',
   systemMsgModal = 'systemMsgModal',
   license = 'license'
 }
 
 export const SystemConfigsTypeMap = {
-  [SystemConfigsTypeEnum.fastgpt]: {
-    label: 'fastgpt'
+  [SystemConfigsTypeEnum.libchat]: {
+    label: 'libchat'
   },
-  [SystemConfigsTypeEnum.fastgptPro]: {
-    label: 'fastgptPro'
+  [SystemConfigsTypeEnum.libchatPro]: {
+    label: 'libchatPro'
   },
   [SystemConfigsTypeEnum.systemMsgModal]: {
     label: 'systemMsgModal'

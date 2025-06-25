@@ -1,15 +1,15 @@
-import { storeNodes2RuntimeNodes } from '@fastgpt/global/core/workflow/runtime/utils';
-import { type StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import { storeNodes2RuntimeNodes } from '@libchat/global/core/workflow/runtime/utils';
+import { type StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
 import {
   type RuntimeEdgeItemType,
   type StoreEdgeItemType
-} from '@fastgpt/global/core/workflow/type/edge';
+} from '@libchat/global/core/workflow/type/edge';
 import { useCallback, useState, useMemo } from 'react';
 import { checkWorkflowNodeAndConnection } from '@/web/core/workflow/utils';
 import { useTranslation } from 'next-i18next';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { uiWorkflow2StoreWorkflow } from '../../utils';
-import { type RuntimeNodeItemType } from '@fastgpt/global/core/workflow/runtime/type';
+import { type RuntimeNodeItemType } from '@libchat/global/core/workflow/runtime/type';
 
 import dynamic from 'next/dynamic';
 import {
@@ -27,25 +27,25 @@ import { type FieldErrors, useForm } from 'react-hook-form';
 import {
   VariableInputEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
-import { checkInputIsReference } from '@fastgpt/global/core/workflow/utils';
+} from '@libchat/global/core/workflow/constants';
+import { checkInputIsReference } from '@libchat/global/core/workflow/utils';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { AppContext } from '../../../context';
 import {
   ExternalVariableInputItem,
   VariableInputItem
 } from '@/components/core/chat/ChatContainer/ChatBox/components/VariableInput';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
 import { WorkflowNodeEdgeContext } from '../../context/workflowInitContext';
 
 const MyRightDrawer = dynamic(
-  () => import('@fastgpt/web/components/common/MyDrawer/MyRightDrawer')
+  () => import('@libchat/web/components/common/MyDrawer/MyRightDrawer')
 );
-const JsonEditor = dynamic(() => import('@fastgpt/web/components/common/Textarea/JsonEditor'));
+const JsonEditor = dynamic(() => import('@libchat/web/components/common/Textarea/JsonEditor'));
 
 enum TabEnum {
   global = 'global',

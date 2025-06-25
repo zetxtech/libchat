@@ -1,11 +1,11 @@
 import React from 'react';
 import { ModalBody, Box } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useContextSelector } from 'use-context-selector';
 import { ChatBoxContext } from '../Provider';
-import { type ChatHistoryItemResType } from '@fastgpt/global/core/chat/type';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { type ChatHistoryItemResType } from '@libchat/global/core/chat/type';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { getFlatAppResponses } from '@/global/core/chat/utils';
 const isLLMNode = (item: ChatHistoryItemResType) =>

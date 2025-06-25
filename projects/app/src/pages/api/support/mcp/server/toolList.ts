@@ -1,4 +1,4 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
 import { type Tool } from '@modelcontextprotocol/sdk/types';
 import { getMcpServerTools } from '@/service/support/mcp/utils';

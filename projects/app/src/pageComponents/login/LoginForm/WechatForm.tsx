@@ -4,12 +4,12 @@ import type { ResLogin } from '@/global/support/api/userRes';
 import { Box, Center } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
 import { getWXLoginQR, getWXLoginResult } from '@/web/support/user/api';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { useToast } from '@libchat/web/hooks/useToast';
 import FormLayout from './FormLayout';
 import { useTranslation } from 'next-i18next';
-import Loading from '@fastgpt/web/components/common/MyLoading';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
+import Loading from '@libchat/web/components/common/MyLoading';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
 
 interface Props {
   loginSuccess: (e: ResLogin) => void;

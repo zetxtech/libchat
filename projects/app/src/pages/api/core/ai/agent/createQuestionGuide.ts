@@ -1,22 +1,22 @@
 import type { NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
+import { jsonRes } from '@libchat/service/common/response';
 
 import { pushQuestionGuideUsage } from '@/service/support/wallet/usage/push';
-import { createQuestionGuide } from '@fastgpt/service/core/ai/functions/createQuestionGuide';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { createQuestionGuide } from '@libchat/service/core/ai/functions/createQuestionGuide';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { type ChatCompletionMessageParam } from '@fastgpt/global/core/ai/type';
-import { type AuthModeType } from '@fastgpt/service/support/permission/type';
-import { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { authOutLinkValid } from '@fastgpt/service/support/permission/publish/authLink';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { type ChatCompletionMessageParam } from '@libchat/global/core/ai/type';
+import { type AuthModeType } from '@libchat/service/support/permission/type';
+import { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
+import { authOutLinkValid } from '@libchat/service/support/permission/publish/authLink';
 import { authOutLinkInit } from '@/service/support/permission/auth/outLink';
 import { authTeamSpaceToken } from '@/service/support/permission/auth/team';
-import { MongoTeamMember } from '@fastgpt/service/support/user/team/teamMemberSchema';
-import { TeamMemberRoleEnum } from '@fastgpt/global/support/user/team/constant';
-import { ChatErrEnum } from '@fastgpt/global/common/error/code/chat';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { getDefaultLLMModel } from '@fastgpt/service/core/ai/model';
+import { MongoTeamMember } from '@libchat/service/support/user/team/teamMemberSchema';
+import { TeamMemberRoleEnum } from '@libchat/global/support/user/team/constant';
+import { ChatErrEnum } from '@libchat/global/common/error/code/chat';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { getDefaultLLMModel } from '@libchat/service/core/ai/model';
 
 async function handler(
   req: ApiRequestProps<

@@ -1,7 +1,7 @@
 import React from 'react';
-import { PermissionTypeMap } from '@fastgpt/global/support/permission/constant';
+import { PermissionTypeMap } from '@libchat/global/support/permission/constant';
 import { Box, type StackProps, HStack } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 
 const PermissionIconText = ({

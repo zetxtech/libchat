@@ -5,7 +5,7 @@ import {
   putChannel,
   putChannelStatus
 } from '@/web/core/ai/channel';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import React, { useState } from 'react';
 import {
   Table,
@@ -21,24 +21,24 @@ import {
   HStack
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+import MyBox from '@libchat/web/components/common/MyBox';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { type ChannelInfoType } from '@/global/aiproxy/type';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
+import MyTag from '@libchat/web/components/common/Tag/index';
 import {
   aiproxyIdMap,
   ChannelStatusEnum,
   ChannelStautsMap,
   defaultChannel
 } from '@/global/aiproxy/constants';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
+import MyMenu from '@libchat/web/components/common/MyMenu';
 import dynamic from 'next/dynamic';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
-import { getModelProvider } from '@fastgpt/global/core/ai/provider';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
+import { getModelProvider } from '@libchat/global/core/ai/provider';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
 
 const EditChannelModal = dynamic(() => import('./EditChannelModal'), { ssr: false });
 const ModelTest = dynamic(() => import('./ModelTest'), { ssr: false });

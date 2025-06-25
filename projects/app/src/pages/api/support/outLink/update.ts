@@ -1,13 +1,13 @@
-import { MongoOutLink } from '@fastgpt/service/support/outLink/schema';
-import type { OutLinkEditType } from '@fastgpt/global/support/outLink/type.d';
-import { authOutLinkCrud } from '@fastgpt/service/support/permission/publish/authLink';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import { MongoOutLink } from '@libchat/service/support/outLink/schema';
+import type { OutLinkEditType } from '@libchat/global/support/outLink/type.d';
+import { authOutLinkCrud } from '@libchat/service/support/permission/publish/authLink';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nAppType } from '@fastgpt/service/support/user/audit/util';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nAppType } from '@libchat/service/support/user/audit/util';
 export type OutLinkUpdateQuery = {};
 
 // {

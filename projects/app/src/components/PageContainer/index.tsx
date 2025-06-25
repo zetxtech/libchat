@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme, type BoxProps } from '@chakra-ui/react';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 
 const PageContainer = ({
   children,

@@ -1,15 +1,15 @@
-import { SseResponseEventEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { SseResponseEventEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { getErrText } from '@libchat/global/common/error/utils';
 import type { StartChatFnProps } from '@/components/core/chat/ChatContainer/type';
 import {
   // refer to https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
   EventStreamContentType,
   fetchEventSource
 } from '@fortaine/fetch-event-source';
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
 import { useSystemStore } from '../system/useSystemStore';
-import { formatTime2YMDHMW } from '@fastgpt/global/common/string/time';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import { formatTime2YMDHMW } from '@libchat/global/common/string/time';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 
 type StreamFetchProps = {
   url?: string;

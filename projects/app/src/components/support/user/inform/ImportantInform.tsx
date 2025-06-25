@@ -1,10 +1,10 @@
-import { type UserInformSchema } from '@fastgpt/global/support/user/inform/type';
+import { type UserInformSchema } from '@libchat/global/support/user/inform/type';
 import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { CloseIcon } from '@chakra-ui/icons';
 import { readInform } from '@/web/support/user/inform/api';
-import { useRequest } from '@fastgpt/web/hooks/useRequest';
+import { useRequest } from '@libchat/web/hooks/useRequest';
 import Markdown from '@/components/Markdown';
 const ImportantInform = ({
   informs,

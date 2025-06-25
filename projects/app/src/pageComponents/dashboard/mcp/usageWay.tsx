@@ -1,13 +1,13 @@
-import { type McpKeyType } from '@fastgpt/global/support/mcp/type';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import { type McpKeyType } from '@libchat/global/support/mcp/type';
+import MyModal from '@libchat/web/components/common/MyModal';
 import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box, Flex, HStack, ModalBody } from '@chakra-ui/react';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import CopyBox from '@fastgpt/web/components/common/String/CopyBox';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import CopyBox from '@libchat/web/components/common/String/CopyBox';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 
 type LinkWay = 'sse' | 'http';
 

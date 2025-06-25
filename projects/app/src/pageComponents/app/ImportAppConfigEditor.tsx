@@ -1,8 +1,8 @@
 import React, { type DragEvent, useCallback, useState } from 'react';
 import { Box, Button, Flex, Textarea } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { useToast } from '@libchat/web/hooks/useToast';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
 
 type Props = {

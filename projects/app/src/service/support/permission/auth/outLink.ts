@@ -1,16 +1,16 @@
-import { POST } from '@fastgpt/service/common/api/plusRequest';
+import { POST } from '@libchat/service/common/api/plusRequest';
 import type {
   AuthOutLinkChatProps,
   AuthOutLinkLimitProps,
   AuthOutLinkInitProps,
   AuthOutLinkResponse
-} from '@fastgpt/global/support/outLink/api.d';
-import { type ShareChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { authOutLinkValid } from '@fastgpt/service/support/permission/publish/authLink';
-import { getUserChatInfoAndAuthTeamPoints } from '@fastgpt/service/support/permission/auth/team';
-import { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { OutLinkErrEnum } from '@fastgpt/global/common/error/code/outLink';
-import { type OutLinkSchema } from '@fastgpt/global/support/outLink/type';
+} from '@libchat/global/support/outLink/api.d';
+import { type ShareChatAuthProps } from '@libchat/global/support/permission/chat';
+import { authOutLinkValid } from '@libchat/service/support/permission/publish/authLink';
+import { getUserChatInfoAndAuthTeamPoints } from '@libchat/service/support/permission/auth/team';
+import { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
+import { OutLinkErrEnum } from '@libchat/global/common/error/code/outLink';
+import { type OutLinkSchema } from '@libchat/global/support/outLink/type';
 
 export function authOutLinkInit(data: AuthOutLinkInitProps): Promise<AuthOutLinkResponse> {
   if (!global.feConfigs?.isPlus) return Promise.resolve({ uid: data.outLinkUid });

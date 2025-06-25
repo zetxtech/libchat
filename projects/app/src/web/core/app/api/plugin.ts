@@ -4,23 +4,23 @@ import type { UpdateHttpPluginBody } from '@/pages/api/core/app/httpPlugin/updat
 import type {
   FlowNodeTemplateType,
   NodeTemplateListItemType
-} from '@fastgpt/global/core/workflow/type/node';
+} from '@libchat/global/core/workflow/type/node';
 import { getMyApps } from '../api';
 import type { ListAppBody } from '@/pages/api/core/app/list';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { FlowNodeTemplateTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { FlowNodeTemplateTypeEnum } from '@libchat/global/core/workflow/constants';
 import type { GetPreviewNodeQuery } from '@/pages/api/core/app/plugin/getPreviewNode';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import type {
   GetPathProps,
   ParentTreePathItemType
-} from '@fastgpt/global/common/parentFolder/type';
+} from '@libchat/global/common/parentFolder/type';
 import type { GetSystemPluginTemplatesBody } from '@/pages/api/core/app/plugin/getSystemPluginTemplates';
-import type { PluginGroupSchemaType } from '@fastgpt/service/core/app/plugin/type';
+import type { PluginGroupSchemaType } from '@libchat/service/core/app/plugin/type';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { defaultGroup } from '@fastgpt/web/core/workflow/constants';
+import { defaultGroup } from '@libchat/web/core/workflow/constants';
 import type { createMCPToolsBody } from '@/pages/api/core/app/mcpTools/create';
-import { type McpToolConfigType } from '@fastgpt/global/core/app/type';
+import { type McpToolConfigType } from '@libchat/global/core/app/type';
 import type { updateMCPToolsBody } from '@/pages/api/core/app/mcpTools/update';
 import type { RunMCPToolBody } from '@/pages/api/support/mcp/client/runTool';
 import type { getMCPToolsBody } from '@/pages/api/support/mcp/client/getTools';

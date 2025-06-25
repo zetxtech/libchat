@@ -3,12 +3,12 @@ import {
   SubModeEnum,
   SubTypeEnum,
   standardSubLevelMap
-} from '@fastgpt/global/support/wallet/sub/constants';
+} from '@libchat/global/support/wallet/sub/constants';
 import { MongoTeamSub } from './schema';
 import {
   type TeamPlanStatusType,
   type TeamSubSchema
-} from '@fastgpt/global/support/wallet/sub/type.d';
+} from '@libchat/global/support/wallet/sub/type.d';
 import dayjs from 'dayjs';
 import { type ClientSession } from '../../../common/mongo';
 import { addMonths } from 'date-fns';

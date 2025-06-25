@@ -10,12 +10,12 @@ import {
   Radio,
   RadioGroup
 } from '@chakra-ui/react';
-import { type TeamInvoiceHeaderType } from '@fastgpt/global/support/user/team/type';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { type TeamInvoiceHeaderType } from '@libchat/global/support/user/team/type';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useTranslation } from 'next-i18next';
 import { type UseFormReturn, useForm } from 'react-hook-form';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 
 export const InvoiceHeaderSingleForm = ({
   inputForm,

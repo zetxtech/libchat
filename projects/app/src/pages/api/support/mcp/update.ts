@@ -1,10 +1,10 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
 import { authMcp } from '../../../../../../../packages/service/support/permission/mcp/auth';
-import { ReadPermissionVal, WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { authAppByTmbId } from '@fastgpt/service/support/permission/app/auth';
-import { MongoMcpKey } from '@fastgpt/service/support/mcp/schema';
-import { type McpAppType } from '@fastgpt/global/support/mcp/type';
+import { ReadPermissionVal, WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { authAppByTmbId } from '@libchat/service/support/permission/app/auth';
+import { MongoMcpKey } from '@libchat/service/support/mcp/schema';
+import { type McpAppType } from '@libchat/global/support/mcp/type';
 
 export type updateQuery = {};
 

@@ -1,4 +1,4 @@
-import { NextEntry } from '@fastgpt/service/common/middle/entry';
+import { NextEntry } from '@libchat/service/common/middle/entry';
 
 export const NextAPI = NextEntry({
   beforeCallback: []

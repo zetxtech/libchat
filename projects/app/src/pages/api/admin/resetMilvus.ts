@@ -1,15 +1,15 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { MilvusCtrl } from '@fastgpt/service/common/vectorDB/milvus/index';
-import { DatasetVectorTableName } from '@fastgpt/service/common/vectorDB/constants';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
-import { TrainingModeEnum } from '@fastgpt/global/core/dataset/constants';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { type DatasetSchemaType } from '@fastgpt/global/core/dataset/type';
-import { delay } from '@fastgpt/global/common/system/utils';
+import { MilvusCtrl } from '@libchat/service/common/vectorDB/milvus/index';
+import { DatasetVectorTableName } from '@libchat/service/common/vectorDB/constants';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
+import { TrainingModeEnum } from '@libchat/global/core/dataset/constants';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { type DatasetSchemaType } from '@libchat/global/core/dataset/type';
+import { delay } from '@libchat/global/common/system/utils';
 import { startTrainingQueue } from '@/service/core/dataset/training/utils';
 
 export type resetMilvusQuery = {};

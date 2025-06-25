@@ -1,25 +1,25 @@
-import { initHttpAgent } from '@fastgpt/service/common/middle/httpAgent';
+import { initHttpAgent } from '@libchat/service/common/middle/httpAgent';
 import fs, { existsSync } from 'fs';
-import type { FastGPTFeConfigsType } from '@fastgpt/global/common/system/types/index.d';
-import type { FastGPTConfigFileType } from '@fastgpt/global/common/system/types/index.d';
-import { getFastGPTConfigFromDB } from '@fastgpt/service/common/system/config/controller';
-import { FastGPTProUrl } from '@fastgpt/service/common/system/constants';
-import { isProduction } from '@fastgpt/global/common/system/constants';
-import { initFastGPTConfig } from '@fastgpt/service/common/system/tools';
+import type { LibChatFeConfigsType } from '@libchat/global/common/system/types/index.d';
+import type { LibChatConfigFileType } from '@libchat/global/common/system/types/index.d';
+import { getLibChatConfigFromDB } from '@libchat/service/common/system/config/controller';
+import { LibChatProUrl } from '@libchat/service/common/system/constants';
+import { isProduction } from '@libchat/global/common/system/constants';
+import { initLibChatConfig } from '@libchat/service/common/system/tools';
 import json5 from 'json5';
-import { defaultGroup, defaultTemplateTypes } from '@fastgpt/web/core/workflow/constants';
-import { MongoPluginGroups } from '@fastgpt/service/core/app/plugin/pluginGroupSchema';
-import { MongoTemplateTypes } from '@fastgpt/service/core/app/templates/templateTypeSchema';
-import { POST } from '@fastgpt/service/common/api/plusRequest';
+import { defaultGroup, defaultTemplateTypes } from '@libchat/web/core/workflow/constants';
+import { MongoPluginGroups } from '@libchat/service/core/app/plugin/pluginGroupSchema';
+import { MongoTemplateTypes } from '@libchat/service/core/app/templates/templateTypeSchema';
+import { POST } from '@libchat/service/common/api/plusRequest';
 import {
   type DeepRagSearchProps,
   type SearchDatasetDataResponse
-} from '@fastgpt/service/core/dataset/search/controller';
-import { type AuthOpenApiLimitProps } from '@fastgpt/service/support/openapi/auth';
+} from '@libchat/service/core/dataset/search/controller';
+import { type AuthOpenApiLimitProps } from '@libchat/service/support/openapi/auth';
 import {
   type ConcatUsageProps,
   type CreateUsageProps
-} from '@fastgpt/global/support/wallet/usage/api';
+} from '@libchat/global/support/wallet/usage/api';
 import { isProVersion } from './constants';
 
 export const readConfigData = async (name: string) => {
@@ -103,17 +103,17 @@ export async function getInitConfig() {
   await Promise.all([initSystemConfig(), getSystemVersion()]);
 }
 
-const defaultFeConfigs: FastGPTFeConfigsType = {
+const defaultFeConfigs: LibChatFeConfigsType = {
   show_emptyChat: true,
   show_git: true,
-  docUrl: 'https://doc.tryfastgpt.ai',
-  openAPIDocUrl: 'https://doc.tryfastgpt.ai/docs/development/openapi',
+  docUrl: 'https://doc.trylibchat.ai',
+  openAPIDocUrl: 'https://doc.trylibchat.ai/docs/development/openapi',
   systemPluginCourseUrl: 'https://fael3z0zfze.feishu.cn/wiki/ERZnw9R26iRRG0kXZRec6WL9nwh',
   appTemplateCourse:
     'https://fael3z0zfze.feishu.cn/wiki/CX9wwMGyEi5TL6koiLYcg7U0nWb?fromScene=spaceOverview',
-  systemTitle: 'FastGPT',
+  systemTitle: 'LibChat',
   concatMd:
-    '项目开源地址: [FastGPT GitHub](https://github.com/labring/FastGPT)\n交流群: ![](https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png)',
+    '项目开源地址: [LibChat GitHub](https://github.com/labring/LibChat)\n交流群: ![](https://oss.laf.run/otnvvf-imgs/libchat-feishu1.png)',
   limit: {
     exportDatasetLimitMinutes: 0,
     websiteSyncLimitMinuted: 0
@@ -125,20 +125,20 @@ const defaultFeConfigs: FastGPTFeConfigsType = {
 
 export async function initSystemConfig() {
   // load config
-  const [{ fastgptConfig, licenseData }, fileConfig] = await Promise.all([
-    getFastGPTConfigFromDB(),
+  const [{ libchatConfig, licenseData }, fileConfig] = await Promise.all([
+    getLibChatConfigFromDB(),
     readConfigData('config.json')
   ]);
   global.licenseData = licenseData;
 
-  const fileRes = json5.parse(fileConfig) as FastGPTConfigFileType;
+  const fileRes = json5.parse(fileConfig) as LibChatConfigFileType;
 
   // get config from database
-  const config: FastGPTConfigFileType = {
+  const config: LibChatConfigFileType = {
     feConfigs: {
       ...fileRes?.feConfigs,
       ...defaultFeConfigs,
-      ...(fastgptConfig.feConfigs || {}),
+      ...(libchatConfig.feConfigs || {}),
       isPlus: true,
       show_aiproxy: !!process.env.AIPROXY_API_ENDPOINT,
       show_coupon: process.env.SHOW_COUPON === 'true',
@@ -147,13 +147,13 @@ export async function initSystemConfig() {
     },
     systemEnv: {
       ...fileRes.systemEnv,
-      ...(fastgptConfig.systemEnv || {})
+      ...(libchatConfig.systemEnv || {})
     },
-    subPlans: fastgptConfig.subPlans
+    subPlans: libchatConfig.subPlans
   };
 
   // set config
-  initFastGPTConfig(config);
+  initLibChatConfig(config);
 
   console.log({
     feConfigs: global.feConfigs,

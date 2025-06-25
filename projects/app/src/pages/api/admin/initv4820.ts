@@ -1,16 +1,16 @@
 import { readConfigData } from '@/service/common/system';
 import { NextAPI } from '@/service/middleware/entry';
 import {
-  getFastGPTConfigFromDB,
-  updateFastGPTConfigBuffer
-} from '@fastgpt/service/common/system/config/controller';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+  getLibChatConfigFromDB,
+  updateLibChatConfigBuffer
+} from '@libchat/service/common/system/config/controller';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { type NextApiRequest, type NextApiResponse } from 'next';
 import json5 from 'json5';
-import { type FastGPTConfigFileType } from '@fastgpt/global/common/system/types';
-import { MongoSystemModel } from '@fastgpt/service/core/ai/config/schema';
-import { loadSystemModels } from '@fastgpt/service/core/ai/config/utils';
-import { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import { type LibChatConfigFileType } from '@libchat/global/common/system/types';
+import { MongoSystemModel } from '@libchat/service/core/ai/config/schema';
+import { loadSystemModels } from '@libchat/service/core/ai/config/utils';
+import { ModelTypeEnum } from '@libchat/global/core/ai/model';
 
 /* 
   简单版迁移：直接升级到最新镜像，会去除 MongoDatasetData 里的索引。直接执行这个脚本。
@@ -21,11 +21,11 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   await authCert({ req, authRoot: true });
 
   // load config
-  const [{ fastgptConfig: dbConfig }, fileConfig] = await Promise.all([
-    getFastGPTConfigFromDB(),
+  const [{ libchatConfig: dbConfig }, fileConfig] = await Promise.all([
+    getLibChatConfigFromDB(),
     readConfigData('config.json')
   ]);
-  const fileRes = json5.parse(fileConfig) as FastGPTConfigFileType;
+  const fileRes = json5.parse(fileConfig) as LibChatConfigFileType;
 
   const llmModels = dbConfig.llmModels || fileRes.llmModels || [];
   const vectorModels = dbConfig.vectorModels || fileRes.vectorModels || [];
@@ -69,7 +69,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   await loadSystemModels(true);
-  await updateFastGPTConfigBuffer();
+  await updateLibChatConfigBuffer();
 
   return { success: true };
 }

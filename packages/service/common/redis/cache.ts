@@ -1,6 +1,6 @@
 import { getGlobalRedisConnection } from './index';
 import { addLog } from '../system/log';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 const redisPrefix = 'cache:';
 const getCacheKey = (key: string) => `${redisPrefix}${key}`;

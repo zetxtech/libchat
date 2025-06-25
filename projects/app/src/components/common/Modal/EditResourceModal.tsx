@@ -1,13 +1,13 @@
 import React from 'react';
 import { ModalFooter, ModalBody, Input, Button, Box, Textarea, HStack } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal/index';
+import MyModal from '@libchat/web/components/common/MyModal/index';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { useForm } from 'react-hook-form';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import Avatar from '@libchat/web/components/common/Avatar';
 
 export type EditResourceInfoFormType = {
   id: string;

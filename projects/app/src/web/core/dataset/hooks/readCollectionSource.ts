@@ -1,7 +1,7 @@
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { getCollectionSource } from '@/web/core/dataset/api';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useTranslation } from 'next-i18next';
 import type { readCollectionSourceBody } from '@/pages/api/core/dataset/collection/read';
 

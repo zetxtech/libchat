@@ -2,27 +2,27 @@ import React, { useMemo } from 'react';
 import { type NodeProps, Position, useViewport } from 'reactflow';
 import { Box, Button, HStack, Input } from '@chakra-ui/react';
 import NodeCard from './render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import Container from '../components/Container';
 import RenderInput from './render/RenderInput';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { useTranslation } from 'next-i18next';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io.d';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io.d';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { MySourceHandle } from './render/Handle';
-import { getHandleId } from '@fastgpt/global/core/workflow/utils';
+import { getHandleId } from '@libchat/global/core/workflow/utils';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../context';
-import { type UserSelectOptionItemType } from '@fastgpt/global/core/workflow/template/system/interactive/type';
+import { type UserSelectOptionItemType } from '@libchat/global/core/workflow/template/system/interactive/type';
 import IOTitle from '../components/IOTitle';
 import RenderOutput from './render/RenderOutput';
 import DndDrag, {
   Draggable,
   type DraggableProvided,
   type DraggableStateSnapshot
-} from '@fastgpt/web/components/common/DndDrag';
+} from '@libchat/web/components/common/DndDrag';
 
 const NodeUserSelect = ({ data, selected }: NodeProps<FlowNodeItemType>) => {
   const { t } = useTranslation();

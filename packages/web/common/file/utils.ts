@@ -1,4 +1,4 @@
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import Papa from 'papaparse';
 
 export const loadFile2Buffer = ({ file, onError }: { file: File; onError?: (err: any) => void }) =>

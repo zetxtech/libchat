@@ -11,7 +11,7 @@ import {
   type TooltipProps
 } from 'recharts';
 import { type NameType, type ValueType } from 'recharts/types/component/DefaultTooltipContent';
-import { formatNumber } from '@fastgpt/global/common/math/tools';
+import { formatNumber } from '@libchat/global/common/math/tools';
 import FillRowTabs from '../Tabs/FillRowTabs';
 import { useTranslation } from 'next-i18next';
 import { cloneDeep } from 'lodash';

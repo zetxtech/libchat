@@ -1,4 +1,4 @@
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 import { useQuery } from '@tanstack/react-query';
 
 export const getMd = async (url: string) => {

@@ -1,9 +1,9 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type UpdateTeamProps } from '@fastgpt/global/support/user/team/controller';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { updateTeam } from '@fastgpt/service/support/user/team/controller';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { type UpdateTeamProps } from '@libchat/global/support/user/team/controller';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { updateTeam } from '@libchat/service/support/user/team/controller';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
 
 export type updateQuery = {};
 

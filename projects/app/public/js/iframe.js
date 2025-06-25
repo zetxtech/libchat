@@ -1,6 +1,6 @@
 function embedChatbot() {
-  const chatBtnId = 'fastgpt-chatbot-button';
-  const chatWindowId = 'fastgpt-chatbot-window';
+  const chatBtnId = 'libchat-chatbot-button';
+  const chatWindowId = 'libchat-chatbot-window';
   const script = document.getElementById('chatbot-iframe');
   const botSrc = script?.getAttribute('data-bot-src');
   const defaultOpen = script?.getAttribute('data-default-open') === 'true';
@@ -34,7 +34,7 @@ function embedChatbot() {
   const iframe = document.createElement('iframe');
   iframe.allow = 'microphone *; *';
   iframe.referrerPolicy = 'no-referrer';
-  iframe.title = 'FastGPT Chat Window';
+  iframe.title = 'LibChat Chat Window';
   iframe.id = chatWindowId;
   iframe.src = botSrc;
   iframe.style.cssText =

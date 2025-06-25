@@ -1,9 +1,9 @@
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { SSEClientTransport } from '@modelcontextprotocol/sdk/client/sse.js';
 import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
-import { type McpToolConfigType } from '@fastgpt/global/core/app/type';
+import { type McpToolConfigType } from '@libchat/global/core/app/type';
 import { addLog } from '../../common/system/log';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 export class MCPClient {
   private client: Client;
@@ -14,7 +14,7 @@ export class MCPClient {
     this.url = config.url;
     this.headers = config.headers;
     this.client = new Client({
-      name: 'FastGPT-MCP-client',
+      name: 'LibChat-MCP-client',
       version: '1.0.0'
     });
   }

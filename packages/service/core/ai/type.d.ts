@@ -1,11 +1,11 @@
-import type { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
+import type { ModelTypeEnum } from '@libchat/global/core/ai/model';
 import type {
   STTModelType,
   RerankModelItemType,
   TTSModelType,
   EmbeddingModelItemType,
   LLMModelItemType
-} from '@fastgpt/global/core/ai/model.d';
+} from '@libchat/global/core/ai/model.d';
 
 export type SystemModelSchemaType = {
   _id: string;

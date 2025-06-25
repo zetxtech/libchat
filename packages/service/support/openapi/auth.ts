@@ -1,7 +1,7 @@
-import { ERROR_ENUM } from '@fastgpt/global/common/error/errorCode';
+import { ERROR_ENUM } from '@libchat/global/common/error/errorCode';
 import { updateApiKeyUsedTime } from './tools';
 import { MongoOpenApi } from './schema';
-import type { OpenApiSchema } from '@fastgpt/global/support/openapi/type';
+import type { OpenApiSchema } from '@libchat/global/support/openapi/type';
 
 export type AuthOpenApiLimitProps = { openApi: OpenApiSchema };
 

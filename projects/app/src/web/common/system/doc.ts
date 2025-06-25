@@ -1,4 +1,4 @@
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 import { useSystemStore } from './useSystemStore';
 export const getDocPath = (path: string) => {
   const feConfigs = useSystemStore.getState().feConfigs;

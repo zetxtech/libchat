@@ -1,18 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { uploadFile } from '@fastgpt/service/common/file/gridfs/controller';
-import { getUploadModel } from '@fastgpt/service/common/file/multer';
-import { removeFilesByPaths } from '@fastgpt/service/common/file/utils';
+import { jsonRes } from '@libchat/service/common/response';
+import { uploadFile } from '@libchat/service/common/file/gridfs/controller';
+import { getUploadModel } from '@libchat/service/common/file/multer';
+import { removeFilesByPaths } from '@libchat/service/common/file/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { createFileToken } from '@fastgpt/service/support/permission/controller';
-import { ReadFileBaseUrl } from '@fastgpt/global/common/file/constants';
-import { addLog } from '@fastgpt/service/common/system/log';
+import { createFileToken } from '@libchat/service/support/permission/controller';
+import { ReadFileBaseUrl } from '@libchat/global/common/file/constants';
+import { addLog } from '@libchat/service/common/system/log';
 import { authFrequencyLimit } from '@/service/common/frequencyLimit/api';
 import { addSeconds } from 'date-fns';
 import { authChatCrud } from '@/service/support/permission/auth/chat';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 
 export type UploadChatFileProps = {
   appId: string;

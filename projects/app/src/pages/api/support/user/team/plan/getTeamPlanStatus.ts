@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { getTeamPlanStatus } from '@fastgpt/service/support/wallet/sub/utils';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { getTeamPlanStatus } from '@libchat/service/support/wallet/sub/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import type { ClientTeamPlanStatusType } from '@fastgpt/global/support/wallet/sub/type';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { MongoDataset } from '@fastgpt/service/core/dataset/schema';
-import { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { getVectorCountByTeamId } from '@fastgpt/service/common/vectorDB/controller';
-import { MongoTeamMember } from '@fastgpt/service/support/user/team/teamMemberSchema';
-import { TeamMemberStatusEnum } from '@fastgpt/global/support/user/team/constant';
+import type { ClientTeamPlanStatusType } from '@libchat/global/support/wallet/sub/type';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { MongoDataset } from '@libchat/service/core/dataset/schema';
+import { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { getVectorCountByTeamId } from '@libchat/service/common/vectorDB/controller';
+import { MongoTeamMember } from '@libchat/service/support/user/team/teamMemberSchema';
+import { TeamMemberStatusEnum } from '@libchat/global/support/user/team/constant';
 
 async function handler(
   req: NextApiRequest,

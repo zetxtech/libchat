@@ -1,13 +1,13 @@
 import { type getPaginationRecordsBody } from '@/pages/api/core/chat/getPaginationRecords';
-import { type ChatSiteItemType } from '@fastgpt/global/core/chat/type';
-import { type PaginationResponse } from '@fastgpt/web/common/fetch/type';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+import { type ChatSiteItemType } from '@libchat/global/core/chat/type';
+import { type PaginationResponse } from '@libchat/web/common/fetch/type';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import React, { type ReactNode, useMemo, useState } from 'react';
 import { createContext, useContextSelector } from 'use-context-selector';
 import { ChatItemContext } from './chatItemContext';
 import { getChatRecords } from '../api';
-import { ChatStatusEnum } from '@fastgpt/global/core/chat/constants';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { ChatStatusEnum } from '@libchat/global/core/chat/constants';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { type BoxProps } from '@chakra-ui/react';
 
 type ChatRecordContextType = {

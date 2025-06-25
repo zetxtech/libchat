@@ -6,8 +6,8 @@ import {
   type AIChatItemType,
   type ChatItemType,
   type UserChatItemType
-} from '@fastgpt/global/core/chat/type';
-import { ChatItemValueTypeEnum } from '@fastgpt/global/core/chat/constants';
+} from '@libchat/global/core/chat/type';
+import { ChatItemValueTypeEnum } from '@libchat/global/core/chat/constants';
 
 export type Metadata = {
   [key: string]: {
@@ -167,7 +167,7 @@ ${JSON.stringify(item.interactive, null, 2)}
     const responseTime =
       responseData?.reduce((acc, item) => acc + (item?.runningTime ?? 0), 0) || 0;
 
-    const sourceIdPrefix = process.env.CHAT_LOG_SOURCE_ID_PREFIX ?? 'fastgpt-';
+    const sourceIdPrefix = process.env.CHAT_LOG_SOURCE_ID_PREFIX ?? 'libchat-';
 
     const chatLog: ChatLog = {
       title: chat.title,

@@ -1,6 +1,6 @@
-import type { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import type { PaginationProps } from '@fastgpt/web/common/fetch/type';
+import type { ChatSourceEnum } from '@libchat/global/core/chat/constants';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import type { PaginationProps } from '@libchat/web/common/fetch/type';
 
 export type GetAppChatLogsProps = {
   appId: string;

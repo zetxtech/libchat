@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
-import { FastGPTProUrl } from '@fastgpt/service/common/system/constants';
-import { POST } from '@fastgpt/service/common/api/plusRequest';
+import { jsonRes } from '@libchat/service/common/response';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
+import { LibChatProUrl } from '@libchat/service/common/system/constants';
+import { POST } from '@libchat/service/common/api/plusRequest';
 
 /* 初始化发布的版本 */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     );
 
-    if (FastGPTProUrl) {
+    if (LibChatProUrl) {
       await POST('/admin/init/4810');
     }
 

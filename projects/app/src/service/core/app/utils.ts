@@ -1,36 +1,36 @@
-import { getUserChatInfoAndAuthTeamPoints } from '@fastgpt/service/support/permission/auth/team';
-import { createChatUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { getNextTimeByCronStringAndTimezone } from '@fastgpt/global/common/string/time';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { delay, retryFn } from '@fastgpt/global/common/system/utils';
+import { getUserChatInfoAndAuthTeamPoints } from '@libchat/service/support/permission/auth/team';
+import { createChatUsage } from '@libchat/service/support/wallet/usage/controller';
+import { getNextTimeByCronStringAndTimezone } from '@libchat/global/common/string/time';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { delay, retryFn } from '@libchat/global/common/system/utils';
 import {
   ChatItemValueTypeEnum,
   ChatRoleEnum,
   ChatSourceEnum
-} from '@fastgpt/global/core/chat/constants';
+} from '@libchat/global/core/chat/constants';
 import {
   getWorkflowEntryNodeIds,
   storeEdges2RuntimeEdges,
   storeNodes2RuntimeNodes
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { WORKFLOW_MAX_RUN_TIMES } from '@fastgpt/service/core/workflow/constants';
-import { dispatchWorkFlow } from '@fastgpt/service/core/workflow/dispatch';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { type UserChatItemValueItemType } from '@fastgpt/global/core/chat/type';
-import { saveChat } from '@fastgpt/service/core/chat/saveChat';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
+} from '@libchat/global/core/workflow/runtime/utils';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import { addLog } from '@libchat/service/common/system/log';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { WORKFLOW_MAX_RUN_TIMES } from '@libchat/service/core/workflow/constants';
+import { dispatchWorkFlow } from '@libchat/service/core/workflow/dispatch';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { type UserChatItemValueItemType } from '@libchat/global/core/chat/type';
+import { saveChat } from '@libchat/service/core/chat/saveChat';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
 import {
   getChildAppPreviewNode,
   splitCombineToolId
-} from '@fastgpt/service/core/app/plugin/controller';
-import { PluginSourceEnum } from '@fastgpt/global/core/plugin/constants';
-import { authAppByTmbId } from '@fastgpt/service/support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { type StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+} from '@libchat/service/core/app/plugin/controller';
+import { PluginSourceEnum } from '@libchat/global/core/plugin/constants';
+import { authAppByTmbId } from '@libchat/service/support/permission/app/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { type StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 export const getScheduleTriggerApp = async () => {
   // 1. Find all the app

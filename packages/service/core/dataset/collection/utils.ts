@@ -2,21 +2,21 @@ import { MongoDatasetCollection } from './schema';
 import type { ClientSession } from '../../../common/mongo';
 import { MongoDatasetCollectionTags } from '../tag/schema';
 import { readFromSecondary } from '../../../common/mongo/utils';
-import type { CollectionWithDatasetType } from '@fastgpt/global/core/dataset/type';
-import { DatasetCollectionSchemaType } from '@fastgpt/global/core/dataset/type';
+import type { CollectionWithDatasetType } from '@libchat/global/core/dataset/type';
+import { DatasetCollectionSchemaType } from '@libchat/global/core/dataset/type';
 import {
   DatasetCollectionDataProcessModeEnum,
   DatasetCollectionSyncResultEnum,
   DatasetCollectionTypeEnum,
   DatasetSourceReadTypeEnum,
   TrainingModeEnum
-} from '@fastgpt/global/core/dataset/constants';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
+} from '@libchat/global/core/dataset/constants';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
 import { readDatasetSourceRawText } from '../read';
-import { hashStr } from '@fastgpt/global/common/string/tools';
+import { hashStr } from '@libchat/global/common/string/tools';
 import { mongoSessionRun } from '../../../common/mongo/sessionRun';
 import { createCollectionAndInsertData, delCollection } from './controller';
-import { collectionCanSync } from '@fastgpt/global/core/dataset/collection/utils';
+import { collectionCanSync } from '@libchat/global/core/dataset/collection/utils';
 
 /**
  * get all collection by top collectionId

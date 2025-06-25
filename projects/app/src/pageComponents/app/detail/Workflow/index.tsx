@@ -1,6 +1,6 @@
 import React from 'react';
-import { appSystemModuleTemplates } from '@fastgpt/global/core/workflow/template/constants';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
+import { appSystemModuleTemplates } from '@libchat/global/core/workflow/template/constants';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
 import { v1Workflow2V2 } from '@/web/core/workflow/adapt';
 import { WorkflowContext } from '../WorkflowComponents/context';
 import { useContextSelector } from 'use-context-selector';

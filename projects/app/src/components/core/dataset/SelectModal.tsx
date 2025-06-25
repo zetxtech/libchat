@@ -1,12 +1,12 @@
 import { getDatasets, getDatasetPaths } from '@/web/core/dataset/api';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useQuery } from '@tanstack/react-query';
 import React, { type Dispatch, useMemo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { Box } from '@chakra-ui/react';
 import ParentPaths from '@/components/common/ParentPaths';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 
 type PathItemType = {
   parentId: string;

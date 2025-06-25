@@ -1,4 +1,4 @@
-export const DatasetVectorDbName = 'fastgpt';
+export const DatasetVectorDbName = 'libchat';
 export const DatasetVectorTableName = 'modeldata';
 
 export const PG_ADDRESS = process.env.PG_URL;

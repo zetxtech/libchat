@@ -1,9 +1,9 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { MongoMcpKey } from '@fastgpt/service/support/mcp/schema';
-import { type McpKeyType } from '@fastgpt/global/support/mcp/type';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { MongoMcpKey } from '@libchat/service/support/mcp/schema';
+import { type McpKeyType } from '@libchat/global/support/mcp/type';
 
 export type listQuery = {};
 

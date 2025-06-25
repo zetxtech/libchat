@@ -1,12 +1,12 @@
 import { describe, it, expect, vi } from 'vitest';
 import { pluginNodes2InputSchema, workflow2InputSchema } from '@/service/support/mcp/utils';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import {
   VariableInputEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/constants';
 
-vi.mock('@fastgpt/service/support/mcp/schema', () => ({
+vi.mock('@libchat/service/support/mcp/schema', () => ({
   MongoMcpKey: {
     findOne: vi.fn().mockReturnValue({
       lean: vi.fn()
@@ -14,7 +14,7 @@ vi.mock('@fastgpt/service/support/mcp/schema', () => ({
   }
 }));
 
-vi.mock('@fastgpt/service/core/app/schema', () => ({
+vi.mock('@libchat/service/core/app/schema', () => ({
   MongoApp: {
     find: vi.fn().mockReturnValue({
       lean: vi.fn()
@@ -35,11 +35,11 @@ vi.mock('@fastgpt/service/core/app/schema', () => ({
   }
 }));
 
-vi.mock('@fastgpt/service/core/app/version/controller', () => ({
+vi.mock('@libchat/service/core/app/version/controller', () => ({
   getAppLatestVersion: vi.fn()
 }));
 
-vi.mock('@fastgpt/service/support/permission/app/auth', () => ({
+vi.mock('@libchat/service/support/permission/app/auth', () => ({
   authAppByTmbId: vi.fn()
 }));
 

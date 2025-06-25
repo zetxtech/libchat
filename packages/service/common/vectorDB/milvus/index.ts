@@ -11,9 +11,9 @@ import type {
   EmbeddingRecallResponse,
   InsertVectorControllerProps
 } from '../controller.d';
-import { delay } from '@fastgpt/global/common/system/utils';
+import { delay } from '@libchat/global/common/system/utils';
 import { addLog } from '../../system/log';
-import { customNanoid } from '@fastgpt/global/common/string/tools';
+import { customNanoid } from '@libchat/global/common/string/tools';
 
 export class MilvusCtrl {
   constructor() {}

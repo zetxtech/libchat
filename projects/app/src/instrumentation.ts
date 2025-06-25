@@ -21,18 +21,18 @@ export async function register() {
         { preLoadWorker },
         { loadSystemModels }
       ] = await Promise.all([
-        import('@fastgpt/service/common/mongo/init'),
-        import('@fastgpt/service/common/mongo/index'),
-        import('@fastgpt/service/common/system/tools'),
+        import('@libchat/service/common/mongo/init'),
+        import('@libchat/service/common/mongo/index'),
+        import('@libchat/service/common/system/tools'),
         import('@/service/common/system'),
-        import('@fastgpt/service/common/vectorDB/controller'),
+        import('@libchat/service/common/vectorDB/controller'),
         import('@/service/mongo'),
         import('@/service/core/app/plugin'),
         import('@/service/common/system/volumnMongoWatch'),
         import('@/service/common/system/cron'),
         import('@/service/core/dataset/training/utils'),
-        import('@fastgpt/service/worker/preload'),
-        import('@fastgpt/service/core/ai/config/utils')
+        import('@libchat/service/worker/preload'),
+        import('@libchat/service/core/ai/config/utils')
       ]);
 
       // 执行初始化流程

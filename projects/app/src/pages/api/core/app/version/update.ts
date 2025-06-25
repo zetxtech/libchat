@@ -1,8 +1,8 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { MongoAppVersion } from '@fastgpt/service/core/app/version/schema';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { MongoAppVersion } from '@libchat/service/core/app/version/schema';
 
 export type UpdateAppVersionBody = {
   appId: string;

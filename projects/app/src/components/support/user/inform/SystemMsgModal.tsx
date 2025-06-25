@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { Button, ModalBody, ModalFooter, useDisclosure } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { LOGO_ICON } from '@fastgpt/global/common/system/constants';
+import { LOGO_ICON } from '@libchat/global/common/system/constants';
 import { getSystemMsgModalData } from '@/web/support/user/inform/api';
 import dynamic from 'next/dynamic';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 const Markdown = dynamic(() => import('@/components/Markdown'), { ssr: false });
 
 const SystemMsgModal = ({}: {}) => {

@@ -1,13 +1,13 @@
-import { getLLMModel, getEmbeddingModel, getVlmModel } from '@fastgpt/service/core/ai/model';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { getLLMModel, getEmbeddingModel, getVlmModel } from '@libchat/service/core/ai/model';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
 import { NextAPI } from '@/service/middleware/entry';
-import { type DatasetItemType } from '@fastgpt/global/core/dataset/type';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { getWebsiteSyncDatasetStatus } from '@fastgpt/service/core/dataset/websiteSync';
-import { DatasetStatusEnum, DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { filterApiDatasetServerPublicData } from '@fastgpt/global/core/dataset/apiDataset/utils';
+import { type DatasetItemType } from '@libchat/global/core/dataset/type';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { getWebsiteSyncDatasetStatus } from '@libchat/service/core/dataset/websiteSync';
+import { DatasetStatusEnum, DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import { filterApiDatasetServerPublicData } from '@libchat/global/core/dataset/apiDataset/utils';
 
 type Query = {
   id: string;

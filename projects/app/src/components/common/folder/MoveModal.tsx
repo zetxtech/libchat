@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { Box, Button, Flex, ModalBody, ModalFooter } from '@chakra-ui/react';
 import {
   type GetResourceFolderListProps,
   type GetResourceFolderListItemResponse,
   type ParentIdType
-} from '@fastgpt/global/common/parentFolder/type';
+} from '@libchat/global/common/parentFolder/type';
 import { useMemoizedFn, useMount } from 'ahooks';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { FolderIcon } from '@fastgpt/global/common/file/image/constants';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import LightTip from '@fastgpt/web/components/common/LightTip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { FolderIcon } from '@libchat/global/common/file/image/constants';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import LightTip from '@libchat/web/components/common/LightTip';
 
 type FolderItemType = {
   id: string;

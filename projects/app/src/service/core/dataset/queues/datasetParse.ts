@@ -1,36 +1,36 @@
 /* Dataset collection source parse, not max size. */
 
-import { ParagraphChunkAIModeEnum } from '@fastgpt/global/core/dataset/constants';
+import { ParagraphChunkAIModeEnum } from '@libchat/global/core/dataset/constants';
 import {
   DatasetCollectionDataProcessModeEnum,
   DatasetCollectionTypeEnum,
   DatasetSourceReadTypeEnum,
   TrainingModeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import type {
   DatasetCollectionSchemaType,
   DatasetSchemaType
-} from '@fastgpt/global/core/dataset/type';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
+} from '@libchat/global/core/dataset/type';
+import { addLog } from '@libchat/service/common/system/log';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
 import { addMinutes } from 'date-fns';
 import { checkTeamAiPointsAndLock } from './utils';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { delay } from '@fastgpt/service/common/bullmq';
-import { rawText2Chunks, readDatasetSourceRawText } from '@fastgpt/service/core/dataset/read';
-import { getLLMModel } from '@fastgpt/service/core/ai/model';
-import { getLLMMaxChunkSize } from '@fastgpt/global/core/dataset/training/utils';
-import { checkDatasetIndexLimit } from '@fastgpt/service/support/permission/teamLimit';
-import { predictDataLimitLength } from '@fastgpt/global/core/dataset/utils';
-import { getTrainingModeByCollection } from '@fastgpt/service/core/dataset/collection/utils';
-import { pushDataListToTrainingQueue } from '@fastgpt/service/core/dataset/training/controller';
-import { DatasetDataIndexTypeEnum } from '@fastgpt/global/core/dataset/data/constants';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { hashStr } from '@fastgpt/global/common/string/tools';
-import { POST } from '@fastgpt/service/common/api/plusRequest';
-import { pushLLMTrainingUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { MongoImage } from '@fastgpt/service/common/file/image/schema';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { delay } from '@libchat/service/common/bullmq';
+import { rawText2Chunks, readDatasetSourceRawText } from '@libchat/service/core/dataset/read';
+import { getLLMModel } from '@libchat/service/core/ai/model';
+import { getLLMMaxChunkSize } from '@libchat/global/core/dataset/training/utils';
+import { checkDatasetIndexLimit } from '@libchat/service/support/permission/teamLimit';
+import { predictDataLimitLength } from '@libchat/global/core/dataset/utils';
+import { getTrainingModeByCollection } from '@libchat/service/core/dataset/collection/utils';
+import { pushDataListToTrainingQueue } from '@libchat/service/core/dataset/training/controller';
+import { DatasetDataIndexTypeEnum } from '@libchat/global/core/dataset/data/constants';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { hashStr } from '@libchat/global/common/string/tools';
+import { POST } from '@libchat/service/common/api/plusRequest';
+import { pushLLMTrainingUsage } from '@libchat/service/support/wallet/usage/controller';
+import { MongoImage } from '@libchat/service/common/file/image/schema';
 
 const requestLLMPargraph = async ({
   rawText,

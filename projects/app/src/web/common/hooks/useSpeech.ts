@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { POST } from '../api/request';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useTranslation } from 'next-i18next';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
 
 export const useSpeech = (props?: OutLinkChatAuthProps & { appId?: string }) => {
   const { t } = useTranslation();

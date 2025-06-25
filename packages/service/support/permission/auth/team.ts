@@ -1,8 +1,8 @@
 import { MongoTeamMember } from '../../user/team/teamMemberSchema';
 import { checkTeamAIPoints } from '../teamLimit';
-import { type UserModelSchema } from '@fastgpt/global/support/user/type';
-import { type TeamSchema } from '@fastgpt/global/support/user/team/type';
-import { TeamErrEnum } from '@fastgpt/global/common/error/code/team';
+import { type UserModelSchema } from '@libchat/global/support/user/type';
+import { type TeamSchema } from '@libchat/global/support/user/team/type';
+import { TeamErrEnum } from '@libchat/global/common/error/code/team';
 
 export async function getUserChatInfoAndAuthTeamPoints(tmbId: string) {
   const tmb = await MongoTeamMember.findById(tmbId, 'userId teamId')

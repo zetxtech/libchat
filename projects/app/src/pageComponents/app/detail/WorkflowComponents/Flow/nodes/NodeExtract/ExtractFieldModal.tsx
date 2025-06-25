@@ -9,15 +9,15 @@ import {
   Input,
   Textarea
 } from '@chakra-ui/react';
-import type { ContextExtractAgentItemType } from '@fastgpt/global/core/workflow/template/system/contextExtract/type';
+import type { ContextExtractAgentItemType } from '@libchat/global/core/workflow/template/system/contextExtract/type';
 import { useForm } from 'react-hook-form';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { toolValueTypeList } from '@fastgpt/global/core/workflow/constants';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { toolValueTypeList } from '@libchat/global/core/workflow/constants';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 
 export const defaultField: ContextExtractAgentItemType = {
   valueType: WorkflowIOValueTypeEnum.string,

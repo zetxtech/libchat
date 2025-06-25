@@ -1,10 +1,10 @@
-import { OrgCollectionName } from '@fastgpt/global/support/user/team/org/constant';
+import { OrgCollectionName } from '@libchat/global/support/user/team/org/constant';
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 import {
   TeamCollectionName,
   TeamMemberCollectionName
-} from '@fastgpt/global/support/user/team/constant';
-import { type OrgMemberSchemaType } from '@fastgpt/global/support/user/team/org/type';
+} from '@libchat/global/support/user/team/constant';
+import { type OrgMemberSchemaType } from '@libchat/global/support/user/team/org/type';
 const { Schema } = connectionMongo;
 
 export const OrgMemberCollectionName = 'team_org_members';

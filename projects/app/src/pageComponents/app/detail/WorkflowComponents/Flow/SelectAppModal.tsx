@@ -1,15 +1,15 @@
 import React, { useCallback, useState } from 'react';
 import { ModalBody, ModalFooter, Button } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import type { SelectAppItemType } from '@fastgpt/global/core/workflow/template/system/abandoned/runApp/type';
+import MyModal from '@libchat/web/components/common/MyModal';
+import type { SelectAppItemType } from '@libchat/global/core/workflow/template/system/abandoned/runApp/type';
 import { useTranslation } from 'next-i18next';
 import SelectOneResource from '@/components/common/folder/SelectOneResource';
 import {
   type GetResourceFolderListProps,
   type GetResourceListItemResponse
-} from '@fastgpt/global/common/parentFolder/type';
+} from '@libchat/global/common/parentFolder/type';
 import { getMyApps } from '@/web/core/app/api';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 
 const SelectAppModal = ({
   value,

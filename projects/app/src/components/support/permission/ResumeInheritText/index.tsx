@@ -1,6 +1,6 @@
 import { Box, type BoxProps } from '@chakra-ui/react';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
+import { useToast } from '@libchat/web/hooks/useToast';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 

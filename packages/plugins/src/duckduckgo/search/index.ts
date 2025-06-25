@@ -1,7 +1,7 @@
 import { search, SafeSearchType } from 'duck-duck-scrape';
-import { delay } from '@fastgpt/global/common/system/utils';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { delay } from '@libchat/global/common/system/utils';
+import { addLog } from '@libchat/service/common/system/log';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 type Props = {
   query: string;

@@ -1,13 +1,13 @@
 import { Box, Button, Flex } from '@chakra-ui/react';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
+import MyPopover from '@libchat/web/components/common/MyPopover';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
-import { VariableInputEnum } from '@fastgpt/global/core/workflow/constants';
+import { VariableInputEnum } from '@libchat/global/core/workflow/constants';
 import { useEffect } from 'react';
 import { ExternalVariableInputItem, VariableInputItem } from './VariableInput';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 
 const VariablePopover = ({
   showExternalVariables = false

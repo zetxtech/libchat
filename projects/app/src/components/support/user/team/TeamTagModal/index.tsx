@@ -1,5 +1,5 @@
 import React from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import {
   Box,
   Button,
@@ -14,11 +14,11 @@ import {
 import { putUpdateTeam } from '@/web/support/user/team/api';
 import { useFieldArray, useForm } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
-import type { TeamTagItemType } from '@fastgpt/global/support/user/team/type';
-import { useRequest } from '@fastgpt/web/hooks/useRequest';
+import type { TeamTagItemType } from '@libchat/global/support/user/team/type';
+import { useRequest } from '@libchat/web/hooks/useRequest';
 import { RepeatIcon } from '@chakra-ui/icons';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useCopyData } from '@fastgpt/web/hooks/useCopyData';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useCopyData } from '@libchat/web/hooks/useCopyData';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import { useQuery } from '@tanstack/react-query';
 import { getTeamsTags, loadTeamTagsByDomain } from '@/web/support/user/team/api';

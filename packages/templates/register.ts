@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-import { isProduction } from '@fastgpt/global/common/system/constants';
-import { PluginSourceEnum } from '@fastgpt/global/core/plugin/constants';
-import { MongoAppTemplate } from '@fastgpt/service/core/app/templates/templateSchema';
-import { type AppTemplateSchemaType } from '@fastgpt/global/core/app/type';
+import { isProduction } from '@libchat/global/common/system/constants';
+import { PluginSourceEnum } from '@libchat/global/core/plugin/constants';
+import { MongoAppTemplate } from '@libchat/service/core/app/templates/templateSchema';
+import { type AppTemplateSchemaType } from '@libchat/global/core/app/type';
 
 const getTemplateNameList = () => {
   const currentFileUrl = new URL(import.meta.url);

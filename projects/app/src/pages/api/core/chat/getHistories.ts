@@ -1,13 +1,13 @@
-import { MongoChat } from '@fastgpt/service/core/chat/chatSchema';
-import { ChatSourceEnum } from '@fastgpt/global/core/chat/constants';
+import { MongoChat } from '@libchat/service/core/chat/chatSchema';
+import { ChatSourceEnum } from '@libchat/global/core/chat/constants';
 import { authOutLink } from '@/service/support/permission/auth/outLink';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { authTeamSpaceToken } from '@/service/support/permission/auth/team';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps, type ApiResponseType } from '@fastgpt/service/type/next';
-import { type PaginationProps, type PaginationResponse } from '@fastgpt/web/common/fetch/type';
+import { type ApiRequestProps, type ApiResponseType } from '@libchat/service/type/next';
+import { type PaginationProps, type PaginationResponse } from '@libchat/web/common/fetch/type';
 import { type GetHistoriesProps } from '@/global/core/chat/api';
-import { parsePaginationRequest } from '@fastgpt/service/common/api/pagination';
+import { parsePaginationRequest } from '@libchat/service/common/api/pagination';
 import { addMonths } from 'date-fns';
 
 export type getHistoriesQuery = {};

@@ -2,15 +2,15 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Box, Flex, type FlexProps } from '@chakra-ui/react';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { getErrText } from '@libchat/global/common/error/utils';
 import dynamic from 'next/dynamic';
 import PageContainer from '@/components/PageContainer';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import { useTranslation } from 'next-i18next';
 import MetaDataCard from '@/pageComponents/dataset/detail/MetaDataCard';
 import NavBar from '@/pageComponents/dataset/detail/NavBar';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyBox from '@libchat/web/components/common/MyBox';
 import {
   DatasetPageContext,
   DatasetPageContextProvider
@@ -18,8 +18,8 @@ import {
 import CollectionPageContextProvider from '@/pageComponents/dataset/detail/CollectionCard/Context';
 import { useContextSelector } from 'use-context-selector';
 import NextHead from '@/components/common/NextHead';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 
 const CollectionCard = dynamic(
   () => import('@/pageComponents/dataset/detail/CollectionCard/index')

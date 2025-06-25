@@ -1,15 +1,15 @@
-import { defaultQAModels, defaultVectorModels } from '@fastgpt/global/core/ai/model';
+import { defaultQAModels, defaultVectorModels } from '@libchat/global/core/ai/model';
 import {
   DatasetCollectionDataProcessModeEnum,
   DatasetCollectionTypeEnum,
   DatasetTypeEnum
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import type {
   DatasetCollectionItemType,
   DatasetItemType
-} from '@fastgpt/global/core/dataset/type.d';
-import { DatasetPermission } from '@fastgpt/global/support/permission/dataset/controller';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+} from '@libchat/global/core/dataset/type.d';
+import { DatasetPermission } from '@libchat/global/support/permission/dataset/controller';
+import { i18nT } from '@libchat/web/i18n/utils';
 
 export const defaultDatasetDetail: DatasetItemType = {
   _id: '',

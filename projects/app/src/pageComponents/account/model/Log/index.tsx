@@ -18,23 +18,23 @@ import {
   GridItem,
   type BoxProps
 } from '@chakra-ui/react';
-import { getModelProvider } from '@fastgpt/global/core/ai/provider';
+import { getModelProvider } from '@libchat/global/core/ai/provider';
 import DateRangePicker, {
   type DateRangeType
-} from '@fastgpt/web/components/common/DateRangePicker';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { useScrollPagination } from '@fastgpt/web/hooks/useScrollPagination';
+} from '@libchat/web/components/common/DateRangePicker';
+import MyBox from '@libchat/web/components/common/MyBox';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { useScrollPagination } from '@libchat/web/hooks/useScrollPagination';
 import { addDays } from 'date-fns';
 import { useTranslation } from 'next-i18next';
 import React, { useCallback, useMemo, useState } from 'react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { formatTime2YMDHMS } from '@fastgpt/global/common/string/time';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { formatTime2YMDHMS } from '@libchat/global/common/string/time';
+import MyModal from '@libchat/web/components/common/MyModal';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
 import { type ChannelLogUsageType } from '@/global/aiproxy/type';
 
 type LogDetailType = {

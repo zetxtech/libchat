@@ -1,14 +1,14 @@
 import {
   type DispatchNodeResultType,
   type ModuleDispatchProps
-} from '@fastgpt/global/core/workflow/runtime/type';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
+} from '@libchat/global/core/workflow/runtime/type';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
 import { MCPClient } from '../../../app/mcp';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 import { getSecretValue } from '../../../../common/secret/utils';
-import type { McpToolDataType } from '@fastgpt/global/core/app/mcpTools/type';
+import type { McpToolDataType } from '@libchat/global/core/app/mcpTools/type';
 
 type RunToolProps = ModuleDispatchProps<{
   toolData?: McpToolDataType;

@@ -27,9 +27,9 @@ export type ExternalProviderWorkflowVarType = {
   url?: string;
 };
 
-/* fastgpt main */
-export type FastGPTConfigFileType = {
-  feConfigs: FastGPTFeConfigsType;
+/* libchat main */
+export type LibChatConfigFileType = {
+  feConfigs: LibChatFeConfigsType;
   systemEnv: SystemEnvType;
   subPlans?: SubPlanType;
 
@@ -41,7 +41,7 @@ export type FastGPTConfigFileType = {
   whisperModel?: STTModelType;
 };
 
-export type FastGPTFeConfigsType = {
+export type LibChatFeConfigsType = {
   show_workorder?: boolean;
   show_emptyChat?: boolean;
   isPlus?: boolean;

@@ -1,10 +1,10 @@
 import * as copyapi from '@/pages/api/core/app/copy';
 import * as createapi from '@/pages/api/core/app/create';
-import { AppErrEnum } from '@fastgpt/global/common/error/code/app';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { TeamAppCreatePermissionVal } from '@fastgpt/global/support/permission/user/constant';
-import { MongoResourcePermission } from '@fastgpt/service/support/permission/schema';
+import { AppErrEnum } from '@libchat/global/common/error/code/app';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { TeamAppCreatePermissionVal } from '@libchat/global/support/permission/user/constant';
+import { MongoResourcePermission } from '@libchat/service/support/permission/schema';
 import { getFakeUsers } from '@test/datas/users';
 import { Call } from '@test/utils/request';
 import { describe, expect, it } from 'vitest';

@@ -1,22 +1,22 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authSystemAdmin } from '@fastgpt/service/support/permission/user/auth';
-import { findModelFromAlldata } from '@fastgpt/service/core/ai/model';
+import { authSystemAdmin } from '@libchat/service/support/permission/user/auth';
+import { findModelFromAlldata } from '@libchat/service/core/ai/model';
 import {
   type EmbeddingModelItemType,
   type LLMModelItemType,
   type RerankModelItemType,
   type STTModelType,
   type TTSModelType
-} from '@fastgpt/global/core/ai/model.d';
-import { createChatCompletion, getAIApi } from '@fastgpt/service/core/ai/config';
-import { addLog } from '@fastgpt/service/common/system/log';
-import { getVectorsByText } from '@fastgpt/service/core/ai/embedding';
-import { reRankRecall } from '@fastgpt/service/core/ai/rerank';
-import { aiTranscriptions } from '@fastgpt/service/core/ai/audio/transcriptions';
-import { isProduction } from '@fastgpt/global/common/system/constants';
+} from '@libchat/global/core/ai/model.d';
+import { createChatCompletion, getAIApi } from '@libchat/service/core/ai/config';
+import { addLog } from '@libchat/service/common/system/log';
+import { getVectorsByText } from '@libchat/service/core/ai/embedding';
+import { reRankRecall } from '@libchat/service/core/ai/rerank';
+import { aiTranscriptions } from '@libchat/service/core/ai/audio/transcriptions';
+import { isProduction } from '@libchat/global/common/system/constants';
 import * as fs from 'fs';
-import { llmCompletionsBodyFormat, formatLLMResponse } from '@fastgpt/service/core/ai/utils';
+import { llmCompletionsBodyFormat, formatLLMResponse } from '@libchat/service/core/ai/utils';
 
 export type testQuery = { model: string; channelId?: number };
 

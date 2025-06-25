@@ -1,4 +1,4 @@
-import { type DatasetSchemaType } from '@fastgpt/global/core/dataset/type';
+import { type DatasetSchemaType } from '@libchat/global/core/dataset/type';
 import { MongoDatasetCollection } from './collection/schema';
 import { MongoDataset } from './schema';
 import { delCollectionRelatedSource } from './collection/controller';
@@ -7,8 +7,8 @@ import { MongoDatasetTraining } from './training/schema';
 import { MongoDatasetData } from './data/schema';
 import { deleteDatasetDataVector } from '../../common/vectorDB/controller';
 import { MongoDatasetDataText } from './data/dataTextSchema';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
+import { retryFn } from '@libchat/global/common/system/utils';
 import { clearDatasetImages } from './image/utils';
 
 /* ============= dataset ========== */

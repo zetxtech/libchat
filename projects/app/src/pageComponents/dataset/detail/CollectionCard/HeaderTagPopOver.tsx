@@ -1,14 +1,14 @@
 import { Box, Button, Checkbox, Flex, Input, useDisclosure } from '@chakra-ui/react';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyPopover from '@libchat/web/components/common/MyPopover';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyBox from '@libchat/web/components/common/MyBox';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import { useTranslation } from 'next-i18next';
 import { CollectionPageContext } from './Context';
 import { isEqual } from 'lodash';
 import TagManageModal from './TagManageModal';
-import { type DatasetTagType } from '@fastgpt/global/core/dataset/type';
+import { type DatasetTagType } from '@libchat/global/core/dataset/type';
 
 const HeaderTagPopOver = () => {
   const { t } = useTranslation();

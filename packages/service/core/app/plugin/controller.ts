@@ -1,27 +1,27 @@
-import { type FlowNodeTemplateType } from '@fastgpt/global/core/workflow/type/node.d';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { type FlowNodeTemplateType } from '@libchat/global/core/workflow/type/node.d';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import {
   appData2FlowNodeIO,
   pluginData2FlowNodeIO,
   toolData2FlowNodeIO,
   toolSetData2FlowNodeIO
-} from '@fastgpt/global/core/workflow/utils';
-import { PluginSourceEnum } from '@fastgpt/global/core/plugin/constants';
-import { FlowNodeTemplateTypeEnum } from '@fastgpt/global/core/workflow/constants';
-import { getHandleConfig } from '@fastgpt/global/core/workflow/template/utils';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+} from '@libchat/global/core/workflow/utils';
+import { PluginSourceEnum } from '@libchat/global/core/plugin/constants';
+import { FlowNodeTemplateTypeEnum } from '@libchat/global/core/workflow/constants';
+import { getHandleConfig } from '@libchat/global/core/workflow/template/utils';
+import { getNanoid } from '@libchat/global/common/string/tools';
 import { cloneDeep } from 'lodash';
 import { MongoApp } from '../schema';
-import { type SystemPluginTemplateItemType } from '@fastgpt/global/core/workflow/type';
+import { type SystemPluginTemplateItemType } from '@libchat/global/core/workflow/type';
 import { getSystemPluginTemplates } from '../../../../plugins/register';
 import {
   checkIsLatestVersion,
   getAppLatestVersion,
   getAppVersionById
 } from '../version/controller';
-import { type PluginRuntimeType } from '@fastgpt/global/core/plugin/type';
+import { type PluginRuntimeType } from '@libchat/global/core/plugin/type';
 import { MongoSystemPlugin } from './systemPluginSchema';
-import { PluginErrEnum } from '@fastgpt/global/common/error/code/plugin';
+import { PluginErrEnum } from '@libchat/global/common/error/code/plugin';
 import { Types } from 'mongoose';
 
 /* 

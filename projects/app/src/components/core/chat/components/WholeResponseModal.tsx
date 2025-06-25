@@ -1,23 +1,23 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Box, Flex, type BoxProps, useDisclosure, HStack } from '@chakra-ui/react';
-import type { ChatHistoryItemResType } from '@fastgpt/global/core/chat/type.d';
+import type { ChatHistoryItemResType } from '@libchat/global/core/chat/type.d';
 import { useTranslation } from 'next-i18next';
-import { moduleTemplatesFlat } from '@fastgpt/global/core/workflow/template/constants';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import { moduleTemplatesFlat } from '@libchat/global/core/workflow/template/constants';
+import MyModal from '@libchat/web/components/common/MyModal';
 import Markdown from '@/components/Markdown';
 import QuoteList from '../ChatContainer/ChatBox/components/QuoteList';
-import { DatasetSearchModeMap } from '@fastgpt/global/core/dataset/constants';
-import { formatNumber } from '@fastgpt/global/common/math/tools';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { DatasetSearchModeMap } from '@libchat/global/core/dataset/constants';
+import { formatNumber } from '@libchat/global/common/math/tools';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
 import { ChatBoxContext } from '../ChatContainer/ChatBox/Provider';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
-import { getFileIcon } from '@fastgpt/global/common/file/icon';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import { completionFinishReasonMap } from '@fastgpt/global/core/ai/constants';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
+import { getFileIcon } from '@libchat/global/common/file/icon';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import { completionFinishReasonMap } from '@libchat/global/core/ai/constants';
 
 type sideTabItemType = {
   moduleLogo?: string;

@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { useAudioPlay } from '@/web/common/utils/voice';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
 import {
   type AppFileSelectConfigType,
   type AppQGConfigType,
@@ -8,17 +8,17 @@ import {
   type AppWhisperConfigType,
   type ChatInputGuideConfigType,
   type VariableItemType
-} from '@fastgpt/global/core/app/type';
-import { type ChatHistoryItemResType } from '@fastgpt/global/core/chat/type';
+} from '@libchat/global/core/app/type';
+import { type ChatHistoryItemResType } from '@libchat/global/core/chat/type';
 import {
   defaultAppSelectFileConfig,
   defaultChatInputGuideConfig,
   defaultQGConfig,
   defaultTTSConfig,
   defaultWhisperConfig
-} from '@fastgpt/global/core/app/constants';
+} from '@libchat/global/core/app/constants';
 import { createContext, useContextSelector } from 'use-context-selector';
-import { VariableInputEnum } from '@fastgpt/global/core/workflow/constants';
+import { VariableInputEnum } from '@libchat/global/core/workflow/constants';
 import { getChatResData } from '@/web/core/chat/api';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { ChatRecordContext } from '@/web/core/chat/context/chatRecordContext';

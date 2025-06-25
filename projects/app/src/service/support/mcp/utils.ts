@@ -1,43 +1,43 @@
-import { MongoMcpKey } from '@fastgpt/service/support/mcp/schema';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { authAppByTmbId } from '@fastgpt/service/support/permission/app/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
+import { MongoMcpKey } from '@libchat/service/support/mcp/schema';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { authAppByTmbId } from '@libchat/service/support/permission/app/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
 import { type Tool } from '@modelcontextprotocol/sdk/types';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
-import { toolValueTypeList, valueTypeJsonSchemaMap } from '@fastgpt/global/core/workflow/constants';
-import { type AppChatConfigType } from '@fastgpt/global/core/app/type';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { type FlowNodeInputItemType } from '@fastgpt/global/core/workflow/type/io';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
+import { toolValueTypeList, valueTypeJsonSchemaMap } from '@libchat/global/core/workflow/constants';
+import { type AppChatConfigType } from '@libchat/global/core/app/type';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { type FlowNodeInputItemType } from '@libchat/global/core/workflow/type/io';
 import { type toolCallProps } from './type';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
-import { getUserChatInfoAndAuthTeamPoints } from '@fastgpt/service/support/permission/auth/team';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import { type AIChatItemType, type UserChatItemType } from '@fastgpt/global/core/chat/type';
+import { type AppSchema } from '@libchat/global/core/app/type';
+import { getUserChatInfoAndAuthTeamPoints } from '@libchat/service/support/permission/auth/team';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import { type AIChatItemType, type UserChatItemType } from '@libchat/global/core/chat/type';
 import {
   getPluginRunUserQuery,
   updatePluginInputByVariables
-} from '@fastgpt/global/core/workflow/utils';
-import { getPluginInputsFromStoreNodes } from '@fastgpt/global/core/app/plugin/utils';
+} from '@libchat/global/core/workflow/utils';
+import { getPluginInputsFromStoreNodes } from '@libchat/global/core/app/plugin/utils';
 import {
   ChatItemValueTypeEnum,
   ChatRoleEnum,
   ChatSourceEnum
-} from '@fastgpt/global/core/chat/constants';
+} from '@libchat/global/core/chat/constants';
 import {
   getWorkflowEntryNodeIds,
   storeEdges2RuntimeEdges,
   storeNodes2RuntimeNodes
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import { WORKFLOW_MAX_RUN_TIMES } from '@fastgpt/service/core/workflow/constants';
-import { dispatchWorkFlow } from '@fastgpt/service/core/workflow/dispatch';
-import { getChatTitleFromChatMessage, removeEmptyUserInput } from '@fastgpt/global/core/chat/utils';
-import { saveChat } from '@fastgpt/service/core/chat/saveChat';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
-import { createChatUsage } from '@fastgpt/service/support/wallet/usage/controller';
-import { UsageSourceEnum } from '@fastgpt/global/support/wallet/usage/constants';
-import { removeDatasetCiteText } from '@fastgpt/service/core/ai/utils';
+} from '@libchat/global/core/workflow/runtime/utils';
+import { WORKFLOW_MAX_RUN_TIMES } from '@libchat/service/core/workflow/constants';
+import { dispatchWorkFlow } from '@libchat/service/core/workflow/dispatch';
+import { getChatTitleFromChatMessage, removeEmptyUserInput } from '@libchat/global/core/chat/utils';
+import { saveChat } from '@libchat/service/core/chat/saveChat';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
+import { createChatUsage } from '@libchat/service/support/wallet/usage/controller';
+import { UsageSourceEnum } from '@libchat/global/support/wallet/usage/constants';
+import { removeDatasetCiteText } from '@libchat/service/core/ai/utils';
 
 export const pluginNodes2InputSchema = (
   nodes: { flowNodeType: FlowNodeTypeEnum; inputs: FlowNodeInputItemType[] }[]

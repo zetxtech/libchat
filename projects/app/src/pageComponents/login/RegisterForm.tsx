@@ -5,21 +5,21 @@ import { LoginPageTypeEnum } from '@/web/support/user/login/constants';
 import { postRegister } from '@/web/support/user/api';
 import { useSendCode } from '@/web/support/user/hooks/useSendCode';
 import type { ResLogin } from '@/global/support/api/userRes';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { postCreateApp } from '@/web/core/app/api';
 import { emptyTemplates } from '@/web/core/app/templates';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useTranslation } from 'next-i18next';
-import type { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import type { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import {
   getBdVId,
-  getFastGPTSem,
+  getLibChatSem,
   getInviterId,
   getSourceDomain,
-  removeFastGPTSem
+  removeLibChatSem
 } from '@/web/support/marketing/utils';
-import { checkPasswordRule } from '@fastgpt/global/common/string/password';
+import { checkPasswordRule } from '@libchat/global/common/string/password';
 
 interface Props {
   loginSuccess: (e: ResLogin) => void;
@@ -60,11 +60,11 @@ const RegisterForm = ({ setPageType, loginSuccess }: Props) => {
           password,
           inviterId: getInviterId(),
           bd_vid: getBdVId(),
-          fastgpt_sem: getFastGPTSem(),
+          libchat_sem: getLibChatSem(),
           sourceDomain: getSourceDomain()
         })
       );
-      removeFastGPTSem();
+      removeLibChatSem();
 
       toast({
         status: 'success',

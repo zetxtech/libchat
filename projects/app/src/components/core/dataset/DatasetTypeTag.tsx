@@ -1,8 +1,8 @@
 import { Box, Flex, type FlexProps } from '@chakra-ui/react';
-import type { DatasetTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import type { DatasetTypeEnum } from '@libchat/global/core/dataset/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
 import React from 'react';
-import { DatasetTypeMap } from '@fastgpt/global/core/dataset/constants';
+import { DatasetTypeMap } from '@libchat/global/core/dataset/constants';
 import { useTranslation } from 'next-i18next';
 
 const DatasetTypeTag = ({ type, ...props }: { type: `${DatasetTypeEnum}` } & FlexProps) => {

@@ -1,7 +1,7 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { StreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/streamableHttp.js';
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
-import { addLog } from '@fastgpt/service/common/system/log';
+import { addLog } from '@libchat/service/common/system/log';
 import {
   CallToolRequestSchema,
   type CallToolResult,
@@ -9,7 +9,7 @@ import {
 } from '@modelcontextprotocol/sdk/types';
 import { callMcpServerTool, getMcpServerTools } from '@/service/support/mcp/utils';
 import { type toolCallProps } from '@/service/support/mcp/type';
-import { getErrText } from '@fastgpt/global/common/error/utils';
+import { getErrText } from '@libchat/global/common/error/utils';
 
 export type mcpQuery = { key: string };
 
@@ -19,7 +19,7 @@ const handlePost = async (req: ApiRequestProps<mcpBody, mcpQuery>, res: ApiRespo
   const key = req.query.key;
   const server = new Server(
     {
-      name: 'fastgpt-mcp-server-http-streamable',
+      name: 'libchat-mcp-server-http-streamable',
       version: '1.0.0'
     },
     {

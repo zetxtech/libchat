@@ -1,18 +1,18 @@
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
 import ParentPaths from '@/components/common/ParentPaths';
-import { useRequest, useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest, useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getDatasetCollectionPathById, getDatasetCollections } from '@/web/core/dataset/api';
 import { Box, Flex, ModalFooter, Button, useTheme, Grid, Card, ModalBody } from '@chakra-ui/react';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { getCollectionIcon } from '@fastgpt/global/core/dataset/utils';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { getCollectionIcon } from '@libchat/global/core/dataset/utils';
 import { useQuery } from '@tanstack/react-query';
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import { useLoading } from '@fastgpt/web/hooks/useLoading';
+import { useLoading } from '@libchat/web/hooks/useLoading';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '../context/datasetPageContext';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 
 const SelectCollections = ({
   datasetId,

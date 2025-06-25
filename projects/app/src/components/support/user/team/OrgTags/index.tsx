@@ -1,7 +1,7 @@
 import { Box, Flex, VStack } from '@chakra-ui/react';
-import MyPopover from '@fastgpt/web/components/common/MyPopover';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import Tag from '@fastgpt/web/components/common/Tag';
+import MyPopover from '@libchat/web/components/common/MyPopover';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import Tag from '@libchat/web/components/common/Tag';
 import React from 'react';
 
 function OrgTags({ orgs, type = 'simple' }: { orgs?: string[]; type?: 'simple' | 'tag' }) {

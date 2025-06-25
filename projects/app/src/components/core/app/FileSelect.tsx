@@ -1,5 +1,5 @@
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import {
   Box,
   Button,
@@ -14,17 +14,17 @@ import {
 } from '@chakra-ui/react';
 import React, { useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
-import type { AppFileSelectConfigType } from '@fastgpt/global/core/app/type.d';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import type { AppFileSelectConfigType } from '@libchat/global/core/app/type.d';
+import MyModal from '@libchat/web/components/common/MyModal';
 import MySlider from '@/components/Slider';
-import { defaultAppSelectFileConfig } from '@fastgpt/global/core/app/constants';
+import { defaultAppSelectFileConfig } from '@libchat/global/core/app/constants';
 import ChatFunctionTip from './Tip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { useMount } from 'ahooks';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import MyTag from '@libchat/web/components/common/Tag/index';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 
 const FileSelect = ({
   forbidVision = false,

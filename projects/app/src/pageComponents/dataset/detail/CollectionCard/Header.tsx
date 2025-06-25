@@ -6,12 +6,12 @@ import {
   putDatasetCollectionById
 } from '@/web/core/dataset/api';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import MyInput from '@/components/MyInput';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useRouter } from 'next/router';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
+import MyMenu from '@libchat/web/components/common/MyMenu';
 import { useEditTitle } from '@/web/common/hooks/useEditTitle';
 import {
   DatasetCollectionTypeEnum,
@@ -19,22 +19,22 @@ import {
   DatasetTypeMap,
   DatasetStatusEnum,
   ApiDatasetTypeMap
-} from '@fastgpt/global/core/dataset/constants';
+} from '@libchat/global/core/dataset/constants';
 import EditFolderModal, { useEditFolder } from '../../EditFolderModal';
 import { TabEnum } from '../../../../pages/dataset/detail/index';
 import ParentPath from '@/components/common/ParentPaths';
 import dynamic from 'next/dynamic';
 
-import { ImportDataSourceEnum } from '@fastgpt/global/core/dataset/constants';
+import { ImportDataSourceEnum } from '@libchat/global/core/dataset/constants';
 import { useContextSelector } from 'use-context-selector';
 import { CollectionPageContext } from './Context';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import HeaderTagPopOver from './HeaderTagPopOver';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import Icon from '@fastgpt/web/components/common/Icon';
-import MyTag from '@fastgpt/web/components/common/Tag/index';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import MyBox from '@libchat/web/components/common/MyBox';
+import Icon from '@libchat/web/components/common/Icon';
+import MyTag from '@libchat/web/components/common/Tag/index';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 
 const FileSourceSelector = dynamic(() => import('../Import/components/FileSourceSelector'));
 const BackupImportModal = dynamic(() => import('./BackupImportModal'));

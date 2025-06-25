@@ -1,7 +1,7 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { MongoChatInputGuide } from '@fastgpt/service/core/chat/inputGuide/schema';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { MongoChatInputGuide } from '@libchat/service/core/chat/inputGuide/schema';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 
 export type countChatInputGuideTotalQuery = { appId: string };
 

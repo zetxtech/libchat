@@ -1,11 +1,11 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { MongoSystemModel } from '@fastgpt/service/core/ai/config/schema';
-import { loadSystemModels, updatedReloadSystemModel } from '@fastgpt/service/core/ai/config/utils';
-import { updateFastGPTConfigBuffer } from '@fastgpt/service/common/system/config/controller';
-import type { ModelTypeEnum } from '@fastgpt/global/core/ai/model';
-import { authSystemAdmin } from '@fastgpt/service/support/permission/user/auth';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { MongoSystemModel } from '@libchat/service/core/ai/config/schema';
+import { loadSystemModels, updatedReloadSystemModel } from '@libchat/service/core/ai/config/utils';
+import { updateLibChatConfigBuffer } from '@libchat/service/common/system/config/controller';
+import type { ModelTypeEnum } from '@libchat/global/core/ai/model';
+import { authSystemAdmin } from '@libchat/service/support/permission/user/auth';
 
 export type updateDefaultQuery = {};
 

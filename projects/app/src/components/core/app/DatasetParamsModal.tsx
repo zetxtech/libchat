@@ -13,23 +13,23 @@ import {
   SliderThumb
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { DatasetSearchModeEnum } from '@fastgpt/global/core/dataset/constants';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { DatasetSearchModeEnum } from '@libchat/global/core/dataset/constants';
 import { useTranslation } from 'next-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import LightRowTabs from '@fastgpt/web/components/common/Tabs/LightRowTabs';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import LightRowTabs from '@libchat/web/components/common/Tabs/LightRowTabs';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import SelectAiModel from '@/components/Select/AIModelSelector';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
-import InputSlider from '@fastgpt/web/components/common/MySlider/InputSlider';
-import LeftRadio from '@fastgpt/web/components/common/Radio/LeftRadio';
-import { type AppDatasetSearchParamsType } from '@fastgpt/global/core/app/type';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import InputSlider from '@libchat/web/components/common/MySlider/InputSlider';
+import LeftRadio from '@libchat/web/components/common/Radio/LeftRadio';
+import { type AppDatasetSearchParamsType } from '@libchat/global/core/app/type';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 
 enum SearchSettingTabEnum {
   searchMode = 'searchMode',

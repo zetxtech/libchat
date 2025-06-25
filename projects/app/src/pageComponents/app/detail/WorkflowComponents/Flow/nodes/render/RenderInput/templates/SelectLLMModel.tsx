@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo } from 'react';
 import type { RenderInputProps } from '../type';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { llmModelTypeFilterMap } from '@fastgpt/global/core/ai/constants';
+import { llmModelTypeFilterMap } from '@libchat/global/core/ai/constants';
 import AIModelSelector from '@/components/Select/AIModelSelector';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';

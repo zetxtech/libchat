@@ -1,8 +1,8 @@
 import type { NextApiRequest } from 'next';
 import { NextAPI } from '@/service/middleware/entry';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
-import { authDataset } from '@fastgpt/service/support/permission/dataset/auth';
-import { DatasetErrEnum } from '@fastgpt/global/common/error/code/dataset';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
+import { authDataset } from '@libchat/service/support/permission/dataset/auth';
+import { DatasetErrEnum } from '@libchat/global/common/error/code/dataset';
 
 export type GetQuotePermissionResponse =
   | {

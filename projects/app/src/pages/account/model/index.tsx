@@ -5,7 +5,7 @@ import AccountContainer from '@/pageComponents/account/AccountContainer';
 import { Box, Flex } from '@chakra-ui/react';
 import ModelTable from '@/components/core/ai/ModelTable';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
 import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 import { useSystemStore } from '@/web/common/system/useSystemStore';

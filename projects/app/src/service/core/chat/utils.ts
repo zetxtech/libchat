@@ -1,4 +1,4 @@
-import type { DatasetCiteItemType } from '@fastgpt/global/core/dataset/type';
+import type { DatasetCiteItemType } from '@libchat/global/core/dataset/type';
 
 // 获取对话时间时，引用的内容
 export function processChatTimeFilter(

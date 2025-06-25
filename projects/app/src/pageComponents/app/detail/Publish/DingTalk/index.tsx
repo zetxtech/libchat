@@ -14,20 +14,20 @@ import {
   Link,
   HStack
 } from '@chakra-ui/react';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useLoading } from '@fastgpt/web/hooks/useLoading';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useLoading } from '@libchat/web/hooks/useLoading';
 import { getShareChatList, delShareChatById } from '@/web/support/outLink/api';
-import { formatTimeToChatTime } from '@fastgpt/global/common/string/time';
+import { formatTimeToChatTime } from '@libchat/global/common/string/time';
 import { defaultDingtalkOutlinkForm } from '@/web/core/app/constants';
-import type { DingtalkAppType, OutLinkEditType } from '@fastgpt/global/support/outLink/type.d';
-import { PublishChannelEnum } from '@fastgpt/global/support/outLink/constant';
+import type { DingtalkAppType, OutLinkEditType } from '@libchat/global/support/outLink/type.d';
+import { PublishChannelEnum } from '@libchat/global/support/outLink/constant';
 import { useTranslation } from 'next-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import dayjs from 'dayjs';
 import dynamic from 'next/dynamic';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import MyMenu from '@libchat/web/components/common/MyMenu';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getDocPath } from '@/web/common/system/doc';
 
 const DingTalkEditModal = dynamic(() => import('./DingTalkEditModal'));

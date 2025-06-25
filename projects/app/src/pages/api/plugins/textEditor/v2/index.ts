@@ -1,9 +1,9 @@
 import type { NextApiResponse } from 'next';
-import type { HttpBodyType } from '@fastgpt/global/core/workflow/api.d';
-import { getErrText } from '@fastgpt/global/common/error/utils';
-import { replaceVariable } from '@fastgpt/global/common/string/tools';
-import { authRequestFromLocal } from '@fastgpt/service/support/permission/auth/common';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import type { HttpBodyType } from '@libchat/global/core/workflow/api.d';
+import { getErrText } from '@libchat/global/common/error/utils';
+import { replaceVariable } from '@libchat/global/common/string/tools';
+import { authRequestFromLocal } from '@libchat/service/support/permission/auth/common';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 
 type Props = HttpBodyType<{
   text: string;

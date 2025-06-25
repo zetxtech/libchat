@@ -1,8 +1,8 @@
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import axios from 'axios';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
-import { isInternalAddress } from '@fastgpt/service/common/system/utils';
+import { authCert } from '@libchat/service/support/permission/auth/common';
+import { isInternalAddress } from '@libchat/service/common/system/utils';
 import { type NextApiResponse } from 'next';
 
 export type FetchWorkflowBody = {
@@ -34,7 +34,7 @@ async function handler(
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      'User-Agent': 'Mozilla/5.0 (compatible; FastGPT/1.0)'
+      'User-Agent': 'Mozilla/5.0 (compatible; LibChat/1.0)'
     },
     timeout: 30000,
     validateStatus: (status) => status < 500

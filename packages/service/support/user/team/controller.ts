@@ -1,20 +1,20 @@
-import { type TeamSchema, type TeamTmbItemType } from '@fastgpt/global/support/user/team/type';
+import { type TeamSchema, type TeamTmbItemType } from '@libchat/global/support/user/team/type';
 import { type ClientSession, Types } from '../../../common/mongo';
 import {
   TeamMemberRoleEnum,
   TeamMemberStatusEnum,
   notLeaveStatus
-} from '@fastgpt/global/support/user/team/constant';
+} from '@libchat/global/support/user/team/constant';
 import { MongoTeamMember } from './teamMemberSchema';
 import { MongoTeam } from './teamSchema';
-import { type UpdateTeamProps } from '@fastgpt/global/support/user/team/controller';
+import { type UpdateTeamProps } from '@libchat/global/support/user/team/controller';
 import { getResourcePermission } from '../../permission/controller';
-import { PerResourceTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { TeamPermission } from '@fastgpt/global/support/permission/user/controller';
-import { TeamDefaultPermissionVal } from '@fastgpt/global/support/permission/user/constant';
+import { PerResourceTypeEnum } from '@libchat/global/support/permission/constant';
+import { TeamPermission } from '@libchat/global/support/permission/user/controller';
+import { TeamDefaultPermissionVal } from '@libchat/global/support/permission/user/constant';
 import { MongoMemberGroupModel } from '../../permission/memberGroup/memberGroupSchema';
 import { mongoSessionRun } from '../../../common/mongo/sessionRun';
-import { DefaultGroupName } from '@fastgpt/global/support/user/team/group/constant';
+import { DefaultGroupName } from '@libchat/global/support/user/team/group/constant';
 import { getAIApi } from '../../../core/ai/config';
 import { createRootOrg } from '../../permission/org/controllers';
 import { refreshSourceAvatar } from '../../../common/file/image/controller';

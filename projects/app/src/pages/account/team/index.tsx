@@ -2,20 +2,20 @@
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import AccountContainer from '@/pageComponents/account/AccountContainer';
 import { Box, Flex } from '@chakra-ui/react';
-import Icon from '@fastgpt/web/components/common/Icon';
+import Icon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 import TeamSelector from '@/pageComponents/account/TeamSelector';
 import { useUserStore } from '@/web/support/user/useUserStore';
 import React, { useMemo } from 'react';
 import { useContextSelector } from 'use-context-selector';
 import { useRouter } from 'next/router';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { TeamMemberRoleEnum } from '@fastgpt/global/support/user/team/constant';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { TeamMemberRoleEnum } from '@libchat/global/support/user/team/constant';
 import { TeamContext, TeamModalContextProvider } from '@/pageComponents/account/team/context';
 import dynamic from 'next/dynamic';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 
 const MemberTable = dynamic(() => import('@/pageComponents/account/team/MemberTable'));
 const PermissionManage = dynamic(

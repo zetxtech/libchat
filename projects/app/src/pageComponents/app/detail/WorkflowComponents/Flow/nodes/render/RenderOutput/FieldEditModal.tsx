@@ -1,7 +1,7 @@
 import {
   FlowNodeOutputTypeEnum,
   FlowValueTypeMap
-} from '@fastgpt/global/core/workflow/node/constant';
+} from '@libchat/global/core/workflow/node/constant';
 import {
   Box,
   Button,
@@ -12,19 +12,19 @@ import {
   Stack,
   Textarea
 } from '@chakra-ui/react';
-import { WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import {
   type CustomFieldConfigType,
   type FlowNodeOutputItemType
-} from '@fastgpt/global/core/workflow/type/io';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+} from '@libchat/global/core/workflow/type/io';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MySelect from '@libchat/web/components/common/MySelect';
+import { useToast } from '@libchat/web/hooks/useToast';
 import React, { useCallback, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import { getNanoid } from '@libchat/global/common/string/tools';
 
 const FieldModal = ({
   customFieldConfig,

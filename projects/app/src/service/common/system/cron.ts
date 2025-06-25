@@ -1,18 +1,18 @@
-import { setCron } from '@fastgpt/service/common/system/cron';
+import { setCron } from '@libchat/service/common/system/cron';
 import { startTrainingQueue } from '@/service/core/dataset/training/utils';
-import { clearTmpUploadFiles } from '@fastgpt/service/common/file/utils';
+import { clearTmpUploadFiles } from '@libchat/service/common/file/utils';
 import {
   checkInvalidDatasetFiles,
   checkInvalidDatasetData,
   checkInvalidVector,
   removeExpiredChatFiles
 } from './cronTask';
-import { checkTimerLock } from '@fastgpt/service/common/system/timerLock/utils';
-import { TimerIdEnum } from '@fastgpt/service/common/system/timerLock/constants';
+import { checkTimerLock } from '@libchat/service/common/system/timerLock/utils';
+import { TimerIdEnum } from '@libchat/service/common/system/timerLock/constants';
 import { addHours } from 'date-fns';
 import { getScheduleTriggerApp } from '@/service/core/app/utils';
-import { clearExpiredRawTextBufferCron } from '@fastgpt/service/common/buffer/rawText/controller';
-import { clearExpiredDatasetImageCron } from '@fastgpt/service/core/dataset/image/controller';
+import { clearExpiredRawTextBufferCron } from '@libchat/service/common/buffer/rawText/controller';
+import { clearExpiredDatasetImageCron } from '@libchat/service/core/dataset/image/controller';
 
 // Try to run train every minute
 const setTrainingQueueCron = () => {

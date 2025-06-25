@@ -1,13 +1,13 @@
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
+import { authApp } from '@libchat/service/support/permission/app/auth';
 import {
   ManagePermissionVal,
   PerResourceTypeEnum
-} from '@fastgpt/global/support/permission/constant';
-import { resumeInheritPermission } from '@fastgpt/service/support/permission/inheritPermission';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
-import { AppFolderTypeList } from '@fastgpt/global/core/app/constants';
+} from '@libchat/global/support/permission/constant';
+import { resumeInheritPermission } from '@libchat/service/support/permission/inheritPermission';
+import { MongoApp } from '@libchat/service/core/app/schema';
+import { AppFolderTypeList } from '@libchat/global/core/app/constants';
 export type ResumeInheritPermissionQuery = {
   appId: string;
 };

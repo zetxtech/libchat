@@ -12,30 +12,30 @@ import {
   HStack,
   Button
 } from '@chakra-ui/react';
-import UserBox from '@fastgpt/web/components/common/UserBox';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import UserBox from '@libchat/web/components/common/UserBox';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 import { getAppChatLogs } from '@/web/core/app/api';
 import dayjs from 'dayjs';
-import { ChatSourceEnum, ChatSourceMap } from '@fastgpt/global/core/chat/constants';
+import { ChatSourceEnum, ChatSourceMap } from '@libchat/global/core/chat/constants';
 import { addDays } from 'date-fns';
-import { usePagination } from '@fastgpt/web/hooks/usePagination';
+import { usePagination } from '@libchat/web/hooks/usePagination';
 import DateRangePicker, {
   type DateRangeType
-} from '@fastgpt/web/components/common/DateRangePicker';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+} from '@libchat/web/components/common/DateRangePicker';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import { useContextSelector } from 'use-context-selector';
 import { AppContext } from '../context';
 import { cardStyles } from '../constants';
 
 import dynamic from 'next/dynamic';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import MultipleSelect, {
   useMultipleSelect
-} from '@fastgpt/web/components/common/MySelect/MultipleSelect';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+} from '@libchat/web/components/common/MySelect/MultipleSelect';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { downloadFetch } from '@/web/common/system/utils';
 
 const DetailLogsModal = dynamic(() => import('./DetailLogsModal'));

@@ -1,9 +1,9 @@
 import { connectionMongo, getMongoModel } from '../../common/mongo';
 const { Schema } = connectionMongo;
-import { hashStr } from '@fastgpt/global/common/string/tools';
-import type { UserModelSchema } from '@fastgpt/global/support/user/type';
-import { UserStatusEnum, userStatusMap } from '@fastgpt/global/support/user/constant';
-import { TeamMemberCollectionName } from '@fastgpt/global/support/user/team/constant';
+import { hashStr } from '@libchat/global/common/string/tools';
+import type { UserModelSchema } from '@libchat/global/support/user/type';
+import { UserStatusEnum, userStatusMap } from '@libchat/global/support/user/constant';
+import { TeamMemberCollectionName } from '@libchat/global/support/user/team/constant';
 
 export const userCollectionName = 'users';
 
@@ -56,7 +56,7 @@ const UserSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: userCollectionName
   },
-  fastgpt_sem: Object,
+  libchat_sem: Object,
   sourceDomain: String,
   contact: String,
 

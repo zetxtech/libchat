@@ -1,20 +1,20 @@
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
 import {
   createOrGetCollectionTags,
   getCollectionUpdateTime
-} from '@fastgpt/service/core/dataset/collection/utils';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
+} from '@libchat/service/core/dataset/collection/utils';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
 import { NextAPI } from '@/service/middleware/entry';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { DatasetCollectionTypeEnum } from '@fastgpt/global/core/dataset/constants';
-import { type ClientSession } from '@fastgpt/service/common/mongo';
-import { type CollectionWithDatasetType } from '@fastgpt/global/core/dataset/type';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { DatasetCollectionTypeEnum } from '@libchat/global/core/dataset/constants';
+import { type ClientSession } from '@libchat/service/common/mongo';
+import { type CollectionWithDatasetType } from '@libchat/global/core/dataset/type';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 export type UpdateDatasetCollectionParams = {
   id?: string;
   parentId?: string;

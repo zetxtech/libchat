@@ -15,17 +15,17 @@ import {
   Button
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import {
   deleteMemberPermission,
   getTeamClbs,
   updateMemberPermission
 } from '@/web/support/user/team/api';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import Avatar from '@libchat/web/components/common/Avatar';
 import MemberTag from '../../../../components/support/user/team/Info/MemberTag';
-import { DefaultGroupName } from '@fastgpt/global/support/user/team/group/constant';
+import { DefaultGroupName } from '@libchat/global/support/user/team/group/constant';
 import {
   TeamApikeyCreatePermissionVal,
   TeamAppCreatePermissionVal,
@@ -33,21 +33,21 @@ import {
   TeamManagePermissionVal,
   TeamPermissionList,
   TeamWritePermissionVal
-} from '@fastgpt/global/support/permission/user/constant';
-import { TeamPermission } from '@fastgpt/global/support/permission/user/controller';
+} from '@libchat/global/support/permission/user/constant';
+import { TeamPermission } from '@libchat/global/support/permission/user/controller';
 import { useToggle } from 'ahooks';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
-import MyBox from '@fastgpt/web/components/common/MyBox';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
+import MyBox from '@libchat/web/components/common/MyBox';
 import CollaboratorContextProvider, {
   CollaboratorContext
 } from '@/components/support/permission/MemberManager/context';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
 import { GetSearchUserGroupOrg } from '@/web/support/user/api';
-import { type PermissionValueType } from '@fastgpt/global/support/permission/type';
-import { type CollaboratorItemType } from '@fastgpt/global/support/permission/collaborator';
-import type { Permission } from '@fastgpt/global/support/permission/controller';
+import { type PermissionValueType } from '@libchat/global/support/permission/type';
+import { type CollaboratorItemType } from '@libchat/global/support/permission/collaborator';
+import type { Permission } from '@libchat/global/support/permission/controller';
 
 function PermissionManage({
   Tabs,

@@ -1,8 +1,8 @@
 import type { NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
-import { authDatasetImagePreviewUrl } from '@fastgpt/service/core/dataset/image/utils';
-import { getDatasetImageReadData } from '@fastgpt/service/core/dataset/image/controller';
+import { jsonRes } from '@libchat/service/common/response';
+import type { ApiRequestProps } from '@libchat/service/type/next';
+import { authDatasetImagePreviewUrl } from '@libchat/service/core/dataset/image/utils';
+import { getDatasetImageReadData } from '@libchat/service/core/dataset/image/controller';
 
 export default async function handler(
   req: ApiRequestProps<

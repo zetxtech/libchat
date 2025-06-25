@@ -1,21 +1,21 @@
 import React, { useMemo } from 'react';
 import { Box, Button, Flex, useTheme, IconButton } from '@chakra-ui/react';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
+import { useSystem } from '@libchat/web/hooks/useSystem';
 import { useEditTitle } from '@/web/common/hooks/useEditTitle';
 import { useRouter } from 'next/router';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useTranslation } from 'next-i18next';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import MyMenu from '@fastgpt/web/components/common/MyMenu';
+import MyMenu from '@libchat/web/components/common/MyMenu';
 import { useContextSelector } from 'use-context-selector';
 import { ChatContext } from '@/web/core/chat/context/chatContext';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import { formatTimeToChatTime } from '@fastgpt/global/common/string/time';
+import MyBox from '@libchat/web/components/common/MyBox';
+import { formatTimeToChatTime } from '@libchat/global/common/string/time';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { useChatStore } from '@/web/core/chat/context/useChatStore';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
 
 type HistoryItemType = {
   id: string;

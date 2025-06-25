@@ -18,24 +18,24 @@ import {
   Tr,
   useDisclosure
 } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import { type McpAppType } from '@fastgpt/global/support/mcp/type';
+import MyModal from '@libchat/web/components/common/MyModal';
+import { type McpAppType } from '@libchat/global/support/mcp/type';
 import { useTranslation } from 'next-i18next';
 import { useFieldArray, useForm } from 'react-hook-form';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
-import SearchInput from '@fastgpt/web/components/common/Input/SearchInput';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
+import SearchInput from '@libchat/web/components/common/Input/SearchInput';
 import Path from '@/components/common/folder/Path';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import Avatar from '@libchat/web/components/common/Avatar';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getAppBasicInfoByIds, getMyApps } from '@/web/core/app/api';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
 import { getAppFolderPath } from '@/web/core/app/api/app';
-import { AppFolderTypeList } from '@fastgpt/global/core/app/constants';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { AppFolderTypeList } from '@libchat/global/core/app/constants';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { postCreateMcpServer, putUpdateMcpServer } from '../../../web/support/mcp/api';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 
 export type EditMcForm = {
   id?: string;

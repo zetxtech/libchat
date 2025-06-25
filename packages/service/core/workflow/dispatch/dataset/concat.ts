@@ -1,13 +1,13 @@
-import type { SearchDataResponseItemType } from '@fastgpt/global/core/dataset/type';
+import type { SearchDataResponseItemType } from '@libchat/global/core/dataset/type';
 import type {
   DispatchNodeResultType,
   ModuleDispatchProps
-} from '@fastgpt/global/core/workflow/runtime/type';
-import type { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { NodeOutputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { datasetSearchResultConcat } from '@fastgpt/global/core/dataset/search/utils';
+} from '@libchat/global/core/workflow/runtime/type';
+import type { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { NodeOutputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { datasetSearchResultConcat } from '@libchat/global/core/dataset/search/utils';
 import { filterSearchResultsByMaxChars } from '../../utils';
-import { DispatchNodeResponseKeyEnum } from '@fastgpt/global/core/workflow/runtime/constants';
+import { DispatchNodeResponseKeyEnum } from '@libchat/global/core/workflow/runtime/constants';
 
 type DatasetConcatProps = ModuleDispatchProps<
   {

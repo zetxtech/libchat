@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { ModalBody, ModalFooter, Button } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import LeftRadio from '@fastgpt/web/components/common/Radio/LeftRadio';
+import LeftRadio from '@libchat/web/components/common/Radio/LeftRadio';
 import { useRouter } from 'next/router';
 import { TabEnum } from '../../../../../pages/dataset/detail';
-import { ImportDataSourceEnum } from '@fastgpt/global/core/dataset/constants';
+import { ImportDataSourceEnum } from '@libchat/global/core/dataset/constants';
 
 const FileModeSelector = ({ onClose }: { onClose: () => void }) => {
   const { t } = useTranslation();

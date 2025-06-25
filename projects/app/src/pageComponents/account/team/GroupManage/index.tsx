@@ -1,4 +1,4 @@
-import AvatarGroup from '@fastgpt/web/components/common/Avatar/AvatarGroup';
+import AvatarGroup from '@libchat/web/components/common/Avatar/AvatarGroup';
 import {
   Box,
   Button,
@@ -13,20 +13,20 @@ import {
   useDisclosure
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
-import MyBox from '@fastgpt/web/components/common/MyBox';
-import MyMenu, { type MenuItemType } from '@fastgpt/web/components/common/MyMenu';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
+import MyBox from '@libchat/web/components/common/MyBox';
+import MyMenu, { type MenuItemType } from '@libchat/web/components/common/MyMenu';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { deleteGroup, getGroupList } from '@/web/support/user/team/group/api';
-import { DefaultGroupName } from '@fastgpt/global/support/user/team/group/constant';
+import { DefaultGroupName } from '@libchat/global/support/user/team/group/constant';
 import MemberTag from '../../../../components/support/user/team/Info/MemberTag';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import IconButton from '../OrgManage/IconButton';
-import { type MemberGroupListItemType } from '@fastgpt/global/support/permission/memberGroup/type';
+import { type MemberGroupListItemType } from '@libchat/global/support/permission/memberGroup/type';
 
 const ChangeOwnerModal = dynamic(() => import('./GroupTransferOwnerModal'));
 const GroupInfoModal = dynamic(() => import('./GroupInfoModal'));

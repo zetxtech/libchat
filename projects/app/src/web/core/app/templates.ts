@@ -1,17 +1,17 @@
-import { parseCurl } from '@fastgpt/global/common/string/http';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
-import { NodeInputKeyEnum, WorkflowIOValueTypeEnum } from '@fastgpt/global/core/workflow/constants';
+import { parseCurl } from '@libchat/global/common/string/http';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
+import { type AppSchema } from '@libchat/global/core/app/type';
+import { NodeInputKeyEnum, WorkflowIOValueTypeEnum } from '@libchat/global/core/workflow/constants';
 import {
   FlowNodeInputTypeEnum,
   FlowNodeOutputTypeEnum,
   FlowNodeTypeEnum
-} from '@fastgpt/global/core/workflow/node/constant';
+} from '@libchat/global/core/workflow/node/constant';
 import {
   type FlowNodeInputItemType,
   type FlowNodeOutputItemType
-} from '@fastgpt/global/core/workflow/type/io';
-import { i18nT } from '@fastgpt/web/i18n/utils';
+} from '@libchat/global/core/workflow/type/io';
+import { i18nT } from '@libchat/web/i18n/utils';
 
 export const emptyTemplates: Record<
   AppTypeEnum.simple | AppTypeEnum.plugin | AppTypeEnum.workflow,

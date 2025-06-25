@@ -4,17 +4,17 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { TabEnum } from '../../NavBar';
 import { createImageDatasetCollection } from '@/web/core/dataset/image/api';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
 import { useForm } from 'react-hook-form';
 import FileSelector, { type SelectFileItemType } from '../components/FileSelector';
 import type { ImportSourceItemType } from '@/web/core/dataset/type';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { getNanoid } from '@libchat/global/common/string/tools';
+import MyIcon from '@libchat/web/components/common/Icon';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useContextSelector } from 'use-context-selector';
 import { DatasetPageContext } from '@/web/core/dataset/context/datasetPageContext';
 import { DatasetImportContext } from '../Context';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
 
 const fileType = '.jpg, .jpeg, .png';
 

@@ -14,39 +14,39 @@ import {
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import { type UserUpdateParams } from '@/types/user';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 import { useUserStore } from '@/web/support/user/useUserStore';
-import type { UserType } from '@fastgpt/global/support/user/type.d';
+import type { UserType } from '@libchat/global/support/user/type.d';
 import { useQuery } from '@tanstack/react-query';
 import dynamic from 'next/dynamic';
 import { useSelectFile } from '@/web/common/file/hooks/useSelectFile';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useTranslation } from 'next-i18next';
-import Avatar from '@fastgpt/web/components/common/Avatar';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyTooltip from '@fastgpt/web/components/common/MyTooltip';
-import { formatStorePrice2Read } from '@fastgpt/global/support/wallet/usage/tools';
+import Avatar from '@libchat/web/components/common/Avatar';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyTooltip from '@libchat/web/components/common/MyTooltip';
+import { formatStorePrice2Read } from '@libchat/global/support/wallet/usage/tools';
 import { putUpdateMemberName, redeemCoupon } from '@/web/support/user/team/api';
 import { getDocPath } from '@/web/common/system/doc';
 import {
   StandardSubLevelEnum,
   standardSubLevelMap
-} from '@fastgpt/global/support/wallet/sub/constants';
-import { formatTime2YMD } from '@fastgpt/global/common/string/time';
+} from '@libchat/global/support/wallet/sub/constants';
+import { formatTime2YMD } from '@libchat/global/common/string/time';
 import { getExtraPlanCardRoute } from '@/web/support/wallet/sub/constants';
 
 import StandardPlanContentList from '@/components/support/wallet/StandardPlanContentList';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { useSystem } from '@fastgpt/web/hooks/useSystem';
-import { getWebReqUrl } from '@fastgpt/web/common/system/utils';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { useSystem } from '@libchat/web/hooks/useSystem';
+import { getWebReqUrl } from '@libchat/web/common/system/utils';
 import AccountContainer from '@/pageComponents/account/AccountContainer';
 import { serviceSideProps } from '@/web/common/i18n/utils';
 import { useRouter } from 'next/router';
 import TeamSelector from '@/pageComponents/account/TeamSelector';
 import { getWorkorderURL } from '@/web/common/workorder/api';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useMount } from 'ahooks';
-import MyDivider from '@fastgpt/web/components/common/MyDivider';
+import MyDivider from '@libchat/web/components/common/MyDivider';
 
 const RedeemCouponModal = dynamic(() => import('@/pageComponents/account/info/RedeemCouponModal'), {
   ssr: false

@@ -1,4 +1,4 @@
-import { type UrlFetchParams, type UrlFetchResponse } from '@fastgpt/global/common/file/api';
+import { type UrlFetchParams, type UrlFetchResponse } from '@libchat/global/common/file/api';
 import * as cheerio from 'cheerio';
 import axios from 'axios';
 import { htmlToMarkdown } from './utils';

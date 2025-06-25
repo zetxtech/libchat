@@ -1,12 +1,12 @@
-import { type UploadImgProps } from '@fastgpt/global/common/file/api';
-import { imageBaseUrl } from '@fastgpt/global/common/file/image/constants';
+import { type UploadImgProps } from '@libchat/global/common/file/api';
+import { imageBaseUrl } from '@libchat/global/common/file/image/constants';
 import { MongoImage } from './schema';
 import { type ClientSession, Types } from '../../../common/mongo';
 import { guessBase64ImageType } from '../utils';
 import { readFromSecondary } from '../../mongo/utils';
 import { addHours } from 'date-fns';
-import { imageFileType } from '@fastgpt/global/common/file/constants';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { imageFileType } from '@libchat/global/common/file/constants';
+import { retryFn } from '@libchat/global/common/system/utils';
 
 export const maxImgSize = 1024 * 1024 * 12;
 const base64MimeRegex = /data:image\/([^\)]+);base64/;

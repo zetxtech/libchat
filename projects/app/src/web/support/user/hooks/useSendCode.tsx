@@ -1,13 +1,13 @@
 import { useState, useMemo } from 'react';
 import { sendAuthCode } from '@/web/support/user/api';
-import type { UserAuthTypeEnum } from '@fastgpt/global/support/user/auth/constants';
+import type { UserAuthTypeEnum } from '@libchat/global/support/user/auth/constants';
 import { useTranslation } from 'next-i18next';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { Box, type BoxProps, useDisclosure } from '@chakra-ui/react';
 import SendCodeAuthModal from '@/components/support/user/safe/SendCodeAuthModal';
 import { useMemoizedFn } from 'ahooks';
-import { useToast } from '@fastgpt/web/hooks/useToast';
+import { useToast } from '@libchat/web/hooks/useToast';
 let timer: NodeJS.Timeout;
 
 export const useSendCode = ({ type }: { type: `${UserAuthTypeEnum}` }) => {

@@ -1,9 +1,9 @@
-import { MongoOpenApi } from '@fastgpt/service/support/openapi/schema';
+import { MongoOpenApi } from '@libchat/service/support/openapi/schema';
 import type { GetApiKeyProps } from '@/global/support/openapi/api';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
-import type { ApiRequestProps } from '@fastgpt/service/type/next';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
+import type { ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
 
 async function handler(req: ApiRequestProps<any, GetApiKeyProps>) {

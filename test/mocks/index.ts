@@ -1,7 +1,7 @@
 import { vi } from 'vitest';
 import './request';
 
-vi.mock(import('@fastgpt/service/support/audit/util'), async (importOriginal) => {
+vi.mock(import('@libchat/service/support/audit/util'), async (importOriginal) => {
   const actual = await importOriginal();
   return {
     ...actual,

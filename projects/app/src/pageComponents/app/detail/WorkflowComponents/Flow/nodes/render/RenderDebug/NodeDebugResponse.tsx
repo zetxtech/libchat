@@ -1,25 +1,25 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { Box, Button, Card, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../../context';
-import EmptyTip from '@fastgpt/web/components/common/EmptyTip';
+import EmptyTip from '@libchat/web/components/common/EmptyTip';
 import { WholeResponseContent } from '@/components/core/chat/components/WholeResponseModal';
-import type { FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import type { FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import {
   FormInputComponent,
   SelectOptionsComponent
 } from '@/components/core/chat/components/Interactive/InteractiveComponents';
-import { type UserInputInteractive } from '@fastgpt/global/core/workflow/template/system/interactive/type';
+import { type UserInputInteractive } from '@libchat/global/core/workflow/template/system/interactive/type';
 import {
   getLastInteractiveValue,
   storeEdges2RuntimeEdges
-} from '@fastgpt/global/core/workflow/runtime/utils';
-import { type ChatItemType, type UserChatItemValueItemType } from '@fastgpt/global/core/chat/type';
-import { ChatItemValueTypeEnum, ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
-import PopoverConfirm from '@fastgpt/web/components/common/MyPopover/PopoverConfirm';
-import MyIconButton from '@fastgpt/web/components/common/Icon/button';
+} from '@libchat/global/core/workflow/runtime/utils';
+import { type ChatItemType, type UserChatItemValueItemType } from '@libchat/global/core/chat/type';
+import { ChatItemValueTypeEnum, ChatRoleEnum } from '@libchat/global/core/chat/constants';
+import PopoverConfirm from '@libchat/web/components/common/MyPopover/PopoverConfirm';
+import MyIconButton from '@libchat/web/components/common/Icon/button';
 
 type NodeDebugResponseProps = {
   nodeId: string;

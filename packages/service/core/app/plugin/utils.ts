@@ -1,7 +1,7 @@
-import { type ChatNodeUsageType } from '@fastgpt/global/support/wallet/bill/type';
-import { type PluginRuntimeType } from '@fastgpt/global/core/plugin/type';
+import { type ChatNodeUsageType } from '@libchat/global/support/wallet/bill/type';
+import { type PluginRuntimeType } from '@libchat/global/core/plugin/type';
 import { splitCombineToolId } from './controller';
-import { PluginSourceEnum } from '@fastgpt/global/core/plugin/constants';
+import { PluginSourceEnum } from '@libchat/global/core/plugin/constants';
 
 /* 
   Plugin points calculation:

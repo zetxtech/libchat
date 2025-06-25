@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Flex, useTheme, Grid, type GridProps, Radio } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import Avatar from '@fastgpt/web/components/common/Avatar';
+import { useToast } from '@libchat/web/hooks/useToast';
+import Avatar from '@libchat/web/components/common/Avatar';
 
 // @ts-ignore
 interface Props extends GridProps {

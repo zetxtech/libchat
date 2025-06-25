@@ -11,14 +11,14 @@ import {
   Slider,
   useDisclosure
 } from '@chakra-ui/react';
-import { HeaderSecretTypeEnum } from '@fastgpt/global/common/secret/constants';
-import type { SecretValueType, StoreSecretValueType } from '@fastgpt/global/common/secret/type';
+import { HeaderSecretTypeEnum } from '@libchat/global/common/secret/constants';
+import type { SecretValueType, StoreSecretValueType } from '@libchat/global/common/secret/type';
 import React, { useEffect, useMemo, useState } from 'react';
 import { useFieldArray, useForm, type UseFormRegister } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
-import MyIcon from '@fastgpt/web/components/common/Icon';
-import MyModal from '@fastgpt/web/components/common/MyModal';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MyIcon from '@libchat/web/components/common/Icon';
+import MyModal from '@libchat/web/components/common/MyModal';
+import MySelect from '@libchat/web/components/common/MySelect';
 
 type HeaderSecretConfigType = {
   Bearer?: SecretValueType;

@@ -1,6 +1,6 @@
-import { type SystemConfigsType } from '@fastgpt/global/common/system/config/type';
+import { type SystemConfigsType } from '@libchat/global/common/system/config/type';
 import { connectionMongo, getMongoModel, type Model } from '../../../common/mongo';
-import { SystemConfigsTypeMap } from '@fastgpt/global/common/system/config/constants';
+import { SystemConfigsTypeMap } from '@libchat/global/common/system/config/constants';
 
 const { Schema, model, models } = connectionMongo;
 

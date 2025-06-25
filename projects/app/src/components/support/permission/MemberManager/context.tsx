@@ -2,22 +2,22 @@ import { useDisclosure } from '@chakra-ui/react';
 import type {
   CollaboratorItemType,
   UpdateClbPermissionProps
-} from '@fastgpt/global/support/permission/collaborator';
-import { PermissionList } from '@fastgpt/global/support/permission/constant';
-import { Permission } from '@fastgpt/global/support/permission/controller';
+} from '@libchat/global/support/permission/collaborator';
+import { PermissionList } from '@libchat/global/support/permission/constant';
+import { Permission } from '@libchat/global/support/permission/controller';
 import type {
   PermissionListType,
   PermissionValueType
-} from '@fastgpt/global/support/permission/type';
+} from '@libchat/global/support/permission/type';
 import { type ReactNode, useCallback } from 'react';
 import { createContext } from 'use-context-selector';
 import dynamic from 'next/dynamic';
 
 import MemberListCard, { type MemberListCardProps } from './MemberListCard';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { useConfirm } from '@fastgpt/web/hooks/useConfirm';
-import type { RequireOnlyOne } from '@fastgpt/global/common/type/utils';
+import { useConfirm } from '@libchat/web/hooks/useConfirm';
+import type { RequireOnlyOne } from '@libchat/global/common/type/utils';
 import { useTranslation } from 'next-i18next';
 
 const MemberModal = dynamic(() => import('./MemberModal'));

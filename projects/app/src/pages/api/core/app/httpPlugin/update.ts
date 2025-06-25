@@ -1,17 +1,17 @@
 import type { NextApiResponse } from 'next';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
-import { type ClientSession } from '@fastgpt/service/common/mongo';
-import { httpApiSchema2Plugins } from '@fastgpt/global/core/app/httpPlugin/utils';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
+import { type ClientSession } from '@libchat/service/common/mongo';
+import { httpApiSchema2Plugins } from '@libchat/global/core/app/httpPlugin/utils';
 import { NextAPI } from '@/service/middleware/entry';
-import { type AppSchema } from '@fastgpt/global/core/app/type';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { ManagePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
+import { type AppSchema } from '@libchat/global/core/app/type';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { ManagePermissionVal } from '@libchat/global/support/permission/constant';
+import { MongoApp } from '@libchat/service/core/app/schema';
 import { isEqual } from 'lodash';
 import { onCreateApp } from '../create';
 import { onDelOneApp } from '../del';
-import { refreshSourceAvatar } from '@fastgpt/service/common/file/image/controller';
+import { refreshSourceAvatar } from '@libchat/service/common/file/image/controller';
 
 export type UpdateHttpPluginBody = {
   appId: string;

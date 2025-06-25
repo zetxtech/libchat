@@ -1,14 +1,14 @@
 import React from 'react';
 import { type NodeProps } from 'reactflow';
 import NodeCard from './render/NodeCard';
-import { type FlowNodeItemType } from '@fastgpt/global/core/workflow/type/node.d';
+import { type FlowNodeItemType } from '@libchat/global/core/workflow/type/node.d';
 import Divider from '../components/Divider';
 import Container from '../components/Container';
 import RenderInput from './render/RenderInput';
 import { useTranslation } from 'next-i18next';
 import { Box } from '@chakra-ui/react';
 import IOTitle from '../components/IOTitle';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+import MyIcon from '@libchat/web/components/common/Icon';
 import RenderOutput from './render/RenderOutput';
 
 const NodeTools = ({ data, selected }: NodeProps<FlowNodeItemType>) => {

@@ -1,18 +1,18 @@
 import React, { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { createContext } from 'use-context-selector';
 import { useRouter } from 'next/router';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { getAppDetailById, getMyApps, putAppById } from '@/web/core/app/api';
-import { type AppDetailType, type AppListItemType } from '@fastgpt/global/core/app/type';
+import { type AppDetailType, type AppListItemType } from '@libchat/global/core/app/type';
 import { getAppFolderPath } from '@/web/core/app/api/app';
 import {
   type GetResourceFolderListProps,
   type ParentIdType,
   type ParentTreePathItemType
-} from '@fastgpt/global/common/parentFolder/type';
+} from '@libchat/global/common/parentFolder/type';
 import { type AppUpdateParams } from '@/global/core/app/api';
 import dynamic from 'next/dynamic';
-import { AppTypeEnum } from '@fastgpt/global/core/app/constants';
+import { AppTypeEnum } from '@libchat/global/core/app/constants';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import { useTranslation } from 'next-i18next';
 const MoveModal = dynamic(() => import('@/components/common/folder/MoveModal'));

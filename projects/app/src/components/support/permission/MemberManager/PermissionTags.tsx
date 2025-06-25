@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react';
-import { type PermissionValueType } from '@fastgpt/global/support/permission/type';
-import Tag from '@fastgpt/web/components/common/Tag';
+import { type PermissionValueType } from '@libchat/global/support/permission/type';
+import Tag from '@libchat/web/components/common/Tag';
 import React from 'react';
 import { useContextSelector } from 'use-context-selector';
 import { CollaboratorContext } from './context';

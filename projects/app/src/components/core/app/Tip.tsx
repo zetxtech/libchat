@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
-import MyImage from '@fastgpt/web/components/common/Image/MyImage';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import MyImage from '@libchat/web/components/common/Image/MyImage';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { useTranslation } from 'next-i18next';
 import React, { useRef } from 'react';
 

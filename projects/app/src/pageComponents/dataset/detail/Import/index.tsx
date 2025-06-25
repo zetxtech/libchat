@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
-import { ImportDataSourceEnum } from '@fastgpt/global/core/dataset/constants';
+import { ImportDataSourceEnum } from '@libchat/global/core/dataset/constants';
 import { useContextSelector } from 'use-context-selector';
 import DatasetImportContextProvider, { DatasetImportContext } from './Context';
 

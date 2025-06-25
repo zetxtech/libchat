@@ -7,18 +7,18 @@ import ChatRecordContextProvider from '@/web/core/chat/context/chatRecordContext
 import { Box, Button, Flex, Switch, Textarea } from '@chakra-ui/react';
 import { cardStyles } from '../constants';
 import { useTranslation } from 'react-i18next';
-import { type McpToolConfigType } from '@fastgpt/global/core/app/type';
-import FormLabel from '@fastgpt/web/components/common/MyBox/FormLabel';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
+import { type McpToolConfigType } from '@libchat/global/core/app/type';
+import FormLabel from '@libchat/web/components/common/MyBox/FormLabel';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
 import { Controller, useForm } from 'react-hook-form';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 import dynamic from 'next/dynamic';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import Markdown from '@/components/Markdown';
 import { postRunMCPTool } from '@/web/core/app/api/plugin';
-import { type StoreSecretValueType } from '@fastgpt/global/common/secret/type';
+import { type StoreSecretValueType } from '@libchat/global/common/secret/type';
 
-const JsonEditor = dynamic(() => import('@fastgpt/web/components/common/Textarea/JsonEditor'));
+const JsonEditor = dynamic(() => import('@libchat/web/components/common/Textarea/JsonEditor'));
 
 const ChatTest = ({
   currentTool,

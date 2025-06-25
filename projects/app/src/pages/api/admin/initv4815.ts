@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 import { NextAPI } from '@/service/middleware/entry';
-import { MongoApp } from '@fastgpt/service/core/app/schema';
+import { MongoApp } from '@libchat/service/core/app/schema';
 
 /* 初始化发布的版本 */
 async function handler(req: NextApiRequest, res: NextApiResponse) {

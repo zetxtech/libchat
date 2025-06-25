@@ -1,4 +1,4 @@
-import type { OpenApiSchema } from '@fastgpt/global/support/openapi/type';
+import type { OpenApiSchema } from '@libchat/global/support/openapi/type';
 
 export type GetApiKeyProps = {
   appId?: string;

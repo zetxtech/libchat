@@ -1,8 +1,8 @@
-import { type AppSchema } from '@fastgpt/global/core/app/type';
-import { NodeInputKeyEnum } from '@fastgpt/global/core/workflow/constants';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import { type AppSchema } from '@libchat/global/core/app/type';
+import { NodeInputKeyEnum } from '@libchat/global/core/workflow/constants';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { MongoApp } from './schema';
-import type { StoreNodeItemType } from '@fastgpt/global/core/workflow/type/node';
+import type { StoreNodeItemType } from '@libchat/global/core/workflow/type/node';
 import { storeSecretValue } from '../../common/secret/utils';
 
 export const beforeUpdateAppFormat = ({ nodes }: { nodes?: StoreNodeItemType[] }) => {

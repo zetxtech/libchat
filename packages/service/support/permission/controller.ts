@@ -1,24 +1,24 @@
 import Cookie from 'cookie';
-import { ERROR_ENUM } from '@fastgpt/global/common/error/errorCode';
+import { ERROR_ENUM } from '@libchat/global/common/error/errorCode';
 import jwt from 'jsonwebtoken';
 import { type NextApiResponse } from 'next';
 import type { AuthModeType, ReqHeaderAuthType } from './type.d';
-import type { PerResourceTypeEnum } from '@fastgpt/global/support/permission/constant';
-import { AuthUserTypeEnum } from '@fastgpt/global/support/permission/constant';
+import type { PerResourceTypeEnum } from '@libchat/global/support/permission/constant';
+import { AuthUserTypeEnum } from '@libchat/global/support/permission/constant';
 import { authOpenApiKey } from '../openapi/auth';
-import { type FileTokenQuery } from '@fastgpt/global/common/file/type';
+import { type FileTokenQuery } from '@libchat/global/common/file/type';
 import { MongoResourcePermission } from './schema';
 import { type ClientSession } from 'mongoose';
-import { type PermissionValueType } from '@fastgpt/global/support/permission/type';
-import { bucketNameMap } from '@fastgpt/global/common/file/constants';
+import { type PermissionValueType } from '@libchat/global/support/permission/type';
+import { bucketNameMap } from '@libchat/global/common/file/constants';
 import { addMinutes } from 'date-fns';
 import { getGroupsByTmbId } from './memberGroup/controllers';
-import { Permission } from '@fastgpt/global/support/permission/controller';
-import { type ParentIdType } from '@fastgpt/global/common/parentFolder/type';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { type MemberGroupSchemaType } from '@fastgpt/global/support/permission/memberGroup/type';
-import { type TeamMemberSchema } from '@fastgpt/global/support/user/team/type';
-import { type OrgSchemaType } from '@fastgpt/global/support/user/team/org/type';
+import { Permission } from '@libchat/global/support/permission/controller';
+import { type ParentIdType } from '@libchat/global/common/parentFolder/type';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { type MemberGroupSchemaType } from '@libchat/global/support/permission/memberGroup/type';
+import { type TeamMemberSchema } from '@libchat/global/support/user/team/type';
+import { type OrgSchemaType } from '@libchat/global/support/user/team/org/type';
 import { getOrgIdSetWithParentByTmbId } from './org/controllers';
 import { authUserSession } from '../user/session';
 
@@ -239,7 +239,7 @@ export async function parseHeaderCert({
       return Promise.reject(ERROR_ENUM.unAuthorization);
     }
 
-    // Bearer fastgpt-xxxx-appId
+    // Bearer libchat-xxxx-appId
     const auth = authorization.split(' ')[1];
     if (!auth) {
       return Promise.reject(ERROR_ENUM.unAuthorization);
@@ -299,7 +299,7 @@ export async function parseHeaderCert({
         };
       }
       if (authToken && (token || cookie)) {
-        // user token(from fastgpt web)
+        // user token(from libchat web)
         const res = await authCookieToken(cookie, token);
 
         return {
@@ -346,7 +346,7 @@ export async function parseHeaderCert({
 }
 
 /* set cookie */
-export const TokenName = 'fastgpt_token';
+export const TokenName = 'libchat_token';
 export const setCookie = (res: NextApiResponse, token: string) => {
   res.setHeader(
     'Set-Cookie',

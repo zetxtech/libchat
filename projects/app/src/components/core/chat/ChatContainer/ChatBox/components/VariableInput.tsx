@@ -7,20 +7,20 @@ import { MessageCardStyle } from '../constants';
 import {
   VariableInputEnum,
   WorkflowIOValueTypeEnum
-} from '@fastgpt/global/core/workflow/constants';
-import MySelect from '@fastgpt/web/components/common/MySelect';
-import MyIcon from '@fastgpt/web/components/common/Icon';
+} from '@libchat/global/core/workflow/constants';
+import MySelect from '@libchat/web/components/common/MySelect';
+import MyIcon from '@libchat/web/components/common/Icon';
 import { type ChatBoxInputFormType } from '../type.d';
 import { useContextSelector } from 'use-context-selector';
-import QuestionTip from '@fastgpt/web/components/common/MyTooltip/QuestionTip';
-import { type VariableItemType } from '@fastgpt/global/core/app/type';
+import QuestionTip from '@libchat/web/components/common/MyTooltip/QuestionTip';
+import { type VariableItemType } from '@libchat/global/core/app/type';
 import MyTextarea from '@/components/common/Textarea/MyTextarea';
-import MyNumberInput from '@fastgpt/web/components/common/Input/NumberInput';
+import MyNumberInput from '@libchat/web/components/common/Input/NumberInput';
 import { ChatItemContext } from '@/web/core/chat/context/chatItemContext';
 import { ChatBoxContext } from '../Provider';
 import dynamic from 'next/dynamic';
 
-const JsonEditor = dynamic(() => import('@fastgpt/web/components/common/Textarea/JsonEditor'));
+const JsonEditor = dynamic(() => import('@libchat/web/components/common/Textarea/JsonEditor'));
 
 export const VariableInputItem = ({
   item,

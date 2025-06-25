@@ -1,15 +1,15 @@
-import { type reTrainingDatasetFileCollectionParams } from '@fastgpt/global/core/dataset/api';
-import { createCollectionAndInsertData } from '@fastgpt/service/core/dataset/collection/controller';
-import { mongoSessionRun } from '@fastgpt/service/common/mongo/sessionRun';
+import { type reTrainingDatasetFileCollectionParams } from '@libchat/global/core/dataset/api';
+import { createCollectionAndInsertData } from '@libchat/service/core/dataset/collection/controller';
+import { mongoSessionRun } from '@libchat/service/common/mongo/sessionRun';
 import { NextAPI } from '@/service/middleware/entry';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
-import { delCollection } from '@fastgpt/service/core/dataset/collection/controller';
-import { authDatasetCollection } from '@fastgpt/service/support/permission/dataset/auth';
-import { CommonErrEnum } from '@fastgpt/global/common/error/code/common';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
-import { addAuditLog } from '@fastgpt/service/support/user/audit/util';
-import { AuditEventEnum } from '@fastgpt/global/support/user/audit/constants';
-import { getI18nDatasetType } from '@fastgpt/service/support/user/audit/util';
+import { type ApiRequestProps } from '@libchat/service/type/next';
+import { delCollection } from '@libchat/service/core/dataset/collection/controller';
+import { authDatasetCollection } from '@libchat/service/support/permission/dataset/auth';
+import { CommonErrEnum } from '@libchat/global/common/error/code/common';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
+import { addAuditLog } from '@libchat/service/support/user/audit/util';
+import { AuditEventEnum } from '@libchat/global/support/user/audit/constants';
+import { getI18nDatasetType } from '@libchat/service/support/user/audit/util';
 
 type RetrainingCollectionResponse = {
   collectionId: string;

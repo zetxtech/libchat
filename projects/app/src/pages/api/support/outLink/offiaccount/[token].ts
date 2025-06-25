@@ -1,5 +1,5 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
-import { plusRequest } from '@fastgpt/service/common/api/plusRequest';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
+import { plusRequest } from '@libchat/service/common/api/plusRequest';
 
 export type OutLinkOffiAccountQuery = any;
 export type OutLinkOffiAccountBody = any;

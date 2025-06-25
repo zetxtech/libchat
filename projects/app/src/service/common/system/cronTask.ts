@@ -1,18 +1,18 @@
-import { BucketNameEnum } from '@fastgpt/global/common/file/constants';
-import { retryFn } from '@fastgpt/global/common/system/utils';
+import { BucketNameEnum } from '@libchat/global/common/file/constants';
+import { retryFn } from '@libchat/global/common/system/utils';
 import {
   delFileByFileIdList,
   getGFSCollection
-} from '@fastgpt/service/common/file/gridfs/controller';
-import { addLog } from '@fastgpt/service/common/system/log';
+} from '@libchat/service/common/file/gridfs/controller';
+import { addLog } from '@libchat/service/common/system/log';
 import {
   deleteDatasetDataVector,
   getVectorDataByTime
-} from '@fastgpt/service/common/vectorDB/controller';
-import { MongoDatasetCollection } from '@fastgpt/service/core/dataset/collection/schema';
-import { MongoDatasetDataText } from '@fastgpt/service/core/dataset/data/dataTextSchema';
-import { MongoDatasetData } from '@fastgpt/service/core/dataset/data/schema';
-import { MongoDatasetTraining } from '@fastgpt/service/core/dataset/training/schema';
+} from '@libchat/service/common/vectorDB/controller';
+import { MongoDatasetCollection } from '@libchat/service/core/dataset/collection/schema';
+import { MongoDatasetDataText } from '@libchat/service/core/dataset/data/dataTextSchema';
+import { MongoDatasetData } from '@libchat/service/core/dataset/data/schema';
+import { MongoDatasetTraining } from '@libchat/service/core/dataset/training/schema';
 import { addDays } from 'date-fns';
 
 /* 

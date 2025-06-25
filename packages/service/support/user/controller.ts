@@ -1,7 +1,7 @@
-import { type UserType } from '@fastgpt/global/support/user/type';
+import { type UserType } from '@libchat/global/support/user/type';
 import { MongoUser } from './schema';
 import { getTmbInfoByTmbId, getUserDefaultTeam } from './team/controller';
-import { ERROR_ENUM } from '@fastgpt/global/common/error/errorCode';
+import { ERROR_ENUM } from '@libchat/global/common/error/errorCode';
 
 export async function authUserExist({ userId, username }: { userId?: string; username?: string }) {
   if (userId) {

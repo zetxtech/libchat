@@ -1,9 +1,9 @@
 import type { NextApiResponse } from 'next';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
 import { type InitDateResponse } from '@/global/common/api/systemRes';
-import { type SystemModelItemType } from '@fastgpt/service/core/ai/type';
-import { authCert } from '@fastgpt/service/support/permission/auth/common';
+import { type SystemModelItemType } from '@libchat/service/core/ai/type';
+import { authCert } from '@libchat/service/support/permission/auth/common';
 
 async function handler(
   req: ApiRequestProps<{}, { bufferId?: string }>,

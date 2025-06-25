@@ -1,12 +1,12 @@
 import React from 'react';
 import { ModalBody, Box, Flex, Input, ModalFooter, Button } from '@chakra-ui/react';
-import MyModal from '@fastgpt/web/components/common/MyModal';
+import MyModal from '@libchat/web/components/common/MyModal';
 import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { updatePasswordByOld } from '@/web/support/user/api';
-import { useToast } from '@fastgpt/web/hooks/useToast';
-import { checkPasswordRule } from '@fastgpt/global/common/string/password';
+import { useToast } from '@libchat/web/hooks/useToast';
+import { checkPasswordRule } from '@libchat/global/common/string/password';
 
 type FormType = {
   oldPsw: string;

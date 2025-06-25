@@ -1,9 +1,9 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authUserPer } from '@fastgpt/service/support/permission/user/auth';
-import { ReadPermissionVal } from '@fastgpt/global/support/permission/constant';
+import { authUserPer } from '@libchat/service/support/permission/user/auth';
+import { ReadPermissionVal } from '@libchat/global/support/permission/constant';
 import axios from 'axios';
-import { addLog } from '@fastgpt/service/common/system/log';
+import { addLog } from '@libchat/service/common/system/log';
 
 export type checkUsageQuery = { key: string };
 

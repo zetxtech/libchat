@@ -1,4 +1,4 @@
-import { isTestEnv } from '@fastgpt/global/common/system/constants';
+import { isTestEnv } from '@libchat/global/common/system/constants';
 import { addLog } from '../../common/system/log';
 import type { Model } from 'mongoose';
 import mongoose, { Mongoose } from 'mongoose';

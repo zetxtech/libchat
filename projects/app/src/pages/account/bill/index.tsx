@@ -1,6 +1,6 @@
 'use client';
 import { Box, Button, Flex } from '@chakra-ui/react';
-import FillRowTabs from '@fastgpt/web/components/common/Tabs/FillRowTabs';
+import FillRowTabs from '@libchat/web/components/common/Tabs/FillRowTabs';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { useTranslation } from 'next-i18next';

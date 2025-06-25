@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import type { RenderInputProps } from '../type';
-import MySelect from '@fastgpt/web/components/common/MySelect';
+import MySelect from '@libchat/web/components/common/MySelect';
 import { WorkflowContext } from '@/pageComponents/app/detail/WorkflowComponents/context';
 import { useContextSelector } from 'use-context-selector';
 

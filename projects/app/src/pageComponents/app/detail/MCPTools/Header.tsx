@@ -1,16 +1,16 @@
 import { Box, Button, Flex } from '@chakra-ui/react';
 import FolderPath from '@/components/common/folder/Path';
 import { useTranslation } from 'react-i18next';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useContextSelector } from 'use-context-selector';
 import { AppContext } from '../context';
 import { getAppFolderPath } from '@/web/core/app/api/app';
 import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import { type McpToolConfigType } from '@fastgpt/global/core/app/type';
+import { type McpToolConfigType } from '@libchat/global/core/app/type';
 import { postUpdateMCPTools } from '@/web/core/app/api/plugin';
-import { type StoreSecretValueType } from '@fastgpt/global/common/secret/type';
+import { type StoreSecretValueType } from '@libchat/global/common/secret/type';
 
 const Header = ({
   url,

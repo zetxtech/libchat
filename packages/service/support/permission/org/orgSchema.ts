@@ -1,9 +1,9 @@
-import { TeamCollectionName } from '@fastgpt/global/support/user/team/constant';
-import { OrgCollectionName } from '@fastgpt/global/support/user/team/org/constant';
-import type { OrgSchemaType } from '@fastgpt/global/support/user/team/org/type';
+import { TeamCollectionName } from '@libchat/global/support/user/team/constant';
+import { OrgCollectionName } from '@libchat/global/support/user/team/org/constant';
+import type { OrgSchemaType } from '@libchat/global/support/user/team/org/type';
 import { connectionMongo, getMongoModel } from '../../../common/mongo';
 import { OrgMemberCollectionName } from './orgMemberSchema';
-import { getNanoid } from '@fastgpt/global/common/string/tools';
+import { getNanoid } from '@libchat/global/common/string/tools';
 const { Schema } = connectionMongo;
 
 export const OrgSchema = new Schema(

@@ -1,8 +1,8 @@
-import type { ApiRequestProps, ApiResponseType } from '@fastgpt/service/type/next';
+import type { ApiRequestProps, ApiResponseType } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { authApp } from '@fastgpt/service/support/permission/app/auth';
-import { MongoChatInputGuide } from '@fastgpt/service/core/chat/inputGuide/schema';
-import { WritePermissionVal } from '@fastgpt/global/support/permission/constant';
+import { authApp } from '@libchat/service/support/permission/app/auth';
+import { MongoChatInputGuide } from '@libchat/service/core/chat/inputGuide/schema';
+import { WritePermissionVal } from '@libchat/global/support/permission/constant';
 
 export type deleteInputGuideBody = { appId: string; dataIdList: string[] };
 

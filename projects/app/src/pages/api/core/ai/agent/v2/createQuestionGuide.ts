@@ -1,15 +1,15 @@
 import type { NextApiResponse } from 'next';
-import { jsonRes } from '@fastgpt/service/common/response';
+import { jsonRes } from '@libchat/service/common/response';
 import { pushQuestionGuideUsage } from '@/service/support/wallet/usage/push';
-import { createQuestionGuide } from '@fastgpt/service/core/ai/functions/createQuestionGuide';
+import { createQuestionGuide } from '@libchat/service/core/ai/functions/createQuestionGuide';
 import { authChatCrud } from '@/service/support/permission/auth/chat';
-import { type ApiRequestProps } from '@fastgpt/service/type/next';
+import { type ApiRequestProps } from '@libchat/service/type/next';
 import { NextAPI } from '@/service/middleware/entry';
-import { type OutLinkChatAuthProps } from '@fastgpt/global/support/permission/chat';
-import { getChatItems } from '@fastgpt/service/core/chat/controller';
-import { chats2GPTMessages } from '@fastgpt/global/core/chat/adapt';
-import { getAppLatestVersion } from '@fastgpt/service/core/app/version/controller';
-import { getDefaultLLMModel } from '@fastgpt/service/core/ai/model';
+import { type OutLinkChatAuthProps } from '@libchat/global/support/permission/chat';
+import { getChatItems } from '@libchat/service/core/chat/controller';
+import { chats2GPTMessages } from '@libchat/global/core/chat/adapt';
+import { getAppLatestVersion } from '@libchat/service/core/app/version/controller';
+import { getDefaultLLMModel } from '@libchat/service/core/ai/model';
 
 export type CreateQuestionGuideParams = OutLinkChatAuthProps & {
   appId: string;

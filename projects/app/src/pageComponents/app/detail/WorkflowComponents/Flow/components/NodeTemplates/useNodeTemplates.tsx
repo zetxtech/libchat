@@ -1,13 +1,13 @@
 import { useState, useMemo, useCallback } from 'react';
-import { useRequest2 } from '@fastgpt/web/hooks/useRequest';
+import { useRequest2 } from '@libchat/web/hooks/useRequest';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
-import type { NodeTemplateListItemType } from '@fastgpt/global/core/workflow/type/node';
-import { FlowNodeTypeEnum } from '@fastgpt/global/core/workflow/node/constant';
+import type { NodeTemplateListItemType } from '@libchat/global/core/workflow/type/node';
+import { FlowNodeTypeEnum } from '@libchat/global/core/workflow/node/constant';
 import { getTeamPlugTemplates, getSystemPlugTemplates } from '@/web/core/app/api/plugin';
 import { TemplateTypeEnum } from './header';
 import { useContextSelector } from 'use-context-selector';
 import { WorkflowContext } from '../../../context';
-import type { ParentIdType } from '@fastgpt/global/common/parentFolder/type';
+import type { ParentIdType } from '@libchat/global/common/parentFolder/type';
 
 export const useNodeTemplates = () => {
   const { feConfigs } = useSystemStore();
