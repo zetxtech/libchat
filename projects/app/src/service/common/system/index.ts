@@ -139,11 +139,11 @@ export async function initSystemConfig() {
       ...fileRes?.feConfigs,
       ...defaultFeConfigs,
       ...(fastgptConfig.feConfigs || {}),
-      isPlus: !!licenseData,
+      isPlus: true,
       show_aiproxy: !!process.env.AIPROXY_API_ENDPOINT,
       show_coupon: process.env.SHOW_COUPON === 'true',
-      show_dataset_enhance: licenseData?.functions?.datasetEnhance,
-      show_batch_eval: licenseData?.functions?.batchEval
+      show_dataset_enhance: true,
+      show_batch_eval: true,
     },
     systemEnv: {
       ...fileRes.systemEnv,
