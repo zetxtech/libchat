@@ -106,8 +106,8 @@ export async function getInitConfig() {
 const defaultFeConfigs: LibChatFeConfigsType = {
   show_emptyChat: true,
   show_git: true,
-  docUrl: 'https://doc.trylibchat.ai',
-  openAPIDocUrl: 'https://doc.trylibchat.ai/docs/development/openapi',
+  docUrl: 'https://libchat-docs.zetx.tech',
+  openAPIDocUrl: 'https://libchat-docs.zetx.tech/openapi',
   systemPluginCourseUrl: 'https://fael3z0zfze.feishu.cn/wiki/ERZnw9R26iRRG0kXZRec6WL9nwh',
   appTemplateCourse:
     'https://fael3z0zfze.feishu.cn/wiki/CX9wwMGyEi5TL6koiLYcg7U0nWb?fromScene=spaceOverview',

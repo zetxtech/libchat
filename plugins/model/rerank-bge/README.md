@@ -108,7 +108,3 @@ services:
       - ACCESS_TOKEN=mytoken
 
 ```
-
-## 接入 LibChat
-
-参考 [ReRank模型接入](https://doc.trylibchat.ai/docs/development/configuration/#rerank-接入)
