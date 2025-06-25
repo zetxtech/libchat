@@ -1,4 +1,4 @@
-name: 'LibChat-Test'
+name: 'Test libchat'
 on:
   pull_request:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: Build LibChat images
+name: Build libchat images
 
 on:
   workflow_dispatch:

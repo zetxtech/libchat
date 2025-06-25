@@ -1,4 +1,4 @@
-name: Build LibChat images in Personal warehouse
+name: Build libchat images in personal warehouse
 on:
   workflow_dispatch:
   push:

@@ -1,4 +1,4 @@
-name: Preview LibChat images
+name: Preview libChat images
 on:
   pull_request_target:
   workflow_dispatch:
