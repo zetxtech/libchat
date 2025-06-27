@@ -109,13 +109,13 @@ services:
   # libchat
   sandbox:
     container_name: sandbox
-    image: ghcr.io/labring/libchat-sandbox:v4.9.13 # git
+    image: ghcr.io/zetxtech/libchat-sandbox:v4.9.13 # git
     networks:
       - libchat
     restart: always
   libchat-mcp-server:
     container_name: libchat-mcp-server
-    image: ghcr.io/labring/libchat-mcp_server:v4.9.13 # git
+    image: ghcr.io/zetxtech/libchat-mcp_server:v4.9.13 # git
     ports:
       - 3005:3000
     networks:
@@ -125,7 +125,7 @@ services:
       - LIBCHAT_ENDPOINT=http://libchat:3000
   libchat:
     container_name: libchat
-    image: ghcr.io/labring/libchat:v4.9.13 # git
+    image: ghcr.io/zetxtech/libchat:v4.9.13 # git
     ports:
       - 3000:3000
     networks:
