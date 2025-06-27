@@ -139,11 +139,11 @@ export async function initSystemConfig() {
       ...fileRes?.feConfigs,
       ...defaultFeConfigs,
       ...(libchatConfig.feConfigs || {}),
-      isPlus: true,
+      isPlus: !!licenseData,
       show_aiproxy: !!process.env.AIPROXY_API_ENDPOINT,
       show_coupon: process.env.SHOW_COUPON === 'true',
-      show_dataset_enhance: true,
-      show_batch_eval: true,
+      show_dataset_enhance: licenseData?.functions?.datasetEnhance,
+      show_batch_eval: licenseData?.functions?.batchEval
     },
     systemEnv: {
       ...fileRes.systemEnv,
