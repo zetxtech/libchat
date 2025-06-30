@@ -1,10 +1,12 @@
 {
   "name": "Flux 绘图",
-  "intro": "通过请求 Flux 接口绘图，需要有 api key",
+  "intro": "通过请求 Flux 接口绘图，需要提供 API Key",
   "author": "",
   "avatar": "core/app/templates/flux",
   "type": "plugin",
-  "tags": ["image-generation"],
+  "tags": [
+    "image-generation"
+  ],
   "workflow": {
     "nodes": [
       {
@@ -21,7 +23,9 @@
         "version": "481",
         "inputs": [
           {
-            "renderTypeList": ["reference"],
+            "renderTypeList": [
+              "reference"
+            ],
             "selectedTypeIndex": 0,
             "valueType": "string",
             "canEdit": true,
@@ -56,22 +60,32 @@
         "version": "481",
         "inputs": [
           {
-            "renderTypeList": ["reference"],
+            "renderTypeList": [
+              "reference"
+            ],
             "valueType": "string",
             "canEdit": true,
             "key": "图片访问链接",
             "label": "图片访问链接",
             "description": "",
-            "value": ["tMvel910bnrJ", "pJXgWoTpPoMy"]
+            "value": [
+              "tMvel910bnrJ",
+              "pJXgWoTpPoMy"
+            ]
           },
           {
-            "renderTypeList": ["reference"],
+            "renderTypeList": [
+              "reference"
+            ],
             "valueType": "object",
             "canEdit": true,
             "key": "error",
             "label": "错误信息",
             "description": "",
-            "value": ["tMvel910bnrJ", "error"]
+            "value": [
+              "tMvel910bnrJ",
+              "error"
+            ]
           }
         ],
         "outputs": []
@@ -91,7 +105,9 @@
         "inputs": [
           {
             "key": "system_addInputParam",
-            "renderTypeList": ["addInputParam"],
+            "renderTypeList": [
+              "addInputParam"
+            ],
             "valueType": "dynamic",
             "label": "",
             "required": false,
@@ -122,7 +138,9 @@
           },
           {
             "key": "system_httpMethod",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "valueType": "string",
             "label": "",
             "value": "POST",
@@ -132,7 +150,9 @@
           },
           {
             "key": "system_httpTimeout",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "valueType": "number",
             "label": "",
             "value": 30,
@@ -144,7 +164,9 @@
           },
           {
             "key": "system_httpReqUrl",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "string",
             "label": "",
             "description": "common:core.module.input.description.Http Request Url",
@@ -156,7 +178,9 @@
           },
           {
             "key": "system_httpHeader",
-            "renderTypeList": ["custom"],
+            "renderTypeList": [
+              "custom"
+            ],
             "valueType": "any",
             "value": [
               {
@@ -174,7 +198,9 @@
           },
           {
             "key": "system_httpParams",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "value": [],
             "label": "",
@@ -184,7 +210,9 @@
           },
           {
             "key": "system_httpJsonBody",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "value": "{\n  \"prompt\": \"{{prompt}}\",\n  \"image_size\": \"landscape_4_3\",\n  \"num_inference_steps\": 28,\n  \"guidance_scale\": 3.5\n}",
             "label": "",
@@ -194,7 +222,9 @@
           },
           {
             "key": "system_httpFormBody",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "any",
             "value": [],
             "label": "",
@@ -204,7 +234,9 @@
           },
           {
             "key": "system_httpContentType",
-            "renderTypeList": ["hidden"],
+            "renderTypeList": [
+              "hidden"
+            ],
             "valueType": "string",
             "value": "json",
             "label": "",
@@ -213,7 +245,9 @@
             "toolDescription": ""
           },
           {
-            "renderTypeList": ["reference"],
+            "renderTypeList": [
+              "reference"
+            ],
             "valueType": "string",
             "canEdit": true,
             "key": "prompt",
@@ -240,7 +274,10 @@
               "showDefaultValue": true
             },
             "required": true,
-            "value": ["pluginInput", "绘图提示词"]
+            "value": [
+              "pluginInput",
+              "绘图提示词"
+            ]
           }
         ],
         "outputs": [
