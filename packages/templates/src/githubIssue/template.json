@@ -898,7 +898,7 @@
       },
       {
         "nodeId": "jmSiT6OXA3Fe",
-        "name": "飞书机器人 webhook",
+        "name": "飞书机器人 Webhook",
         "intro": "向飞书机器人发起 webhook 请求。",
         "avatar": "/appMarketTemplates/plugin-feishu/avatar.svg",
         "flowNodeType": "pluginModule",

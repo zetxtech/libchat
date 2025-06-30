@@ -1,6 +1,6 @@
 {
   "author": "",
-  "name": "飞书 webhook",
+  "name": "飞书 Webhook",
   "avatar": "core/app/templates/plugin-feishu",
   "intro": "向飞书机器人发起 webhook 请求。",
   "courseUrl": "https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot#f62e72d5",

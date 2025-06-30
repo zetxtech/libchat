@@ -1,6 +1,6 @@
 {
   "author": "",
-  "name": "企业微信 webhook",
+  "name": "企业微信 Webhook",
   "avatar": "plugins/qiwei",
   "intro": "向企业微信机器人发起 webhook 请求。只能内部群使用。",
   "courseUrl": "https://developer.work.weixin.qq.com/document/path/91770",
